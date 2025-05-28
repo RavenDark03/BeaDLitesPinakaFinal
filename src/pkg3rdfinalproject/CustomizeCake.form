@@ -339,7 +339,7 @@
                           <Color blue="2c" green="87" red="e1" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Customize Cake"/>
+                        <Property name="text" type="java.lang.String" value="Custom Icing Cake"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JToggleButton" name="jToggleButton6">

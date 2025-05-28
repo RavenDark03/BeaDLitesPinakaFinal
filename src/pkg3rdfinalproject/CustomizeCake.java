@@ -79,7 +79,7 @@ public class CustomizeCake extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(225, 135, 44));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Customize Cake");
+        jLabel4.setText("Custom Icing Cake");
 
         jToggleButton6.setBackground(new java.awt.Color(255, 255, 153));
         jToggleButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
