@@ -283,7 +283,10 @@ public class Login extends javax.swing.JFrame {
             if (loginSuccess) {
                 JOptionPane.showMessageDialog(null, "User login successful!");
          
-                this.dispose();
+                BeaPOS main = new BeaPOS();
+                main.setVisible(true);
+                setVisible(false);
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid username or password.");
             }

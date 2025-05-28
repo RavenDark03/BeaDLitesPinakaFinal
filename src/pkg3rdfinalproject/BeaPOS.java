@@ -18,6 +18,7 @@ public class BeaPOS extends javax.swing.JFrame {
     public BeaPOS() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -405,7 +406,7 @@ public class BeaPOS extends javax.swing.JFrame {
 
         btnCake.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCake.setForeground(new java.awt.Color(0, 0, 0));
-        btnCake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkg3rdfinalproject/Top view of cake with cinnamon sticks _ Premium Photo.png"))); // NOI18N
+        btnCake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Banana Muffin.jpg"))); // NOI18N
         btnCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCakeActionPerformed(evt);

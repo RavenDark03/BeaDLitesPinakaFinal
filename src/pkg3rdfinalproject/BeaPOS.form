@@ -277,7 +277,7 @@
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/pkg3rdfinalproject/Top view of cake with cinnamon sticks _ Premium Photo.png"/>
+                          <Image iconType="3" name="/images/Banana Muffin.jpg"/>
                         </Property>
                       </Properties>
                       <Events>
