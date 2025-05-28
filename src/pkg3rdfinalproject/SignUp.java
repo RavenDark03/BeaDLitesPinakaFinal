@@ -3,11 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pkg3rdfinalproject;
+import java.sql.*; // sql import
 import java.awt.Color;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -262,65 +259,74 @@ public class SignUp extends javax.swing.JFrame {
         String username = txtNewUsername.getText().trim();
         String password = txtNewPassword.getText().trim();
 
-        // Username and password validation using regex
-        if (!username.matches("^[a-zA-Z0-9]{3,}$")) {
-            JOptionPane.showMessageDialog(this,
-                    "Username must be at least 3 characters long and contain only letters and numbers!",
-                    "Invalid Username",
-                    JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+        // Username and password validation using regex (unchanged)
+    if (!username.matches("^[a-zA-Z0-9]{8,}$")) {
+    JOptionPane.showMessageDialog(this,
+            "Username must be at least 8 characters long and contain only letters and numbers!",
+            "Invalid Username",
+            JOptionPane.ERROR_MESSAGE);
+    return;
+}
 
-        if (!password.matches("^(?=.*[A-Za-z])(?=.*\\d).{6,}$")) {
-            JOptionPane.showMessageDialog(this,
-                    "Password must be at least 6 characters long and contain both letters and numbers!",
-                    "Invalid Password",
-                    JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+if (!password.matches("^(?=.*[A-Za-z])(?=.*\\d).{8,}$")) {
+    JOptionPane.showMessageDialog(this,
+            "Password must be at least 8 characters long and contain both letters and numbers!",
+            "Invalid Password",
+            JOptionPane.ERROR_MESSAGE);
+    return;
+}
 
-        try {
-            File file = new File("users.txt");
-            boolean usernameExists = false;
+    Connection conn = null;
+    PreparedStatement checkStmt = null;
+    PreparedStatement insertStmt = null;
+    ResultSet rs = null;
 
-            if (file.exists()) {
-                Scanner scanner = new Scanner(file);
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    String[] userDetails = line.split(",");
-                    if (userDetails.length > 0 && userDetails[0].equals(username)) {
-                        usernameExists = true;
-                    }
-                    if (usernameExists) {
-                        break;
-                    }
-                }
-                scanner.close();
-            }
-            if (usernameExists) {
-                JOptionPane.showMessageDialog(null, "Username already exists.");
-                return;
-            }
+    try {
+    // Get database connection
+    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bea_d_lites", "root", "root"); //connection sa database
+    
+    // Check if username exists
+    String checkSql = "SELECT username FROM users WHERE username = ?";
+    checkStmt = conn.prepareStatement(checkSql);
+    checkStmt.setString(1, username);
+    rs = checkStmt.executeQuery();
+    
+    if (rs.next()) {
+        JOptionPane.showMessageDialog(null, "Username already exists.");
+        return;
+    }
+    
+    // Insert new user
+    String insertSql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    insertStmt = conn.prepareStatement(insertSql);
+    insertStmt.setString(1, username);
+    insertStmt.setString(2, password);
+    int rowsAffected = insertStmt.executeUpdate();
+    
+    if (rowsAffected > 0) {
+        JOptionPane.showMessageDialog(null, "Account successfully created!");
+        
+        // Clear input fields
+        txtNewUsername.setText("");
+        txtNewPassword.setText("");
 
-            try (FileWriter writer = new FileWriter("users.txt", true)) {
-                writer.write(username + "," + password + "\n");
-                JOptionPane.showMessageDialog(null, "Account successfully created!");
-
-                // Clear input fields
-                txtNewUsername.setText("");
-                txtNewPassword.setText("");
-
-                // Launch login screen
-                Login login = new Login();
-                login.setVisible(true);
-                login.setLocationRelativeTo(null);
-                this.dispose();
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(null, "Error saving account: " + e.getMessage());
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error reading file: " + e.getMessage());
-        }
+        // Launch login screen
+        Login login = new Login();
+        login.setVisible(true);
+        login.setLocationRelativeTo(null);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(null, "Failed to create account.");
+    }
+    } catch (SQLException e) {
+    JOptionPane.showMessageDialog(null, "Database error: " + e.getMessage());
+    } finally {
+    // Close resources
+        try { if (rs != null) rs.close(); } catch (SQLException e) { }
+        try { if (checkStmt != null) checkStmt.close(); } catch (SQLException e) {  }
+        try { if (insertStmt != null) insertStmt.close(); } catch (SQLException e) {  }
+        try { if (conn != null) conn.close(); } catch (SQLException e) {  }
+}
     }//GEN-LAST:event_btnCreateActionPerformed
 
     /**

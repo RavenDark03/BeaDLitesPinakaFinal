@@ -7,6 +7,9 @@ import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 
@@ -251,46 +254,44 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsernameFocusLost
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-               String username = txtUsername.getText().trim();
+        String username = txtUsername.getText().trim();
         String password = txtPassword.getText().trim();
-
-        if (username.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Please enter username.");
-        } else if (password.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Please enter password.");
-        } else {
-            boolean loginSuccess = false;
-
-            try (BufferedReader reader = new BufferedReader(new FileReader("users.txt"))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    String[] credentials = line.split(",");
-
-                    if (credentials.length == 2) {
-                        String savedUsername = credentials[0].trim();
-                        String savedPassword = credentials[1].trim();
-
-                        if (username.equals(savedUsername) && password.equals(savedPassword)) {
-                            loginSuccess = true;
-                            break;
-                        }
-                    }
-                }
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(null, "Error reading account file: " + e.getMessage());
-            }
-
-            if (loginSuccess) {
-                JOptionPane.showMessageDialog(null, "User login successful!");
-         
-                BeaPOS main = new BeaPOS();
-                main.setVisible(true);
-                setVisible(false);
-                
-            } else {
-                JOptionPane.showMessageDialog(null, "Invalid username or password.");
-            }
+        
+        if (username.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter both username and password", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
+        try {
+        
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bea_d_lites", "root", "root"); //connection sa database
+
+        
+        String sql = "SELECT * FROM users WHERE username=? AND password=?"; //sql query
+        java.sql.PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, username);
+        pstmt.setString(2, password);
+
+        ResultSet rs = pstmt.executeQuery();
+
+        if (rs.next()) {
+            JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            BeaPOS bea = new BeaPOS();
+            bea.setVisible(true);
+            setVisible(false);
+            
+           
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid username or password", "Login Failed", JOptionPane.ERROR_MESSAGE);
+        }
+
+        conn.close();
+
+    } catch (Exception ex) {
+        ex.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
