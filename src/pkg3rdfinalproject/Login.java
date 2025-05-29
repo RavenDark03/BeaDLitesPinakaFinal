@@ -25,6 +25,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
         txtUsername.setBackground(new java.awt.Color(0,0,0,1));
         txtPassword.setBackground(new java.awt.Color(0,0,0,1));
     }
@@ -275,8 +276,10 @@ public class Login extends javax.swing.JFrame {
 
         if (rs.next()) {
             JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
-            BeaPOS bea = new BeaPOS();
-            bea.setVisible(true);
+            
+            MainFrameDashBoard mainDash = new MainFrameDashBoard();
+            
+            mainDash.setVisible(true);
             setVisible(false);
             
            

@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pkg3rdfinalproject;
+
+import java.util.Properties;
+import javax.mail.*;
+import javax.mail.internet.*;
+
+/**
+ *
+ * @author Lynch
+ */
+public class JavaMailSender {
+    private static final String USERNAME = "beadlites859@gmail.com";
+    private static final String PASSWORD = "mitf lyfg laqq glwb"; 
+
+    public static void sendEmail(String toEmail, String subject, String messageText) throws MessagingException {
+
+       
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");       
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");          
+        props.put("mail.smtp.host", "smtp.gmail.com");            
+        props.put("mail.smtp.port", "587");                    
+
+        // create a session with authentication
+        Session session = Session.getInstance(props, new Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(USERNAME, PASSWORD);
+            }
+        });
+
+        // create the email message
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress(USERNAME));
+        message.setRecipients(
+                Message.RecipientType.TO, InternetAddress.parse(toEmail));
+        message.setSubject(subject);
+        message.setText(messageText);
+
+        // send email
+        Transport.send(message);
+}}
