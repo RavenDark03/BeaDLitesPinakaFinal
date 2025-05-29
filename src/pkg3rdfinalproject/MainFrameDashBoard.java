@@ -155,10 +155,20 @@ public class MainFrameDashBoard extends javax.swing.JFrame {
         btnInventory.setBackground(new java.awt.Color(255, 255, 153));
         btnInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/shipping.png"))); // NOI18N
         btnInventory.setBorder(null);
+        btnInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInventoryActionPerformed(evt);
+            }
+        });
 
         btnProduct.setBackground(new java.awt.Color(255, 255, 153));
         btnProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/box.png"))); // NOI18N
         btnProduct.setBorder(null);
+        btnProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductActionPerformed(evt);
+            }
+        });
 
         PointofSaleButton.setBackground(new java.awt.Color(255, 255, 153));
         PointofSaleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/point-of-sale.png"))); // NOI18N
@@ -945,7 +955,7 @@ public class MainFrameDashBoard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
-        // TODO add your handling code here:
+         jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_btnDashboardActionPerformed
 
     private void PointofSaleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointofSaleButtonActionPerformed
@@ -970,8 +980,16 @@ public class MainFrameDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutButtonActionPerformed
 
     private void btnOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdersActionPerformed
-        // TODO add your handling code here:
+       jTabbedPane1.setSelectedIndex(1);
     }//GEN-LAST:event_btnOrdersActionPerformed
+
+    private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_btnInventoryActionPerformed
+
+    private void btnProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductActionPerformed
+        jTabbedPane1.setSelectedIndex(3);
+    }//GEN-LAST:event_btnProductActionPerformed
 
     /**
      * @param args the command line arguments
