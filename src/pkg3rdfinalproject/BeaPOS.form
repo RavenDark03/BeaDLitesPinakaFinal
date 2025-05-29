@@ -416,25 +416,25 @@
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Component id="jLabel12" min="-2" pref="79" max="-2" attributes="0"/>
                               <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <Component id="amountLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <Component id="quantityLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="107" pref="107" max="-2" attributes="0"/>
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              <Component id="sizeLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
-                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <Component id="toppingLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -514,25 +514,25 @@
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                  <Component id="amountLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                      <Component id="quantityLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sizeLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                  <Component id="toppingLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel11" min="-2" pref="20" max="-2" attributes="0"/>
@@ -651,7 +651,7 @@
                         <Property name="text" type="java.lang.String" value="- Product"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel13">
+                    <Component class="javax.swing.JLabel" name="amountLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="10" style="1"/>
@@ -673,7 +673,7 @@
                         <Property name="text" type="java.lang.String" value="Amount"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel15">
+                    <Component class="javax.swing.JLabel" name="quantityLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="10" style="1"/>
@@ -706,7 +706,7 @@
                         <Property name="text" type="java.lang.String" value="Topping"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel18">
+                    <Component class="javax.swing.JLabel" name="sizeLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -717,7 +717,7 @@
                         <Property name="text" type="java.lang.String" value="What Size"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel19">
+                    <Component class="javax.swing.JLabel" name="toppingLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -959,7 +959,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" alignment="0" pref="695" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="0" pref="1148" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -1083,7 +1083,7 @@
                                                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                               <Component id="jLabel72" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jToggleButton4" min="-2" pref="33" max="-2" attributes="0"/>
+                                                              <Component id="mangoToppings" min="-2" pref="33" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Component id="jPanel9" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
@@ -1092,18 +1092,18 @@
                                                           <Component id="jPanel10" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="1" attributes="0">
                                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="jToggleButton6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="mangoBravo5x2button" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jPanel13" alignment="0" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace min="11" max="32767" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jToggleButton5" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="jToggleButton7" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="mangoBravo6x2button" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="mangoBravo4x2button" alignment="0" max="32767" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jRadioButton3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangoRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -1113,7 +1113,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="mangoRadioButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
@@ -1121,12 +1121,12 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Component id="jPanel13" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jToggleButton5" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="mangoBravo6x2button" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jToggleButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jToggleButton7" alignment="3" max="32767" attributes="0"/>
+                                                          <Component id="mangoBravo5x2button" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="mangoBravo4x2button" alignment="3" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
@@ -1136,7 +1136,7 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton4" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="mangoToppings" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                                   <Component id="jLabel72" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -1145,7 +1145,7 @@
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton4">
+                                    <Component class="javax.swing.JToggleButton" name="mangoToppings">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1211,11 +1211,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton1" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="minusButtonMango" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangoBravoQuantity" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton2" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="addButtonMango" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1225,9 +1225,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="minusButtonMango" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="mangoBravoQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="addButtonMango" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -1235,7 +1235,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton1">
+                                        <Component class="javax.swing.JButton" name="minusButtonMango">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1249,10 +1249,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusButtonMangoActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel36">
+                                        <Component class="javax.swing.JLabel" name="mangoBravoQuantity">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -1263,7 +1263,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton2">
+                                        <Component class="javax.swing.JButton" name="addButtonMango">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1276,6 +1276,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonMangoActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -1294,7 +1297,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="mangoBravoPrice" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangoPrice" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1303,14 +1306,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="mangoBravoPrice" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangoPrice" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="mangoBravoPrice">
+                                        <Component class="javax.swing.JLabel" name="mangoPrice">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -1323,7 +1326,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton6">
+                                    <Component class="javax.swing.JToggleButton" name="mangoBravo5x2button">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1337,7 +1340,7 @@
                                         <Property name="text" type="java.lang.String" value="5 x 2&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton5">
+                                    <Component class="javax.swing.JToggleButton" name="mangoBravo6x2button">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1351,7 +1354,7 @@
                                         <Property name="text" type="java.lang.String" value="6 x 2&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton7">
+                                    <Component class="javax.swing.JToggleButton" name="mangoBravo4x2button">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1365,7 +1368,7 @@
                                         <Property name="text" type="java.lang.String" value="4 x 2&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                                    <Component class="javax.swing.JRadioButton" name="mangoRadioButton">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1410,11 +1413,11 @@
                                                           <Component id="jPanel22" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jRadioButton9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="redVelvetRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jToggleButton8" min="-2" pref="63" max="-2" attributes="0"/>
+                                                      <Component id="redVelvet6x2sizebutton" min="-2" pref="63" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton9" min="-2" pref="63" max="-2" attributes="0"/>
+                                                      <Component id="redVelvet5x2sizeButton" min="-2" pref="63" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -1424,7 +1427,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                              <Component id="redVelvetRadioButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
@@ -1437,8 +1440,8 @@
                                                       <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jToggleButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jToggleButton9" alignment="3" max="32767" attributes="0"/>
+                                                          <Component id="redVelvet6x2sizebutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="redVelvet5x2sizeButton" alignment="3" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -1500,11 +1503,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton10" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="redVelvetMinusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
                                                   <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton11" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="RedVelvetPlusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1514,9 +1517,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="redVelvetMinusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="RedVelvetPlusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -1524,7 +1527,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton10">
+                                        <Component class="javax.swing.JButton" name="redVelvetMinusButton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1538,7 +1541,7 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="redVelvetMinusButtonActionPerformed"/>
                                           </Events>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="jLabel46">
@@ -1552,7 +1555,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton11">
+                                        <Component class="javax.swing.JButton" name="RedVelvetPlusButton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1609,7 +1612,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton8">
+                                    <Component class="javax.swing.JToggleButton" name="redVelvet6x2sizebutton">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1623,7 +1626,7 @@
                                         <Property name="text" type="java.lang.String" value="6 x 2&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton9">
+                                    <Component class="javax.swing.JToggleButton" name="redVelvet5x2sizeButton">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1637,7 +1640,7 @@
                                         <Property name="text" type="java.lang.String" value="5 x 2&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+                                    <Component class="javax.swing.JRadioButton" name="redVelvetRadioButton">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1679,19 +1682,19 @@
                                                               <Component id="jPanel25" alignment="0" min="-2" max="-2" attributes="0"/>
                                                               <Component id="jPanel26" alignment="0" min="-2" max="-2" attributes="0"/>
                                                               <Group type="102" alignment="1" attributes="0">
-                                                                  <Component id="jToggleButton14" min="-2" pref="63" max="-2" attributes="0"/>
+                                                                  <Component id="strawberryshortcake4x3sizebtn" min="-2" pref="63" max="-2" attributes="0"/>
                                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                                  <Component id="jToggleButton12" min="-2" pref="63" max="-2" attributes="0"/>
+                                                                  <Component id="strawberryshortcake5x3sizebtn" min="-2" pref="63" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jToggleButton11" min="-2" pref="63" max="-2" attributes="0"/>
+                                                              <Component id="strawberryshortcake6x3sizebtn" min="-2" pref="63" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jToggleButton13" max="32767" attributes="0"/>
+                                                              <Component id="strawberryshortcake8x3sizebtn" max="32767" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jRadioButton10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="strawberryshortcakeradioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -1701,18 +1704,18 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                                              <Component id="strawberryshortcakeradioButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jToggleButton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jToggleButton14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="strawberryshortcake5x3sizebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="strawberryshortcake4x3sizebtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jToggleButton13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jToggleButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="strawberryshortcake8x3sizebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="strawberryshortcake6x3sizebtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
@@ -1789,11 +1792,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton12" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="strawberryshortminusbutton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
                                                   <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton13" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="strawberryshortplusbutton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1803,9 +1806,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="strawberryshortminusbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="strawberryshortplusbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -1813,7 +1816,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton12">
+                                        <Component class="javax.swing.JButton" name="strawberryshortminusbutton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1827,7 +1830,7 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="strawberryshortminusbuttonActionPerformed"/>
                                           </Events>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="jLabel50">
@@ -1841,7 +1844,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton13">
+                                        <Component class="javax.swing.JButton" name="strawberryshortplusbutton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1898,7 +1901,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton11">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryshortcake6x3sizebtn">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1912,7 +1915,7 @@
                                         <Property name="text" type="java.lang.String" value="6x3&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton12">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryshortcake5x3sizebtn">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1926,7 +1929,7 @@
                                         <Property name="text" type="java.lang.String" value="5x3&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton13">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryshortcake8x3sizebtn">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1953,7 +1956,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton14">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryshortcake4x3sizebtn">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1978,7 +1981,7 @@
                                         <Property name="text" type="java.lang.String" value="Topping:"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+                                    <Component class="javax.swing.JRadioButton" name="strawberryshortcakeradioButton">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -2016,12 +2019,12 @@
                                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="jToggleButton42" pref="166" max="32767" attributes="0"/>
+                                                              <Component id="bentoCakeSizebutton" pref="166" max="32767" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jRadioButton6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="bentoCakeRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -2030,7 +2033,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bentoCakeRadioButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jPanel52" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -2039,7 +2042,7 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jPanel54" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton42" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="bentoCakeSizebutton" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -2103,11 +2106,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton26" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="bentoCakeminusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
                                                   <Component id="jLabel83" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton27" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="bentoCakePlusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -2117,9 +2120,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="bentoCakeminusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="bentoCakePlusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -2127,7 +2130,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton26">
+                                        <Component class="javax.swing.JButton" name="bentoCakeminusButton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -2141,7 +2144,7 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton26ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bentoCakeminusButtonActionPerformed"/>
                                           </Events>
                                         </Component>
                                         <Component class="javax.swing.JLabel" name="jLabel83">
@@ -2155,7 +2158,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton27">
+                                        <Component class="javax.swing.JButton" name="bentoCakePlusButton">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -2215,7 +2218,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton42">
+                                    <Component class="javax.swing.JToggleButton" name="bentoCakeSizebutton">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2229,7 +2232,7 @@
                                         <Property name="text" type="java.lang.String" value="4 x 2&quot; + 2 pcs cupcake"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+                                    <Component class="javax.swing.JRadioButton" name="bentoCakeRadioButton">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -2594,7 +2597,7 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel32" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="jPanel34" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
@@ -2631,9 +2634,9 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel33" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jPanel34" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jToggleButton22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Component id="jPanel34" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jToggleButton22" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Component id="jPanel32" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
