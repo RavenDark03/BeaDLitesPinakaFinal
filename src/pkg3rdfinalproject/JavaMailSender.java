@@ -16,7 +16,7 @@ public class JavaMailSender {
     private static final String USERNAME = "beadlites859@gmail.com";
     private static final String PASSWORD = "mitf lyfg laqq glwb"; 
 
-    public static void sendEmail(String toEmail, String subject, String messageText) throws MessagingException {
+    public static void sendHtmlEmail(String to, String subject, String htmlBody) throws MessagingException {
 
        
         Properties props = new Properties();
@@ -34,13 +34,12 @@ public class JavaMailSender {
         });
 
         // create the email message
-        Message message = new MimeMessage(session);
+        MimeMessage message = new MimeMessage(session);
         message.setFrom(new InternetAddress(USERNAME));
-        message.setRecipients(
-                Message.RecipientType.TO, InternetAddress.parse(toEmail));
+        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
         message.setSubject(subject);
-        message.setText(messageText);
+        message.setContent(htmlBody, "text/html; charset=utf-8");
 
-        // send email
         Transport.send(message);
+    
 }}
