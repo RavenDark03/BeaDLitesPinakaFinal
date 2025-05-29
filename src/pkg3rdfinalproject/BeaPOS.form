@@ -4825,7 +4825,7 @@
                                               <Component id="jPanel76" min="-2" max="-2" attributes="0"/>
                                               <Component id="jPanel80" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="681" max="32767" attributes="0"/>
+                                          <EmptySpace pref="678" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -4844,7 +4844,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton20" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="btnUbeCheesedesal" alignment="0" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jRadioButton12" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4859,7 +4859,7 @@
                                                       </Group>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jToggleButton21" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="btnUbeHalayaCheesedesal" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -4880,9 +4880,9 @@
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jToggleButton20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnUbeCheesedesal" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jToggleButton21" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnUbeHalayaCheesedesal" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -4942,11 +4942,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton30" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinusUbePandesal" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroUbePandesal" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton31" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusUbePandesal" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -4956,9 +4956,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton30" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel52" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinusUbePandesal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroUbePandesal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusUbePandesal" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -4966,7 +4966,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton30">
+                                        <Component class="javax.swing.JButton" name="btnMinusUbePandesal">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -4980,10 +4980,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton30ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusUbePandesalActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel52">
+                                        <Component class="javax.swing.JLabel" name="lbzeroUbePandesal">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -4994,7 +4994,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton31">
+                                        <Component class="javax.swing.JButton" name="btnPlusUbePandesal">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5022,7 +5022,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel56" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpUbePandesal" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5031,14 +5031,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel56" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpUbePandesal" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel56">
+                                        <Component class="javax.swing.JLabel" name="lbPhpUbePandesal">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5051,7 +5051,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton20">
+                                    <Component class="javax.swing.JToggleButton" name="btnUbeCheesedesal">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5065,7 +5065,7 @@
                                         <Property name="text" type="java.lang.String" value="Ube Cheesedesal"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton21">
+                                    <Component class="javax.swing.JToggleButton" name="btnUbeHalayaCheesedesal">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5115,8 +5115,8 @@
                                                       </Group>
                                                   </Group>
                                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jToggleButton39" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jToggleButton38" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="btnMoistBananaChocoChipAlmondLoaf" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="btnMoistBananaChocoChipLoaf" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace pref="21" max="32767" attributes="0"/>
@@ -5138,9 +5138,9 @@
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jToggleButton38" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnMoistBananaChocoChipLoaf" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jToggleButton39" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnMoistBananaChocoChipAlmondLoaf" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -5200,11 +5200,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton32" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinusBananaLoaf" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel81" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroBananaLoaf" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton33" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusBananaLoaf" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5214,9 +5214,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel81" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinusBananaLoaf" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroBananaLoaf" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusBananaLoaf" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -5224,7 +5224,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton32">
+                                        <Component class="javax.swing.JButton" name="btnMinusBananaLoaf">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5238,10 +5238,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton32ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusBananaLoafActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel81">
+                                        <Component class="javax.swing.JLabel" name="lbzeroBananaLoaf">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5252,7 +5252,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton33">
+                                        <Component class="javax.swing.JButton" name="btnPlusBananaLoaf">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5280,7 +5280,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpBananaLoaf" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5289,14 +5289,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpBananaLoaf" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel85">
+                                        <Component class="javax.swing.JLabel" name="lbPhpBananaLoaf">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5309,7 +5309,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton38">
+                                    <Component class="javax.swing.JToggleButton" name="btnMoistBananaChocoChipLoaf">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5323,7 +5323,7 @@
                                         <Property name="text" type="java.lang.String" value="Moist Banana Choco Chip Loaf"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton39">
+                                    <Component class="javax.swing.JToggleButton" name="btnMoistBananaChocoChipAlmondLoaf">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5374,11 +5374,11 @@
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jToggleButton41" max="32767" attributes="0"/>
-                                                          <Component id="jToggleButton40" max="32767" attributes="0"/>
+                                                          <Component id="btn12PcsBrownies" max="32767" attributes="0"/>
+                                                          <Component id="btn6PcsBrownies" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton44" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btn30PcsBrownies" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace pref="22" max="32767" attributes="0"/>
@@ -5401,11 +5401,11 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jToggleButton40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn6PcsBrownies" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn30PcsBrownies" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jToggleButton41" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn12PcsBrownies" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -5465,11 +5465,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton34" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinusBrownies" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel87" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroBrownies" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton35" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusBrownies" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5479,9 +5479,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton34" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinusBrownies" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroBrownies" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusBrownies" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -5489,7 +5489,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton34">
+                                        <Component class="javax.swing.JButton" name="btnMinusBrownies">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5503,10 +5503,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton34ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusBrowniesActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel87">
+                                        <Component class="javax.swing.JLabel" name="lbzeroBrownies">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5517,7 +5517,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton35">
+                                        <Component class="javax.swing.JButton" name="btnPlusBrownies">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5545,7 +5545,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel88" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpBrownies" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5554,14 +5554,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel88" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpBrownies" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel88">
+                                        <Component class="javax.swing.JLabel" name="lbPhpBrownies">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5574,7 +5574,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton40">
+                                    <Component class="javax.swing.JToggleButton" name="btn6PcsBrownies">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5588,7 +5588,7 @@
                                         <Property name="text" type="java.lang.String" value="6 PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton41">
+                                    <Component class="javax.swing.JToggleButton" name="btn12PcsBrownies">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5613,7 +5613,7 @@
                                         <Property name="text" type="java.lang.String" value="Brownies"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton44">
+                                    <Component class="javax.swing.JToggleButton" name="btn30PcsBrownies">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5652,9 +5652,9 @@
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jToggleButton45" min="-2" pref="77" max="-2" attributes="0"/>
+                                                      <Component id="btnBoxof4ClassicCinnamon" min="-2" pref="77" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton46" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnBoxof6ClassicCinnamon" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
@@ -5677,8 +5677,8 @@
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton46" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton45" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btnBoxof6ClassicCinnamon" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btnBoxof4ClassicCinnamon" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
@@ -5739,11 +5739,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton36" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinusClassicCinnamon" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel90" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroClassicCinnamon" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton37" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusClassicCinnamon" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5753,9 +5753,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton36" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel90" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinusClassicCinnamon" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroClassicCinnamon" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusClassicCinnamon" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -5763,7 +5763,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton36">
+                                        <Component class="javax.swing.JButton" name="btnMinusClassicCinnamon">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5777,10 +5777,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton36ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusClassicCinnamonActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel90">
+                                        <Component class="javax.swing.JLabel" name="lbzeroClassicCinnamon">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5791,7 +5791,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton37">
+                                        <Component class="javax.swing.JButton" name="btnPlusClassicCinnamon">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -5819,7 +5819,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel91" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpClassicCinnamon" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -5828,14 +5828,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel91" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpClassicCinnamon" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel91">
+                                        <Component class="javax.swing.JLabel" name="lbPhpClassicCinnamon">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -5848,7 +5848,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton45">
+                                    <Component class="javax.swing.JToggleButton" name="btnBoxof4ClassicCinnamon">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5862,7 +5862,7 @@
                                         <Property name="text" type="java.lang.String" value="Box of 4"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton46">
+                                    <Component class="javax.swing.JToggleButton" name="btnBoxof6ClassicCinnamon">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -5912,9 +5912,9 @@
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jToggleButton47" min="-2" pref="77" max="-2" attributes="0"/>
+                                                      <Component id="btn5PcsMilkyDonut" min="-2" pref="77" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton48" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btn10PcsMilkyDonut" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
@@ -5937,8 +5937,8 @@
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton48" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton47" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn10PcsMilkyDonut" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn5PcsMilkyDonut" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
@@ -5999,11 +5999,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton38" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinusMilkyDonut" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel93" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroMilkyDonut" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton39" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusMilkyDonut" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -6013,9 +6013,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel93" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinusMilkyDonut" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroMilkyDonut" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusMilkyDonut" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -6023,7 +6023,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton38">
+                                        <Component class="javax.swing.JButton" name="btnMinusMilkyDonut">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -6037,10 +6037,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton38ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusMilkyDonutActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel93">
+                                        <Component class="javax.swing.JLabel" name="lbzeroMilkyDonut">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -6051,7 +6051,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton39">
+                                        <Component class="javax.swing.JButton" name="btnPlusMilkyDonut">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -6079,7 +6079,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel94" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpMilkyDonut" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -6088,14 +6088,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel94" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpMilkyDonut" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel94">
+                                        <Component class="javax.swing.JLabel" name="lbPhpMilkyDonut">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -6108,7 +6108,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton47">
+                                    <Component class="javax.swing.JToggleButton" name="btn5PcsMilkyDonut">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -6122,7 +6122,7 @@
                                         <Property name="text" type="java.lang.String" value="5 PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton48">
+                                    <Component class="javax.swing.JToggleButton" name="btn10PcsMilkyDonut">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -6171,7 +6171,7 @@
                                                           <Component id="jPanel83" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jToggleButton50" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                                                  <Component id="btn6PcsBananaMuffin" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -6192,7 +6192,7 @@
                                                   </Group>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jToggleButton50" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn6PcsBananaMuffin" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -6252,11 +6252,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton40" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnMinuMuffin" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel96" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbzeroMuffin" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButton41" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusMuffin" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -6266,9 +6266,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnMinuMuffin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbzeroMuffin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusMuffin" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -6276,7 +6276,7 @@
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JButton" name="jButton40">
+                                        <Component class="javax.swing.JButton" name="btnMinuMuffin">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -6290,10 +6290,10 @@
                                             <Property name="text" type="java.lang.String" value="-"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton40ActionPerformed"/>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinuMuffinActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel96">
+                                        <Component class="javax.swing.JLabel" name="lbzeroMuffin">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -6304,7 +6304,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="jButton41">
+                                        <Component class="javax.swing.JButton" name="btnPlusMuffin">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -6332,7 +6332,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpMuffin" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -6341,14 +6341,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbPhpMuffin" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                         </DimensionLayout>
                                       </Layout>
                                       <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel97">
+                                        <Component class="javax.swing.JLabel" name="lbPhpMuffin">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -6372,7 +6372,7 @@
                                         <Property name="text" type="java.lang.String" value="Banana Muffin"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton50">
+                                    <Component class="javax.swing.JToggleButton" name="btn6PcsBananaMuffin">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>

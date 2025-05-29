@@ -32,16 +32,16 @@ public class Icingcustomcake extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jToggleButton27 = new javax.swing.JToggleButton();
+        btn5x3IcingCake = new javax.swing.JToggleButton();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
-        jToggleButton28 = new javax.swing.JToggleButton();
-        jToggleButton29 = new javax.swing.JToggleButton();
-        jToggleButton30 = new javax.swing.JToggleButton();
-        jToggleButton31 = new javax.swing.JToggleButton();
-        jToggleButton32 = new javax.swing.JToggleButton();
-        jToggleButton33 = new javax.swing.JToggleButton();
+        btn6x2IcingCake = new javax.swing.JToggleButton();
+        btn6x3IcingCake = new javax.swing.JToggleButton();
+        btn7x3IcingCake = new javax.swing.JToggleButton();
+        btn8x3IcingCake = new javax.swing.JToggleButton();
+        btn8x4IcingCake = new javax.swing.JToggleButton();
+        btn9x4IcingCake = new javax.swing.JToggleButton();
         jLabel87 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
@@ -50,19 +50,19 @@ public class Icingcustomcake extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
+        lb650IcingCake = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
         jLabel99 = new javax.swing.JLabel();
         jLabel100 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
+        lb750IcingCake = new javax.swing.JLabel();
+        lb850IcingCake = new javax.swing.JLabel();
+        lb1075IcingCake = new javax.swing.JLabel();
+        lb1300IcingCake = new javax.swing.JLabel();
+        lb1400IcingCake = new javax.swing.JLabel();
+        lb1800IcingCake = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,10 +81,10 @@ public class Icingcustomcake extends javax.swing.JFrame {
         jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel83.setText("Custom Icing Cake");
 
-        jToggleButton27.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton27.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton27.setText("5 x 3\"");
+        btn5x3IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn5x3IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn5x3IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn5x3IcingCake.setText("5 x 3\"");
 
         jLabel84.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel84.setForeground(new java.awt.Color(225, 135, 44));
@@ -101,35 +101,35 @@ public class Icingcustomcake extends javax.swing.JFrame {
         jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel86.setText("&");
 
-        jToggleButton28.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton28.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton28.setText("6 x 2\"");
+        btn6x2IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn6x2IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6x2IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn6x2IcingCake.setText("6 x 2\"");
 
-        jToggleButton29.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton29.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton29.setText("6 x 3\"");
+        btn6x3IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn6x3IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6x3IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn6x3IcingCake.setText("6 x 3\"");
 
-        jToggleButton30.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton30.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton30.setText("7 x 3\"");
+        btn7x3IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn7x3IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn7x3IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn7x3IcingCake.setText("7 x 3\"");
 
-        jToggleButton31.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton31.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton31.setText("8 x 3\"");
+        btn8x3IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn8x3IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn8x3IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn8x3IcingCake.setText("8 x 3\"");
 
-        jToggleButton32.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton32.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton32.setText("8 x 4\"");
+        btn8x4IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn8x4IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn8x4IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn8x4IcingCake.setText("8 x 4\"");
 
-        jToggleButton33.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton33.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton33.setText("9 x  4\"");
+        btn9x4IcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn9x4IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn9x4IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn9x4IcingCake.setText("9 x  4\"");
 
         jLabel87.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel87.setForeground(new java.awt.Color(225, 135, 44));
@@ -168,10 +168,10 @@ public class Icingcustomcake extends javax.swing.JFrame {
 
         jLabel94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
-        jLabel95.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel95.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel95.setText("650");
+        lb650IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb650IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb650IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb650IcingCake.setText("650");
 
         jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
@@ -185,35 +185,35 @@ public class Icingcustomcake extends javax.swing.JFrame {
 
         jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
-        jLabel102.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel102.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel102.setText("750");
+        lb750IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb750IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb750IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb750IcingCake.setText("750");
 
-        jLabel103.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel103.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel103.setText("650");
+        lb850IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb850IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb850IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb850IcingCake.setText("850");
 
-        jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel104.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel104.setText("1,075");
+        lb1075IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1075IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1075IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1075IcingCake.setText("1,075");
 
-        jLabel105.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel105.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel105.setText("1,300");
+        lb1300IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1300IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1300IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1300IcingCake.setText("1,300");
 
-        jLabel106.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel106.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel106.setText("1,400");
+        lb1400IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1400IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1400IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1400IcingCake.setText("1,400");
 
-        jLabel107.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel107.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel107.setText("1,800");
+        lb1800IcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1800IcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1800IcingCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1800IcingCake.setText("1,800");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -225,17 +225,17 @@ public class Icingcustomcake extends javax.swing.JFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jToggleButton33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(btn9x4IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn8x4IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn8x3IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn7x3IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn6x3IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn6x2IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn5x3IcingCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -245,41 +245,36 @@ public class Icingcustomcake extends javax.swing.JFrame {
                     .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jLabel94)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel100)
-                                        .addComponent(jLabel97)
-                                        .addComponent(jLabel98)
-                                        .addComponent(jLabel96))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jLabel101)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel11Layout.createSequentialGroup()
-                                    .addComponent(jLabel99)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(80, 80, 80))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                            .addComponent(jLabel94)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lb650IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel100)
+                                .addComponent(jLabel97)
+                                .addComponent(jLabel98)
+                                .addComponent(jLabel96))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lb1400IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb1075IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb850IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb750IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                            .addComponent(jLabel101)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lb1800IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                            .addComponent(jLabel99)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lb1300IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(98, 98, 98))
             .addComponent(jLabel83, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel11Layout.setVerticalGroup(
@@ -298,66 +293,66 @@ public class Icingcustomcake extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton27)
+                            .addComponent(btn5x3IcingCake)
                             .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton28)
+                            .addComponent(btn6x2IcingCake)
                             .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton29))
+                            .addComponent(btn6x3IcingCake))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton30))
+                            .addComponent(btn7x3IcingCake))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton31)
+                            .addComponent(btn8x3IcingCake)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(3, 3, 3)))
                         .addGap(15, 15, 15)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton32)
+                            .addComponent(btn8x4IcingCake)
                             .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addComponent(jToggleButton33))
+                                .addComponent(btn9x4IcingCake))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb650IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel96, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel102, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb750IcingCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel97, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel103, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb850IcingCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb1075IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel105, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lb1300IcingCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lb1400IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(16, 16, 16)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lb1800IcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(77, 77, 77))
         );
 
@@ -402,7 +397,7 @@ public class Icingcustomcake extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -465,94 +460,15 @@ public class Icingcustomcake extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JToggleButton btn5x3IcingCake;
+    private javax.swing.JToggleButton btn6x2IcingCake;
+    private javax.swing.JToggleButton btn6x3IcingCake;
+    private javax.swing.JToggleButton btn7x3IcingCake;
+    private javax.swing.JToggleButton btn8x3IcingCake;
+    private javax.swing.JToggleButton btn8x4IcingCake;
+    private javax.swing.JToggleButton btn9x4IcingCake;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
@@ -561,57 +477,25 @@ public class Icingcustomcake extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JToggleButton jToggleButton10;
-    private javax.swing.JToggleButton jToggleButton11;
-    private javax.swing.JToggleButton jToggleButton12;
-    private javax.swing.JToggleButton jToggleButton13;
-    private javax.swing.JToggleButton jToggleButton14;
-    private javax.swing.JToggleButton jToggleButton15;
-    private javax.swing.JToggleButton jToggleButton16;
-    private javax.swing.JToggleButton jToggleButton17;
-    private javax.swing.JToggleButton jToggleButton18;
-    private javax.swing.JToggleButton jToggleButton19;
-    private javax.swing.JToggleButton jToggleButton20;
-    private javax.swing.JToggleButton jToggleButton21;
-    private javax.swing.JToggleButton jToggleButton22;
-    private javax.swing.JToggleButton jToggleButton23;
-    private javax.swing.JToggleButton jToggleButton24;
-    private javax.swing.JToggleButton jToggleButton25;
-    private javax.swing.JToggleButton jToggleButton26;
-    private javax.swing.JToggleButton jToggleButton27;
-    private javax.swing.JToggleButton jToggleButton28;
-    private javax.swing.JToggleButton jToggleButton29;
-    private javax.swing.JToggleButton jToggleButton30;
-    private javax.swing.JToggleButton jToggleButton31;
-    private javax.swing.JToggleButton jToggleButton32;
-    private javax.swing.JToggleButton jToggleButton33;
-    private javax.swing.JToggleButton jToggleButton6;
-    private javax.swing.JToggleButton jToggleButton7;
-    private javax.swing.JToggleButton jToggleButton8;
-    private javax.swing.JToggleButton jToggleButton9;
+    private javax.swing.JLabel lb1075IcingCake;
+    private javax.swing.JLabel lb1300IcingCake;
+    private javax.swing.JLabel lb1400IcingCake;
+    private javax.swing.JLabel lb1800IcingCake;
+    private javax.swing.JLabel lb650IcingCake;
+    private javax.swing.JLabel lb750IcingCake;
+    private javax.swing.JLabel lb850IcingCake;
     // End of variables declaration//GEN-END:variables
 }

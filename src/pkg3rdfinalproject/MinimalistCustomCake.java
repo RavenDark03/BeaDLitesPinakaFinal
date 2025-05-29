@@ -31,16 +31,16 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jToggleButton27 = new javax.swing.JToggleButton();
+        btn4x2MinimalistCake = new javax.swing.JToggleButton();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
-        jToggleButton28 = new javax.swing.JToggleButton();
-        jToggleButton29 = new javax.swing.JToggleButton();
-        jToggleButton30 = new javax.swing.JToggleButton();
-        jToggleButton31 = new javax.swing.JToggleButton();
-        jToggleButton32 = new javax.swing.JToggleButton();
-        jToggleButton33 = new javax.swing.JToggleButton();
+        btn5x2MinimalistCake = new javax.swing.JToggleButton();
+        btn5x3MinimalistCake = new javax.swing.JToggleButton();
+        btn6x2MinimalistCake = new javax.swing.JToggleButton();
+        btn7x2MinimalistCake = new javax.swing.JToggleButton();
+        btn8x2MinimalistCake = new javax.swing.JToggleButton();
+        btn8x4MinimalistCake = new javax.swing.JToggleButton();
         jLabel87 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
@@ -49,23 +49,23 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         jLabel93 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
+        lb250MinimalistCake = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
         jLabel99 = new javax.swing.JLabel();
         jLabel100 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
-        jToggleButton34 = new javax.swing.JToggleButton();
+        lb400MinimalistCake = new javax.swing.JLabel();
+        lb550MinimalistCake = new javax.swing.JLabel();
+        lb649MinimalistCake = new javax.swing.JLabel();
+        lb849MinimalistCake = new javax.swing.JLabel();
+        lb949MinimalistCake = new javax.swing.JLabel();
+        lb1200MinimalistCake = new javax.swing.JLabel();
+        btn9x4MinimalistCake = new javax.swing.JToggleButton();
         jLabel108 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
+        lb1700MinimalistCake = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,10 +84,10 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel83.setText("Custom Minimalist Cake");
 
-        jToggleButton27.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton27.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton27.setText("4 x 2\"");
+        btn4x2MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn4x2MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn4x2MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn4x2MinimalistCake.setText("4 x 2\"");
 
         jLabel84.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel84.setForeground(new java.awt.Color(225, 135, 44));
@@ -104,35 +104,35 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel86.setText("&");
 
-        jToggleButton28.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton28.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton28.setText("5 x 2\"");
+        btn5x2MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn5x2MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn5x2MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn5x2MinimalistCake.setText("5 x 2\"");
 
-        jToggleButton29.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton29.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton29.setText("5 x 3\"");
+        btn5x3MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn5x3MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn5x3MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn5x3MinimalistCake.setText("5 x 3\"");
 
-        jToggleButton30.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton30.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton30.setText("6 x 2\"");
+        btn6x2MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn6x2MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6x2MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn6x2MinimalistCake.setText("6 x 2\"");
 
-        jToggleButton31.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton31.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton31.setText("7 x 2\"");
+        btn7x2MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn7x2MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn7x2MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn7x2MinimalistCake.setText("7 x 2\"");
 
-        jToggleButton32.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton32.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton32.setText("8 x 2\"");
+        btn8x2MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn8x2MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn8x2MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn8x2MinimalistCake.setText("8 x 2\"");
 
-        jToggleButton33.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton33.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton33.setText("8 x 4\"");
+        btn8x4MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn8x4MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn8x4MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn8x4MinimalistCake.setText("8 x 4\"");
 
         jLabel87.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel87.setForeground(new java.awt.Color(225, 135, 44));
@@ -171,10 +171,10 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
 
         jLabel94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
-        jLabel95.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel95.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel95.setText("250");
+        lb250MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb250MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb250MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb250MinimalistCake.setText("250");
 
         jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
@@ -188,40 +188,40 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
 
         jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
-        jLabel102.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel102.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel102.setText("400");
+        lb400MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb400MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb400MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb400MinimalistCake.setText("400");
 
-        jLabel103.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel103.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel103.setText("550");
+        lb550MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb550MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb550MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb550MinimalistCake.setText("550");
 
-        jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel104.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel104.setText("649");
+        lb649MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb649MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb649MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb649MinimalistCake.setText("649");
 
-        jLabel105.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel105.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel105.setText("849");
+        lb849MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb849MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb849MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb849MinimalistCake.setText("849");
 
-        jLabel106.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel106.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel106.setText("949");
+        lb949MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb949MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb949MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb949MinimalistCake.setText("949");
 
-        jLabel107.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel107.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel107.setText("1,200");
+        lb1200MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1200MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1200MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1200MinimalistCake.setText("1,200");
 
-        jToggleButton34.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton34.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton34.setText("9 x  4\"");
+        btn9x4MinimalistCake.setBackground(new java.awt.Color(255, 255, 153));
+        btn9x4MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn9x4MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btn9x4MinimalistCake.setText("9 x  4\"");
 
         jLabel108.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel108.setForeground(new java.awt.Color(225, 135, 44));
@@ -230,10 +230,10 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
 
         jLabel109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/philippine-peso.png"))); // NOI18N
 
-        jLabel110.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel110.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel110.setText("1,700");
+        lb1700MinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lb1700MinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lb1700MinimalistCake.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1700MinimalistCake.setText("1,700");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -245,14 +245,14 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jToggleButton33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(btn8x4MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn8x2MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn7x2MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn6x2MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn5x3MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn5x2MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn4x2MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn9x4MinimalistCake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -274,7 +274,7 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel94)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lb250MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel100)
@@ -283,24 +283,24 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
                                     .addComponent(jLabel96))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(lb949MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lb649MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lb550MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lb400MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel101)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lb1200MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel99)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lb849MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jLabel109)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lb1700MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(80, 80, 80))
             .addComponent(jLabel83, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -320,73 +320,73 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton27)
+                            .addComponent(btn4x2MinimalistCake)
                             .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton28)
+                            .addComponent(btn5x2MinimalistCake)
                             .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton29))
+                            .addComponent(btn5x3MinimalistCake))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton30))
+                            .addComponent(btn6x2MinimalistCake))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton31)
+                            .addComponent(btn7x2MinimalistCake)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(3, 3, 3)))
                         .addGap(15, 15, 15)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton32)
+                            .addComponent(btn8x2MinimalistCake)
                             .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addComponent(jToggleButton33))
+                                .addComponent(btn8x4MinimalistCake))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb250MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel96, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel102, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb400MinimalistCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel97, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel103, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb550MinimalistCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lb649MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel105, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lb849MinimalistCake, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lb949MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(16, 16, 16)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lb1200MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jToggleButton34)
+                        .addComponent(btn9x4MinimalistCake)
                         .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb1700MinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39))
         );
 
@@ -484,17 +484,18 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btn4x2MinimalistCake;
+    private javax.swing.JToggleButton btn5x2MinimalistCake;
+    private javax.swing.JToggleButton btn5x3MinimalistCake;
+    private javax.swing.JToggleButton btn6x2MinimalistCake;
+    private javax.swing.JToggleButton btn7x2MinimalistCake;
+    private javax.swing.JToggleButton btn8x2MinimalistCake;
+    private javax.swing.JToggleButton btn8x4MinimalistCake;
+    private javax.swing.JToggleButton btn9x4MinimalistCake;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
@@ -508,7 +509,6 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
@@ -516,13 +516,13 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JToggleButton jToggleButton27;
-    private javax.swing.JToggleButton jToggleButton28;
-    private javax.swing.JToggleButton jToggleButton29;
-    private javax.swing.JToggleButton jToggleButton30;
-    private javax.swing.JToggleButton jToggleButton31;
-    private javax.swing.JToggleButton jToggleButton32;
-    private javax.swing.JToggleButton jToggleButton33;
-    private javax.swing.JToggleButton jToggleButton34;
+    private javax.swing.JLabel lb1200MinimalistCake;
+    private javax.swing.JLabel lb1700MinimalistCake;
+    private javax.swing.JLabel lb250MinimalistCake;
+    private javax.swing.JLabel lb400MinimalistCake;
+    private javax.swing.JLabel lb550MinimalistCake;
+    private javax.swing.JLabel lb649MinimalistCake;
+    private javax.swing.JLabel lb849MinimalistCake;
+    private javax.swing.JLabel lb949MinimalistCake;
     // End of variables declaration//GEN-END:variables
 }
