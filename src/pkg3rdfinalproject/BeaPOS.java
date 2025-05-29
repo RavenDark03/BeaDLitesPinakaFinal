@@ -84,9 +84,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         quantityLabel = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         sizeLabel = new javax.swing.JLabel();
-        toppingLabel = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -166,14 +164,14 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel28 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
-        jButton14 = new javax.swing.JButton();
-        jLabel54 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
+        btnMinusCaramelFlan = new javax.swing.JButton();
+        lbqty = new javax.swing.JLabel();
+        btnPlusCaramelFlan = new javax.swing.JButton();
         jPanel30 = new javax.swing.JPanel();
         caramelFlanDeLecheCakePrice = new javax.swing.JLabel();
-        jToggleButton15 = new javax.swing.JToggleButton();
-        jToggleButton16 = new javax.swing.JToggleButton();
-        jToggleButton17 = new javax.swing.JToggleButton();
+        btn4x2CaramelFlan = new javax.swing.JToggleButton();
+        btn6x2CaramelFlan = new javax.swing.JToggleButton();
+        btn5x2CaramelFlan = new javax.swing.JToggleButton();
         jLabel57 = new javax.swing.JLabel();
         jToggleButton18 = new javax.swing.JToggleButton();
         jToggleButton19 = new javax.swing.JToggleButton();
@@ -182,12 +180,12 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel32 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
-        jButton16 = new javax.swing.JButton();
-        jLabel59 = new javax.swing.JLabel();
-        jButton17 = new javax.swing.JButton();
+        btnMinusCheesecake = new javax.swing.JButton();
+        lbQty = new javax.swing.JLabel();
+        btnPlusCheesecake = new javax.swing.JButton();
         jPanel34 = new javax.swing.JPanel();
         cheeseCakePrice = new javax.swing.JLabel();
-        jToggleButton22 = new javax.swing.JToggleButton();
+        btn8Cheesecake = new javax.swing.JToggleButton();
         jToggleButton23 = new javax.swing.JToggleButton();
         jToggleButton24 = new javax.swing.JToggleButton();
         jToggleButton25 = new javax.swing.JToggleButton();
@@ -198,9 +196,9 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel36 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
-        jButton18 = new javax.swing.JButton();
-        jLabel64 = new javax.swing.JLabel();
-        jButton19 = new javax.swing.JButton();
+        btnMinusSliceCheesecake = new javax.swing.JButton();
+        lbQTy = new javax.swing.JLabel();
+        btnPlusMangoBravotub = new javax.swing.JButton();
         jPanel38 = new javax.swing.JPanel();
         sliceCheesecakePrice = new javax.swing.JLabel();
         jToggleButton28 = new javax.swing.JToggleButton();
@@ -213,9 +211,9 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel40 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
         jPanel41 = new javax.swing.JPanel();
-        jButton20 = new javax.swing.JButton();
-        jLabel69 = new javax.swing.JLabel();
-        jButton21 = new javax.swing.JButton();
+        btnMinusMangoBravoTub = new javax.swing.JButton();
+        lbQTY = new javax.swing.JLabel();
+        btnPlusMangoBravoTub = new javax.swing.JButton();
         jPanel42 = new javax.swing.JPanel();
         mangoBravoTubPrice = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -223,61 +221,74 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel44 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
-        jButton22 = new javax.swing.JButton();
-        jLabel75 = new javax.swing.JLabel();
-        jButton23 = new javax.swing.JButton();
+        btnMinusMiniCupcake = new javax.swing.JButton();
+        lbQtyMiniCupcake = new javax.swing.JLabel();
+        btnPlusMiniCupcake = new javax.swing.JButton();
         jPanel46 = new javax.swing.JPanel();
         miniCupcakesPrice = new javax.swing.JLabel();
-        jToggleButton34 = new javax.swing.JToggleButton();
-        jToggleButton33 = new javax.swing.JToggleButton();
+        btn6PcsMiniCupcake = new javax.swing.JToggleButton();
+        btn12PcsMiniCupcake = new javax.swing.JToggleButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jPanel47 = new javax.swing.JPanel();
         jPanel48 = new javax.swing.JPanel();
         jLabel78 = new javax.swing.JLabel();
         jPanel49 = new javax.swing.JPanel();
-        jButton24 = new javax.swing.JButton();
-        jLabel79 = new javax.swing.JLabel();
-        jButton25 = new javax.swing.JButton();
+        btnMinusPiscesCupcake = new javax.swing.JButton();
+        lbzeroqty = new javax.swing.JLabel();
+        btnPlusPiscescupcake = new javax.swing.JButton();
         jPanel50 = new javax.swing.JPanel();
         piscesCupcakesPrice = new javax.swing.JLabel();
-        jToggleButton32 = new javax.swing.JToggleButton();
-        jToggleButton27 = new javax.swing.JToggleButton();
-        jToggleButton35 = new javax.swing.JToggleButton();
-        jToggleButton36 = new javax.swing.JToggleButton();
-        jToggleButton37 = new javax.swing.JToggleButton();
+        btn1pcPisces = new javax.swing.JToggleButton();
+        btn3PcsPisces = new javax.swing.JToggleButton();
+        btn4PcsPisces = new javax.swing.JToggleButton();
+        btn6PcsPisces = new javax.swing.JToggleButton();
+        btn12PcsPisces = new javax.swing.JToggleButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jPanel55 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
-        jButton28 = new javax.swing.JButton();
-        jLabel73 = new javax.swing.JLabel();
-        jButton29 = new javax.swing.JButton();
+        btnMinusIcingCake = new javax.swing.JButton();
+        lbzeroQty = new javax.swing.JLabel();
+        btnPlusIcingCake = new javax.swing.JButton();
         jPanel58 = new javax.swing.JPanel();
         customCakePrice = new javax.swing.JLabel();
         jRadioButton11 = new javax.swing.JRadioButton();
-        jToggleButton43 = new javax.swing.JToggleButton();
+        btnCustomeCakeIcingCake = new javax.swing.JToggleButton();
         jPanel84 = new javax.swing.JPanel();
         jPanel85 = new javax.swing.JPanel();
         jLabel70 = new javax.swing.JLabel();
         jPanel86 = new javax.swing.JPanel();
-        jButton42 = new javax.swing.JButton();
-        jLabel76 = new javax.swing.JLabel();
-        jButton43 = new javax.swing.JButton();
+        btnMinusMinimalistCake = new javax.swing.JButton();
+        lbqtY = new javax.swing.JLabel();
+        btnPlusMinimalistCake = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
-        customCakePrice1 = new javax.swing.JLabel();
+        lbPhpMinimalistCake = new javax.swing.JLabel();
         jRadioButton18 = new javax.swing.JRadioButton();
-        jToggleButton49 = new javax.swing.JToggleButton();
+        btnMinimalistCakeCustomCake = new javax.swing.JToggleButton();
         jPanel88 = new javax.swing.JPanel();
         jPanel89 = new javax.swing.JPanel();
         jLabel77 = new javax.swing.JLabel();
         jPanel90 = new javax.swing.JPanel();
-        jButton44 = new javax.swing.JButton();
-        jLabel80 = new javax.swing.JLabel();
-        jButton45 = new javax.swing.JButton();
+        btnMinusFondantCake = new javax.swing.JButton();
+        lbzeroQTY = new javax.swing.JLabel();
+        btnPlusFondantCake = new javax.swing.JButton();
         jPanel91 = new javax.swing.JPanel();
-        customCakePrice2 = new javax.swing.JLabel();
+        lbPhpFondantCake = new javax.swing.JLabel();
         jRadioButton19 = new javax.swing.JRadioButton();
+        jPanel92 = new javax.swing.JPanel();
+        jPanel93 = new javax.swing.JPanel();
+        jLabel73 = new javax.swing.JLabel();
+        jPanel94 = new javax.swing.JPanel();
+        btnMinusYemaCake = new javax.swing.JButton();
+        lbqTY = new javax.swing.JLabel();
+        btnPlusYemaCake = new javax.swing.JButton();
+        jPanel95 = new javax.swing.JPanel();
+        lbPhpYemaCake = new javax.swing.JLabel();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        btn6x2Yemacake = new javax.swing.JToggleButton();
+        btn5x2Yemacake = new javax.swing.JToggleButton();
+        btn4x2Yemacake = new javax.swing.JToggleButton();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel12 = new javax.swing.JPanel();
@@ -547,17 +558,9 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Size");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Topping");
-
         sizeLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         sizeLabel.setForeground(new java.awt.Color(102, 102, 102));
         sizeLabel.setText("What Size");
-
-        toppingLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        toppingLabel.setForeground(new java.awt.Color(102, 102, 102));
-        toppingLabel.setText("Name of topping");
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
@@ -637,79 +640,78 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel9)
-                .addGap(125, 125, 125)
-                .addComponent(jLabel10))
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(amountLabel))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel14)
-                .addGap(120, 120, 120)
-                .addComponent(quantityLabel))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel16)
-                .addGap(107, 107, 107)
-                .addComponent(sizeLabel))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel17)
-                .addGap(42, 42, 42)
-                .addComponent(toppingLabel))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(jLabel21))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel22)
-                .addGap(120, 120, 120)
-                .addComponent(jLabel23))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(jLabel26))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel27)
-                .addGap(120, 120, 120)
-                .addComponent(jLabel28))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel30)
-                .addGap(103, 103, 103)
-                .addComponent(jLabel33))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel32)
-                .addGap(115, 115, 115)
-                .addComponent(jLabel35))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel9)
+                        .addGap(125, 125, 125)
+                        .addComponent(jLabel10))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(amountLabel))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(sizeLabel))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel21))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel22)
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel23))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel26))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel27)
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel28))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel30)
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel33))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel32)
+                        .addGap(115, 115, 115)
+                        .addComponent(jLabel35))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(120, 120, 120)
+                                .addComponent(quantityLabel)))))
+                .addGap(8, 8, 8))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -722,25 +724,19 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(13, 13, 13)
                 .addComponent(jLabel7)
-                .addGap(6, 6, 6)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(amountLabel))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(quantityLabel)))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(quantityLabel)
+                    .addComponent(jLabel14))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(sizeLabel))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(toppingLabel))
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1475,24 +1471,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel29.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton14.setBackground(new java.awt.Color(255, 204, 102));
-        jButton14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton14.setForeground(new java.awt.Color(225, 135, 44));
-        jButton14.setText("-");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusCaramelFlan.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusCaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusCaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusCaramelFlan.setText("-");
+        btnMinusCaramelFlan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                btnMinusCaramelFlanActionPerformed(evt);
             }
         });
 
-        jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel54.setText("0");
+        lbqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbqty.setForeground(new java.awt.Color(225, 135, 44));
+        lbqty.setText("0");
 
-        jButton15.setBackground(new java.awt.Color(255, 204, 102));
-        jButton15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(225, 135, 44));
-        jButton15.setText("+");
+        btnPlusCaramelFlan.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusCaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusCaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusCaramelFlan.setText("+");
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -1500,11 +1496,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel54)
+                .addComponent(lbqty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel29Layout.setVerticalGroup(
@@ -1512,9 +1508,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jLabel54)
-                    .addComponent(jButton15))
+                    .addComponent(btnMinusCaramelFlan)
+                    .addComponent(lbqty)
+                    .addComponent(btnPlusCaramelFlan))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -1541,20 +1537,20 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jToggleButton15.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton15.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton15.setText("4x2\"");
+        btn4x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
+        btn4x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn4x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
+        btn4x2CaramelFlan.setText("4x2\"");
 
-        jToggleButton16.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton16.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton16.setText(" 6x2\"");
+        btn6x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
+        btn6x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
+        btn6x2CaramelFlan.setText(" 6x2\"");
 
-        jToggleButton17.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton17.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton17.setText("5x2\"");
+        btn5x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
+        btn5x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn5x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
+        btn5x2CaramelFlan.setText("5x2\"");
 
         jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(225, 135, 44));
@@ -1586,14 +1582,14 @@ public class BeaPOS extends javax.swing.JFrame {
                             .addGroup(jPanel27Layout.createSequentialGroup()
                                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
-                                        .addComponent(jToggleButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn5x2CaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(12, 12, 12))
                                     .addGroup(jPanel27Layout.createSequentialGroup()
                                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(9, 9, 9)))
                                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jToggleButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-                                    .addComponent(jToggleButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(btn6x2CaramelFlan, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                                    .addComponent(btn4x2CaramelFlan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(jPanel29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addComponent(jLabel57)
@@ -1616,11 +1612,11 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn6x2CaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton15)
-                            .addComponent(jToggleButton17)))
+                            .addComponent(btn4x2CaramelFlan)
+                            .addComponent(btn5x2CaramelFlan)))
                     .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1656,24 +1652,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel33.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton16.setBackground(new java.awt.Color(255, 204, 102));
-        jButton16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(225, 135, 44));
-        jButton16.setText("-");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusCheesecake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusCheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusCheesecake.setText("-");
+        btnMinusCheesecake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                btnMinusCheesecakeActionPerformed(evt);
             }
         });
 
-        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel59.setText("0");
+        lbQty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbQty.setForeground(new java.awt.Color(225, 135, 44));
+        lbQty.setText("0");
 
-        jButton17.setBackground(new java.awt.Color(255, 204, 102));
-        jButton17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(225, 135, 44));
-        jButton17.setText("+");
+        btnPlusCheesecake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusCheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusCheesecake.setText("+");
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -1681,11 +1677,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel33Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel59)
+                .addComponent(lbQty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel33Layout.setVerticalGroup(
@@ -1693,9 +1689,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel33Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
-                    .addComponent(jLabel59)
-                    .addComponent(jButton17))
+                    .addComponent(btnMinusCheesecake)
+                    .addComponent(lbQty)
+                    .addComponent(btnPlusCheesecake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -1722,10 +1718,10 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jToggleButton22.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton22.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton22.setText("8\"");
+        btn8Cheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        btn8Cheesecake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn8Cheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        btn8Cheesecake.setText("8\"");
 
         jToggleButton23.setBackground(new java.awt.Color(255, 255, 153));
         jToggleButton23.setForeground(new java.awt.Color(255, 204, 102));
@@ -1765,7 +1761,7 @@ public class BeaPOS extends javax.swing.JFrame {
                             .addGroup(jPanel31Layout.createSequentialGroup()
                                 .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btn8Cheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel31Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
@@ -1791,9 +1787,9 @@ public class BeaPOS extends javax.swing.JFrame {
                     .addGroup(jPanel31Layout.createSequentialGroup()
                         .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton22)))
+                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn8Cheesecake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1831,24 +1827,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel37.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton18.setBackground(new java.awt.Color(255, 204, 102));
-        jButton18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(225, 135, 44));
-        jButton18.setText("-");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusSliceCheesecake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusSliceCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusSliceCheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusSliceCheesecake.setText("-");
+        btnMinusSliceCheesecake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                btnMinusSliceCheesecakeActionPerformed(evt);
             }
         });
 
-        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel64.setText("0");
+        lbQTy.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbQTy.setForeground(new java.awt.Color(225, 135, 44));
+        lbQTy.setText("0");
 
-        jButton19.setBackground(new java.awt.Color(255, 204, 102));
-        jButton19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(225, 135, 44));
-        jButton19.setText("+");
+        btnPlusMangoBravotub.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusMangoBravotub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusMangoBravotub.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusMangoBravotub.setText("+");
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
@@ -1856,11 +1852,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel37Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel64)
+                .addComponent(lbQTy)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusMangoBravotub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel37Layout.setVerticalGroup(
@@ -1868,9 +1864,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel37Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton18)
-                    .addComponent(jLabel64)
-                    .addComponent(jButton19))
+                    .addComponent(btnMinusSliceCheesecake)
+                    .addComponent(lbQTy)
+                    .addComponent(btnPlusMangoBravotub))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -1998,24 +1994,24 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel41.setBackground(new java.awt.Color(255, 204, 102));
         jPanel41.setForeground(new java.awt.Color(225, 135, 44));
 
-        jButton20.setBackground(new java.awt.Color(255, 204, 102));
-        jButton20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton20.setForeground(new java.awt.Color(225, 135, 44));
-        jButton20.setText("-");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusMangoBravoTub.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusMangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusMangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusMangoBravoTub.setText("-");
+        btnMinusMangoBravoTub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                btnMinusMangoBravoTubActionPerformed(evt);
             }
         });
 
-        jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel69.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel69.setText("0");
+        lbQTY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbQTY.setForeground(new java.awt.Color(225, 135, 44));
+        lbQTY.setText("0");
 
-        jButton21.setBackground(new java.awt.Color(255, 204, 102));
-        jButton21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton21.setForeground(new java.awt.Color(225, 135, 44));
-        jButton21.setText("+");
+        btnPlusMangoBravoTub.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusMangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusMangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusMangoBravoTub.setText("+");
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -2023,11 +2019,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel69)
+                .addComponent(lbQTY)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel41Layout.setVerticalGroup(
@@ -2035,9 +2031,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton20)
-                    .addComponent(jLabel69)
-                    .addComponent(jButton21))
+                    .addComponent(btnMinusMangoBravoTub)
+                    .addComponent(lbQTY)
+                    .addComponent(btnPlusMangoBravoTub))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -2127,24 +2123,24 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel45.setBackground(new java.awt.Color(255, 204, 102));
         jPanel45.setForeground(new java.awt.Color(225, 135, 44));
 
-        jButton22.setBackground(new java.awt.Color(255, 204, 102));
-        jButton22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton22.setForeground(new java.awt.Color(225, 135, 44));
-        jButton22.setText("-");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusMiniCupcake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusMiniCupcake.setText("-");
+        btnMinusMiniCupcake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                btnMinusMiniCupcakeActionPerformed(evt);
             }
         });
 
-        jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel75.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel75.setText("0");
+        lbQtyMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbQtyMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        lbQtyMiniCupcake.setText("0");
 
-        jButton23.setBackground(new java.awt.Color(255, 204, 102));
-        jButton23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton23.setForeground(new java.awt.Color(225, 135, 44));
-        jButton23.setText("+");
+        btnPlusMiniCupcake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusMiniCupcake.setText("+");
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -2152,11 +2148,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel75)
+                .addComponent(lbQtyMiniCupcake)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel45Layout.setVerticalGroup(
@@ -2164,9 +2160,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton22)
-                    .addComponent(jLabel75)
-                    .addComponent(jButton23))
+                    .addComponent(btnMinusMiniCupcake)
+                    .addComponent(lbQtyMiniCupcake)
+                    .addComponent(btnPlusMiniCupcake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -2194,15 +2190,15 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jToggleButton34.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton34.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton34.setText("6PCS");
+        btn6PcsMiniCupcake.setBackground(new java.awt.Color(255, 255, 153));
+        btn6PcsMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6PcsMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btn6PcsMiniCupcake.setText("6PCS");
 
-        jToggleButton33.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton33.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton33.setText("12PCS");
+        btn12PcsMiniCupcake.setBackground(new java.awt.Color(255, 255, 153));
+        btn12PcsMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn12PcsMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btn12PcsMiniCupcake.setText("12PCS");
 
         jRadioButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(225, 135, 44));
@@ -2222,9 +2218,9 @@ public class BeaPOS extends javax.swing.JFrame {
                             .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(jToggleButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn6PcsMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton33))
+                        .addComponent(btn12PcsMiniCupcake))
                     .addComponent(jRadioButton4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2244,8 +2240,8 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton34)
-                    .addComponent(jToggleButton33))
+                    .addComponent(btn6PcsMiniCupcake)
+                    .addComponent(btn12PcsMiniCupcake))
                 .addGap(55, 55, 55))
         );
 
@@ -2276,24 +2272,24 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel49.setBackground(new java.awt.Color(255, 204, 102));
         jPanel49.setForeground(new java.awt.Color(225, 135, 44));
 
-        jButton24.setBackground(new java.awt.Color(255, 204, 102));
-        jButton24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton24.setForeground(new java.awt.Color(225, 135, 44));
-        jButton24.setText("-");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusPiscesCupcake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusPiscesCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusPiscesCupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusPiscesCupcake.setText("-");
+        btnMinusPiscesCupcake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                btnMinusPiscesCupcakeActionPerformed(evt);
             }
         });
 
-        jLabel79.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel79.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel79.setText("0");
+        lbzeroqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbzeroqty.setForeground(new java.awt.Color(225, 135, 44));
+        lbzeroqty.setText("0");
 
-        jButton25.setBackground(new java.awt.Color(255, 204, 102));
-        jButton25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton25.setForeground(new java.awt.Color(225, 135, 44));
-        jButton25.setText("+");
+        btnPlusPiscescupcake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusPiscescupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusPiscescupcake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusPiscescupcake.setText("+");
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
@@ -2301,11 +2297,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel49Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusPiscesCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel79)
+                .addComponent(lbzeroqty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusPiscescupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel49Layout.setVerticalGroup(
@@ -2313,9 +2309,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel49Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton24)
-                    .addComponent(jLabel79)
-                    .addComponent(jButton25))
+                    .addComponent(btnMinusPiscesCupcake)
+                    .addComponent(lbzeroqty)
+                    .addComponent(btnPlusPiscescupcake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -2343,30 +2339,30 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jToggleButton32.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton32.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton32.setText("1 PC");
+        btn1pcPisces.setBackground(new java.awt.Color(255, 255, 153));
+        btn1pcPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn1pcPisces.setForeground(new java.awt.Color(225, 135, 44));
+        btn1pcPisces.setText("1 PC");
 
-        jToggleButton27.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton27.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton27.setText("3 PCS");
+        btn3PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
+        btn3PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn3PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
+        btn3PcsPisces.setText("3 PCS");
 
-        jToggleButton35.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton35.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton35.setText("4 PCS");
+        btn4PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
+        btn4PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn4PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
+        btn4PcsPisces.setText("4 PCS");
 
-        jToggleButton36.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton36.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton36.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton36.setText("6 PCS");
+        btn6PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
+        btn6PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
+        btn6PcsPisces.setText("6 PCS");
 
-        jToggleButton37.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton37.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton37.setText("12 PCS");
+        btn12PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
+        btn12PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn12PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
+        btn12PcsPisces.setText("12 PCS");
 
         jRadioButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(225, 135, 44));
@@ -2387,14 +2383,14 @@ public class BeaPOS extends javax.swing.JFrame {
                             .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel47Layout.createSequentialGroup()
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jToggleButton32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn1pcPisces, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn3PcsPisces, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jToggleButton36, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-                            .addComponent(jToggleButton35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btn6PcsPisces, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                            .addComponent(btn4PcsPisces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton37))
+                        .addComponent(btn12PcsPisces))
                     .addComponent(jRadioButton5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2414,13 +2410,13 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton32)
-                            .addComponent(jToggleButton35))
+                            .addComponent(btn1pcPisces)
+                            .addComponent(btn4PcsPisces))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jToggleButton27)
-                            .addComponent(jToggleButton36)
-                            .addComponent(jToggleButton37))
+                            .addComponent(btn3PcsPisces)
+                            .addComponent(btn6PcsPisces)
+                            .addComponent(btn12PcsPisces))
                         .addGap(30, 30, 30))))
         );
 
@@ -2450,24 +2446,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel57.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton28.setBackground(new java.awt.Color(255, 204, 102));
-        jButton28.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton28.setForeground(new java.awt.Color(225, 135, 44));
-        jButton28.setText("-");
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusIcingCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusIcingCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusIcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusIcingCake.setText("-");
+        btnMinusIcingCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                btnMinusIcingCakeActionPerformed(evt);
             }
         });
 
-        jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel73.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel73.setText("0");
+        lbzeroQty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbzeroQty.setForeground(new java.awt.Color(225, 135, 44));
+        lbzeroQty.setText("0");
 
-        jButton29.setBackground(new java.awt.Color(255, 204, 102));
-        jButton29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton29.setForeground(new java.awt.Color(225, 135, 44));
-        jButton29.setText("+");
+        btnPlusIcingCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusIcingCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusIcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusIcingCake.setText("+");
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -2475,11 +2471,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel57Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusIcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel73)
+                .addComponent(lbzeroQty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusIcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel57Layout.setVerticalGroup(
@@ -2487,9 +2483,9 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel57Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton28)
-                    .addComponent(jLabel73)
-                    .addComponent(jButton29))
+                    .addComponent(btnMinusIcingCake)
+                    .addComponent(lbzeroQty)
+                    .addComponent(btnPlusIcingCake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -2521,10 +2517,10 @@ public class BeaPOS extends javax.swing.JFrame {
         jRadioButton11.setForeground(new java.awt.Color(209, 127, 45));
         jRadioButton11.setText("Icing Cake");
 
-        jToggleButton43.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton43.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton43.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton43.setText("Custom Cake");
+        btnCustomeCakeIcingCake.setBackground(new java.awt.Color(255, 255, 153));
+        btnCustomeCakeIcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCustomeCakeIcingCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnCustomeCakeIcingCake.setText("Custom Cake");
 
         javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
         jPanel55.setLayout(jPanel55Layout);
@@ -2539,7 +2535,7 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton43)))
+                            .addComponent(btnCustomeCakeIcingCake)))
                     .addComponent(jRadioButton11))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -2555,7 +2551,7 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton43))
+                        .addComponent(btnCustomeCakeIcingCake))
                     .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
         );
@@ -2586,24 +2582,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel86.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton42.setBackground(new java.awt.Color(255, 204, 102));
-        jButton42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton42.setForeground(new java.awt.Color(225, 135, 44));
-        jButton42.setText("-");
-        jButton42.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusMinimalistCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusMinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusMinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusMinimalistCake.setText("-");
+        btnMinusMinimalistCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton42ActionPerformed(evt);
+                btnMinusMinimalistCakeActionPerformed(evt);
             }
         });
 
-        jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel76.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel76.setText("0");
+        lbqtY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbqtY.setForeground(new java.awt.Color(225, 135, 44));
+        lbqtY.setText("0");
 
-        jButton43.setBackground(new java.awt.Color(255, 204, 102));
-        jButton43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton43.setForeground(new java.awt.Color(225, 135, 44));
-        jButton43.setText("+");
+        btnPlusMinimalistCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusMinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusMinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusMinimalistCake.setText("+");
 
         javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
         jPanel86.setLayout(jPanel86Layout);
@@ -2611,11 +2607,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel86Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusMinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel76)
+                .addComponent(lbqtY)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusMinimalistCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel86Layout.setVerticalGroup(
@@ -2623,18 +2619,18 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel86Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton42)
-                    .addComponent(jLabel76)
-                    .addComponent(jButton43))
+                    .addComponent(btnMinusMinimalistCake)
+                    .addComponent(lbqtY)
+                    .addComponent(btnPlusMinimalistCake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel87.setBackground(new java.awt.Color(255, 255, 153));
 
-        customCakePrice1.setBackground(new java.awt.Color(255, 204, 102));
-        customCakePrice1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        customCakePrice1.setForeground(new java.awt.Color(225, 135, 44));
-        customCakePrice1.setText("Php: 0.00");
+        lbPhpMinimalistCake.setBackground(new java.awt.Color(255, 204, 102));
+        lbPhpMinimalistCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbPhpMinimalistCake.setForeground(new java.awt.Color(225, 135, 44));
+        lbPhpMinimalistCake.setText("Php: 0.00");
 
         javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
         jPanel87.setLayout(jPanel87Layout);
@@ -2642,14 +2638,14 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel87Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(customCakePrice1)
+                .addComponent(lbPhpMinimalistCake)
                 .addContainerGap())
         );
         jPanel87Layout.setVerticalGroup(
             jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel87Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(customCakePrice1)
+                .addComponent(lbPhpMinimalistCake)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2657,10 +2653,10 @@ public class BeaPOS extends javax.swing.JFrame {
         jRadioButton18.setForeground(new java.awt.Color(209, 127, 45));
         jRadioButton18.setText("Minimalist Cake");
 
-        jToggleButton49.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton49.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jToggleButton49.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton49.setText("Custom Cake");
+        btnMinimalistCakeCustomCake.setBackground(new java.awt.Color(255, 255, 153));
+        btnMinimalistCakeCustomCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMinimalistCakeCustomCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinimalistCakeCustomCake.setText("Custom Cake");
 
         javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
         jPanel84.setLayout(jPanel84Layout);
@@ -2675,7 +2671,7 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel86, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton49)))
+                            .addComponent(btnMinimalistCakeCustomCake)))
                     .addComponent(jRadioButton18))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -2691,7 +2687,7 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton49))
+                        .addComponent(btnMinimalistCakeCustomCake))
                     .addComponent(jPanel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
         );
@@ -2722,24 +2718,24 @@ public class BeaPOS extends javax.swing.JFrame {
 
         jPanel90.setBackground(new java.awt.Color(255, 204, 102));
 
-        jButton44.setBackground(new java.awt.Color(255, 204, 102));
-        jButton44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton44.setForeground(new java.awt.Color(225, 135, 44));
-        jButton44.setText("-");
-        jButton44.addActionListener(new java.awt.event.ActionListener() {
+        btnMinusFondantCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusFondantCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusFondantCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusFondantCake.setText("-");
+        btnMinusFondantCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton44ActionPerformed(evt);
+                btnMinusFondantCakeActionPerformed(evt);
             }
         });
 
-        jLabel80.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel80.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel80.setText("0");
+        lbzeroQTY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbzeroQTY.setForeground(new java.awt.Color(225, 135, 44));
+        lbzeroQTY.setText("0");
 
-        jButton45.setBackground(new java.awt.Color(255, 204, 102));
-        jButton45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton45.setForeground(new java.awt.Color(225, 135, 44));
-        jButton45.setText("+");
+        btnPlusFondantCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusFondantCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusFondantCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusFondantCake.setText("+");
 
         javax.swing.GroupLayout jPanel90Layout = new javax.swing.GroupLayout(jPanel90);
         jPanel90.setLayout(jPanel90Layout);
@@ -2747,11 +2743,11 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel90Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMinusFondantCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel80)
+                .addComponent(lbzeroQTY)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusFondantCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel90Layout.setVerticalGroup(
@@ -2759,18 +2755,18 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(jPanel90Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton44)
-                    .addComponent(jLabel80)
-                    .addComponent(jButton45))
+                    .addComponent(btnMinusFondantCake)
+                    .addComponent(lbzeroQTY)
+                    .addComponent(btnPlusFondantCake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel91.setBackground(new java.awt.Color(255, 255, 153));
 
-        customCakePrice2.setBackground(new java.awt.Color(255, 204, 102));
-        customCakePrice2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        customCakePrice2.setForeground(new java.awt.Color(225, 135, 44));
-        customCakePrice2.setText("Php: 0.00");
+        lbPhpFondantCake.setBackground(new java.awt.Color(255, 204, 102));
+        lbPhpFondantCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbPhpFondantCake.setForeground(new java.awt.Color(225, 135, 44));
+        lbPhpFondantCake.setText("Php: 0.00");
 
         javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
         jPanel91.setLayout(jPanel91Layout);
@@ -2778,14 +2774,14 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel91Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(customCakePrice2)
+                .addComponent(lbPhpFondantCake)
                 .addContainerGap())
         );
         jPanel91Layout.setVerticalGroup(
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel91Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(customCakePrice2)
+                .addComponent(lbPhpFondantCake)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2824,6 +2820,165 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(51, 51, 51))
         );
 
+        jPanel92.setBackground(new java.awt.Color(255, 204, 102));
+
+        jPanel93.setBackground(new java.awt.Color(255, 255, 153));
+
+        jLabel73.setBackground(new java.awt.Color(225, 135, 44));
+        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/YemaCake.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel93Layout = new javax.swing.GroupLayout(jPanel93);
+        jPanel93.setLayout(jPanel93Layout);
+        jPanel93Layout.setHorizontalGroup(
+            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel93Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel73)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel93Layout.setVerticalGroup(
+            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel93Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel94.setBackground(new java.awt.Color(255, 204, 102));
+
+        btnMinusYemaCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnMinusYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMinusYemaCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnMinusYemaCake.setText("-");
+        btnMinusYemaCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinusYemaCakeActionPerformed(evt);
+            }
+        });
+
+        lbqTY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbqTY.setForeground(new java.awt.Color(225, 135, 44));
+        lbqTY.setText("0");
+
+        btnPlusYemaCake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusYemaCake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusYemaCake.setText("+");
+
+        javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
+        jPanel94.setLayout(jPanel94Layout);
+        jPanel94Layout.setHorizontalGroup(
+            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel94Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnMinusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbqTY)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel94Layout.setVerticalGroup(
+            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel94Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMinusYemaCake)
+                    .addComponent(lbqTY)
+                    .addComponent(btnPlusYemaCake))
+                .addContainerGap(11, Short.MAX_VALUE))
+        );
+
+        jPanel95.setBackground(new java.awt.Color(255, 255, 153));
+
+        lbPhpYemaCake.setBackground(new java.awt.Color(255, 204, 102));
+        lbPhpYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbPhpYemaCake.setForeground(new java.awt.Color(225, 135, 44));
+        lbPhpYemaCake.setText("Php: 0.00");
+
+        javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
+        jPanel95.setLayout(jPanel95Layout);
+        jPanel95Layout.setHorizontalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel95Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbPhpYemaCake)
+                .addContainerGap())
+        );
+        jPanel95Layout.setVerticalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel95Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbPhpYemaCake)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jRadioButton20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton20.setForeground(new java.awt.Color(209, 127, 45));
+        jRadioButton20.setText("Yema Cake");
+
+        btn6x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
+        btn6x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn6x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
+        btn6x2Yemacake.setText(" 6x2\"");
+
+        btn5x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
+        btn5x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn5x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
+        btn5x2Yemacake.setText("5x2\"");
+
+        btn4x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
+        btn4x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn4x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
+        btn4x2Yemacake.setText("4x2\"");
+
+        javax.swing.GroupLayout jPanel92Layout = new javax.swing.GroupLayout(jPanel92);
+        jPanel92.setLayout(jPanel92Layout);
+        jPanel92Layout.setHorizontalGroup(
+            jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel92Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel92Layout.createSequentialGroup()
+                        .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel92Layout.createSequentialGroup()
+                                .addComponent(jPanel95, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn6x2Yemacake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel92Layout.createSequentialGroup()
+                                .addComponent(btn5x2Yemacake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn4x2Yemacake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(3, 3, 3))))
+                    .addComponent(jRadioButton20))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel92Layout.setVerticalGroup(
+            jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jRadioButton20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel92Layout.createSequentialGroup()
+                        .addComponent(jPanel94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn6x2Yemacake, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn5x2Yemacake)
+                            .addComponent(btn4x2Yemacake)))
+                    .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51))
+        );
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -2847,7 +3002,8 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2884,7 +3040,9 @@ public class BeaPOS extends javax.swing.JFrame {
                     .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel92, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(358, Short.MAX_VALUE))
         );
 
@@ -2898,7 +3056,7 @@ public class BeaPOS extends javax.swing.JFrame {
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1148, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab1", jPanel71);
@@ -3925,33 +4083,33 @@ public class BeaPOS extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bentoCakeminusButtonActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void btnMinusCaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCaramelFlanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_btnMinusCaramelFlanActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void btnMinusCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCheesecakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_btnMinusCheesecakeActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void btnMinusSliceCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusSliceCheesecakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_btnMinusSliceCheesecakeActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void btnMinusMangoBravoTubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMangoBravoTubActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_btnMinusMangoBravoTubActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void btnMinusMiniCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMiniCupcakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_btnMinusMiniCupcakeActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+    private void btnMinusPiscesCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusPiscesCupcakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+    }//GEN-LAST:event_btnMinusPiscesCupcakeActionPerformed
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void btnMinusIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusIcingCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+    }//GEN-LAST:event_btnMinusIcingCakeActionPerformed
 
     private void btnMinusUbePandesalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusUbePandesalActionPerformed
         // TODO add your handling code here:
@@ -3977,13 +4135,13 @@ public class BeaPOS extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMinuMuffinActionPerformed
 
-    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+    private void btnMinusMinimalistCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMinimalistCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton42ActionPerformed
+    }//GEN-LAST:event_btnMinusMinimalistCakeActionPerformed
 
-    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+    private void btnMinusFondantCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusFondantCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton44ActionPerformed
+    }//GEN-LAST:event_btnMinusFondantCakeActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
  
@@ -3998,6 +4156,10 @@ public class BeaPOS extends javax.swing.JFrame {
     updateMangoPrice();
         
     }//GEN-LAST:event_addButtonMangoActionPerformed
+
+    private void btnMinusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusYemaCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinusYemaCakeActionPerformed
     
 
 
@@ -4053,53 +4215,69 @@ private void updateMangoPrice() {
     private javax.swing.JButton bentoCakeminusButton;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
+    private javax.swing.JToggleButton btn12PcsMiniCupcake;
+    private javax.swing.JToggleButton btn12PcsPisces;
+    private javax.swing.JToggleButton btn1pcPisces;
     private javax.swing.JToggleButton btn30PcsBrownies;
+    private javax.swing.JToggleButton btn3PcsPisces;
+    private javax.swing.JToggleButton btn4PcsPisces;
+    private javax.swing.JToggleButton btn4x2CaramelFlan;
+    private javax.swing.JToggleButton btn4x2Yemacake;
     private javax.swing.JToggleButton btn5PcsMilkyDonut;
+    private javax.swing.JToggleButton btn5x2CaramelFlan;
+    private javax.swing.JToggleButton btn5x2Yemacake;
     private javax.swing.JToggleButton btn6PcsBananaMuffin;
     private javax.swing.JToggleButton btn6PcsBrownies;
+    private javax.swing.JToggleButton btn6PcsMiniCupcake;
+    private javax.swing.JToggleButton btn6PcsPisces;
+    private javax.swing.JToggleButton btn6x2CaramelFlan;
+    private javax.swing.JToggleButton btn6x2Yemacake;
+    private javax.swing.JToggleButton btn8Cheesecake;
     private javax.swing.JToggleButton btnBoxof4ClassicCinnamon;
     private javax.swing.JToggleButton btnBoxof6ClassicCinnamon;
     private javax.swing.JButton btnBreadSweets1;
     private javax.swing.JButton btnCake;
+    private javax.swing.JToggleButton btnCustomeCakeIcingCake;
+    private javax.swing.JToggleButton btnMinimalistCakeCustomCake;
     private javax.swing.JButton btnMinuMuffin;
     private javax.swing.JButton btnMinusBananaLoaf;
     private javax.swing.JButton btnMinusBrownies;
+    private javax.swing.JButton btnMinusCaramelFlan;
+    private javax.swing.JButton btnMinusCheesecake;
     private javax.swing.JButton btnMinusClassicCinnamon;
+    private javax.swing.JButton btnMinusFondantCake;
+    private javax.swing.JButton btnMinusIcingCake;
+    private javax.swing.JButton btnMinusMangoBravoTub;
     private javax.swing.JButton btnMinusMilkyDonut;
+    private javax.swing.JButton btnMinusMiniCupcake;
+    private javax.swing.JButton btnMinusMinimalistCake;
+    private javax.swing.JButton btnMinusPiscesCupcake;
+    private javax.swing.JButton btnMinusSliceCheesecake;
     private javax.swing.JButton btnMinusUbePandesal;
+    private javax.swing.JButton btnMinusYemaCake;
     private javax.swing.JToggleButton btnMoistBananaChocoChipAlmondLoaf;
     private javax.swing.JToggleButton btnMoistBananaChocoChipLoaf;
     private javax.swing.JButton btnPlusBananaLoaf;
     private javax.swing.JButton btnPlusBrownies;
+    private javax.swing.JButton btnPlusCaramelFlan;
+    private javax.swing.JButton btnPlusCheesecake;
     private javax.swing.JButton btnPlusClassicCinnamon;
+    private javax.swing.JButton btnPlusFondantCake;
+    private javax.swing.JButton btnPlusIcingCake;
+    private javax.swing.JButton btnPlusMangoBravoTub;
+    private javax.swing.JButton btnPlusMangoBravotub;
     private javax.swing.JButton btnPlusMilkyDonut;
+    private javax.swing.JButton btnPlusMiniCupcake;
+    private javax.swing.JButton btnPlusMinimalistCake;
     private javax.swing.JButton btnPlusMuffin;
+    private javax.swing.JButton btnPlusPiscescupcake;
     private javax.swing.JButton btnPlusUbePandesal;
+    private javax.swing.JButton btnPlusYemaCake;
     private javax.swing.JToggleButton btnUbeCheesedesal;
     private javax.swing.JToggleButton btnUbeHalayaCheesedesal;
     private javax.swing.JLabel caramelFlanDeLecheCakePrice;
     private javax.swing.JLabel cheeseCakePrice;
     private javax.swing.JLabel customCakePrice;
-    private javax.swing.JLabel customCakePrice1;
-    private javax.swing.JLabel customCakePrice2;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -4107,7 +4285,6 @@ private void updateMangoPrice() {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -4133,32 +4310,24 @@ private void updateMangoPrice() {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel86;
@@ -4253,6 +4422,10 @@ private void updateMangoPrice() {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel90;
     private javax.swing.JPanel jPanel91;
+    private javax.swing.JPanel jPanel92;
+    private javax.swing.JPanel jPanel93;
+    private javax.swing.JPanel jPanel94;
+    private javax.swing.JPanel jPanel95;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton12;
@@ -4264,6 +4437,7 @@ private void updateMangoPrice() {
     private javax.swing.JRadioButton jRadioButton18;
     private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton7;
@@ -4272,43 +4446,43 @@ private void updateMangoPrice() {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JToggleButton jToggleButton10;
-    private javax.swing.JToggleButton jToggleButton15;
-    private javax.swing.JToggleButton jToggleButton16;
-    private javax.swing.JToggleButton jToggleButton17;
     private javax.swing.JToggleButton jToggleButton18;
     private javax.swing.JToggleButton jToggleButton19;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton22;
     private javax.swing.JToggleButton jToggleButton23;
     private javax.swing.JToggleButton jToggleButton24;
     private javax.swing.JToggleButton jToggleButton25;
     private javax.swing.JToggleButton jToggleButton26;
-    private javax.swing.JToggleButton jToggleButton27;
     private javax.swing.JToggleButton jToggleButton28;
     private javax.swing.JToggleButton jToggleButton29;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton30;
     private javax.swing.JToggleButton jToggleButton31;
-    private javax.swing.JToggleButton jToggleButton32;
-    private javax.swing.JToggleButton jToggleButton33;
-    private javax.swing.JToggleButton jToggleButton34;
-    private javax.swing.JToggleButton jToggleButton35;
-    private javax.swing.JToggleButton jToggleButton36;
-    private javax.swing.JToggleButton jToggleButton37;
-    private javax.swing.JToggleButton jToggleButton43;
-    private javax.swing.JToggleButton jToggleButton49;
     private javax.swing.JLabel lbPhpBananaLoaf;
     private javax.swing.JLabel lbPhpBrownies;
     private javax.swing.JLabel lbPhpClassicCinnamon;
+    private javax.swing.JLabel lbPhpFondantCake;
     private javax.swing.JLabel lbPhpMilkyDonut;
+    private javax.swing.JLabel lbPhpMinimalistCake;
     private javax.swing.JLabel lbPhpMuffin;
     private javax.swing.JLabel lbPhpUbePandesal;
+    private javax.swing.JLabel lbPhpYemaCake;
+    private javax.swing.JLabel lbQTY;
+    private javax.swing.JLabel lbQTy;
+    private javax.swing.JLabel lbQty;
+    private javax.swing.JLabel lbQtyMiniCupcake;
+    private javax.swing.JLabel lbqTY;
+    private javax.swing.JLabel lbqtY;
+    private javax.swing.JLabel lbqty;
     private javax.swing.JLabel lbzeroBananaLoaf;
     private javax.swing.JLabel lbzeroBrownies;
     private javax.swing.JLabel lbzeroClassicCinnamon;
     private javax.swing.JLabel lbzeroMilkyDonut;
     private javax.swing.JLabel lbzeroMuffin;
+    private javax.swing.JLabel lbzeroQTY;
+    private javax.swing.JLabel lbzeroQty;
     private javax.swing.JLabel lbzeroUbePandesal;
+    private javax.swing.JLabel lbzeroqty;
     private javax.swing.JToggleButton mangoBravo4x2button;
     private javax.swing.JToggleButton mangoBravo5x2button;
     private javax.swing.JToggleButton mangoBravo6x2button;
@@ -4336,7 +4510,6 @@ private void updateMangoPrice() {
     private javax.swing.JRadioButton strawberryshortcakeradioButton;
     private javax.swing.JButton strawberryshortminusbutton;
     private javax.swing.JButton strawberryshortplusbutton;
-    private javax.swing.JLabel toppingLabel;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }
