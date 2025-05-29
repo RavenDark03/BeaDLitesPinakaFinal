@@ -5370,9 +5370,9 @@
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="jToggleButton40" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jToggleButton41" alignment="0" max="32767" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="jToggleButton41" max="32767" attributes="0"/>
+                                                          <Component id="jToggleButton40" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jToggleButton44" min="-2" max="-2" attributes="0"/>
@@ -6168,6 +6168,7 @@
                                                           <Component id="jPanel83" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
+                                                  <Component id="jToggleButton50" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -6187,7 +6188,9 @@
                                                       <Component id="jPanel83" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jToggleButton50" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -6350,7 +6353,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php: 109"/>
+                                            <Property name="text" type="java.lang.String" value="Php: 0,00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -6364,6 +6367,20 @@
                                           <Color blue="2c" green="87" red="e1" type="rgb"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Banana Muffin"/>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JToggleButton" name="jToggleButton50">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Segoe UI" size="12" style="1"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="2c" green="87" red="e1" type="rgb"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="6 PCS"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>

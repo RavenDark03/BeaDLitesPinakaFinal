@@ -83,6 +83,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        txtPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(0, 0, 0));
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
