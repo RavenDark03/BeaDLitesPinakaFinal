@@ -32,31 +32,47 @@ public class BeaPOS extends javax.swing.JFrame {
     int bentoCakeQty = 0;
     int bentoCakeBasePrice = 0;
     
+    //chesecake
     int cheesecakeQuantity = 0;
     int cheesecakeBasePrice = 0;
     
+    //caramel flan de leche
     int caramelFlanQty = 0;
     int caramelFlanBasePrice = 0;
     
+    //mango bravo tub
     int mangoBravoTubQty = 0;
     int mangoBravoTubBasePrice = 0;
     
+    //slice cheese cake
     int slicecheesecakeQty = 0;
     int slicecheesecakeBasePrice = 0;
     
+    //mini cupcakes
     int miniCupcakesQty = 0;
     int miniCupcakesBasePrice = 0;
     
+    //pisces cupcakes
     int piscesCupcakesQty = 0;
     int piscesCupcakesBasePrice = 0;
     
+    //yema cake
     int yemaCakeQty = 0;
     int yemaCakeBasePrice = 0;
     
+    //ube pandesal
     int ubePandesalQty = 0;
     int ubePandesalBasePrice = 0;
     
+    //banana loaf
+    int bananaLoafQty = 0;
+    int bananaLoafBasePrice = 0;
     
+    //brownies
+    int browniesQty = 0;
+    int browniesBasePrice = 0;
+    
+    //classic cinnamon
     
 
 
@@ -211,8 +227,37 @@ public class BeaPOS extends javax.swing.JFrame {
         updateCheesePandesalPrice();
     });
     btnUbeHalayaCheesedesal.addActionListener(e->{
-        ubePandesalBasePrice = 170;
+        ubePandesalBasePrice = 185;
         updateCheesePandesalPrice();
+    });
+    
+    //bananaloaf 
+    btnMoistBananaChocoChipLoaf.addActionListener(e->{
+        bananaLoafBasePrice =  160;
+        updateBananaLoafPrice();
+    });
+    btnMoistBananaChocoChipAlmondLoaf.addActionListener(e->{
+        bananaLoafBasePrice =  190;
+        updateBananaLoafPrice();
+    });
+    
+    //brownies
+    btn6PcsBrownies.addActionListener(e->{
+        browniesBasePrice = 150;
+        updateBrowniesPrice();
+    });
+    btn12PcsBrownies.addActionListener(e->{
+        browniesBasePrice = 280;
+        updateBrowniesPrice();
+    });
+    btn30PcsBrownies.addActionListener(e->{
+        browniesBasePrice = 750;
+        updateBrowniesPrice();
+    });
+    
+    //classicCinnamon
+    btnBoxof4ClassicCinnamon.addActionListener(e->{
+        
     });
     
     
@@ -3313,7 +3358,7 @@ public class BeaPOS extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab1", jPanel71);
+        jTabbedPane1.addTab("cakes", jPanel71);
 
         jScrollPane2.setBorder(null);
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -3518,6 +3563,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusBananaLoaf.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusBananaLoaf.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusBananaLoaf.setText("+");
+        btnPlusBananaLoaf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusBananaLoafActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
         jPanel65.setLayout(jPanel65Layout);
@@ -3663,6 +3713,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusBrownies.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusBrownies.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusBrownies.setText("+");
+        btnPlusBrownies.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusBrowniesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
         jPanel69.setLayout(jPanel69Layout);
@@ -4256,7 +4311,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab2", jPanel11);
+        jTabbedPane1.addTab("breads", jPanel11);
 
         jPanel3.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 20, 930, 730));
 
@@ -4356,6 +4411,15 @@ public class BeaPOS extends javax.swing.JFrame {
          int total = (ubePandesalBasePrice) * ubePandesalQty;
          lbPhpUbePandesal.setText("Php: " + total + ".00");
     }
+    private void updateBananaLoafPrice(){
+        int total  = (bananaLoafBasePrice)* bananaLoafQty;
+        lbPhpBananaLoaf.setText("Php: " + total + ".00");
+    }
+    private void updateBrowniesPrice(){
+        int total = (browniesBasePrice) * browniesQty;
+        lbPhpBrownies.setText("Php" + total + ".00");
+    }
+    
     
     
     
@@ -4473,15 +4537,25 @@ public class BeaPOS extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinusIcingCakeActionPerformed
 
     private void btnMinusUbePandesalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusUbePandesalActionPerformed
-       
+       if(ubePandesalQty>0){
+           ubePandesalQty--;
+           lbzeroUbePandesal.setText(String.valueOf(ubePandesalQty));
+           updateCheesePandesalPrice();
+       }
     }//GEN-LAST:event_btnMinusUbePandesalActionPerformed
 
     private void btnMinusBananaLoafActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusBananaLoafActionPerformed
-        // TODO add your handling code here:
+        if(bananaLoafQty>0){
+            bananaLoafQty--;
+            lbzeroBananaLoaf.setText(String.valueOf(bananaLoafQty));
+        }
     }//GEN-LAST:event_btnMinusBananaLoafActionPerformed
 
     private void btnMinusBrowniesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusBrowniesActionPerformed
-        // TODO add your handling code here:
+       if(browniesQty>0){
+           browniesQty--;
+           lbzeroBrownies.setText(String.valueOf(browniesQty));
+       }
     }//GEN-LAST:event_btnMinusBrowniesActionPerformed
 
     private void btnMinusClassicCinnamonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusClassicCinnamonActionPerformed
@@ -4603,6 +4677,16 @@ public class BeaPOS extends javax.swing.JFrame {
         lbzeroUbePandesal.setText(String.valueOf(ubePandesalQty));
         updateCheesePandesalPrice();
     }//GEN-LAST:event_btnPlusUbePandesalActionPerformed
+
+    private void btnPlusBananaLoafActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusBananaLoafActionPerformed
+        bananaLoafQty++;
+        lbzeroBananaLoaf.setText(String.valueOf(bananaLoafQty));
+    }//GEN-LAST:event_btnPlusBananaLoafActionPerformed
+
+    private void btnPlusBrowniesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusBrowniesActionPerformed
+        browniesQty++;
+        lbzeroBrownies.setText(String.valueOf(browniesQty));
+    }//GEN-LAST:event_btnPlusBrowniesActionPerformed
     
 
 
