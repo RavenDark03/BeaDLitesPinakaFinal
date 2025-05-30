@@ -93,7 +93,7 @@ public class BeaPOS extends javax.swing.JFrame {
     int bananaMuffinQty = 0;
     int bananaMuffinBasePrice = 0;
     
-    
+    private String mangoBravocurrentSelectedSize = "4x2";
     
    
 
@@ -131,20 +131,23 @@ public class BeaPOS extends javax.swing.JFrame {
     // mango bravo action listeners
     mangoBravo6x2button.addActionListener(e -> { // 6x2
     mangoBasePrice = 699;
+    mangoBravocurrentSelectedSize = "6x2";
     updateMangoPrice();
-    updateMangoBravoBill("6x2");
+    
     });
     
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
+    mangoBravocurrentSelectedSize = "5x2";
     updateMangoPrice();
-    updateMangoBravoBill("5x2");
+    
     });
     
     mangoBravo4x2button.addActionListener(e -> { // 4x2
     mangoBasePrice = 299;
+    mangoBravocurrentSelectedSize = "4x2";
     updateMangoPrice();
-    updateMangoBravoBill("4x2");
+    
     });
 
     
@@ -332,7 +335,7 @@ public class BeaPOS extends javax.swing.JFrame {
     //methods for actionListeners
 
 
-public void updateMangoBravoBill(String selectedSize, int quantity) {
+public void updateMangoBravoBill(String selectedSize) {
     String productName = "Mango Bravo";
     
     double unitPrice = 0.0;
@@ -4328,6 +4331,7 @@ public void updateMangoBravoBill(String selectedSize, int quantity) {
            mangoQty--;
            mangoBravoQuantity.setText(String.valueOf(mangoQty));
            updateMangoPrice();
+           updateMangoBravoBill(mangoBravocurrentSelectedSize);
            
        }
     
