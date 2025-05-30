@@ -13,8 +13,8 @@ import javax.mail.MessagingException;
 public class ReceiptGenerator {
     public static void main(String[] args) {
         // Test email details
-        String recipientEmail = "edgarharryquindoza@gmail.com"; // Replace with actual email
-        String emailSubject = "Test Receipt from Java Application";
+        String recipientEmail = "quindozaebea@gmail.com"; // Replace with actual email
+        String emailSubject = "Receipt";
         String receipt = """
                          <html lang="en">
                          <head>
@@ -72,7 +72,7 @@ public class ReceiptGenerator {
                              </div>
                          
                              <div class="receipt-details">
-                               <p><strong>Customer:</strong> Edgar Quindoza</p>
+                               <p><strong>Customer:</strong> Bea Quindoza </p>
                              </div>
                          
                              <table class="items">
@@ -95,9 +95,9 @@ public class ReceiptGenerator {
                                    <td style="text-align:right;">₱95</td>
                                  </tr>
                                  <tr>
-                                   <td>Macarons (Box of 6)</td>
+                                   <td>Banana Muffins (Box of 6)</td>
                                    <td>1</td>
-                                   <td style="text-align:right;">₱180</td>
+                                   <td style="text-align:right;">₱109</td>
                                  </tr>
                                </tbody>
                              </table>
