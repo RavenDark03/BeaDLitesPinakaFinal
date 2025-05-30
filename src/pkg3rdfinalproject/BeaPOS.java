@@ -12,6 +12,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -20,6 +22,8 @@ import javax.swing.JPanel;
 public class BeaPOS extends javax.swing.JFrame {
     
    
+    
+    
 
     //mango bravo
     int mangoQty = 0;
@@ -90,7 +94,6 @@ public class BeaPOS extends javax.swing.JFrame {
     int bananaMuffinBasePrice = 0;
     
     
-   
     
    
 
@@ -102,8 +105,9 @@ public class BeaPOS extends javax.swing.JFrame {
      */
     
     
+    
 
-
+    String mangoBravoProductName = "Mango Bravo";
     
     
     
@@ -119,24 +123,28 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
         
-        
-        
-        
+    LocalDate today = LocalDate.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+    String formattedDate = today.format(formatter);
+    dateLabel.setText(formattedDate);
         
     // mango bravo action listeners
     mangoBravo6x2button.addActionListener(e -> { // 6x2
     mangoBasePrice = 699;
     updateMangoPrice();
+    updateMangoBravoBill("6x2");
     });
     
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
     updateMangoPrice();
+    updateMangoBravoBill("5x2");
     });
     
     mangoBravo4x2button.addActionListener(e -> { // 4x2
     mangoBasePrice = 299;
     updateMangoPrice();
+    updateMangoBravoBill("4x2");
     });
 
     
@@ -306,10 +314,78 @@ public class BeaPOS extends javax.swing.JFrame {
         updateBananaMuffinPrice();
     });
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //actionlisteners for radiobuttons
-
+    
     
       }
+    //methods for actionListeners
+    // Assume you have a variable called selectedSize holding the selected size as a String
+// You can call this function in the ActionListener for each size button
+
+public void updateMangoBravoBill(String selectedSize) {
+    String productName = "Mango Bravo";
+    int quantity = 1; // or get from your logic
+    double unitPrice = 0.0;
+    String size = "";
+
+    switch(selectedSize) {
+        case "6x2":
+            size = "6 x 2\"";
+            unitPrice = 699.00;
+            break;
+        case "5x2":
+            size = "5 x 2\"";
+            unitPrice = 399.00;
+            break;
+        case "4x2":
+            size = "4 x 2\"";
+            unitPrice = 299.00;
+            break;
+        default:
+            size = "Unknown Size";
+            unitPrice = 0.0;
+            break;
+    }
+
+    double subtotal = quantity * unitPrice;
+
+    productNameLabel.setText(productName);
+    quantityLabel.setText(String.valueOf(quantity));
+    sizeorVariationLabel.setText(size);
+    subTotalamountlabel.setText(String.format("₱%.2f", subtotal));
+    totalAmountLabel.setText(String.format("₱%.2f", subtotal));
+    
+    mangoRadioButton.addActionListener(e -> {
+    productNameLabel.setText(mangoBravoProductName);
+    quantityLabel.setText(String.valueOf(mangoQty));
+    sizeorVariationLabel.setText(selectedSize);
+    subTotalamountlabel.setText(String.format("₱%.2f", subtotal));
+    totalAmountLabel.setText(String.format("₱%.2f", subtotal));
+});
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     private void confirmExit(){
         int choice = JOptionPane.showConfirmDialog(this,"Are you sure you want to Exit?", "Exit",JOptionPane.YES_NO_OPTION);
@@ -759,8 +835,9 @@ public class BeaPOS extends javax.swing.JFrame {
         BillLabel.setForeground(new java.awt.Color(225, 135, 44));
         BillLabel.setText("Bill");
 
-        dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(225, 135, 44));
+        dateLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         dateLabel.setText("day");
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -837,8 +914,8 @@ public class BeaPOS extends javax.swing.JFrame {
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(BillLabel)
-                        .addGap(125, 125, 125)
-                        .addComponent(dateLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
