@@ -330,12 +330,11 @@ public class BeaPOS extends javax.swing.JFrame {
     
       }
     //methods for actionListeners
-    // Assume you have a variable called selectedSize holding the selected size as a String
-// You can call this function in the ActionListener for each size button
 
-public void updateMangoBravoBill(String selectedSize) {
+
+public void updateMangoBravoBill(String selectedSize, int quantity) {
     String productName = "Mango Bravo";
-    int quantity = 1; // or get from your logic
+    
     double unitPrice = 0.0;
     String size = "";
 
@@ -4329,6 +4328,7 @@ public void updateMangoBravoBill(String selectedSize) {
            mangoQty--;
            mangoBravoQuantity.setText(String.valueOf(mangoQty));
            updateMangoPrice();
+           
        }
     
     }//GEN-LAST:event_minusButtonMangoActionPerformed
@@ -4463,9 +4463,8 @@ public void updateMangoBravoBill(String selectedSize) {
 
     private void addButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonMangoActionPerformed
     mangoQty++;
-    mangoBravoQuantity.setText(String.valueOf(mangoQty));
-    updateMangoPrice();
-        
+    updateMangoBravoBill(currentSelectedSize); 
+    
     }//GEN-LAST:event_addButtonMangoActionPerformed
 
     private void btnMinusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusYemaCakeActionPerformed
