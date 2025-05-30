@@ -5,17 +5,19 @@
 package pkg3rdfinalproject;
 
 import javax.swing.JOptionPane;
+import pkg3rdfinalproject.BeaPOS;
+import pkg3rdfinalproject.Login;
 
 /**
  *
  * @author A315
  */
-public class MainFrameDashBoard extends javax.swing.JFrame {
+public class MainFrameDashBoard1 extends javax.swing.JFrame {
 
     /**
      * Creates new form 
      */
-    public MainFrameDashBoard() {
+    public MainFrameDashBoard1() {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
@@ -2066,11 +2068,10 @@ public class MainFrameDashBoard extends javax.swing.JFrame {
                     .addComponent(jLabel100))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(OrdersGmailofCustomer)
                     .addComponent(OrdersCity))
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(OrdersNumberCashGcash, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4425,20 +4426,21 @@ public class MainFrameDashBoard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrameDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrameDashBoard1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrameDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrameDashBoard1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrameDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrameDashBoard1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrameDashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrameDashBoard1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrameDashBoard().setVisible(true);
+                new MainFrameDashBoard1().setVisible(true);
             }
         });
     }
