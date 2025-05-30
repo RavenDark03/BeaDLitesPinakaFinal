@@ -14,7 +14,7 @@ import javax.mail.internet.*;
  */
 public class JavaMailSender {
     private static final String USERNAME = "beadlites859@gmail.com";
-    private static final String PASSWORD = "mitf lyfg laqq glwb"; 
+    private static final String PASSWORD = "dxcz levj dqqs uelu"; 
 
     public static void sendHtmlEmail(String to, String subject, String htmlBody) throws MessagingException {
 

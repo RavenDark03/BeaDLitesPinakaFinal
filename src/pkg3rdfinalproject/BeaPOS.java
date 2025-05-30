@@ -5,6 +5,9 @@
 package pkg3rdfinalproject;
 
 import java.awt.Color;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,10 +15,54 @@ import java.awt.Color;
  */
 public class BeaPOS extends javax.swing.JFrame {
 
+    
+    //mango bravo
     int mangoQty = 0;
     int mangoBasePrice = 0;
-    int mangoToppingPrice = 0;
+    
+    // RedVelvet
+    int redVelvetQty = 0;
+    int redVelvetBasePrice = 0;
 
+    // StrawberryShortcake
+    int strawberryShortcakeQty = 0;
+    int strawberryShortcakeBasePrice = 0;
+
+    //bento cake
+    int bentoCakeQty = 0;
+    int bentoCakeBasePrice = 0;
+    
+    int cheesecakeQuantity = 0;
+    int cheesecakeBasePrice = 0;
+    
+    int caramelFlanQty = 0;
+    int caramelFlanBasePrice = 0;
+    
+    int mangoBravoTubQty = 0;
+    int mangoBravoTubBasePrice = 0;
+    
+    int slicecheesecakeQty = 0;
+    int slicecheesecakeBasePrice = 0;
+    
+    int miniCupcakesQty = 0;
+    int miniCupcakesBasePrice = 0;
+    
+    int piscesCupcakesQty = 0;
+    int piscesCupcakesBasePrice = 0;
+    
+    int yemaCakeQty = 0;
+    int yemaCakeBasePrice = 0;
+    
+    int ubePandesalQty = 0;
+    int ubePandesalBasePrice = 0;
+    
+    
+    
+
+
+
+
+    
     /**
      * Creates new form BeaPOS
      */
@@ -24,29 +71,162 @@ public class BeaPOS extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         
+        addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent e){
+                confirmExit();
+            }
+        });
+        
+        
+        
+        
+        
+    // mango bravo action listeners
     mangoBravo6x2button.addActionListener(e -> { // 6x2
     mangoBasePrice = 699;
     updateMangoPrice();
-});
+    });
+    
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
     updateMangoPrice();
-});
+    });
+    
     mangoBravo4x2button.addActionListener(e -> { // 4x2
     mangoBasePrice = 299;
     updateMangoPrice();
-});
+    });
 
-    mangoToppings.addActionListener(e -> {
-    if (mangoToppings.isSelected()) {
-        mangoToppingPrice = 0;
-    } else {
-        mangoToppingPrice = 0;
-    }
-    updateMangoPrice();
-});
+    
+    //red velvet action listeners
+    redVelvet6x2sizebutton.addActionListener(e->{
+    redVelvetBasePrice = 799;
+    updateRedVelvetPrice();
+    });
+    
+    redVelvet5x2sizeButton.addActionListener(e->{
+    redVelvetBasePrice = 499;
+    updateRedVelvetPrice();
+    });
+    
+    
+    //strawberry shortcake listeners
+    strawberryshortcake4x3sizebtn.addActionListener(e->{
+    strawberryShortcakeBasePrice = 299;
+    updateStrawberryShortPrice();    
+    });
+    
+    strawberryshortcake5x3sizebtn.addActionListener(e->{
+    strawberryShortcakeBasePrice = 499;
+    updateStrawberryShortPrice();  
+    });
+    strawberryshortcake6x3sizebtn.addActionListener(e->{
+    strawberryShortcakeBasePrice = 699;    
+    });
+    strawberryshortcake8x3sizebtn.addActionListener(e->{
+    strawberryShortcakeBasePrice = 999; 
+    updateStrawberryShortPrice();     
+    });
+    
+    
+    //bento cake listener
+    bentoCakeSizebutton.addActionListener(e->{
+    bentoCakeBasePrice = 340; 
+    updateBentoCakePrice();     
+    });
+    
+    //chesecake 
+    btn8Cheesecake.addActionListener(e->{
+    cheesecakeBasePrice = 1400; 
+    updateCheeseCakePrice();     
+    });
+    
+    //caramel de leche flan 
+    btn6x2CaramelFlan.addActionListener(e->{
+        caramelFlanBasePrice = 699;
+        updateCaramelLechePrice();
+        
+    });
+    btn5x2CaramelFlan.addActionListener(e->{
+        caramelFlanBasePrice = 399;
+        updateCaramelLechePrice();
+    });
+    btn4x2CaramelFlan.addActionListener(e->{
+        caramelFlanBasePrice = 299;
+        updateCaramelLechePrice();
+    });
+    
+    //mini cupcakes
+    btn6PcsMiniCupcake.addActionListener(e->{
+        miniCupcakesBasePrice = 98;
+        updateMiniCupcakesPrice();
+        
+    });
+    btn12PcsMiniCupcake.addActionListener(e->{
+        miniCupcakesBasePrice = 169;
+        updateMiniCupcakesPrice();
+    });
+    
+    //pisces cupcakes
+    btn1pcPisces.addActionListener(e->{ 
+        piscesCupcakesBasePrice = 55;
+        updatePiscesCupcakesPrice();        
+    });
+    btn3PcsPisces.addActionListener(e->{ 
+        piscesCupcakesBasePrice = 99;
+        updatePiscesCupcakesPrice();        
+    });
+    btn4PcsPisces.addActionListener(e->{ 
+        piscesCupcakesBasePrice = 149;
+        updatePiscesCupcakesPrice();        
+    });
+    btn6PcsPisces.addActionListener(e->{ 
+        piscesCupcakesBasePrice = 300;
+        updatePiscesCupcakesPrice();        
+    });
+    btn12PcsPisces.addActionListener(e->{ 
+        piscesCupcakesBasePrice = 600;
+        updatePiscesCupcakesPrice();        
+    });
+    
+    //yema cake
+    btn6x2Yemacake.addActionListener(e->{
+        yemaCakeBasePrice = 699;
+        updateYemaCakePrice();
+    });
+    btn6x2Yemacake.addActionListener(e->{
+        yemaCakeBasePrice = 399;
+        updateYemaCakePrice();
+    });
+    btn6x2Yemacake.addActionListener(e->{
+        yemaCakeBasePrice = 299;
+        updateYemaCakePrice();
+    });
+    
+    
+    //ube pandesal 
+    btnUbeCheesedesal.addActionListener(e->{
+        ubePandesalBasePrice = 170;
+        updateCheesePandesalPrice();
+    });
+    btnUbeHalayaCheesedesal.addActionListener(e->{
+        ubePandesalBasePrice = 170;
+        updateCheesePandesalPrice();
+    });
+    
+    
+    
 
     }
+    private void confirmExit(){
+        int choice = JOptionPane.showConfirmDialog(this,"Are you sure you want to Exit?", "Exit",JOptionPane.YES_NO_OPTION);
+        if(choice == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,9 +304,9 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
+        Jpanel = new javax.swing.JPanel();
         redVelvetMinusButton = new javax.swing.JButton();
-        jLabel46 = new javax.swing.JLabel();
+        redvelvetlabel = new javax.swing.JLabel();
         RedVelvetPlusButton = new javax.swing.JButton();
         jPanel22 = new javax.swing.JPanel();
         redVelvetCakePrice = new javax.swing.JLabel();
@@ -138,7 +318,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         strawberryshortminusbutton = new javax.swing.JButton();
-        jLabel50 = new javax.swing.JLabel();
+        strawberyshortcakelbl = new javax.swing.JLabel();
         strawberryshortplusbutton = new javax.swing.JButton();
         jPanel26 = new javax.swing.JPanel();
         strawberryShortCakePrice = new javax.swing.JLabel();
@@ -154,7 +334,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel82 = new javax.swing.JLabel();
         jPanel53 = new javax.swing.JPanel();
         bentoCakeminusButton = new javax.swing.JButton();
-        jLabel83 = new javax.swing.JLabel();
+        bentocakelbl = new javax.swing.JLabel();
         bentoCakePlusButton = new javax.swing.JButton();
         jPanel54 = new javax.swing.JPanel();
         bentoCakePrice = new javax.swing.JLabel();
@@ -165,7 +345,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel53 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         btnMinusCaramelFlan = new javax.swing.JButton();
-        lbqty = new javax.swing.JLabel();
+        lbqtycaramelflan = new javax.swing.JLabel();
         btnPlusCaramelFlan = new javax.swing.JButton();
         jPanel30 = new javax.swing.JPanel();
         caramelFlanDeLecheCakePrice = new javax.swing.JLabel();
@@ -181,7 +361,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel58 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         btnMinusCheesecake = new javax.swing.JButton();
-        lbQty = new javax.swing.JLabel();
+        lblquantitycheesecake = new javax.swing.JLabel();
         btnPlusCheesecake = new javax.swing.JButton();
         jPanel34 = new javax.swing.JPanel();
         cheeseCakePrice = new javax.swing.JLabel();
@@ -197,8 +377,8 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel63 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
         btnMinusSliceCheesecake = new javax.swing.JButton();
-        lbQTy = new javax.swing.JLabel();
-        btnPlusMangoBravotub = new javax.swing.JButton();
+        slicecheesecakelblqty = new javax.swing.JLabel();
+        btnPlusSliceCheesecake = new javax.swing.JButton();
         jPanel38 = new javax.swing.JPanel();
         sliceCheesecakePrice = new javax.swing.JLabel();
         jToggleButton28 = new javax.swing.JToggleButton();
@@ -212,7 +392,7 @@ public class BeaPOS extends javax.swing.JFrame {
         jLabel68 = new javax.swing.JLabel();
         jPanel41 = new javax.swing.JPanel();
         btnMinusMangoBravoTub = new javax.swing.JButton();
-        lbQTY = new javax.swing.JLabel();
+        mangobravotublblqty = new javax.swing.JLabel();
         btnPlusMangoBravoTub = new javax.swing.JButton();
         jPanel42 = new javax.swing.JPanel();
         mangoBravoTubPrice = new javax.swing.JLabel();
@@ -276,12 +456,13 @@ public class BeaPOS extends javax.swing.JFrame {
         jPanel91 = new javax.swing.JPanel();
         lbPhpFondantCake = new javax.swing.JLabel();
         jRadioButton19 = new javax.swing.JRadioButton();
+        btnCustomFondantCake1 = new javax.swing.JToggleButton();
         jPanel92 = new javax.swing.JPanel();
         jPanel93 = new javax.swing.JPanel();
         jLabel73 = new javax.swing.JLabel();
         jPanel94 = new javax.swing.JPanel();
         btnMinusYemaCake = new javax.swing.JButton();
-        lbqTY = new javax.swing.JLabel();
+        yemaCakeLabelQty = new javax.swing.JLabel();
         btnPlusYemaCake = new javax.swing.JButton();
         jPanel95 = new javax.swing.JPanel();
         lbPhpYemaCake = new javax.swing.JLabel();
@@ -999,7 +1180,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel18.setBackground(new java.awt.Color(255, 204, 102));
+        Jpanel.setBackground(new java.awt.Color(255, 204, 102));
 
         redVelvetMinusButton.setBackground(new java.awt.Color(255, 204, 102));
         redVelvetMinusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1011,35 +1192,40 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel46.setText("0");
+        redvelvetlabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        redvelvetlabel.setForeground(new java.awt.Color(225, 135, 44));
+        redvelvetlabel.setText("0");
 
         RedVelvetPlusButton.setBackground(new java.awt.Color(255, 204, 102));
         RedVelvetPlusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         RedVelvetPlusButton.setForeground(new java.awt.Color(225, 135, 44));
         RedVelvetPlusButton.setText("+");
+        RedVelvetPlusButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RedVelvetPlusButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        javax.swing.GroupLayout JpanelLayout = new javax.swing.GroupLayout(Jpanel);
+        Jpanel.setLayout(JpanelLayout);
+        JpanelLayout.setHorizontalGroup(
+            JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(redVelvetMinusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel46)
+                .addComponent(redvelvetlabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(RedVelvetPlusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        JpanelLayout.setVerticalGroup(
+            JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpanelLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(redVelvetMinusButton)
-                    .addComponent(jLabel46)
+                    .addComponent(redvelvetlabel)
                     .addComponent(RedVelvetPlusButton))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1092,7 +1278,7 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Jpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(redVelvetRadioButton)
                     .addGroup(jPanel16Layout.createSequentialGroup()
@@ -1108,7 +1294,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Jpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(126, 126, 126))
@@ -1156,14 +1342,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel50.setText("0");
+        strawberyshortcakelbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        strawberyshortcakelbl.setForeground(new java.awt.Color(225, 135, 44));
+        strawberyshortcakelbl.setText("0");
 
         strawberryshortplusbutton.setBackground(new java.awt.Color(255, 204, 102));
         strawberryshortplusbutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         strawberryshortplusbutton.setForeground(new java.awt.Color(225, 135, 44));
         strawberryshortplusbutton.setText("+");
+        strawberryshortplusbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                strawberryshortplusbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -1173,7 +1364,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(strawberryshortminusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel50)
+                .addComponent(strawberyshortcakelbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(strawberryshortplusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1184,7 +1375,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(strawberryshortminusbutton)
-                    .addComponent(jLabel50)
+                    .addComponent(strawberyshortcakelbl)
                     .addComponent(strawberryshortplusbutton))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1341,14 +1532,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        jLabel83.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel83.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel83.setText("0");
+        bentocakelbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bentocakelbl.setForeground(new java.awt.Color(225, 135, 44));
+        bentocakelbl.setText("0");
 
         bentoCakePlusButton.setBackground(new java.awt.Color(255, 204, 102));
         bentoCakePlusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         bentoCakePlusButton.setForeground(new java.awt.Color(225, 135, 44));
         bentoCakePlusButton.setText("+");
+        bentoCakePlusButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bentoCakePlusButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
         jPanel53.setLayout(jPanel53Layout);
@@ -1358,7 +1554,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(bentoCakeminusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel83)
+                .addComponent(bentocakelbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bentoCakePlusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1369,7 +1565,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bentoCakeminusButton)
-                    .addComponent(jLabel83)
+                    .addComponent(bentocakelbl)
                     .addComponent(bentoCakePlusButton))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1379,7 +1575,7 @@ public class BeaPOS extends javax.swing.JFrame {
         bentoCakePrice.setBackground(new java.awt.Color(255, 255, 153));
         bentoCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         bentoCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakePrice.setText("Php 0,00");
+        bentoCakePrice.setText("Php 0.00");
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -1481,14 +1677,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        lbqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbqty.setForeground(new java.awt.Color(225, 135, 44));
-        lbqty.setText("0");
+        lbqtycaramelflan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbqtycaramelflan.setForeground(new java.awt.Color(225, 135, 44));
+        lbqtycaramelflan.setText("0");
 
         btnPlusCaramelFlan.setBackground(new java.awt.Color(255, 204, 102));
         btnPlusCaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusCaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusCaramelFlan.setText("+");
+        btnPlusCaramelFlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusCaramelFlanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -1498,7 +1699,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnMinusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(lbqty)
+                .addComponent(lbqtycaramelflan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPlusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1509,7 +1710,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMinusCaramelFlan)
-                    .addComponent(lbqty)
+                    .addComponent(lbqtycaramelflan)
                     .addComponent(btnPlusCaramelFlan))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1546,6 +1747,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btn6x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn6x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
         btn6x2CaramelFlan.setText(" 6x2\"");
+        btn6x2CaramelFlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6x2CaramelFlanActionPerformed(evt);
+            }
+        });
 
         btn5x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
         btn5x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -1662,14 +1868,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        lbQty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbQty.setForeground(new java.awt.Color(225, 135, 44));
-        lbQty.setText("0");
+        lblquantitycheesecake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblquantitycheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        lblquantitycheesecake.setText("0");
 
         btnPlusCheesecake.setBackground(new java.awt.Color(255, 204, 102));
         btnPlusCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusCheesecake.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusCheesecake.setText("+");
+        btnPlusCheesecake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusCheesecakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -1679,7 +1890,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnMinusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(lbQty)
+                .addComponent(lblquantitycheesecake)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPlusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1690,7 +1901,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMinusCheesecake)
-                    .addComponent(lbQty)
+                    .addComponent(lblquantitycheesecake)
                     .addComponent(btnPlusCheesecake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1699,7 +1910,7 @@ public class BeaPOS extends javax.swing.JFrame {
 
         cheeseCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cheeseCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        cheeseCakePrice.setText("Php: 0,00");
+        cheeseCakePrice.setText("Php: 0.00");
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1722,6 +1933,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btn8Cheesecake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn8Cheesecake.setForeground(new java.awt.Color(225, 135, 44));
         btn8Cheesecake.setText("8\"");
+        btn8Cheesecake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8CheesecakeActionPerformed(evt);
+            }
+        });
 
         jToggleButton23.setBackground(new java.awt.Color(255, 255, 153));
         jToggleButton23.setForeground(new java.awt.Color(255, 204, 102));
@@ -1837,14 +2053,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        lbQTy.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbQTy.setForeground(new java.awt.Color(225, 135, 44));
-        lbQTy.setText("0");
+        slicecheesecakelblqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        slicecheesecakelblqty.setForeground(new java.awt.Color(225, 135, 44));
+        slicecheesecakelblqty.setText("0");
 
-        btnPlusMangoBravotub.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusMangoBravotub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusMangoBravotub.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusMangoBravotub.setText("+");
+        btnPlusSliceCheesecake.setBackground(new java.awt.Color(255, 204, 102));
+        btnPlusSliceCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPlusSliceCheesecake.setForeground(new java.awt.Color(225, 135, 44));
+        btnPlusSliceCheesecake.setText("+");
+        btnPlusSliceCheesecake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusSliceCheesecakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
@@ -1854,9 +2075,9 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnMinusSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(lbQTy)
+                .addComponent(slicecheesecakelblqty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusMangoBravotub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPlusSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel37Layout.setVerticalGroup(
@@ -1865,8 +2086,8 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMinusSliceCheesecake)
-                    .addComponent(lbQTy)
-                    .addComponent(btnPlusMangoBravotub))
+                    .addComponent(slicecheesecakelblqty)
+                    .addComponent(btnPlusSliceCheesecake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -1875,7 +2096,7 @@ public class BeaPOS extends javax.swing.JFrame {
         sliceCheesecakePrice.setBackground(new java.awt.Color(255, 204, 102));
         sliceCheesecakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         sliceCheesecakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        sliceCheesecakePrice.setText("Php: 175");
+        sliceCheesecakePrice.setText("Php: 0.00");
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -2004,14 +2225,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        lbQTY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbQTY.setForeground(new java.awt.Color(225, 135, 44));
-        lbQTY.setText("0");
+        mangobravotublblqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mangobravotublblqty.setForeground(new java.awt.Color(225, 135, 44));
+        mangobravotublblqty.setText("0");
 
         btnPlusMangoBravoTub.setBackground(new java.awt.Color(255, 204, 102));
         btnPlusMangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusMangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusMangoBravoTub.setText("+");
+        btnPlusMangoBravoTub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusMangoBravoTubActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -2021,7 +2247,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnMinusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbQTY)
+                .addComponent(mangobravotublblqty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPlusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -2032,7 +2258,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMinusMangoBravoTub)
-                    .addComponent(lbQTY)
+                    .addComponent(mangobravotublblqty)
                     .addComponent(btnPlusMangoBravoTub))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -2043,7 +2269,7 @@ public class BeaPOS extends javax.swing.JFrame {
         mangoBravoTubPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         mangoBravoTubPrice.setForeground(new java.awt.Color(225, 135, 44));
         mangoBravoTubPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mangoBravoTubPrice.setText("Php 170");
+        mangoBravoTubPrice.setText("Php 0.00");
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -2141,6 +2367,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusMiniCupcake.setText("+");
+        btnPlusMiniCupcake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusMiniCupcakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -2290,6 +2521,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusPiscescupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusPiscescupcake.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusPiscescupcake.setText("+");
+        btnPlusPiscescupcake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusPiscescupcakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
@@ -2320,7 +2556,7 @@ public class BeaPOS extends javax.swing.JFrame {
         piscesCupcakesPrice.setBackground(new java.awt.Color(255, 255, 153));
         piscesCupcakesPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         piscesCupcakesPrice.setForeground(new java.awt.Color(225, 135, 44));
-        piscesCupcakesPrice.setText("Php 0,00");
+        piscesCupcakesPrice.setText("Php 0.00");
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
@@ -2464,6 +2700,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusIcingCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusIcingCake.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusIcingCake.setText("+");
+        btnPlusIcingCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusIcingCakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -2789,6 +3030,11 @@ public class BeaPOS extends javax.swing.JFrame {
         jRadioButton19.setForeground(new java.awt.Color(209, 127, 45));
         jRadioButton19.setText("Fondant Cake");
 
+        btnCustomFondantCake1.setBackground(new java.awt.Color(255, 255, 153));
+        btnCustomFondantCake1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCustomFondantCake1.setForeground(new java.awt.Color(225, 135, 44));
+        btnCustomFondantCake1.setText("Custom Cake");
+
         javax.swing.GroupLayout jPanel88Layout = new javax.swing.GroupLayout(jPanel88);
         jPanel88.setLayout(jPanel88Layout);
         jPanel88Layout.setHorizontalGroup(
@@ -2801,7 +3047,8 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel91, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel90, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel90, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCustomFondantCake1)))
                     .addComponent(jRadioButton19))
                 .addGap(0, 35, Short.MAX_VALUE))
         );
@@ -2811,11 +3058,13 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jRadioButton19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel88Layout.createSequentialGroup()
                         .addComponent(jPanel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCustomFondantCake1))
                     .addComponent(jPanel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51))
         );
@@ -2856,14 +3105,19 @@ public class BeaPOS extends javax.swing.JFrame {
             }
         });
 
-        lbqTY.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbqTY.setForeground(new java.awt.Color(225, 135, 44));
-        lbqTY.setText("0");
+        yemaCakeLabelQty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        yemaCakeLabelQty.setForeground(new java.awt.Color(225, 135, 44));
+        yemaCakeLabelQty.setText("0");
 
         btnPlusYemaCake.setBackground(new java.awt.Color(255, 204, 102));
         btnPlusYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusYemaCake.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusYemaCake.setText("+");
+        btnPlusYemaCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusYemaCakeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
         jPanel94.setLayout(jPanel94Layout);
@@ -2873,7 +3127,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnMinusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbqTY)
+                .addComponent(yemaCakeLabelQty)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPlusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -2884,7 +3138,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMinusYemaCake)
-                    .addComponent(lbqTY)
+                    .addComponent(yemaCakeLabelQty)
                     .addComponent(btnPlusYemaCake))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -3112,6 +3366,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusUbePandesal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusUbePandesal.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusUbePandesal.setText("+");
+        btnPlusUbePandesal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusUbePandesalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
@@ -3559,6 +3818,11 @@ public class BeaPOS extends javax.swing.JFrame {
         btnPlusClassicCinnamon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPlusClassicCinnamon.setForeground(new java.awt.Color(225, 135, 44));
         btnPlusClassicCinnamon.setText("+");
+        btnPlusClassicCinnamon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusClassicCinnamonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
         jPanel74.setLayout(jPanel74Layout);
@@ -3880,7 +4144,7 @@ public class BeaPOS extends javax.swing.JFrame {
 
         lbPhpMuffin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbPhpMuffin.setForeground(new java.awt.Color(225, 135, 44));
-        lbPhpMuffin.setText("Php: 0,00");
+        lbPhpMuffin.setText("Php: 0.00");
 
         javax.swing.GroupLayout jPanel83Layout = new javax.swing.GroupLayout(jPanel83);
         jPanel83.setLayout(jPanel83Layout);
@@ -4034,7 +4298,67 @@ public class BeaPOS extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void updateMangoPrice() {
+    int total = (mangoBasePrice) * mangoQty;
+    mangoPrice.setText("Php: " + total + ".00");
+}
+    private void updateRedVelvetPrice(){
+       int total = (redVelvetBasePrice) * redVelvetQty;
+       redVelvetCakePrice.setText("Php: " + total + ".00"); 
+    }
+    
+    private void updateStrawberryShortPrice(){
+       int total = (strawberryShortcakeBasePrice) * strawberryShortcakeQty ;
+       strawberryShortCakePrice.setText("Php: " + total + ".00"); 
+    }
+    
+    private void updateBentoCakePrice(){
+        int total = (bentoCakeBasePrice) * bentoCakeQty;
+        bentoCakePrice.setText("Php: " + total + ".00");
+        
+    }
+    private void updateCheeseCakePrice(){
+        int total = (cheesecakeBasePrice) * cheesecakeQuantity;
+        cheeseCakePrice.setText("Php: " + total + ".00");
+    }
+    private void updateCaramelLechePrice(){
+        int total = (caramelFlanBasePrice) * caramelFlanQty;
+        caramelFlanDeLecheCakePrice.setText("Php: " + total + ".00");
+    }
+    private void updateMangoBravoTubPrice(){
+        mangoBravoTubBasePrice = 170;
+        int total = (mangoBravoTubBasePrice) * mangoBravoTubQty;
+        mangoBravoTubPrice.setText("Php: " + total + ".00");
+        
+    }
+    private void updateSliceCheesecakePrice(){
+        slicecheesecakeBasePrice = 175;
+        int total = (slicecheesecakeBasePrice) * slicecheesecakeQty;
+        sliceCheesecakePrice.setText("Php: " + total + ".00");
+        
+    }
+    private void updateMiniCupcakesPrice(){
+        int total = (miniCupcakesBasePrice) * miniCupcakesQty;
+        miniCupcakesPrice.setText("Php: " + total + ".00");
+    }
+    private void updatePiscesCupcakesPrice(){
+        int total = piscesCupcakesBasePrice * piscesCupcakesQty;
+        piscesCupcakesPrice.setText("Php: " + total + ".00");
+    }
+    private void updateYemaCakePrice(){
+        
+        int total = (yemaCakeBasePrice) * yemaCakeQty;
+        lbPhpYemaCake.setText("Php: " + total + ".00");
+        
+    }
+    private void updateCheesePandesalPrice(){
+         int total = (ubePandesalBasePrice) * ubePandesalQty;
+         lbPhpUbePandesal.setText("Php: " + total + ".00");
+    }
+    
+    
+    
     private void btnCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakeActionPerformed
       jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_btnCakeActionPerformed
@@ -4064,47 +4388,84 @@ public class BeaPOS extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSearchFocusLost
 
     private void minusButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonMangoActionPerformed
-        if (mangoQty > 0) {
-        mangoQty--;
-        mangoBravoQuantity.setText(String.valueOf(mangoQty));
-        updateMangoPrice();
-    }
+       if(mangoQty>0){
+           mangoQty--;
+           mangoBravoQuantity.setText(String.valueOf(mangoQty));
+           updateMangoPrice();
+       }
+    
     }//GEN-LAST:event_minusButtonMangoActionPerformed
 
     private void redVelvetMinusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redVelvetMinusButtonActionPerformed
-        // TODO add your handling code here:
+        if(redVelvetQty>0){
+           redVelvetQty--;
+           redvelvetlabel.setText(String.valueOf(redVelvetQty));
+           updateRedVelvetPrice();
+       }
     }//GEN-LAST:event_redVelvetMinusButtonActionPerformed
 
     private void strawberryshortminusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strawberryshortminusbuttonActionPerformed
-        // TODO add your handling code here:
+        if(strawberryShortcakeQty>0){
+           strawberryShortcakeQty--;
+           strawberyshortcakelbl.setText(String.valueOf(strawberryShortcakeQty));
+           updateStrawberryShortPrice();
+       }
     }//GEN-LAST:event_strawberryshortminusbuttonActionPerformed
 
     private void bentoCakeminusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentoCakeminusButtonActionPerformed
-        // TODO add your handling code here:
+        if(bentoCakeQty>0){
+           bentoCakeQty--;
+           bentocakelbl.setText(String.valueOf(bentoCakeQty));
+           updateBentoCakePrice();
+       }
     }//GEN-LAST:event_bentoCakeminusButtonActionPerformed
 
     private void btnMinusCaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCaramelFlanActionPerformed
-        // TODO add your handling code here:
+        if(caramelFlanQty>0){
+           caramelFlanQty--;
+           lbqtycaramelflan.setText(String.valueOf(caramelFlanQty));
+           updateCaramelLechePrice();
+       }
     }//GEN-LAST:event_btnMinusCaramelFlanActionPerformed
 
     private void btnMinusCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCheesecakeActionPerformed
-        // TODO add your handling code here:
+        if(cheesecakeQuantity>0){
+           cheesecakeQuantity--;
+           lblquantitycheesecake.setText(String.valueOf(cheesecakeQuantity));
+           updateCheeseCakePrice();
+       }
     }//GEN-LAST:event_btnMinusCheesecakeActionPerformed
 
     private void btnMinusSliceCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusSliceCheesecakeActionPerformed
-        // TODO add your handling code here:
+        if(slicecheesecakeQty>0){
+           slicecheesecakeQty--;
+           slicecheesecakelblqty.setText(String.valueOf(slicecheesecakeQty));
+           updateSliceCheesecakePrice();
+       }
     }//GEN-LAST:event_btnMinusSliceCheesecakeActionPerformed
 
     private void btnMinusMangoBravoTubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMangoBravoTubActionPerformed
-        // TODO add your handling code here:
+        if(mangoBravoTubQty>0){
+           mangoBravoTubQty--;
+           mangobravotublblqty.setText(String.valueOf(mangoBravoTubQty));
+           updateMangoBravoTubPrice();
+       }
     }//GEN-LAST:event_btnMinusMangoBravoTubActionPerformed
 
     private void btnMinusMiniCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMiniCupcakeActionPerformed
-        // TODO add your handling code here:
+        if(miniCupcakesQty>0){
+           miniCupcakesQty--;
+           lbQtyMiniCupcake.setText(String.valueOf(miniCupcakesQty));
+           updateMiniCupcakesPrice();
+       }
     }//GEN-LAST:event_btnMinusMiniCupcakeActionPerformed
 
     private void btnMinusPiscesCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusPiscesCupcakeActionPerformed
-        // TODO add your handling code here:
+        if(piscesCupcakesQty>0){
+           piscesCupcakesQty--;
+           lbzeroqty.setText(String.valueOf(piscesCupcakesQty));
+           updatePiscesCupcakesPrice();
+       }
     }//GEN-LAST:event_btnMinusPiscesCupcakeActionPerformed
 
     private void btnMinusIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusIcingCakeActionPerformed
@@ -4112,7 +4473,7 @@ public class BeaPOS extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinusIcingCakeActionPerformed
 
     private void btnMinusUbePandesalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusUbePandesalActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_btnMinusUbePandesalActionPerformed
 
     private void btnMinusBananaLoafActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusBananaLoafActionPerformed
@@ -4158,15 +4519,94 @@ public class BeaPOS extends javax.swing.JFrame {
     }//GEN-LAST:event_addButtonMangoActionPerformed
 
     private void btnMinusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusYemaCakeActionPerformed
-        // TODO add your handling code here:
+        if(yemaCakeQty>0){
+           yemaCakeQty--;
+           yemaCakeLabelQty.setText(String.valueOf(yemaCakeQty));
+          updateYemaCakePrice();
+       }
     }//GEN-LAST:event_btnMinusYemaCakeActionPerformed
+
+    private void RedVelvetPlusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedVelvetPlusButtonActionPerformed
+       redVelvetQty ++;
+       redvelvetlabel.setText(String.valueOf(redVelvetQty));
+    }//GEN-LAST:event_RedVelvetPlusButtonActionPerformed
+
+    private void strawberryshortplusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strawberryshortplusbuttonActionPerformed
+       strawberryShortcakeQty++;
+       strawberyshortcakelbl.setText(String.valueOf(strawberryShortcakeQty));
+    }//GEN-LAST:event_strawberryshortplusbuttonActionPerformed
+
+    private void bentoCakePlusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentoCakePlusButtonActionPerformed
+       bentoCakeQty++;
+       bentocakelbl.setText(String.valueOf(bentoCakeQty));
+    }//GEN-LAST:event_bentoCakePlusButtonActionPerformed
+
+    private void btnPlusCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusCheesecakeActionPerformed
+       cheesecakeQuantity++;
+       lblquantitycheesecake.setText(String.valueOf(cheesecakeQuantity));
+    }//GEN-LAST:event_btnPlusCheesecakeActionPerformed
+
+    private void btn8CheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8CheesecakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn8CheesecakeActionPerformed
+
+    private void btn6x2CaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6x2CaramelFlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6x2CaramelFlanActionPerformed
+
+    private void btnPlusCaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusCaramelFlanActionPerformed
+        caramelFlanQty++;
+        lbqtycaramelflan.setText(String.valueOf( caramelFlanQty));
+    }//GEN-LAST:event_btnPlusCaramelFlanActionPerformed
+
+    private void btnPlusMangoBravoTubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMangoBravoTubActionPerformed
+        mangoBravoTubQty++;
+        mangobravotublblqty.setText(String.valueOf(mangoBravoTubQty));
+        updateMangoBravoTubPrice();
+    }//GEN-LAST:event_btnPlusMangoBravoTubActionPerformed
+
+    private void btnPlusSliceCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusSliceCheesecakeActionPerformed
+        slicecheesecakeQty++;
+        slicecheesecakelblqty.setText(String.valueOf(slicecheesecakeQty));
+        updateSliceCheesecakePrice();
+    }//GEN-LAST:event_btnPlusSliceCheesecakeActionPerformed
+
+    private void btnPlusMiniCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMiniCupcakeActionPerformed
+        miniCupcakesQty++;
+        lbQtyMiniCupcake.setText(String.valueOf(miniCupcakesQty));
+        updateMiniCupcakesPrice();
+    }//GEN-LAST:event_btnPlusMiniCupcakeActionPerformed
+
+    private void btnPlusPiscescupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusPiscescupcakeActionPerformed
+        piscesCupcakesQty++;
+        lbzeroqty.setText(String.valueOf(piscesCupcakesQty));
+        updatePiscesCupcakesPrice();
+    }//GEN-LAST:event_btnPlusPiscescupcakeActionPerformed
+
+    private void btnPlusIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusIcingCakeActionPerformed
+        
+    }//GEN-LAST:event_btnPlusIcingCakeActionPerformed
+
+    private void btnPlusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusYemaCakeActionPerformed
+        yemaCakeQty++;
+        yemaCakeLabelQty.setText(String.valueOf(yemaCakeQty));
+        updateYemaCakePrice();
+    }//GEN-LAST:event_btnPlusYemaCakeActionPerformed
+
+    private void btnPlusClassicCinnamonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusClassicCinnamonActionPerformed
+       
+        
+    }//GEN-LAST:event_btnPlusClassicCinnamonActionPerformed
+
+    private void btnPlusUbePandesalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusUbePandesalActionPerformed
+        ubePandesalQty++;
+        lbzeroUbePandesal.setText(String.valueOf(ubePandesalQty));
+        updateCheesePandesalPrice();
+    }//GEN-LAST:event_btnPlusUbePandesalActionPerformed
     
 
 
-private void updateMangoPrice() {
-    int total = (mangoBasePrice + mangoToppingPrice) * mangoQty;
-    mangoPrice.setText("Php: " + total + ".00");
-}
+
 
     /**
      * @param args the command line arguments
@@ -4204,6 +4644,7 @@ private void updateMangoPrice() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Jpanel;
     private javax.swing.JButton RedVelvetPlusButton;
     private javax.swing.JButton addButtonMango;
     private javax.swing.JLabel amountLabel;
@@ -4213,6 +4654,7 @@ private void updateMangoPrice() {
     private javax.swing.JRadioButton bentoCakeRadioButton;
     private javax.swing.JToggleButton bentoCakeSizebutton;
     private javax.swing.JButton bentoCakeminusButton;
+    private javax.swing.JLabel bentocakelbl;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
     private javax.swing.JToggleButton btn12PcsMiniCupcake;
@@ -4237,6 +4679,7 @@ private void updateMangoPrice() {
     private javax.swing.JToggleButton btnBoxof6ClassicCinnamon;
     private javax.swing.JButton btnBreadSweets1;
     private javax.swing.JButton btnCake;
+    private javax.swing.JToggleButton btnCustomFondantCake1;
     private javax.swing.JToggleButton btnCustomeCakeIcingCake;
     private javax.swing.JToggleButton btnMinimalistCakeCustomCake;
     private javax.swing.JButton btnMinuMuffin;
@@ -4265,12 +4708,12 @@ private void updateMangoPrice() {
     private javax.swing.JButton btnPlusFondantCake;
     private javax.swing.JButton btnPlusIcingCake;
     private javax.swing.JButton btnPlusMangoBravoTub;
-    private javax.swing.JButton btnPlusMangoBravotub;
     private javax.swing.JButton btnPlusMilkyDonut;
     private javax.swing.JButton btnPlusMiniCupcake;
     private javax.swing.JButton btnPlusMinimalistCake;
     private javax.swing.JButton btnPlusMuffin;
     private javax.swing.JButton btnPlusPiscescupcake;
+    private javax.swing.JButton btnPlusSliceCheesecake;
     private javax.swing.JButton btnPlusUbePandesal;
     private javax.swing.JButton btnPlusYemaCake;
     private javax.swing.JToggleButton btnUbeCheesedesal;
@@ -4304,11 +4747,9 @@ private void updateMangoPrice() {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
@@ -4329,7 +4770,6 @@ private void updateMangoPrice() {
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
@@ -4343,7 +4783,6 @@ private void updateMangoPrice() {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
@@ -4467,13 +4906,10 @@ private void updateMangoPrice() {
     private javax.swing.JLabel lbPhpMuffin;
     private javax.swing.JLabel lbPhpUbePandesal;
     private javax.swing.JLabel lbPhpYemaCake;
-    private javax.swing.JLabel lbQTY;
-    private javax.swing.JLabel lbQTy;
-    private javax.swing.JLabel lbQty;
     private javax.swing.JLabel lbQtyMiniCupcake;
-    private javax.swing.JLabel lbqTY;
+    private javax.swing.JLabel lblquantitycheesecake;
     private javax.swing.JLabel lbqtY;
-    private javax.swing.JLabel lbqty;
+    private javax.swing.JLabel lbqtycaramelflan;
     private javax.swing.JLabel lbzeroBananaLoaf;
     private javax.swing.JLabel lbzeroBrownies;
     private javax.swing.JLabel lbzeroClassicCinnamon;
@@ -4491,6 +4927,7 @@ private void updateMangoPrice() {
     private javax.swing.JLabel mangoPrice;
     private javax.swing.JRadioButton mangoRadioButton;
     private javax.swing.JToggleButton mangoToppings;
+    private javax.swing.JLabel mangobravotublblqty;
     private javax.swing.JLabel miniCupcakesPrice;
     private javax.swing.JButton minusButtonMango;
     private javax.swing.JLabel piscesCupcakesPrice;
@@ -4500,8 +4937,10 @@ private void updateMangoPrice() {
     private javax.swing.JLabel redVelvetCakePrice;
     private javax.swing.JButton redVelvetMinusButton;
     private javax.swing.JRadioButton redVelvetRadioButton;
+    private javax.swing.JLabel redvelvetlabel;
     private javax.swing.JLabel sizeLabel;
     private javax.swing.JLabel sliceCheesecakePrice;
+    private javax.swing.JLabel slicecheesecakelblqty;
     private javax.swing.JLabel strawberryShortCakePrice;
     private javax.swing.JToggleButton strawberryshortcake4x3sizebtn;
     private javax.swing.JToggleButton strawberryshortcake5x3sizebtn;
@@ -4510,6 +4949,8 @@ private void updateMangoPrice() {
     private javax.swing.JRadioButton strawberryshortcakeradioButton;
     private javax.swing.JButton strawberryshortminusbutton;
     private javax.swing.JButton strawberryshortplusbutton;
+    private javax.swing.JLabel strawberyshortcakelbl;
     private javax.swing.JTextField txtSearch;
+    private javax.swing.JLabel yemaCakeLabelQty;
     // End of variables declaration//GEN-END:variables
 }

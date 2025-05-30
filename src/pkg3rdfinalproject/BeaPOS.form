@@ -1385,7 +1385,7 @@
                                                       <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jPanel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="Jpanel" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jPanel22" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
@@ -1407,7 +1407,7 @@
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="Jpanel" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jPanel22" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
@@ -1467,7 +1467,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Container class="javax.swing.JPanel" name="jPanel18">
+                                    <Container class="javax.swing.JPanel" name="Jpanel">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1481,7 +1481,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="redVelvetMinusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="redvelvetlabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="RedVelvetPlusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -1494,7 +1494,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="redVelvetMinusButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="redvelvetlabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="RedVelvetPlusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -1520,7 +1520,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="redVelvetMinusButtonActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel46">
+                                        <Component class="javax.swing.JLabel" name="redvelvetlabel">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -1544,6 +1544,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RedVelvetPlusButtonActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -1770,7 +1773,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="strawberryshortminusbutton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="strawberyshortcakelbl" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="strawberryshortplusbutton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -1783,7 +1786,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="strawberryshortminusbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="strawberyshortcakelbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="strawberryshortplusbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -1809,7 +1812,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="strawberryshortminusbuttonActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel50">
+                                        <Component class="javax.swing.JLabel" name="strawberyshortcakelbl">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -1833,6 +1836,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="strawberryshortplusbuttonActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -2084,7 +2090,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="bentoCakeminusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel83" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="bentocakelbl" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="bentoCakePlusButton" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -2097,7 +2103,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="bentoCakeminusButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="bentocakelbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="bentoCakePlusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -2123,7 +2129,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bentoCakeminusButtonActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="jLabel83">
+                                        <Component class="javax.swing.JLabel" name="bentocakelbl">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -2147,6 +2153,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bentoCakePlusButtonActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -2189,7 +2198,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php 0,00"/>
+                                            <Property name="text" type="java.lang.String" value="Php 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -2358,7 +2367,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="btnMinusCaramelFlan" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="lbqty" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbqtycaramelflan" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="btnPlusCaramelFlan" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -2371,7 +2380,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="btnMinusCaramelFlan" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbqty" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbqtycaramelflan" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="btnPlusCaramelFlan" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -2397,7 +2406,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusCaramelFlanActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="lbqty">
+                                        <Component class="javax.swing.JLabel" name="lbqtycaramelflan">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -2421,6 +2430,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusCaramelFlanActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -2492,6 +2504,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value=" 6x2&quot;"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn6x2CaramelFlanActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JToggleButton" name="btn5x2CaramelFlan">
                                       <Properties>
@@ -2685,7 +2700,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="btnMinusCheesecake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="lbQty" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblquantitycheesecake" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="btnPlusCheesecake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -2698,7 +2713,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="btnMinusCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbQty" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lblquantitycheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="btnPlusCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -2724,7 +2739,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusCheesecakeActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="lbQty">
+                                        <Component class="javax.swing.JLabel" name="lblquantitycheesecake">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -2748,6 +2763,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusCheesecakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -2787,7 +2805,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php: 0,00"/>
+                                            <Property name="text" type="java.lang.String" value="Php: 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -2805,6 +2823,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="8&quot;"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn8CheesecakeActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JToggleButton" name="jToggleButton23">
                                       <Properties>
@@ -3003,9 +3024,9 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="btnMinusSliceCheesecake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace pref="14" max="32767" attributes="0"/>
-                                                  <Component id="lbQTy" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="slicecheesecakelblqty" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnPlusMangoBravotub" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  <Component id="btnPlusSliceCheesecake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -3016,8 +3037,8 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="btnMinusSliceCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbQTy" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="btnPlusMangoBravotub" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="slicecheesecakelblqty" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="btnPlusSliceCheesecake" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
                                               </Group>
@@ -3042,7 +3063,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusSliceCheesecakeActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="lbQTy">
+                                        <Component class="javax.swing.JLabel" name="slicecheesecakelblqty">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -3053,7 +3074,7 @@
                                             <Property name="text" type="java.lang.String" value="0"/>
                                           </Properties>
                                         </Component>
-                                        <Component class="javax.swing.JButton" name="btnPlusMangoBravotub">
+                                        <Component class="javax.swing.JButton" name="btnPlusSliceCheesecake">
                                           <Properties>
                                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -3066,6 +3087,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusSliceCheesecakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -3108,7 +3132,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php: 175"/>
+                                            <Property name="text" type="java.lang.String" value="Php: 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -3296,7 +3320,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="btnMinusMangoBravoTub" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="lbQTY" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangobravotublblqty" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="btnPlusMangoBravoTub" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -3309,7 +3333,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="btnMinusMangoBravoTub" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbQTY" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="mangobravotublblqty" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="btnPlusMangoBravoTub" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -3335,7 +3359,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusMangoBravoTubActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="lbQTY">
+                                        <Component class="javax.swing.JLabel" name="mangobravotublblqty">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -3359,6 +3383,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusMangoBravoTubActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -3398,7 +3425,7 @@
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
                                             <Property name="horizontalAlignment" type="int" value="0"/>
-                                            <Property name="text" type="java.lang.String" value="Php 170"/>
+                                            <Property name="text" type="java.lang.String" value="Php 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -3596,6 +3623,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusMiniCupcakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -3878,6 +3908,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusPiscescupcakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -3920,7 +3953,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php 0,00"/>
+                                            <Property name="text" type="java.lang.String" value="Php 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -4175,6 +4208,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusIcingCakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -4509,6 +4545,7 @@
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jPanel91" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
                                                           <Component id="jPanel90" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="btnCustomFondantCake1" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4523,13 +4560,15 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jRadioButton19" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="jPanel90" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jPanel91" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="btnCustomFondantCake1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jPanel89" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jPanel89" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                                           </Group>
@@ -4712,6 +4751,20 @@
                                         <Property name="text" type="java.lang.String" value="Fondant Cake"/>
                                       </Properties>
                                     </Component>
+                                    <Component class="javax.swing.JToggleButton" name="btnCustomFondantCake1">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Segoe UI" size="12" style="1"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="2c" green="87" red="e1" type="rgb"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="Custom Cake"/>
+                                      </Properties>
+                                    </Component>
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel92">
@@ -4836,7 +4889,7 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="btnMinusYemaCake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="lbqTY" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="yemaCakeLabelQty" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="btnPlusYemaCake" min="-2" pref="47" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -4849,7 +4902,7 @@
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="btnMinusYemaCake" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbqTY" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="yemaCakeLabelQty" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="btnPlusYemaCake" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -4875,7 +4928,7 @@
                                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMinusYemaCakeActionPerformed"/>
                                           </Events>
                                         </Component>
-                                        <Component class="javax.swing.JLabel" name="lbqTY">
+                                        <Component class="javax.swing.JLabel" name="yemaCakeLabelQty">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Segoe UI" size="12" style="1"/>
@@ -4899,6 +4952,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusYemaCakeActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -5270,6 +5326,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusUbePandesalActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -6067,6 +6126,9 @@
                                             </Property>
                                             <Property name="text" type="java.lang.String" value="+"/>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlusClassicCinnamonActionPerformed"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
@@ -6619,7 +6681,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php: 0,00"/>
+                                            <Property name="text" type="java.lang.String" value="Php: 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
