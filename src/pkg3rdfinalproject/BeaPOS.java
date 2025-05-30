@@ -329,52 +329,42 @@ public class BeaPOS extends javax.swing.JFrame {
     
     
     //actionlisteners for radiobuttons
-    
+    mangoRadioButton.addActionListener(e -> {
+    if (mangoRadioButton.isSelected()) {
+        updateMangoBravoBill();
+    } else {
+        removeMangoBravoFromBill();
+    }
+});
     
       }
     //methods for actionListeners
+private void removeMangoBravoFromBill() {
+    subTotalamountlabel.setText("₱0.00");
+    totalAmountLabel.setText("₱0.00");
+    productNameLabel.setText("");
+    quantityLabel.setText("");
+    sizeorVariationLabel.setText("");
+}
 
-
-public void updateMangoBravoBill(String selectedSize) {
-    String productName = "Mango Bravo";
+public void updateMangoBravoBill() {
     
     double unitPrice = 0.0;
     String size = "";
-
-    switch(selectedSize) {
-        case "6x2":
-            size = "6 x 2\"";
-            unitPrice = 699.00;
-            break;
-        case "5x2":
-            size = "5 x 2\"";
-            unitPrice = 399.00;
-            break;
-        case "4x2":
-            size = "4 x 2\"";
-            unitPrice = 299.00;
-            break;
-        default:
-            size = "Unknown Size";
-            unitPrice = 0.0;
-            break;
+    switch(mangoBravocurrentSelectedSize) {
+        case "6x2": size = "6 x 2\""; unitPrice = 699.00; break;
+        case "5x2": size = "5 x 2\""; unitPrice = 399.00; break;
+        case "4x2": size = "4 x 2\""; unitPrice = 299.00; break;
+        default: size = "Unknown Size"; unitPrice = 0.0; break;
     }
-
-    double subtotal = quantity * unitPrice;
-
-    productNameLabel.setText(productName);
-    quantityLabel.setText(String.valueOf(quantity));
-    sizeorVariationLabel.setText(size);
+    double subtotal = mangoQty * unitPrice;
+    // update the bill panel labels
     subTotalamountlabel.setText(String.format("₱%.2f", subtotal));
     totalAmountLabel.setText(String.format("₱%.2f", subtotal));
-    
-    mangoRadioButton.addActionListener(e -> {
-    productNameLabel.setText(mangoBravoProductName);
+    productNameLabel.setText("Mango Bravo");
     quantityLabel.setText(String.valueOf(mangoQty));
-    sizeorVariationLabel.setText(selectedSize);
-    subTotalamountlabel.setText(String.format("₱%.2f", subtotal));
-    totalAmountLabel.setText(String.format("₱%.2f", subtotal));
-});
+    sizeorVariationLabel.setText(size);
+
 }
     
     
@@ -4327,14 +4317,17 @@ public void updateMangoBravoBill(String selectedSize) {
     }//GEN-LAST:event_txtSearchFocusLost
 
     private void minusButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonMangoActionPerformed
-       if(mangoQty>0){
-           mangoQty--;
-           mangoBravoQuantity.setText(String.valueOf(mangoQty));
-           updateMangoPrice();
-           updateMangoBravoBill(mangoBravocurrentSelectedSize);
-           
-       }
+       if (mangoQty > 0) {
+        mangoQty--;
+    }
+    mangoBravoQuantity.setText(String.valueOf(mangoQty));
+    updateMangoPrice();
+    updateMangoBravoBill();
     
+    if (mangoQty == 0) {
+        mangoRadioButton.setSelected(false);
+        removeMangoBravoFromBill(); // This method should clear the bill panel for Mango Bravo
+    }
     }//GEN-LAST:event_minusButtonMangoActionPerformed
 
     private void redVelvetMinusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redVelvetMinusButtonActionPerformed
@@ -4467,7 +4460,9 @@ public void updateMangoBravoBill(String selectedSize) {
 
     private void addButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonMangoActionPerformed
     mangoQty++;
-    updateMangoBravoBill(currentSelectedSize); 
+    mangoBravoQuantity.setText(String.valueOf(mangoQty));
+    updateMangoPrice();
+    updateMangoBravoBill();
     
     }//GEN-LAST:event_addButtonMangoActionPerformed
 
