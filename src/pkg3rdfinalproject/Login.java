@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pkg3rdfinalproject;
+import abstraction.MainFrameDashBoard;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -279,7 +280,7 @@ public class Login extends javax.swing.JFrame {
         if (rs.next()) {
             JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
             
-            MainFrameDashBoard1 mainDash = new MainFrameDashBoard1();
+            MainFrameDashBoard mainDash = new MainFrameDashBoard();
             
             mainDash.setVisible(true);
             setVisible(false);
