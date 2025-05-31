@@ -387,19 +387,14 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="payByGCASHBtn" min="-2" pref="190" max="-2" attributes="0"/>
+                                          <Component id="payByCashBtn" min="-2" pref="190" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="totalstaticlabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="115" pref="115" max="-2" attributes="0"/>
                                               <Component id="totalAmountLabel" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="payByGCASHBtn" min="-2" pref="190" max="-2" attributes="0"/>
-                                                  <Component id="payByCashBtn" min="-2" pref="190" max="-2" attributes="0"/>
-                                              </Group>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="19" max="32767" attributes="0"/>
@@ -429,15 +424,15 @@
                               <Component id="billLabel" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="415" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="totalstaticlabel" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                                       <Component id="totalAmountLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="payByCashBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="payByGCASHBtn" min="-2" max="-2" attributes="0"/>

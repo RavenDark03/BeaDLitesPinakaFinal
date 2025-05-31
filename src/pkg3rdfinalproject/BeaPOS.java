@@ -154,6 +154,8 @@ public class BeaPOS extends javax.swing.JFrame {
     
     });
     
+    
+    
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
     
@@ -339,12 +341,26 @@ public class BeaPOS extends javax.swing.JFrame {
     
     
     //actionlisteners for radiobuttons
-    mangoRadioButton.addActionListener(e -> {
-    if (mangoQty > 0) { // Only add if quantity is set
-        String item = "Mango Bravo | Qty: " + mangoQty + " | ₱" + (mangoQty * mangoBasePrice);
-        billListModel.addElement(item);
+   mangoRadioButton.addItemListener(e -> {
+    if (mangoRadioButton.isSelected()) {
+        // Add or update item
+        addOrUpdateBillItem("Mango Bravo", mangoQty, mangoBasePrice);
+    } else {
+        // Remove item
+        addOrUpdateBillItem("Mango Bravo", 0, mangoBasePrice); // 0 quantity means remove
     }
 });
+   redVelvetRadioButton.addItemListener(e->{
+       
+       String name = "Red Velvet Cake";
+       if (redVelvetRadioButton.isSelected()) {
+        // Add or update item
+        addOrUpdateBillItem(name, redVelvetQty, redVelvetBasePrice);
+    } else {
+        // Remove item
+        addOrUpdateBillItem(name, 0, redVelvetBasePrice); // 0 quantity means remove
+    }
+   });
     
     
     
@@ -833,17 +849,14 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(BillPanelLayout.createSequentialGroup()
                 .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BillPanelLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGap(25, 25, 25)
                         .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(payByGCASHBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(payByCashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(BillPanelLayout.createSequentialGroup()
                                 .addComponent(totalstaticlabel)
                                 .addGap(115, 115, 115)
-                                .addComponent(totalAmountLabel))
-                            .addGroup(BillPanelLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(payByGCASHBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(payByCashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(totalAmountLabel)))
                         .addGap(0, 19, Short.MAX_VALUE))
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addContainerGap()
@@ -864,13 +877,13 @@ public class BeaPOS extends javax.swing.JFrame {
                 .addComponent(billLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(totalstaticlabel)
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addComponent(totalAmountLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(32, 32, 32)
                 .addComponent(payByCashBtn)
                 .addGap(18, 18, 18)
                 .addComponent(payByGCASHBtn)
@@ -4076,6 +4089,53 @@ public class BeaPOS extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    
+    private void addOrUpdateBillItem(String productName, int quantity, int unitPrice) {
+    if (quantity <= 0) {
+        // Remove the item from the billList
+        for (int i = 0; i < billListModel.size(); i++) {
+            if (billListModel.get(i).startsWith(productName + " |")) {
+                billListModel.remove(i);
+                break;
+            }
+        }
+        return;
+    }
+    // Remove existing entry (to avoid duplicates)
+    for (int i = 0; i < billListModel.size(); i++) {
+        if (billListModel.get(i).startsWith(productName + " |")) {
+            billListModel.remove(i);
+            break;
+        }
+    }
+    // Add updated entry
+    String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * unitPrice);
+    billListModel.addElement(entry);
+    updateTotalAmountLabel();
+}
+    
+    
+    private void updateTotalAmountLabel() {
+    int total = 0;
+    // Sum all item totals from billListModel
+    for (int i = 0; i < billListModel.size(); i++) {
+        String entry = billListModel.get(i);
+        // Entry format: "Product Name | Qty: X | ₱Y"
+        int pesoIndex = entry.lastIndexOf("₱");
+        if (pesoIndex != -1) {
+            try {
+                int itemTotal = Integer.parseInt(entry.substring(pesoIndex + 1).trim());
+                total += itemTotal;
+            } catch (NumberFormatException e) {
+                // Ignore parse errors
+            }
+        }
+    }
+    totalAmountLabel.setText(String.format("₱%,.2f", (double) total));
+}
+    
     
     private void updateMangoPrice() {
     int total = (mangoBasePrice) * mangoQty;
