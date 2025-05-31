@@ -422,9 +422,8 @@ public void updateMangoBravoBill() {
         totalstaticlabel = new javax.swing.JLabel();
         subTotalamountlabel = new javax.swing.JLabel();
         totalAmountLabel = new javax.swing.JLabel();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jButton9 = new javax.swing.JButton();
+        paybyCashButton = new javax.swing.JToggleButton();
+        payByGcashButton = new javax.swing.JToggleButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel71 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -882,20 +881,15 @@ public void updateMangoBravoBill() {
         totalAmountLabel.setForeground(new java.awt.Color(102, 102, 102));
         totalAmountLabel.setText("Amount");
 
-        jToggleButton2.setBackground(new java.awt.Color(255, 204, 102));
-        jToggleButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton2.setText("Pay By Cash");
+        paybyCashButton.setBackground(new java.awt.Color(255, 204, 102));
+        paybyCashButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        paybyCashButton.setForeground(new java.awt.Color(225, 135, 44));
+        paybyCashButton.setText("Pay By Cash");
 
-        jToggleButton3.setBackground(new java.awt.Color(255, 204, 102));
-        jToggleButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jToggleButton3.setForeground(new java.awt.Color(225, 135, 44));
-        jToggleButton3.setText("Pay By Gcash");
-
-        jButton9.setBackground(new java.awt.Color(255, 204, 102));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(225, 135, 44));
-        jButton9.setText("Done");
+        payByGcashButton.setBackground(new java.awt.Color(255, 204, 102));
+        payByGcashButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        payByGcashButton.setForeground(new java.awt.Color(225, 135, 44));
+        payByGcashButton.setText("Pay By Gcash");
 
         javax.swing.GroupLayout BillPanelLayout = new javax.swing.GroupLayout(BillPanel);
         BillPanel.setLayout(BillPanelLayout);
@@ -923,13 +917,10 @@ public void updateMangoBravoBill() {
                         .addComponent(totalAmountLabel))
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(paybyCashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BillPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(payByGcashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(BillPanelLayout.createSequentialGroup()
                             .addGap(6, 6, 6)
@@ -993,12 +984,10 @@ public void updateMangoBravoBill() {
                         .addGap(5, 5, 5)
                         .addComponent(totalAmountLabel)))
                 .addGap(109, 109, 109)
-                .addComponent(jToggleButton2)
+                .addComponent(paybyCashButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(payByGcashButton)
+                .addGap(87, 87, 87))
         );
 
         jPanel3.add(BillPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 60, 210, 690));
@@ -4704,7 +4693,6 @@ public void updateMangoBravoBill() {
     private javax.swing.JLabel cheeseCakePrice;
     private javax.swing.JButton customCakeButton;
     private javax.swing.JLabel dateLabel;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
@@ -4845,14 +4833,12 @@ public void updateMangoBravoBill() {
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton18;
     private javax.swing.JToggleButton jToggleButton19;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton23;
     private javax.swing.JToggleButton jToggleButton24;
     private javax.swing.JToggleButton jToggleButton25;
     private javax.swing.JToggleButton jToggleButton26;
     private javax.swing.JToggleButton jToggleButton28;
     private javax.swing.JToggleButton jToggleButton29;
-    private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton30;
     private javax.swing.JToggleButton jToggleButton31;
     private javax.swing.JLabel lbPhpBananaLoaf;
@@ -4883,6 +4869,8 @@ public void updateMangoBravoBill() {
     private javax.swing.JLabel mangobravotublblqty;
     private javax.swing.JLabel miniCupcakesPrice;
     private javax.swing.JButton minusButtonMango;
+    private javax.swing.JToggleButton payByGcashButton;
+    private javax.swing.JToggleButton paybyCashButton;
     private javax.swing.JLabel piscesCupcakesPrice;
     private javax.swing.JLabel productNameLabel;
     private javax.swing.JLabel productStaticLabel;
