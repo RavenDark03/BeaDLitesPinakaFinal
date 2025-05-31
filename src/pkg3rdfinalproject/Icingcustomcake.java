@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pkg3rdfinalproject;
+import pkg3rdfinalproject.BeaPOS;
 
 /**
  *

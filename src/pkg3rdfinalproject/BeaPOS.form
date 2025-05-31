@@ -583,7 +583,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" alignment="0" pref="1148" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="0" pref="695" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -4782,7 +4782,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="bananaLoafRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel64" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -4804,7 +4804,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton13" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bananaLoafRadioButton" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel64" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5017,7 +5017,7 @@
                                         <Property name="text" type="java.lang.String" value="Moist Banana Choco Chip Almond Loaf"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+                                    <Component class="javax.swing.JRadioButton" name="bananaLoafRadioButton">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>

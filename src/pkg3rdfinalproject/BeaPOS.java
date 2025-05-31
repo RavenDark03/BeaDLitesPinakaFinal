@@ -5,7 +5,6 @@
 package pkg3rdfinalproject;
 
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 
 import java.awt.event.WindowAdapter;
@@ -15,10 +14,9 @@ import javax.swing.JOptionPane;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+
 import javax.swing.DefaultListModel;
-import javax.swing.JList;
-import javax.swing.JScrollPane;
+
 
 
 
@@ -440,6 +438,60 @@ jRadioButton20.addItemListener(e -> {
     }
 });
    
+
+// Ube Pandesal
+ubePandesalRadioButton.addItemListener(e -> {
+    if (ubePandesalRadioButton.isSelected()) {
+        addOrUpdateBillItem("Ube Pandesal", ubePandesalQty, ubePandesalBasePrice);
+    } else {
+        addOrUpdateBillItem("Ube Pandesal", 0, ubePandesalBasePrice);
+    }
+});
+
+// Banana Loaf
+bananaLoafRadioButton.addItemListener(e -> {
+    if (bananaLoafRadioButton.isSelected()) {
+        addOrUpdateBillItem("Banana Loaf", bananaLoafQty, bananaLoafBasePrice);
+    } else {
+        addOrUpdateBillItem("Banana Loaf", 0, bananaLoafBasePrice);
+    }
+});
+
+// Brownies
+browniesRadioButton.addItemListener(e -> {
+    if (browniesRadioButton.isSelected()) {
+        addOrUpdateBillItem("Brownies", browniesQty, browniesBasePrice);
+    } else {
+        addOrUpdateBillItem("Brownies", 0, browniesBasePrice);
+    }
+});
+
+// Classic
+classicRadioButton.addItemListener(e -> {
+    if (classicRadioButton.isSelected()) {
+        addOrUpdateBillItem("Classic", classicCinnamonQty, classicCinnamonBasePrice);
+    } else {
+        addOrUpdateBillItem("Classic", 0, classicCinnamonBasePrice);
+    }
+});
+
+// Milky Cheese Donut
+milkyCheeseDonut.addItemListener(e -> {
+    if (milkyCheeseDonut.isSelected()) {
+        addOrUpdateBillItem("Milky Cheese Donut", milkyCheeseDonutQty, milkyCheeseDonutBasePrice);
+    } else {
+        addOrUpdateBillItem("Milky Cheese Donut", 0, milkyCheeseDonutBasePrice);
+    }
+});
+
+// Banana Muffin
+bananaMuffinRadioButton.addItemListener(e -> {
+    if (bananaMuffinRadioButton.isSelected()) {
+        addOrUpdateBillItem("Banana Muffin", bananaMuffinQty, bananaMuffinBasePrice);
+    } else {
+        addOrUpdateBillItem("Banana Muffin", 0, bananaMuffinBasePrice);
+    }
+});
     
     
     
@@ -684,7 +736,7 @@ jRadioButton20.addItemListener(e -> {
         lbPhpBananaLoaf = new javax.swing.JLabel();
         btnMoistBananaChocoChipLoaf = new javax.swing.JToggleButton();
         btnMoistBananaChocoChipAlmondLoaf = new javax.swing.JToggleButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
+        bananaLoafRadioButton = new javax.swing.JRadioButton();
         jPanel67 = new javax.swing.JPanel();
         jPanel68 = new javax.swing.JPanel();
         jLabel86 = new javax.swing.JLabel();
@@ -3431,9 +3483,9 @@ jRadioButton20.addItemListener(e -> {
         btnMoistBananaChocoChipAlmondLoaf.setForeground(new java.awt.Color(225, 135, 44));
         btnMoistBananaChocoChipAlmondLoaf.setText("Moist Banana Choco Chip Almond Loaf");
 
-        jRadioButton13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton13.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton13.setText("Banana Loaf");
+        bananaLoafRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bananaLoafRadioButton.setForeground(new java.awt.Color(225, 135, 44));
+        bananaLoafRadioButton.setText("Banana Loaf");
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
@@ -3442,7 +3494,7 @@ jRadioButton20.addItemListener(e -> {
             .addGroup(jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton13)
+                    .addComponent(bananaLoafRadioButton)
                     .addGroup(jPanel63Layout.createSequentialGroup()
                         .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3458,7 +3510,7 @@ jRadioButton20.addItemListener(e -> {
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton13)
+                .addComponent(bananaLoafRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4589,6 +4641,8 @@ jRadioButton20.addItemListener(e -> {
     private void btnCustomeCakeIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomeCakeIcingCakeActionPerformed
         Icingcustomcake icc = new Icingcustomcake();
         icc.setVisible(true);
+        
+        
 
     }//GEN-LAST:event_btnCustomeCakeIcingCakeActionPerformed
 
@@ -4604,7 +4658,7 @@ jRadioButton20.addItemListener(e -> {
     }//GEN-LAST:event_customCakeButtonActionPerformed
 
     private void payByCashBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payByCashBtnActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_payByCashBtnActionPerformed
     
 
@@ -4652,6 +4706,7 @@ jRadioButton20.addItemListener(e -> {
     private javax.swing.JButton RedVelvetPlusButton;
     private javax.swing.JButton addButtonMango;
     private javax.swing.JButton backButton;
+    private javax.swing.JRadioButton bananaLoafRadioButton;
     private javax.swing.JRadioButton bananaMuffinRadioButton;
     private javax.swing.JButton bentoCakePlusButton;
     private javax.swing.JLabel bentoCakePrice;
@@ -4841,7 +4896,6 @@ jRadioButton20.addItemListener(e -> {
     private javax.swing.JPanel jPanel95;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton13;
     private javax.swing.JRadioButton jRadioButton18;
     private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
