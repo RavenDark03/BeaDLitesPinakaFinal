@@ -14,6 +14,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+
 
 /**
  *
@@ -93,7 +97,7 @@ public class BeaPOS extends javax.swing.JFrame {
     int bananaMuffinQty = 0;
     int bananaMuffinBasePrice = 0;
     
-    private String mangoBravocurrentSelectedSize = "4x2";
+   
     
    
 
@@ -107,8 +111,9 @@ public class BeaPOS extends javax.swing.JFrame {
     
     
 
-    String mangoBravoProductName = "Mango Bravo";
     
+    DefaultListModel<String> billListModel = new DefaultListModel<>();
+    JList<String> billList = new JList<>(billListModel);
     
     
     public BeaPOS(){
@@ -122,6 +127,10 @@ public class BeaPOS extends javax.swing.JFrame {
                 confirmExit();
             }
         });
+    
+        
+    BillPanel.add(new JScrollPane(billList));    
+        
         
     LocalDate today = LocalDate.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
@@ -131,21 +140,21 @@ public class BeaPOS extends javax.swing.JFrame {
     // mango bravo action listeners
     mangoBravo6x2button.addActionListener(e -> { // 6x2
     mangoBasePrice = 699;
-    mangoBravocurrentSelectedSize = "6x2";
+    
     updateMangoPrice();
     
     });
     
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
-    mangoBravocurrentSelectedSize = "5x2";
+    
     updateMangoPrice();
     
     });
     
     mangoBravo4x2button.addActionListener(e -> { // 4x2
     mangoBasePrice = 299;
-    mangoBravocurrentSelectedSize = "4x2";
+    
     updateMangoPrice();
     
     });
@@ -321,11 +330,34 @@ public class BeaPOS extends javax.swing.JFrame {
     
     
     //actionlisteners for radiobuttons
-  
-    
+    mangoRadioButton.addActionListener(e -> updateBillPanel());
+    addButtonMango.addActionListener(e -> updateBillPanel());
+    minusButtonMango.addActionListener(e -> updateBillPanel());
+
+    redVelvetRadioButton.addActionListener(e -> updateBillPanel());
+    RedVelvetPlusButton.addActionListener(e -> updateBillPanel());
+    redVelvetMinusButton.addActionListener(e -> updateBillPanel());
       }
     //methods for actionListeners
+void updateBillPanel() {
+    billListModel.clear();
+    if (mangoRadioButton.isSelected() && getMangoQuantity() > 0) {
+        billListModel.addElement("Mango Bravo");
+    }
+    if (redVelvetRadioButton.isSelected() && getRedVelvetQuantity() > 0) {
+        billListModel.addElement("Red Velvet");
+    }
+    // ...repeat for other cakes
+}
+int getMangoQuantity() {
+    // Return the quantity for Mango Bravo (from your quantity label or variable)
+    return Integer.parseInt(mangoBravoQuantity.getText());
+}
 
+int getRedVelvetQuantity() {
+    
+    return Integer.parseInt(redvelvetlabel.getText());
+}
 
 
    
