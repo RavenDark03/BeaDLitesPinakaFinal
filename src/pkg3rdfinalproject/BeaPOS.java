@@ -6,6 +6,7 @@ package pkg3rdfinalproject;
 
 
 import java.awt.Color;
+import java.awt.Dialog;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -541,6 +542,121 @@ jRadioButton17.addItemListener(e -> {
     String entry = String.format("%s | Qty: %d | ₱%d", productName, 1, price);
     billListModel.addElement(entry);
     updateTotalAmountLabel();
+});
+    
+    
+    //action listener for receipt 
+    payByCashBtn.addActionListener(e -> {
+    // 1. Collect customer info (you can use your CustomerInfoFrame or similar dialog)
+    CustomerInfoFrame infoFrame = new CustomerInfoFrame();
+    infoFrame.setVisible(true);
+    if (!infoFrame.isSubmitted()) return; // User cancelled
+
+    String customerName = infoFrame.customerName;
+    String customerEmail = infoFrame.customerEmail;
+    String customerContact = infoFrame.customerContact;
+
+    // 2. Gather bill items (assuming billListModel holds your items in the format: "Product | Qty: n | ₱amount")
+    StringBuilder itemsHtml = new StringBuilder();
+    int total = 0;
+    for (int i = 0; i < billListModel.size(); i++) {
+        String entry = billListModel.get(i);
+        // Parse entry, e.g., "Red Velvet Cupcake | Qty: 2 | ₱140"
+        String[] parts = entry.split("\\|");
+        if (parts.length == 3) {
+            String itemName = parts[0].trim();
+            String qty = parts[1].replace("Qty:", "").trim();
+            String priceStr = parts[2].replace("₱", "").trim();
+            int price = Integer.parseInt(priceStr);
+            total += price;
+            itemsHtml.append("<tr>")
+                .append("<td>").append(itemName).append("</td>")
+                .append("<td>").append(qty).append("</td>")
+                .append("<td style=\"text-align:right;\">₱").append(price).append("</td>")
+                .append("</tr>");
+        }
+    }
+
+    // 3. Ask for paid amount (cash)
+    String paidStr = JOptionPane.showInputDialog(this, "Enter cash amount paid:", total);
+    int paid = total;
+    try { paid = Integer.parseInt(paidStr.trim()); } catch (Exception ex) {}
+    int change = Math.max(0, paid - total);
+
+    // 4. Prepare HTML receipt
+    String htmlReceipt = """
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Receipt</title>
+  <style>
+    .receipt-box { font-family: Arial, Helvetica, sans-serif; border: 2px dashed #d9a066; background: #fffaf0; width: 400px; margin: 20px auto; padding: 20px; }
+    h2, h4 { text-align: center; margin: 0; }
+    .receipt-header { border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px; }
+    .items th, .items td { text-align: left; padding: 5px 0; }
+    .totals td { font-weight: bold; }
+    .footer { text-align: center; font-size: 0.9em; color: #e20f8a; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="receipt-box">
+    <div class="receipt-header">
+      <h2>Bea D Lites</h2>
+      <h4>Pastries & Cakes</h4>
+      <p style="text-align:center;">
+        411 Nebraska St., Villa Priscilla, Cutcot, Pulilan, Bulacan<br>
+        Contact: 0949 470 1077<br>
+        Receipt #: <strong>00000X</strong><br>
+        Date: <strong>""" + java.time.LocalDate.now() + """</strong>
+      </p>
+    </div>
+    <div class="receipt-details">
+      <p><strong>Customer:</strong> """ + customerName + """<br>
+      <strong>Email:</strong> """ + customerEmail + """<br>
+      <strong>Contact:</strong> """ + customerContact + """</p>
+    </div>
+    <table class="items" width="100%">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th style="text-align:right;">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        """ + itemsHtml + """
+      </tbody>
+    </table>
+    <table class="totals" width="100%">
+      <tr>
+        <td>Total</td>
+        <td style="text-align:right;">₱""" + total + """</td>
+      </tr>
+      <tr>
+        <td>Cash</td>
+        <td style="text-align:right;">₱""" + paid + """</td>
+      </tr>
+      <tr>
+        <td>Change</td>
+        <td style="text-align:right;">₱""" + change + """</td>
+      </tr>
+    </table>
+    <div class="footer">
+      <p>Thank you for your purchase!</p>
+      <p>Follow us on Instagram @beadlites</p>
+    </div>
+  </div>
+</body>
+</html>
+""";
+
+    // 5. Send the email
+    try {
+        ReceiptGenerator.sendReceiptEmail(customerEmail, htmlReceipt);
+        JOptionPane.showMessageDialog(this, "Receipt emailed to " + customerEmail);
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
 });
     
       }
