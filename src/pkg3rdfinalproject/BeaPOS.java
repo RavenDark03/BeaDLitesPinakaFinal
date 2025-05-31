@@ -500,8 +500,7 @@ jRadioButton17.addItemListener(e -> {
     
     
     btnMinimalistCakeCustomCake.addActionListener(e -> {
-    MinimalistCustomCake minimal = new MinimalistCustomCake(this);
-    minimal.setVisible(true);
+    new MinimalistCustomCake(this).setVisible(true);
 });
     
       }

@@ -28,7 +28,7 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         initComponents();
         
         
-        this.beaPOSParent = beaPOSParent;
+        this.beaPOSParent = beaPOSparent;
         //custom icing cake 
         ActionListener sizeBtnListener = e -> {
             JToggleButton src = (JToggleButton) e.getSource();
@@ -101,15 +101,15 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         
         
         confirmButton.addActionListener(e -> {
-            if (selectedSize == null || selectedQuantity <= 0) {
-                JOptionPane.showMessageDialog(this, "Please select a size and quantity.");
-                return;
-            }
-            if (beaPOSParent != null) {
-                beaPOSParent.addMinimalistCustomCakeToBill(selectedSize, selectedQuantity, selectedPrice);
-            }
-            this.dispose();
-        });
+    if (selectedSize == null || selectedQuantity <= 0) {
+        JOptionPane.showMessageDialog(this, "Please select a size and quantity.");
+        return;
+    }
+    if (beaPOSParent != null) {
+        beaPOSParent.addMinimalistCustomCakeToBill(selectedSize, selectedQuantity, selectedPrice);
+    }
+    this.dispose();
+});
 
         // Initialize display
         lbzeroQty.setText("0");
