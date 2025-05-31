@@ -405,6 +405,7 @@ public class BeaPOS extends javax.swing.JFrame {
         productNameLabel4 = new javax.swing.JLabel();
         quantityLabel4 = new javax.swing.JLabel();
         sizeorvariationstaticLabel4 = new javax.swing.JLabel();
+        billLabel = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel71 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -849,6 +850,11 @@ public class BeaPOS extends javax.swing.JFrame {
         payByCashBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         payByCashBtn.setForeground(new java.awt.Color(225, 135, 44));
         payByCashBtn.setText("Pay By Cash");
+        payByCashBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                payByCashBtnActionPerformed(evt);
+            }
+        });
 
         payByGCASHBtn.setBackground(new java.awt.Color(255, 204, 102));
         payByGCASHBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -951,6 +957,11 @@ public class BeaPOS extends javax.swing.JFrame {
         sizeorvariationstaticLabel4.setForeground(new java.awt.Color(0, 0, 0));
         sizeorvariationstaticLabel4.setText("Size/Variation");
 
+        billLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        billLabel.setForeground(new java.awt.Color(225, 135, 44));
+        billLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        billLabel.setText("Bill");
+
         javax.swing.GroupLayout BillPanelLayout = new javax.swing.GroupLayout(BillPanel);
         BillPanel.setLayout(BillPanelLayout);
         BillPanelLayout.setHorizontalGroup(
@@ -965,10 +976,9 @@ public class BeaPOS extends javax.swing.JFrame {
                         .addComponent(totalAmountLabel))
                     .addGroup(BillPanelLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(payByCashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BillPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(payByGCASHBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(payByCashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(payByGCASHBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(BillPanelLayout.createSequentialGroup()
                 .addGroup(BillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1049,7 +1059,10 @@ public class BeaPOS extends javax.swing.JFrame {
                                 .addComponent(quantityLabel))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(BillPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(billLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         BillPanelLayout.setVerticalGroup(
@@ -1057,6 +1070,8 @@ public class BeaPOS extends javax.swing.JFrame {
             .addGroup(BillPanelLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(billLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(jLabel7)
                 .addGap(16, 16, 16)
@@ -3325,7 +3340,7 @@ public class BeaPOS extends javax.swing.JFrame {
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("cakes", jPanel71);
@@ -4273,7 +4288,7 @@ public class BeaPOS extends javax.swing.JFrame {
                     .addComponent(jPanel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(678, Short.MAX_VALUE))
+                .addContainerGap(681, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(breadsandsweetsPanel);
@@ -4308,7 +4323,7 @@ public class BeaPOS extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4720,6 +4735,10 @@ public class BeaPOS extends javax.swing.JFrame {
         int convert = Integer.parseInt(declaredValue);
         
     }//GEN-LAST:event_customCakeButtonActionPerformed
+
+    private void payByCashBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payByCashBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_payByCashBtnActionPerformed
     
 
 
@@ -4772,6 +4791,7 @@ public class BeaPOS extends javax.swing.JFrame {
     private javax.swing.JToggleButton bentoCakeSizebutton;
     private javax.swing.JButton bentoCakeminusButton;
     private javax.swing.JLabel bentocakelbl;
+    private javax.swing.JLabel billLabel;
     private javax.swing.JPanel breadsandsweetsPanel;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
