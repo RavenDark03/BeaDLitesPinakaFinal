@@ -503,9 +503,51 @@ jRadioButton17.addItemListener(e -> {
     new MinimalistCustomCake(this).setVisible(true);
 });
     
+    
+    
+    customCakeButton.addActionListener(e -> {
+    // Regex: number, 'x', number, optional letters (e.g., 8x2, 10x4in, 6x2cm)
+    String sizePattern = "^\\d+x\\d+[a-zA-Z]*$";
+    String size = null;
+    while (true) {
+        size = JOptionPane.showInputDialog(this, "Enter fondant cake size (e.g. 8x2, 10x4in):", "Fondant Cake Size", JOptionPane.QUESTION_MESSAGE);
+        if (size == null) return; // User cancelled
+        size = size.trim();
+        if (size.matches(sizePattern)) {
+            break; // Valid
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid size format. Please use e.g. 8x2 or 10x4in.", "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // Prompt for declared value/price
+    String valueStr = null;
+    int price = 0;
+    while (true) {
+        valueStr = JOptionPane.showInputDialog(this, "Enter declared value/price for this fondant cake:", "Fondant Cake Price", JOptionPane.QUESTION_MESSAGE);
+        if (valueStr == null) return; // User cancelled
+        valueStr = valueStr.trim();
+        try {
+            price = Integer.parseInt(valueStr);
+            if (price > 0) break;
+            else throw new NumberFormatException();
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid positive integer for the price.", "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // Add to bill
+    String productName = "Fondant Custom Cake (" + size + ")";
+    String entry = String.format("%s | Qty: %d | ₱%d", productName, 1, price);
+    billListModel.addElement(entry);
+    updateTotalAmountLabel();
+});
+    
       }
     //methods for actionListeners
 
+ 
+    
     /**
      *
      * @param cakeSize
@@ -4702,8 +4744,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }//GEN-LAST:event_btnMinimalistCakeCustomCakeActionPerformed
 
     private void customCakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customCakeButtonActionPerformed
-        String declaredValue = JOptionPane.showInputDialog(null, "Please input Declared Value", "Declared Value", JOptionPane.INFORMATION_MESSAGE);
-        int convert = Integer.parseInt(declaredValue);
+        
         
     }//GEN-LAST:event_customCakeButtonActionPerformed
 
