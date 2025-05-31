@@ -279,9 +279,8 @@ public class Login extends javax.swing.JFrame {
         if (rs.next()) {
             JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
             
-//            MainFrameDashBoard mainDash = new MainFrameDashBoard();
-//            
-//            mainDash.setVisible(true);
+            Dashboard dash = new Dashboard();
+            dash.setVisible(true);
             setVisible(false);
             
            

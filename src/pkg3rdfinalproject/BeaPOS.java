@@ -4867,9 +4867,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
  
-//       setVisible(false);
-//       MainFrameDashBoard main = new MainFrameDashBoard();
-//       main.setVisible(true);
+       setVisible(false);
+       Dashboard main = new Dashboard();
+       main.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void addButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonMangoActionPerformed
