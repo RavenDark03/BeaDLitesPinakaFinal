@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pkg3rdfinalproject;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 import pkg3rdfinalproject.BeaPOS;
 
 /**
@@ -11,56 +14,147 @@ import pkg3rdfinalproject.BeaPOS;
  */
 public class Icingcustomcake extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CustomizeCake
-     */
+   private BeaPOS beaPOSParent;
+    private String selectedSize = null;
+    private int selectedPrice = 0;
+    private int selectedQuantity = 0;
+    
     
     //custom icing cake
+    
+     
      int icingCakeQty = 0;
      int icingCakeBasePrice = 0;
     
     
-   
+
    
     
     
-    public Icingcustomcake() {
+    public Icingcustomcake(BeaPOS beaPOSParent) {
         initComponents();
+        this.beaPOSParent = beaPOSParent;
         setLocationRelativeTo(null);
         setResizable(false);
+
+        
+        
+        ActionListener sizeBtnListener = e -> {
+            JToggleButton src = (JToggleButton) e.getSource();
+            // Deselect all
+            btn5x3IcingCake.setSelected(false);
+            btn6x2IcingCake.setSelected(false);
+            btn6x3IcingCake.setSelected(false);
+            btn7x3IcingCake.setSelected(false);
+            btn8x3IcingCake.setSelected(false);
+            btn8x4IcingCake.setSelected(false);
+            btn9x4IcingCake.setSelected(false);
+            // Select only this
+            src.setSelected(true);
+            // Set size and price
+            if (src == btn5x3IcingCake) {
+                selectedSize = "5 x 3\"";
+                selectedPrice = 650;
+            } else if (src == btn6x2IcingCake) {
+                selectedSize = "6 x 2\"";
+                selectedPrice = 750;
+            } else if (src == btn6x3IcingCake) {
+                selectedSize = "6 x 3\"";
+                selectedPrice = 850;
+            } else if (src == btn7x3IcingCake) {
+                selectedSize = "7 x 3\"";
+                selectedPrice = 1075;
+            } else if (src == btn8x3IcingCake) {
+                selectedSize = "8 x 3\"";
+                selectedPrice = 1300;
+            } else if (src == btn8x4IcingCake) {
+                selectedSize = "8 x 4\"";
+                selectedPrice = 1400;
+            } else if (src == btn9x4IcingCake) {
+                selectedSize = "9 x 4\"";
+                selectedPrice = 1800;
+            }
+            updatePriceDisplay();
+        };
         
         
         //custom icing cake 
-        btn5x3IcingCake.addActionListener(e->{
-           icingCakeBasePrice = 650;
-           updateCustomIcingCakePrice();
-        });
-        btn6x2IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 750;
-             updateCustomIcingCakePrice();
-        });
-        btn6x3IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 850;
-             updateCustomIcingCakePrice();
-        });
-        btn7x3IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 1075;
-             updateCustomIcingCakePrice();
-        });
-        btn8x3IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 1300;
-           updateCustomIcingCakePrice(); 
-        });
-        btn8x4IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 1400;
-             updateCustomIcingCakePrice();
-        });
-        btn9x4IcingCake.addActionListener(e->{
-            icingCakeBasePrice = 1800;
-             updateCustomIcingCakePrice();
-        });
+//        btn5x3IcingCake.addActionListener(e->{
+//           icingCakeBasePrice = 650;
+//           updateCustomIcingCakePrice();
+//        });
+//        btn6x2IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 750;
+//             updateCustomIcingCakePrice();
+//        });
+//        btn6x3IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 850;
+//             updateCustomIcingCakePrice();
+//        });
+//        btn7x3IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 1075;
+//             updateCustomIcingCakePrice();
+//        });
+//        btn8x3IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 1300;
+//           updateCustomIcingCakePrice(); 
+//        });
+//        btn8x4IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 1400;
+//             updateCustomIcingCakePrice();
+//        });
+//        btn9x4IcingCake.addActionListener(e->{
+//            icingCakeBasePrice = 1800;
+//             updateCustomIcingCakePrice();
+//        });
+
+        btn5x3IcingCake.addActionListener(sizeBtnListener);
+        btn6x2IcingCake.addActionListener(sizeBtnListener);
+        btn6x3IcingCake.addActionListener(sizeBtnListener);
+        btn7x3IcingCake.addActionListener(sizeBtnListener);
+        btn8x3IcingCake.addActionListener(sizeBtnListener);
+        btn8x4IcingCake.addActionListener(sizeBtnListener);
+        btn9x4IcingCake.addActionListener(sizeBtnListener);
          
+        
+       btnPlusIcingCake.addActionListener(e -> {
+            selectedQuantity++;
+            lbzeroQty.setText(String.valueOf(selectedQuantity));
+            updatePriceDisplay();
+        });
+
+        btnMinusIcingCake.addActionListener(e -> {
+            if (selectedQuantity > 0) {
+                selectedQuantity--;
+                lbzeroQty.setText(String.valueOf(selectedQuantity));
+                updatePriceDisplay();
+            }
+        }); 
+        
+        
+        
+        confirmButton.addActionListener(e -> {
+            if (selectedSize == null || selectedQuantity <= 0) {
+                JOptionPane.showMessageDialog(this, "Please select a size and quantity.");
+                return;
+            }
+            if (beaPOSParent != null) {
+                beaPOSParent.addCustomCakeToBill(selectedSize, selectedQuantity, selectedPrice);
+            }
+            this.dispose();
+        });
+
+        // Initialize display
+        lbzeroQty.setText("0");
+        updatePriceDisplay();
+    
+        
     }
+    private void updatePriceDisplay() {
+        customCakePrice.setText("Php: " + (selectedPrice * selectedQuantity) + ".00");
+    }
+    
+    
     
     private void updateCustomIcingCakePrice(){
         int total = (icingCakeBasePrice) * icingCakeQty;
@@ -571,22 +665,22 @@ public class Icingcustomcake extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMinusIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusIcingCakeActionPerformed
-        if(icingCakeQty>0){
-        icingCakeQty--;
-        lbzeroQty.setText(String.valueOf(icingCakeQty));
-        updateCustomIcingCakePrice();
-            
-        }
+//        if(icingCakeQty>0){
+//        icingCakeQty--;
+//        lbzeroQty.setText(String.valueOf(icingCakeQty));
+//        updateCustomIcingCakePrice();
+//            
+//        }
     }//GEN-LAST:event_btnMinusIcingCakeActionPerformed
 
     private void btnPlusIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusIcingCakeActionPerformed
-        icingCakeQty++;
-        lbzeroQty.setText(String.valueOf(icingCakeQty));
-        updateCustomIcingCakePrice();
+//        icingCakeQty++;
+//        lbzeroQty.setText(String.valueOf(icingCakeQty));
+//        updateCustomIcingCakePrice();
     }//GEN-LAST:event_btnPlusIcingCakeActionPerformed
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
-        setVisible(false);
+//        setVisible(false);
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     /**
@@ -620,7 +714,8 @@ public class Icingcustomcake extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Icingcustomcake().setVisible(true);
+                BeaPOS BeaPOS = null;
+                new Icingcustomcake(BeaPOS).setVisible(true);
             }
         });
     }

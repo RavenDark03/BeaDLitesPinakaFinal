@@ -440,8 +440,8 @@ jRadioButton20.addItemListener(e -> {
    
 
 // Ube Pandesal
-ubePandesalRadioButton.addItemListener(e -> {
-    if (ubePandesalRadioButton.isSelected()) {
+jRadioButton12.addItemListener(e -> {
+    if (jRadioButton12.isSelected()) {
         addOrUpdateBillItem("Ube Pandesal", ubePandesalQty, ubePandesalBasePrice);
     } else {
         addOrUpdateBillItem("Ube Pandesal", 0, ubePandesalBasePrice);
@@ -449,8 +449,8 @@ ubePandesalRadioButton.addItemListener(e -> {
 });
 
 // Banana Loaf
-bananaLoafRadioButton.addItemListener(e -> {
-    if (bananaLoafRadioButton.isSelected()) {
+jRadioButton13.addItemListener(e -> {
+    if (jRadioButton13.isSelected()) {
         addOrUpdateBillItem("Banana Loaf", bananaLoafQty, bananaLoafBasePrice);
     } else {
         addOrUpdateBillItem("Banana Loaf", 0, bananaLoafBasePrice);
@@ -458,8 +458,8 @@ bananaLoafRadioButton.addItemListener(e -> {
 });
 
 // Brownies
-browniesRadioButton.addItemListener(e -> {
-    if (browniesRadioButton.isSelected()) {
+jRadioButton14.addItemListener(e -> {
+    if (jRadioButton14.isSelected()) {
         addOrUpdateBillItem("Brownies", browniesQty, browniesBasePrice);
     } else {
         addOrUpdateBillItem("Brownies", 0, browniesBasePrice);
@@ -467,8 +467,8 @@ browniesRadioButton.addItemListener(e -> {
 });
 
 // Classic
-classicRadioButton.addItemListener(e -> {
-    if (classicRadioButton.isSelected()) {
+jRadioButton15.addItemListener(e -> {
+    if (jRadioButton15.isSelected()) {
         addOrUpdateBillItem("Classic", classicCinnamonQty, classicCinnamonBasePrice);
     } else {
         addOrUpdateBillItem("Classic", 0, classicCinnamonBasePrice);
@@ -476,8 +476,8 @@ classicRadioButton.addItemListener(e -> {
 });
 
 // Milky Cheese Donut
-milkyCheeseDonut.addItemListener(e -> {
-    if (milkyCheeseDonut.isSelected()) {
+jRadioButton16.addItemListener(e -> {
+    if (jRadioButton16.isSelected()) {
         addOrUpdateBillItem("Milky Cheese Donut", milkyCheeseDonutQty, milkyCheeseDonutBasePrice);
     } else {
         addOrUpdateBillItem("Milky Cheese Donut", 0, milkyCheeseDonutBasePrice);
@@ -485,19 +485,47 @@ milkyCheeseDonut.addItemListener(e -> {
 });
 
 // Banana Muffin
-bananaMuffinRadioButton.addItemListener(e -> {
-    if (bananaMuffinRadioButton.isSelected()) {
+jRadioButton17.addItemListener(e -> {
+    if (jRadioButton17.isSelected()) {
         addOrUpdateBillItem("Banana Muffin", bananaMuffinQty, bananaMuffinBasePrice);
     } else {
         addOrUpdateBillItem("Banana Muffin", 0, bananaMuffinBasePrice);
     }
 });
     
+
+
+
+
+//action listener for custom cakes
+
+btnCustomeCakeIcingCake.addActionListener(e -> {
+    Icingcustomcake icingFrame = new Icingcustomcake(this); // Pass BeaPOS instance
+    icingFrame.setVisible(true);
+});
+
+
+
+
+
     
     
       }
     //methods for actionListeners
-
+public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
+    if (quantity <= 0) return;
+    String productName = "Custom Icing Cake (" + cakeSize + ")";
+    // Remove existing entry for this size if it exists, to avoid duplicates
+    for (int i = 0; i < billListModel.size(); i++) {
+        if (billListModel.get(i).startsWith(productName + " |")) {
+            billListModel.remove(i);
+            break;
+        }
+    }
+    String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * price);
+    billListModel.addElement(entry);
+    updateTotalAmountLabel();
+}
 
  
     
@@ -724,7 +752,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         lbPhpUbePandesal = new javax.swing.JLabel();
         btnUbeCheesedesal = new javax.swing.JToggleButton();
         btnUbeHalayaCheesedesal = new javax.swing.JToggleButton();
-        ubePandesalRadioButton = new javax.swing.JRadioButton();
+        jRadioButton12 = new javax.swing.JRadioButton();
         jPanel63 = new javax.swing.JPanel();
         jPanel64 = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
@@ -736,7 +764,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         lbPhpBananaLoaf = new javax.swing.JLabel();
         btnMoistBananaChocoChipLoaf = new javax.swing.JToggleButton();
         btnMoistBananaChocoChipAlmondLoaf = new javax.swing.JToggleButton();
-        bananaLoafRadioButton = new javax.swing.JRadioButton();
+        jRadioButton13 = new javax.swing.JRadioButton();
         jPanel67 = new javax.swing.JPanel();
         jPanel68 = new javax.swing.JPanel();
         jLabel86 = new javax.swing.JLabel();
@@ -748,7 +776,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         lbPhpBrownies = new javax.swing.JLabel();
         btn6PcsBrownies = new javax.swing.JToggleButton();
         btn12PcsBrownies = new javax.swing.JToggleButton();
-        browniesRadioButton = new javax.swing.JRadioButton();
+        jRadioButton14 = new javax.swing.JRadioButton();
         btn30PcsBrownies = new javax.swing.JToggleButton();
         jPanel72 = new javax.swing.JPanel();
         jPanel73 = new javax.swing.JPanel();
@@ -761,7 +789,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         lbPhpClassicCinnamon = new javax.swing.JLabel();
         btnBoxof4ClassicCinnamon = new javax.swing.JToggleButton();
         btnBoxof6ClassicCinnamon = new javax.swing.JToggleButton();
-        classicRadioButton = new javax.swing.JRadioButton();
+        jRadioButton15 = new javax.swing.JRadioButton();
         jPanel76 = new javax.swing.JPanel();
         jPanel77 = new javax.swing.JPanel();
         jLabel92 = new javax.swing.JLabel();
@@ -773,7 +801,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         lbPhpMilkyDonut = new javax.swing.JLabel();
         btn5PcsMilkyDonut = new javax.swing.JToggleButton();
         btn10PcsMilkyDonut = new javax.swing.JToggleButton();
-        milkyCheeseDonut = new javax.swing.JRadioButton();
+        jRadioButton16 = new javax.swing.JRadioButton();
         jPanel80 = new javax.swing.JPanel();
         jPanel81 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
@@ -783,7 +811,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btnPlusMuffin = new javax.swing.JButton();
         jPanel83 = new javax.swing.JPanel();
         lbPhpMuffin = new javax.swing.JLabel();
-        bananaMuffinRadioButton = new javax.swing.JRadioButton();
+        jRadioButton17 = new javax.swing.JRadioButton();
         btn6PcsBananaMuffin = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -3212,7 +3240,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1148, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("cakes", jPanel71);
@@ -3331,9 +3359,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btnUbeHalayaCheesedesal.setForeground(new java.awt.Color(225, 135, 44));
         btnUbeHalayaCheesedesal.setText("Ube  Halaya Cheesedesal");
 
-        ubePandesalRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ubePandesalRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        ubePandesalRadioButton.setText("Ube Pandesal");
+        jRadioButton12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton12.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton12.setText("Ube Pandesal");
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
@@ -3345,7 +3373,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
                     .addComponent(btnUbeCheesedesal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel59Layout.createSequentialGroup()
                         .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ubePandesalRadioButton)
+                            .addComponent(jRadioButton12)
                             .addGroup(jPanel59Layout.createSequentialGroup()
                                 .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3360,7 +3388,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel59Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ubePandesalRadioButton)
+                .addComponent(jRadioButton12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3483,9 +3511,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btnMoistBananaChocoChipAlmondLoaf.setForeground(new java.awt.Color(225, 135, 44));
         btnMoistBananaChocoChipAlmondLoaf.setText("Moist Banana Choco Chip Almond Loaf");
 
-        bananaLoafRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bananaLoafRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        bananaLoafRadioButton.setText("Banana Loaf");
+        jRadioButton13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton13.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton13.setText("Banana Loaf");
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
@@ -3494,7 +3522,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             .addGroup(jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bananaLoafRadioButton)
+                    .addComponent(jRadioButton13)
                     .addGroup(jPanel63Layout.createSequentialGroup()
                         .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3510,7 +3538,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(bananaLoafRadioButton)
+                .addComponent(jRadioButton13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3633,9 +3661,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btn12PcsBrownies.setForeground(new java.awt.Color(225, 135, 44));
         btn12PcsBrownies.setText("12 PCS");
 
-        browniesRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        browniesRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        browniesRadioButton.setText("Brownies");
+        jRadioButton14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton14.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton14.setText("Brownies");
 
         btn30PcsBrownies.setBackground(new java.awt.Color(255, 255, 153));
         btn30PcsBrownies.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -3649,7 +3677,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             .addGroup(jPanel67Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(browniesRadioButton)
+                    .addComponent(jRadioButton14)
                     .addGroup(jPanel67Layout.createSequentialGroup()
                         .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3668,7 +3696,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel67Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(browniesRadioButton)
+                .addComponent(jRadioButton14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3793,9 +3821,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btnBoxof6ClassicCinnamon.setForeground(new java.awt.Color(225, 135, 44));
         btnBoxof6ClassicCinnamon.setText("Box of 6");
 
-        classicRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        classicRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        classicRadioButton.setText("Classic Cinnamon Roll");
+        jRadioButton15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton15.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton15.setText("Classic Cinnamon Roll");
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
         jPanel72.setLayout(jPanel72Layout);
@@ -3804,7 +3832,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             .addGroup(jPanel72Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(classicRadioButton)
+                    .addComponent(jRadioButton15)
                     .addGroup(jPanel72Layout.createSequentialGroup()
                         .addComponent(jPanel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3821,7 +3849,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel72Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(classicRadioButton)
+                .addComponent(jRadioButton15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3944,9 +3972,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
         btn10PcsMilkyDonut.setForeground(new java.awt.Color(225, 135, 44));
         btn10PcsMilkyDonut.setText("10 PCS");
 
-        milkyCheeseDonut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        milkyCheeseDonut.setForeground(new java.awt.Color(225, 135, 44));
-        milkyCheeseDonut.setText("Milky Cheese Donut");
+        jRadioButton16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton16.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton16.setText("Milky Cheese Donut");
 
         javax.swing.GroupLayout jPanel76Layout = new javax.swing.GroupLayout(jPanel76);
         jPanel76.setLayout(jPanel76Layout);
@@ -3955,7 +3983,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             .addGroup(jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(milkyCheeseDonut)
+                    .addComponent(jRadioButton16)
                     .addGroup(jPanel76Layout.createSequentialGroup()
                         .addComponent(jPanel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3972,7 +4000,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(milkyCheeseDonut)
+                .addComponent(jRadioButton16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4085,9 +4113,9 @@ bananaMuffinRadioButton.addItemListener(e -> {
                 .addContainerGap())
         );
 
-        bananaMuffinRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bananaMuffinRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        bananaMuffinRadioButton.setText("Banana Muffin");
+        jRadioButton17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jRadioButton17.setForeground(new java.awt.Color(225, 135, 44));
+        jRadioButton17.setText("Banana Muffin");
 
         btn6PcsBananaMuffin.setBackground(new java.awt.Color(255, 255, 153));
         btn6PcsBananaMuffin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -4101,7 +4129,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             .addGroup(jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bananaMuffinRadioButton)
+                    .addComponent(jRadioButton17)
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jPanel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4115,7 +4143,7 @@ bananaMuffinRadioButton.addItemListener(e -> {
             jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(bananaMuffinRadioButton)
+                .addComponent(jRadioButton17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4639,8 +4667,8 @@ bananaMuffinRadioButton.addItemListener(e -> {
     }//GEN-LAST:event_btn4x2YemacakeActionPerformed
 
     private void btnCustomeCakeIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomeCakeIcingCakeActionPerformed
-        Icingcustomcake icc = new Icingcustomcake();
-        icc.setVisible(true);
+//        Icingcustomcake icc = new Icingcustomcake();
+//        icc.setVisible(true);
         
         
 
@@ -4706,8 +4734,6 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JButton RedVelvetPlusButton;
     private javax.swing.JButton addButtonMango;
     private javax.swing.JButton backButton;
-    private javax.swing.JRadioButton bananaLoafRadioButton;
-    private javax.swing.JRadioButton bananaMuffinRadioButton;
     private javax.swing.JButton bentoCakePlusButton;
     private javax.swing.JLabel bentoCakePrice;
     private javax.swing.JRadioButton bentoCakeRadioButton;
@@ -4717,7 +4743,6 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JLabel billLabel;
     private javax.swing.JList<String> billList;
     private javax.swing.JPanel breadsandsweetsPanel;
-    private javax.swing.JRadioButton browniesRadioButton;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
     private javax.swing.JToggleButton btn12PcsMiniCupcake;
@@ -4777,7 +4802,6 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JPanel cakesPanel;
     private javax.swing.JLabel caramelFlanDeLecheCakePrice;
     private javax.swing.JLabel cheeseCakePrice;
-    private javax.swing.JRadioButton classicRadioButton;
     private javax.swing.JButton customCakeButton;
     private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel jLabel1;
@@ -4896,6 +4920,12 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JPanel jPanel95;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
     private javax.swing.JRadioButton jRadioButton18;
     private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
@@ -4945,7 +4975,6 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JRadioButton mangoRadioButton;
     private javax.swing.JToggleButton mangoToppings;
     private javax.swing.JLabel mangobravotublblqty;
-    private javax.swing.JRadioButton milkyCheeseDonut;
     private javax.swing.JLabel miniCupcakesPrice;
     private javax.swing.JButton minusButtonMango;
     private javax.swing.JToggleButton payByCashBtn;
@@ -4972,7 +5001,6 @@ bananaMuffinRadioButton.addItemListener(e -> {
     private javax.swing.JLabel totalAmountLabel;
     private javax.swing.JLabel totalstaticlabel;
     private javax.swing.JTextField txtSearch;
-    private javax.swing.JRadioButton ubePandesalRadioButton;
     private javax.swing.JLabel yemaCakeLabelQty;
     // End of variables declaration//GEN-END:variables
 }
