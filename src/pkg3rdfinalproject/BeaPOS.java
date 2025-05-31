@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
@@ -109,8 +110,7 @@ public class BeaPOS extends javax.swing.JFrame {
     /**
      * Creates new form BeaPOS
      */
-    
-    
+   DefaultListModel<String> billListModel = new DefaultListModel<>();
     
 
     
@@ -132,6 +132,7 @@ public class BeaPOS extends javax.swing.JFrame {
                 confirmExit();
             }
         });
+        billList.setModel(billListModel);
     
         
         
@@ -338,7 +339,12 @@ public class BeaPOS extends javax.swing.JFrame {
     
     
     //actionlisteners for radiobuttons
- 
+    mangoRadioButton.addActionListener(e -> {
+    if (mangoQty > 0) { // Only add if quantity is set
+        String item = "Mango Bravo | Qty: " + mangoQty + " | ₱" + (mangoQty * mangoBasePrice);
+        billListModel.addElement(item);
+    }
+});
     
     
     
@@ -346,18 +352,7 @@ public class BeaPOS extends javax.swing.JFrame {
     //methods for actionListeners
 
 
-
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
     
     private void confirmExit(){
         int choice = JOptionPane.showConfirmDialog(this,"Are you sure you want to Exit?", "Exit",JOptionPane.YES_NO_OPTION);
