@@ -1,24 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pkg3rdfinalproject;
-// File: CustomerInfoFrame.java
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
-public class CustomerInfoFrame extends JFrame {
+public class CustomerInfoFrame extends JDialog {
     public String customerName = "";
     public String customerEmail = "";
     public String customerContact = "";
     private boolean submitted = false;
 
-    public CustomerInfoFrame() {
-        setTitle("Customer Information");
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    public CustomerInfoFrame(Frame parent) {
+        super(parent, "Customer Information", true); // true = modal
+        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setSize(350, 220);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(parent);
 
         JLabel nameLabel = new JLabel("Customer Name:");
         JTextField nameField = new JTextField(20);
@@ -51,14 +46,10 @@ public class CustomerInfoFrame extends JFrame {
         panel.add(new JLabel()); panel.add(submitBtn);
 
         add(panel);
+        pack();
     }
 
     public boolean isSubmitted() {
         return submitted;
     }
 }
-/**
- *
- * @author Lynch
- */
-

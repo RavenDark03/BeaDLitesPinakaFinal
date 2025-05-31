@@ -13,7 +13,7 @@ import javax.mail.MessagingException;
 public class ReceiptGenerator {
     public static void main(String[] args) {
         // Test email details
-        String recipientEmail = "quindozaebea@gmail.com"; // Replace with actual email
+        String recipientEmail = "matthewmarcsantua@gmail.com"; // Replace with actual email
         String emailSubject = "Receipt";
         String receipt = """
                          <html lang="en">

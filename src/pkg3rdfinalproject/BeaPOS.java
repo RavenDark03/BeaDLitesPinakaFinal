@@ -17,6 +17,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import javax.swing.DefaultListModel;
+import pkg3rdfinalproject.CustomerInfoFrame;
+import pkg3rdfinalproject.JavaMailSender;
 
 
 
@@ -547,14 +549,13 @@ jRadioButton17.addItemListener(e -> {
     
     //action listener for receipt 
     payByCashBtn.addActionListener(e -> {
-    // 1. Collect customer info (you can use your CustomerInfoFrame or similar dialog)
-    CustomerInfoFrame infoFrame = new CustomerInfoFrame();
-    infoFrame.setVisible(true);
-    if (!infoFrame.isSubmitted()) return; // User cancelled
-
-    String customerName = infoFrame.customerName;
-    String customerEmail = infoFrame.customerEmail;
-    String customerContact = infoFrame.customerContact;
+    // 1. Collect customer info
+    CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
+infoFrame.setVisible(true);
+if (!infoFrame.isSubmitted()) return;
+String customerName = infoFrame.customerName;
+String customerEmail = infoFrame.customerEmail;
+String customerContact = infoFrame.customerContact;
 
     // 2. Gather bill items (assuming billListModel holds your items in the format: "Product | Qty: n | ₱amount")
     StringBuilder itemsHtml = new StringBuilder();
@@ -583,27 +584,39 @@ jRadioButton17.addItemListener(e -> {
     try { paid = Integer.parseInt(paidStr.trim()); } catch (Exception ex) {}
     int change = Math.max(0, paid - total);
 
-    // 4. Prepare HTML receipt
-    String htmlReceipt = """
+    // 4. Prepare HTML receipt using String.format for cleaner code
+    String htmlReceipt = String.format("""
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Receipt</title>
-  ...
+  <style>
+    .receipt-box { font-family: Arial, Helvetica, sans-serif; border: 2px dashed #d9a066; background: #fffaf0; width: 400px; margin: 20px auto; padding: 20px; }
+    h2, h4 { text-align: center; margin: 0; }
+    .receipt-header { border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px; }
+    .items th, .items td { text-align: left; padding: 5px 0; }
+    .totals td { font-weight: bold; }
+    .footer { text-align: center; font-size: 0.9em; color: #e20f8a; margin-top: 10px; }
+  </style>
 </head>
 <body>
   <div class="receipt-box">
     <div class="receipt-header">
-      ...
-      Date: <strong>""" + java.time.LocalDate.now() + """</strong>
+      <h2>Bea D Lites</h2>
+      <h4>Pastries & Cakes</h4>
+      <p style="text-align:center;">
+        411 Nebraska St., Villa Priscilla, Cutcot, Pulilan, Bulacan<br>
+        Contact: 0949 470 1077<br>
+        Receipt #: <strong>00000X</strong><br>
+        Date: <strong>%s</strong>
       </p>
     </div>
     <div class="receipt-details">
-      <p><strong>Customer:</strong> """ + customerName + """<br>
-      <strong>Email:</strong> """ + customerEmail + """<br>
-      <strong>Contact:</strong> """ + customerContact + """</p>
+      <p><strong>Customer:</strong> %s<br>
+      <strong>Email:</strong> %s<br>
+      <strong>Contact:</strong> %s</p>
     </div>
-    <table class="items" width="100%">
+    <table class="items" width="100%%">
       <thead>
         <tr>
           <th>Item</th>
@@ -612,21 +625,21 @@ jRadioButton17.addItemListener(e -> {
         </tr>
       </thead>
       <tbody>
-        """ + itemsHtml + """
+        %s
       </tbody>
     </table>
-    <table class="totals" width="100%">
+    <table class="totals" width="100%%">
       <tr>
         <td>Total</td>
-        <td style="text-align:right;">₱""" + total + """</td>
+        <td style="text-align:right;">₱%d</td>
       </tr>
       <tr>
         <td>Cash</td>
-        <td style="text-align:right;">₱""" + paid + """</td>
+        <td style="text-align:right;">₱%d</td>
       </tr>
       <tr>
         <td>Change</td>
-        <td style="text-align:right;">₱""" + change + """</td>
+        <td style="text-align:right;">₱%d</td>
       </tr>
     </table>
     <div class="footer">
@@ -636,16 +649,158 @@ jRadioButton17.addItemListener(e -> {
   </div>
 </body>
 </html>
-""";
+""",
+        java.time.LocalDate.now(),
+        customerName,
+        customerEmail,
+        customerContact,
+        itemsHtml.toString(),
+        total,
+        paid,
+        change
+            
+            
+    );
+    
 
-    // 5. Send the email
+    // 5. Send the email using JavaMailSender
     try {
-        ReceiptGenerator.sendReceiptEmail(customerEmail, htmlReceipt);
+        JavaMailSender.sendHtmlEmail(customerEmail, "Your Purchase Receipt", htmlReceipt);
         JOptionPane.showMessageDialog(this, "Receipt emailed to " + customerEmail);
+        billListModel.clear();
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
 });
+    
+    
+    payByGCASHBtn.addActionListener(e -> {
+    // 1. Collect customer info using your modal dialog
+    CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
+    infoFrame.setVisible(true);
+    if (!infoFrame.isSubmitted()) return;
+
+    String customerName = infoFrame.customerName;
+    String customerEmail = infoFrame.customerEmail;
+    String customerContact = infoFrame.customerContact;
+
+    // 2. Calculate total from your billListModel (same as in the cash button)
+    StringBuilder itemsHtml = new StringBuilder();
+    int total = 0;
+    for (int i = 0; i < billListModel.size(); i++) {
+        String entry = billListModel.get(i);
+        String[] parts = entry.split("\\|");
+        if (parts.length == 3) {
+            String itemName = parts[0].trim();
+            String qty = parts[1].replace("Qty:", "").trim();
+            String priceStr = parts[2].replace("₱", "").trim();
+            int price = Integer.parseInt(priceStr);
+            total += price;
+            itemsHtml.append("<tr>")
+                .append("<td>").append(itemName).append("</td>")
+                .append("<td>").append(qty).append("</td>")
+                .append("<td style=\"text-align:right;\">₱").append(price).append("</td>")
+                .append("</tr>");
+        }
+    }
+
+    // 3. Generate the GCash QR string (use your merchant QR data, or a placeholder for demo)
+    // For real use, replace with your real GCash QR string.
+    String gcashQRString = "00020101021127830012com.p2pqrpay0111GXCHPHM2XXX02089996440303152170200000006560417DWQM4TK3JDNYRIX0S5204601653036085802PH5915MA****W MA*C S.6005Sibul6104123463043B33"; // e.g., from your merchant QR or link
+
+    // If you want to encode the amount, and your QR supports it, append/format as needed.
+    // For most static GCash QRs, you can't change the amount dynamically.
+
+    // 4. Show the QR code dialog
+    GCashQRDialog.showGCashQR(gcashQRString);
+
+    // 5. After payment, let the cashier confirm, then send the receipt
+    int confirm = JOptionPane.showConfirmDialog(this, "Has the payment been completed via GCash?", "Confirm Payment", JOptionPane.YES_NO_OPTION);
+    if (confirm != JOptionPane.YES_OPTION) return;
+
+    // 6. Prepare HTML receipt (reuse your template)
+    String htmlReceipt = String.format("""
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Receipt</title>
+  <style>
+    .receipt-box { font-family: Arial, Helvetica, sans-serif; border: 2px dashed #d9a066; background: #fffaf0; width: 400px; margin: 20px auto; padding: 20px; }
+    h2, h4 { text-align: center; margin: 0; }
+    .receipt-header { border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px; }
+    .items th, .items td { text-align: left; padding: 5px 0; }
+    .totals td { font-weight: bold; }
+    .footer { text-align: center; font-size: 0.9em; color: #e20f8a; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="receipt-box">
+    <div class="receipt-header">
+      <h2>Bea D Lites</h2>
+      <h4>Pastries & Cakes</h4>
+      <p style="text-align:center;">
+        411 Nebraska St., Villa Priscilla, Cutcot, Pulilan, Bulacan<br>
+        Contact: 0949 470 1077<br>
+        Receipt #: <strong>00000X</strong><br>
+        Date: <strong>%s</strong>
+      </p>
+    </div>
+    <div class="receipt-details">
+      <p><strong>Customer:</strong> %s<br>
+      <strong>Email:</strong> %s<br>
+      <strong>Contact:</strong> %s</p>
+    </div>
+    <table class="items" width="100%%">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th style="text-align:right;">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        %s
+      </tbody>
+    </table>
+    <table class="totals" width="100%%">
+      <tr>
+        <td>Total</td>
+        <td style="text-align:right;">₱%d</td>
+      </tr>
+      <tr>
+        <td>Paid via</td>
+        <td style="text-align:right;">GCash</td>
+      </tr>
+    </table>
+    <div class="footer">
+      <p>Thank you for your purchase!</p>
+      <p>Follow us on Instagram @beadlites</p>
+    </div>
+  </div>
+</body>
+</html>
+""",
+        java.time.LocalDate.now(),
+        customerName,
+        customerEmail,
+        customerContact,
+        itemsHtml.toString(),
+        total
+    );
+
+    // 7. Send the email
+    try {
+        JavaMailSender.sendHtmlEmail(customerEmail, "Your Purchase Receipt", htmlReceipt);
+        JOptionPane.showMessageDialog(this, "Receipt emailed to " + customerEmail);
+        billListModel.clear();
+    } catch (Exception ex) {
+        ex.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+});
+
+    
+
     
       }
     //methods for actionListeners

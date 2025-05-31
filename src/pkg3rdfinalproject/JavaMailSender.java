@@ -42,4 +42,17 @@ public class JavaMailSender {
 
         Transport.send(message);
     
-}}
+}
+public static void main(String[] args) {
+    try {
+        sendHtmlEmail(
+            "matthewmarcsantua@gmail.com", // <-- use your real email!
+            "Test Email from JavaMailSender",
+            "<h1>It works!</h1>This is a test email."
+        );
+        System.out.println("Email sent!");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+}
