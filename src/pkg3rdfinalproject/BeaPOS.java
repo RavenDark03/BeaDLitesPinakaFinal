@@ -589,25 +589,13 @@ jRadioButton17.addItemListener(e -> {
 <head>
   <meta charset="UTF-8">
   <title>Receipt</title>
-  <style>
-    .receipt-box { font-family: Arial, Helvetica, sans-serif; border: 2px dashed #d9a066; background: #fffaf0; width: 400px; margin: 20px auto; padding: 20px; }
-    h2, h4 { text-align: center; margin: 0; }
-    .receipt-header { border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px; }
-    .items th, .items td { text-align: left; padding: 5px 0; }
-    .totals td { font-weight: bold; }
-    .footer { text-align: center; font-size: 0.9em; color: #e20f8a; margin-top: 10px; }
-  </style>
+  ...
 </head>
 <body>
   <div class="receipt-box">
     <div class="receipt-header">
-      <h2>Bea D Lites</h2>
-      <h4>Pastries & Cakes</h4>
-      <p style="text-align:center;">
-        411 Nebraska St., Villa Priscilla, Cutcot, Pulilan, Bulacan<br>
-        Contact: 0949 470 1077<br>
-        Receipt #: <strong>00000X</strong><br>
-        Date: <strong>""" + java.time.LocalDate.now() + """</strong>
+      ...
+      Date: <strong>""" + java.time.LocalDate.now() + """</strong>
       </p>
     </div>
     <div class="receipt-details">
