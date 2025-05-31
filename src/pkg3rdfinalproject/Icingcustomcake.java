@@ -6,7 +6,7 @@ package pkg3rdfinalproject;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
-import pkg3rdfinalproject.BeaPOS;
+
 
 /**
  *
@@ -14,7 +14,7 @@ import pkg3rdfinalproject.BeaPOS;
  */
 public class Icingcustomcake extends javax.swing.JFrame {
 
-   private BeaPOS beaPOSParent;
+    private BeaPOS beaPOSParent;
     private String selectedSize = null;
     private int selectedPrice = 0;
     private int selectedQuantity = 0;

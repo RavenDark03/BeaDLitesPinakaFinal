@@ -4,6 +4,10 @@
  */
 package pkg3rdfinalproject;
 
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
+
 /**
  *
  * @author A315
@@ -13,48 +17,110 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
     /**
      * Creates new form MinimalistCustomCake
      */
+    private BeaPOS beaPOSParent;
+    private String selectedSize = null;
+    private int selectedPrice = 0;
+    private int selectedQuantity = 0;
     
     int miniQty = 0;
     int miniBasePrice = 0;
-    public MinimalistCustomCake() {
+    public MinimalistCustomCake(BeaPOS beaPOSparent) {
         initComponents();
+        
+        
+        this.beaPOSParent = beaPOSParent;
         //custom icing cake 
-        btn4x2Minimalist.addActionListener(e->{
-           miniBasePrice = 250;
-           updateCustomMinimalistCakePrice();
-        });
-        btn5x2MinimalistCake.addActionListener(e->{
-            miniBasePrice = 400;
-             updateCustomMinimalistCakePrice();
-        });
-        btn5x3MinimalistCake.addActionListener(e->{
-            miniBasePrice = 550;
-             updateCustomMinimalistCakePrice();
-        });
-        btn6x2MinimalistCake.addActionListener(e->{
-            miniBasePrice = 649;
-             updateCustomMinimalistCakePrice();
-        });
-        btn7x2MinimalistCake.addActionListener(e->{
-            miniBasePrice = 849;
-           updateCustomMinimalistCakePrice(); 
-        });
-        btn8x2MinimalistCake.addActionListener(e->{
-            miniBasePrice = 949;
-             updateCustomMinimalistCakePrice();
-        });
-        btn8x4MinimalistCake.addActionListener(e->{
-            miniBasePrice = 1200;
-             updateCustomMinimalistCakePrice();
-        });
-        btn9x4MinimalistCake.addActionListener(e->{
-            miniBasePrice = 1700;
-             updateCustomMinimalistCakePrice();
-        });
+        ActionListener sizeBtnListener = e -> {
+            JToggleButton src = (JToggleButton) e.getSource();
+            // Deselect all
+            btn4x2Minimalist.setSelected(false);
+            btn5x2MinimalistCake.setSelected(false);
+            btn5x3MinimalistCake.setSelected(false);
+            btn6x2MinimalistCake.setSelected(false);
+            btn7x2MinimalistCake.setSelected(false);
+            btn8x2MinimalistCake.setSelected(false);
+            btn8x4MinimalistCake.setSelected(false);
+            btn9x4MinimalistCake.setSelected(false);
+            
+            // Select only this
+            src.setSelected(true);
+            // Set size and price
+            if (src == btn4x2Minimalist) {
+                selectedSize = "4 x 2\"";
+                selectedPrice = 250;
+            } else if (src == btn5x2MinimalistCake) {
+                selectedSize = "5 x 2\"";
+                selectedPrice = 400;
+            } else if (src == btn5x3MinimalistCake) {
+                selectedSize = "5 x 3\"";
+                selectedPrice = 550;
+            } else if (src == btn6x2MinimalistCake) {
+                selectedSize = "6 x 2\"";
+                selectedPrice = 649;
+            } else if (src == btn7x2MinimalistCake) {
+                selectedSize = "7 x 2\"";
+                selectedPrice = 849;
+            } else if (src == btn8x2MinimalistCake) {
+                selectedSize = "8 x 2\"";
+                selectedPrice = 949;
+            } else if (src == btn8x4MinimalistCake) {
+                selectedSize = "8 x 4\"";
+                selectedPrice = 1200;
+            } else if (src == btn9x4MinimalistCake){
+                selectedSize = "9 x 4\"";
+                selectedPrice = 1700;
+            }
+            updatePriceDisplay();
+        };
          
+        
+            btn4x2Minimalist.addActionListener(sizeBtnListener);
+            btn5x2MinimalistCake.addActionListener(sizeBtnListener);
+            btn5x3MinimalistCake.addActionListener(sizeBtnListener);
+            btn6x2MinimalistCake.addActionListener(sizeBtnListener);
+            btn7x2MinimalistCake.addActionListener(sizeBtnListener);
+            btn8x2MinimalistCake.addActionListener(sizeBtnListener);
+            btn8x4MinimalistCake.addActionListener(sizeBtnListener);
+            btn9x4MinimalistCake.addActionListener(sizeBtnListener);
+            
+            
+        btnPlusIcingCake.addActionListener(e -> {
+            selectedQuantity++;
+            lbzeroQty.setText(String.valueOf(selectedQuantity));
+            updatePriceDisplay();
+        });
+
+        btnMinusIcingCake.addActionListener(e -> {
+            if (selectedQuantity > 0) {
+                selectedQuantity--;
+                lbzeroQty.setText(String.valueOf(selectedQuantity));
+                updatePriceDisplay();
+            }
+        });
+        
+        
+        
+        confirmButton.addActionListener(e -> {
+            if (selectedSize == null || selectedQuantity <= 0) {
+                JOptionPane.showMessageDialog(this, "Please select a size and quantity.");
+                return;
+            }
+            if (beaPOSParent != null) {
+                beaPOSParent.addMinimalistCustomCakeToBill(selectedSize, selectedQuantity, selectedPrice);
+            }
+            this.dispose();
+        });
+
+        // Initialize display
+        lbzeroQty.setText("0");
+        updatePriceDisplay();
     
     
+    }
+        
     
+    private void updatePriceDisplay() {
+        customCakePrice.setText("Php: " + (selectedPrice * selectedQuantity) + ".00");
     }
     private void updateCustomMinimalistCakePrice(){
         int total = (miniBasePrice) * miniQty;
@@ -653,7 +719,8 @@ public class MinimalistCustomCake extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MinimalistCustomCake().setVisible(true);
+                BeaPOS BeaPOS = null;
+                new MinimalistCustomCake(BeaPOS).setVisible(true);
             }
         });
     }
