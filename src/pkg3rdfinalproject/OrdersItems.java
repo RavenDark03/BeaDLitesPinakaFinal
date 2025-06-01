@@ -70,18 +70,18 @@ private void setupTableSelectionListener() {
     });
 }
 
-// Add this to load the order info and set labels (adjust field names if needed):
-private void loadOrderDetailsByTotal(double total) {
+ // load order information into table
+    private void loadOrderDetailsByTotal(double total) {
     try (Connection conn = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-         PreparedStatement stmt = conn.prepareStatement(
+        PreparedStatement stmt = conn.prepareStatement(
              "SELECT customer_name, customer_email, customer_contact, order_total FROM orders WHERE order_total = ? LIMIT 1")) {
         stmt.setDouble(1, total);
         ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
             OrderNameCustomerLabel.setText("Name Customer: " + rs.getString("customer_name"));
             OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
-            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact")); // Adjust if you have a payment_method column
+            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact")); 
             AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
             
         }
@@ -1268,7 +1268,7 @@ private void loadOrderDetailsByTotal(double total) {
                 {null, null, null}
             },
             new String [] {
-                "Product ", "Amount", "Total"
+                "Product ", "Quantity", "Total"
             }
         ) {
             Class[] types = new Class [] {
@@ -1473,7 +1473,7 @@ private void loadOrderDetailsByTotal(double total) {
     }//GEN-LAST:event_PointOfSaleActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
