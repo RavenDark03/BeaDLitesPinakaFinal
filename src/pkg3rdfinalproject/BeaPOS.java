@@ -7,6 +7,10 @@ package pkg3rdfinalproject;
 
 import java.awt.Color;
 import java.awt.Dialog;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -28,6 +32,47 @@ import pkg3rdfinalproject.JavaMailSender;
  * @author A315
  */
 public class BeaPOS extends javax.swing.JFrame {
+    
+    private Connection getConnection() throws SQLException {
+    String url = "jdbc:mysql://localhost:3306/bea_d_lites";
+    String user = "root";
+    String password = "root";
+    return DriverManager.getConnection(url, user, password);
+}
+    
+    
+    private void saveOrderToDatabase(String customerName, String customerEmail, String customerContact) {
+    StringBuilder orderDetails = new StringBuilder();
+    for (int i = 0; i < billListModel.size(); i++) {
+        orderDetails.append(billListModel.get(i)).append("\n");
+    }
+    String orderDetailsStr = orderDetails.toString();
+    double orderTotal = parseTotalAmountLabel(); // You need to implement parseTotalAmountLabel()
+
+    try (Connection conn = getConnection();
+         PreparedStatement stmt = conn.prepareStatement(
+             "INSERT INTO orders (customer_name, customer_email, customer_contact, order_details, order_total) VALUES (?, ?, ?, ?, ?)")) {
+        stmt.setString(1, customerName);
+        stmt.setString(2, customerEmail);
+        stmt.setString(3, customerContact);
+        stmt.setString(4, orderDetailsStr);
+        stmt.setDouble(5, orderTotal);
+        stmt.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Order completed and saved!");
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
+    
+    private double parseTotalAmountLabel() {
+    try {
+        String text = totalAmountLabel.getText().replace("₱", "").replace(",", "").trim();
+        return Double.parseDouble(text);
+    } catch (NumberFormatException e) {
+        return 0.0;
+    }
+}
+    
     
     //mango bravo
     int mangoQty = 0;
