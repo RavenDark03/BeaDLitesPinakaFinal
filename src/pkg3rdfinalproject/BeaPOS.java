@@ -3643,7 +3643,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                     .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         cakesPanelLayout.setVerticalGroup(
             cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3672,7 +3672,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel92, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(cakesPanel);
