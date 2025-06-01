@@ -20,7 +20,7 @@ public class OrdersItems extends javax.swing.JFrame {
     /**
      * Creates new form OrdersItems
      */
-    private javax.swing.table.DefaultTableModel tableModel;
+   
     
     public OrdersItems() {
         initComponents();
@@ -83,7 +83,7 @@ private void loadOrderDetailsByTotal(double total) {
             OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
             OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact")); // Adjust if you have a payment_method column
             AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
-            // If you also have city/country, set OrdersCity1/OrdersCountry1 here
+            
         }
     } catch (SQLException ex) {
         javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
@@ -261,9 +261,9 @@ private void loadOrderDetailsByTotal(double total) {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        TableOrders.setBackground(new java.awt.Color(255, 255, 255));
+        TableOrders.setBackground(new java.awt.Color(255, 204, 102));
         TableOrders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        TableOrders.setForeground(new java.awt.Color(0, 0, 0));
+        TableOrders.setForeground(new java.awt.Color(225, 135, 44));
         TableOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},

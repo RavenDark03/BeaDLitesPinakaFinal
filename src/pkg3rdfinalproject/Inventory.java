@@ -418,6 +418,7 @@ public class Inventory extends javax.swing.JFrame {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        tableInventory.setAutoCreateRowSorter(true);
         tableInventory.setBackground(new java.awt.Color(255, 204, 102));
         tableInventory.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tableInventory.setForeground(new java.awt.Color(225, 135, 44));
@@ -1571,11 +1572,15 @@ public class Inventory extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardActionPerformed
-
+        Dashboard dash = new Dashboard();
+        dash.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_DashboardActionPerformed
 
     private void OrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdersActionPerformed
-
+        OrdersItems orders = new OrdersItems();
+       orders.setVisible(true);
+       setVisible(false);
     }//GEN-LAST:event_OrdersActionPerformed
 
     private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed

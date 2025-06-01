@@ -407,6 +407,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTable" name="tableInventory">
                           <Properties>
+                            <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="66" green="cc" red="ff" type="rgb"/>
                             </Property>

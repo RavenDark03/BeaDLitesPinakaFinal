@@ -766,7 +766,9 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_InventoryActionPerformed
 
     private void OrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdersActionPerformed
-        
+       OrdersItems orders = new OrdersItems();
+       orders.setVisible(true);
+       setVisible(false);
     }//GEN-LAST:event_OrdersActionPerformed
 
     private void DashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardActionPerformed
