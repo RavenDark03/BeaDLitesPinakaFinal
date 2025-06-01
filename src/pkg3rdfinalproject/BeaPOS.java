@@ -7,10 +7,7 @@ package pkg3rdfinalproject;
 
 import java.awt.Color;
 import java.awt.Dialog;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -24,6 +21,9 @@ import javax.swing.DefaultListModel;
 import javax.swing.JTextField;
 import pkg3rdfinalproject.CustomerInfoFrame;
 import pkg3rdfinalproject.JavaMailSender;
+import java.util.ArrayList;
+import java.util.List;
+import pkg3rdfinalproject.Product;
 
 
 
@@ -34,7 +34,7 @@ import pkg3rdfinalproject.JavaMailSender;
  */
 public class BeaPOS extends javax.swing.JFrame {
     
-    
+    private List<Product> cartProducts = new ArrayList<>();
     
 private String savedCustomerName = null;
 private String savedCustomerEmail = null;
@@ -55,32 +55,62 @@ private String lastPaymentMethod = null;
         return 0.0;
     }
 }
-    
+    private void addToCart(String name, int quantity, double price) {
+        cartProducts.add(new Product(name, quantity, price));
+        String formatted = String.format("%s | Qty: %d | ₱%.2f", name, quantity, price * quantity);
+        billListModel.addElement(formatted);
+    }
    private void saveOrderToDatabase() {
-    StringBuilder orderDetails = new StringBuilder();
-    for (int i = 0; i < billListModel.size(); i++) {
-        orderDetails.append(billListModel.get(i)).append("\n");
-    }
-    String orderDetailsStr = orderDetails.toString();
-    double orderTotal = parseTotalAmountLabel();
+        double orderTotal = parseTotalAmountLabel();
 
-    try (Connection conn = getConnection();
-         PreparedStatement stmt = conn.prepareStatement(
-             "INSERT INTO orders (customer_name, customer_email, customer_contact, order_details, order_total, payment_method) VALUES (?, ?, ?, ?, ?, ?)")) {
-        stmt.setString(1, savedCustomerName);
-        stmt.setString(2, savedCustomerEmail);
-        stmt.setString(3, savedCustomerContact);
-        stmt.setString(4, orderDetailsStr);
-        stmt.setDouble(5, orderTotal);
-        stmt.setString(6, lastPaymentMethod);
-        stmt.executeUpdate();
-        JOptionPane.showMessageDialog(this, "Order completed and saved!");
-    } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+        try (Connection conn = getConnection()) {
+            // Insert into orders table
+            String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, payment_method) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement orderStmt = conn.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS);
+            orderStmt.setString(1, savedCustomerName);
+            orderStmt.setString(2, savedCustomerEmail);
+            orderStmt.setString(3, savedCustomerContact);
+            orderStmt.setDouble(4, orderTotal);
+            orderStmt.setString(5, lastPaymentMethod);
+            orderStmt.executeUpdate();
+
+            // Get generated order_id
+            ResultSet generatedKeys = orderStmt.getGeneratedKeys();
+            int orderId = -1;
+            if (generatedKeys.next()) {
+                orderId = generatedKeys.getInt(1);
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to retrieve order id.");
+                return;
+            }
+
+            // Insert each product into order_items table
+            String itemSql = "INSERT INTO order_items (order_id, product_name, product_quantity) VALUES (?, ?, ?)";
+            PreparedStatement itemStmt = conn.prepareStatement(itemSql);
+
+            for (Product prod : cartProducts) {
+                itemStmt.setInt(1, orderId);
+                itemStmt.setString(2, prod.getName());
+                itemStmt.setInt(3, prod.getQuantity());
+                itemStmt.executeUpdate();
+            }
+            JOptionPane.showMessageDialog(this, "Order completed and saved!");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+        }
     }
-}
+   
+   private void resetCart() {
+        billListModel.clear();
+        cartProducts.clear();
+        savedCustomerName = null;
+        savedCustomerEmail = null;
+        savedCustomerContact = null;
+        lastPaymentMethod = null;
+    }
+
     
-
+    
     
     
     
@@ -391,7 +421,7 @@ private String lastPaymentMethod = null;
     });
     
    
-    
+
     
     //actionlisteners for radiobuttons
    // Mango Bravo
@@ -734,6 +764,7 @@ jRadioButton17.addItemListener(e -> {
     savedCustomerContact = null;
     lastPaymentMethod = null;
     billListModel.clear();
+    resetCart();
 });
     
     
@@ -870,6 +901,7 @@ jRadioButton17.addItemListener(e -> {
     savedCustomerContact = null;
     lastPaymentMethod = null;
     billListModel.clear();
+    resetCart();
 });
 
     
