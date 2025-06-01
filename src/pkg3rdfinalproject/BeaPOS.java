@@ -29,10 +29,6 @@ import pkg3rdfinalproject.JavaMailSender;
  */
 public class BeaPOS extends javax.swing.JFrame {
     
-   
-    
-    
-
     //mango bravo
     int mangoQty = 0;
     int mangoBasePrice = 0;
