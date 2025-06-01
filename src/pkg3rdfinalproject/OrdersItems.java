@@ -15,6 +15,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.*;
+import static javax.swing.JOptionPane.YES_OPTION;
 public class OrdersItems extends javax.swing.JFrame {
 
 
@@ -57,14 +58,14 @@ public class OrdersItems extends javax.swing.JFrame {
     try (Connection conn = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
          PreparedStatement stmt = conn.prepareStatement(
-                 "SELECT id, product_name, quantity, total, customer_name, customer_email, payment_method FROM orders")) {
+                 "SELECT id, product_names, product_quantities, order_total, customer_name, customer_email, payment_method FROM orders")) {
 
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
             int orderId = rs.getInt("id");
-            String productName = rs.getString("product_name");
-            int quantity = rs.getInt("quantity");
-            double total = rs.getDouble("total");
+            String productName = rs.getString("product_names");
+            String quantity = rs.getString("product_quantities");
+            double total = rs.getDouble("order_total");
             // Add row to table
             tableModel.addRow(new Object[]{productName, quantity, total});
         }
@@ -77,15 +78,15 @@ public class OrdersItems extends javax.swing.JFrame {
 private void displayOrderDetailsForRow(int row) {
     // Get product name, quantity, total from the selected row (you may need to fetch order ID if you want to get more details)
     String productName = (String) tableModel.getValueAt(row, 0);
-    int quantity = (int) tableModel.getValueAt(row, 1);
+    String quantity = (String) tableModel.getValueAt(row, 1);
     double total = (double) tableModel.getValueAt(row, 2);
 
     try (Connection conn = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
          PreparedStatement stmt = conn.prepareStatement(
-                 "SELECT customer_name, customer_email, payment_method FROM orders WHERE product_name=? AND quantity=? AND total=?")) {
+                 "SELECT customer_name, customer_email, payment_method FROM orders WHERE product_names=? AND product_quantities=? AND order_total=?")) {
         stmt.setString(1, productName);
-        stmt.setInt(2, quantity);
+        stmt.setString(2, quantity);
         stmt.setDouble(3, total);
 
         ResultSet rs = stmt.executeQuery();
@@ -124,10 +125,9 @@ private void displayOrderDetailsForRow(int row) {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         Dashboard = new javax.swing.JToggleButton();
-        Orders = new javax.swing.JToggleButton();
         Inventory = new javax.swing.JToggleButton();
         PointOfSale = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
         ordersItemPanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         tableOrdersScrollPane = new javax.swing.JScrollPane();
@@ -180,17 +180,6 @@ private void displayOrderDetailsForRow(int row) {
             }
         });
 
-        Orders.setBackground(new java.awt.Color(255, 255, 153));
-        Orders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Orders.setForeground(new java.awt.Color(225, 135, 44));
-        Orders.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/trolley.png"))); // NOI18N
-        Orders.setBorder(null);
-        Orders.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrdersActionPerformed(evt);
-            }
-        });
-
         Inventory.setBackground(new java.awt.Color(255, 255, 153));
         Inventory.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Inventory.setForeground(new java.awt.Color(225, 135, 44));
@@ -213,15 +202,15 @@ private void displayOrderDetailsForRow(int row) {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(225, 135, 44));
-        jButton1.setText("Log Out");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logoutBtn.setBackground(new java.awt.Color(255, 255, 153));
+        logoutBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        logoutBtn.setForeground(new java.awt.Color(225, 135, 44));
+        logoutBtn.setText("Log Out");
+        logoutBtn.setBorder(null);
+        logoutBtn.setBorderPainted(false);
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                logoutBtnActionPerformed(evt);
             }
         });
 
@@ -234,12 +223,11 @@ private void displayOrderDetailsForRow(int row) {
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Dashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
-            .addComponent(Orders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Inventory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PointOfSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -254,14 +242,12 @@ private void displayOrderDetailsForRow(int row) {
                 .addComponent(jLabel4)
                 .addGap(39, 39, 39)
                 .addComponent(Dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(Orders, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(Inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(PointOfSale, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(149, 149, 149)
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(128, Short.MAX_VALUE))
         );
 
@@ -270,7 +256,7 @@ private void displayOrderDetailsForRow(int row) {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(225, 135, 44));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Orders Item");
+        jLabel9.setText("Orders");
 
         tableOrdersScrollPane.setBackground(new java.awt.Color(255, 204, 102));
         tableOrdersScrollPane.setBorder(null);
@@ -1318,7 +1304,7 @@ private void displayOrderDetailsForRow(int row) {
         paymentMethodLabel.setForeground(new java.awt.Color(225, 135, 44));
         paymentMethodLabel.setText("Cash/Gcash");
 
-        AmountofPurchasedProductLabel.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        AmountofPurchasedProductLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AmountofPurchasedProductLabel.setForeground(new java.awt.Color(225, 135, 44));
         AmountofPurchasedProductLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         AmountofPurchasedProductLabel.setText("Amount of Cash/NumberGcash");
@@ -1348,7 +1334,7 @@ private void displayOrderDetailsForRow(int row) {
                         .addGroup(customerDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(OrderNameCustomerLabel)
                             .addComponent(OrdersGmailofCustomerLabel))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 625, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 563, Short.MAX_VALUE)
                 .addComponent(AmountofPurchasedProductLabel)
                 .addContainerGap())
         );
@@ -1382,10 +1368,11 @@ private void displayOrderDetailsForRow(int row) {
                 .addContainerGap()
                 .addGroup(ordersItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tableOrdersScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
+                    .addComponent(customerDetailsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(ordersItemPanelLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addComponent(jLabel9)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(customerDetailsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         ordersItemPanelLayout.setVerticalGroup(
@@ -1471,24 +1458,31 @@ private void displayOrderDetailsForRow(int row) {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardActionPerformed
-
+        Dashboard dash = new Dashboard();
+        dash.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_DashboardActionPerformed
 
-    private void OrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdersActionPerformed
-
-    }//GEN-LAST:event_OrdersActionPerformed
-
     private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed
-
+        Inventory inv = new Inventory();
+        inv.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_InventoryActionPerformed
 
     private void PointOfSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointOfSaleActionPerformed
-
+        BeaPOS pos = new BeaPOS();
+        pos.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_PointOfSaleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+       int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to Log-out?", "LOG OUT", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+       if(choice == YES_OPTION){
+           Login login = new Login();
+           login.setVisible(true);
+           setVisible(false);
+       }
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1530,12 +1524,10 @@ private void displayOrderDetailsForRow(int row) {
     private javax.swing.JToggleButton Dashboard;
     private javax.swing.JToggleButton Inventory;
     private javax.swing.JLabel OrderNameCustomerLabel;
-    private javax.swing.JToggleButton Orders;
     private javax.swing.JLabel OrdersGmailofCustomerLabel;
     private javax.swing.JToggleButton PointOfSale;
     private javax.swing.JTable TableOrders;
     private javax.swing.JPanel customerDetailsPanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
@@ -1548,6 +1540,7 @@ private void displayOrderDetailsForRow(int row) {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton logoutBtn;
     private javax.swing.JPanel ordersItemPanel;
     private javax.swing.JLabel paymentMethodLabel;
     private javax.swing.JScrollPane tableOrdersScrollPane;

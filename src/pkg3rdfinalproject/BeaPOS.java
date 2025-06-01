@@ -23,7 +23,7 @@ import pkg3rdfinalproject.CustomerInfoFrame;
 import pkg3rdfinalproject.JavaMailSender;
 import java.util.ArrayList;
 import java.util.List;
-import pkg3rdfinalproject.Product;
+//import pkg3rdfinalproject.Product;
 
 
 
@@ -34,7 +34,6 @@ import pkg3rdfinalproject.Product;
  */
 public class BeaPOS extends javax.swing.JFrame {
     
-    private List<Product> cartProducts = new ArrayList<>();
     
 private String savedCustomerName = null;
 private String savedCustomerEmail = null;
@@ -55,70 +54,49 @@ private String lastPaymentMethod = null;
         return 0.0;
     }
 }
-    private void addToCart(String name, int quantity, double price) {
-        removeProductFromCart(name); // Avoid duplicates
-        cartProducts.add(new Product(name, quantity, price));
-        String formatted = String.format("%s | Qty: %d | ₱%.2f", name, quantity, price * quantity);
-        billListModel.addElement(formatted);
-    }
-    private void saveOrderToDatabase() {
-        double orderTotal = parseTotalAmountLabel();
-
-        // Build summary strings for products and quantities
-        StringBuilder productNamesSummary = new StringBuilder();
-        StringBuilder productQuantitiesSummary = new StringBuilder();
-        for (int i = 0; i < cartProducts.size(); i++) {
-            Product prod = cartProducts.get(i);
-            productNamesSummary.append(prod.getName());
-            productQuantitiesSummary.append(prod.getQuantity());
-            if (i < cartProducts.size() - 1) {
-                productNamesSummary.append(", ");
-                productQuantitiesSummary.append(", ");
+    
+private void saveOrderToDatabase() {
+    double orderTotal = parseTotalAmountLabel();
+    StringBuilder productNames = new StringBuilder();
+    StringBuilder productQuantities = new StringBuilder();
+    for (int i = 0; i < billListModel.size(); i++) {
+        String entry = billListModel.get(i);
+        String[] parts = entry.split("\\|");
+        if (parts.length >= 2) {
+            String productName = parts[0].trim();
+            String quantity = parts[1].replace("Qty:", "").trim();
+            if (productNames.length() > 0) {
+                productNames.append(",");
+                productQuantities.append(",");
             }
-        }
-
-        try (Connection conn = getConnection()) {
-            // Insert into orders table with summary columns
-            String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, payment_method, product_names, product_quantities) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement orderStmt = conn.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS);
-            orderStmt.setString(1, savedCustomerName);
-            orderStmt.setString(2, savedCustomerEmail);
-            orderStmt.setString(3, savedCustomerContact);
-            orderStmt.setDouble(4, orderTotal);
-            orderStmt.setString(5, lastPaymentMethod);
-            orderStmt.setString(6, productNamesSummary.toString());
-            orderStmt.setString(7, productQuantitiesSummary.toString());
-            orderStmt.executeUpdate();
-
-            // Get generated order_id
-            ResultSet generatedKeys = orderStmt.getGeneratedKeys();
-            int orderId = -1;
-            if (generatedKeys.next()) {
-                orderId = generatedKeys.getInt(1);
-            } else {
-                JOptionPane.showMessageDialog(this, "Failed to retrieve order id.");
-                return;
-            }
-
-            // Insert each product into order_items table (normalized for future use)
-            String itemSql = "INSERT INTO order_items (order_id, product_name, product_quantity) VALUES (?, ?, ?)";
-            PreparedStatement itemStmt = conn.prepareStatement(itemSql);
-
-            for (Product prod : cartProducts) {
-                itemStmt.setInt(1, orderId);
-                itemStmt.setString(2, prod.getName());
-                itemStmt.setInt(3, prod.getQuantity());
-                itemStmt.executeUpdate();
-            }
-            JOptionPane.showMessageDialog(this, "Order completed and saved!");
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+            productNames.append(productName);
+            productQuantities.append(quantity);
         }
     }
+    String productNamesString = productNames.toString();
+    String productQuantitiesString = productQuantities.toString();
+    
+    try (Connection conn = getConnection()) {
+        String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, order_date, payment_method, product_names, product_quantities) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement orderStmt = conn.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS);
+        orderStmt.setString(1, savedCustomerName);
+        orderStmt.setString(2, savedCustomerEmail);
+        orderStmt.setString(3, savedCustomerContact);
+        orderStmt.setDouble(4, orderTotal);
+        orderStmt.setTimestamp(5, new java.sql.Timestamp(System.currentTimeMillis()));
+        orderStmt.setString(6, lastPaymentMethod);
+        orderStmt.setString(7, productNamesString);
+        orderStmt.setString(8, productQuantitiesString);
+        orderStmt.executeUpdate();
+        // rest of your code
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
    
    private void resetCart() {
         billListModel.clear();
-        cartProducts.clear();
+        
         savedCustomerName = null;
         savedCustomerEmail = null;
         savedCustomerContact = null;
@@ -768,7 +746,7 @@ jRadioButton17.addItemListener(e -> {
     try {
         JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
         JOptionPane.showMessageDialog(this, "Receipt emailed to " + savedCustomerEmail);
-        billListModel.clear();
+        
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
@@ -781,6 +759,7 @@ jRadioButton17.addItemListener(e -> {
     lastPaymentMethod = null;
     billListModel.clear();
     resetCart();
+    setTotalAmount();
 });
     
     
@@ -904,7 +883,7 @@ jRadioButton17.addItemListener(e -> {
     try {
         JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
         JOptionPane.showMessageDialog(this, "Receipt emailed to " + savedCustomerEmail);
-        billListModel.clear();
+        
     } catch (Exception ex) {
         ex.printStackTrace();
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -918,6 +897,7 @@ jRadioButton17.addItemListener(e -> {
     lastPaymentMethod = null;
     billListModel.clear();
     resetCart();
+    setTotalAmount();
 });
 
     
@@ -925,7 +905,9 @@ jRadioButton17.addItemListener(e -> {
     
       }
     //methods for actionListeners
-
+    public void setTotalAmount(){
+        totalAmountLabel.setText("₱"+ 0.00);
+    }
  
     
     /**
@@ -946,7 +928,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
     String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * price);
     billListModel.addElement(entry);
-    cartProducts.add(new Product(productName, quantity, price)); 
+  
     updateTotalAmountLabel();
 }
 
@@ -968,7 +950,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
     String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * price);
     billListModel.addElement(entry);
-    cartProducts.add(new Product(productName, quantity, price));
+    
     updateTotalAmountLabel();
 }
 
@@ -980,9 +962,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             System.exit(0);
         }
     }
-    private void removeProductFromCart(String productName) {
-        cartProducts.removeIf(p -> p.getName().equals(productName));
-    }
+   
     
     public void addFondantCakeToBill(String size, int price) {
         String productName = "Fondant Custom Cake (" + size + ")";
@@ -990,13 +970,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         for (int i = 0; i < billListModel.size(); i++) {
             if (billListModel.get(i).startsWith(productName + " |")) {
                 billListModel.remove(i);
-                removeProductFromCart(productName);
+                
                 break;
             }
         }
         String entry = String.format("%s | Qty: %d | ₱%d", productName, 1, price);
         billListModel.addElement(entry);
-        cartProducts.add(new Product(productName, 1, price));
+        
         updateTotalAmountLabel();
     }
     

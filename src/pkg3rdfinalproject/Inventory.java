@@ -16,6 +16,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import static javax.swing.JOptionPane.YES_OPTION;
 
 /**
  *
@@ -271,9 +272,8 @@ public class Inventory extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Dashboard = new javax.swing.JToggleButton();
         Orders = new javax.swing.JToggleButton();
-        Inventory = new javax.swing.JToggleButton();
         PointOfSale = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        logoutBtn = new javax.swing.JButton();
         inventoryPanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -332,17 +332,6 @@ public class Inventory extends javax.swing.JFrame {
             }
         });
 
-        Inventory.setBackground(new java.awt.Color(255, 255, 153));
-        Inventory.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Inventory.setForeground(new java.awt.Color(225, 135, 44));
-        Inventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/shipping.png"))); // NOI18N
-        Inventory.setBorder(null);
-        Inventory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InventoryActionPerformed(evt);
-            }
-        });
-
         PointOfSale.setBackground(new java.awt.Color(255, 255, 153));
         PointOfSale.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         PointOfSale.setForeground(new java.awt.Color(225, 135, 44));
@@ -354,15 +343,15 @@ public class Inventory extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(225, 135, 44));
-        jButton1.setText("Log Out");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logoutBtn.setBackground(new java.awt.Color(255, 255, 153));
+        logoutBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        logoutBtn.setForeground(new java.awt.Color(225, 135, 44));
+        logoutBtn.setText("Log Out");
+        logoutBtn.setBorder(null);
+        logoutBtn.setBorderPainted(false);
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                logoutBtnActionPerformed(evt);
             }
         });
 
@@ -376,12 +365,14 @@ public class Inventory extends javax.swing.JFrame {
             .addComponent(Dashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
             .addComponent(Orders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Inventory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PointOfSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PointOfSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,14 +386,12 @@ public class Inventory extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(39, 39, 39)
                 .addComponent(Dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(Orders, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(Inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(PointOfSale, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(149, 149, 149)
+                .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(128, Short.MAX_VALUE))
         );
 
@@ -1583,17 +1572,20 @@ public class Inventory extends javax.swing.JFrame {
        setVisible(false);
     }//GEN-LAST:event_OrdersActionPerformed
 
-    private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed
-
-    }//GEN-LAST:event_InventoryActionPerformed
-
     private void PointOfSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointOfSaleActionPerformed
-
+        BeaPOS bea = new BeaPOS();
+        bea.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_PointOfSaleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to Log-out?", "LOG OUT", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+       if(choice == YES_OPTION){
+           Login login = new Login();
+           login.setVisible(true);
+           setVisible(false);
+       }
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
@@ -1636,13 +1628,11 @@ public class Inventory extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Dashboard;
-    private javax.swing.JToggleButton Inventory;
     private javax.swing.JToggleButton Orders;
     private javax.swing.JToggleButton PointOfSale;
     private javax.swing.JButton addButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel inventoryPanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1653,6 +1643,7 @@ public class Inventory extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton logoutBtn;
     private javax.swing.JTable tableInventory;
     private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
