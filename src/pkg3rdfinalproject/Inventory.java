@@ -11,6 +11,11 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import javax.swing.table.DefaultTableCellRenderer;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -24,13 +29,20 @@ public class Inventory extends javax.swing.JFrame {
      * 
      * 
      */
-    
+    private Connection getConnection() throws SQLException {
+    String url = "jdbc:mysql://localhost:3306/bea_d_lites";
+    String user = "root";
+    String password = "root";
+    return DriverManager.getConnection(url, user, password);
+}
+
+
 
     private DefaultTableModel tableModel;
     public Inventory() {
         initComponents();
         
-        setupInventoryTable();
+        setupInventoryTable(); 
         setupActionListeners();
         
         tableInventory.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
@@ -42,33 +54,47 @@ public class Inventory extends javax.swing.JFrame {
         }
     });
 
-    jScrollPane1.setViewportView(tableInventory);
+        jScrollPane1.setViewportView(tableInventory);
         
-        
+        loadInventoryFromDatabase();
         
        
     }
     private void setupInventoryTable() {
-        // Table setup
-        String[] columnNames = {"Ingredient", "Stock"};
-        tableModel = new DefaultTableModel(columnNames, 0);
-        tableInventory = new JTable(tableModel);
-        jScrollPane1.setViewportView(tableInventory);
-        
-        
-        tableInventory.setBackground(new Color(255, 204, 102));
-        
+    String[] columnNames = {"Ingredient", "Stock"};
+    tableModel = new DefaultTableModel(columnNames, 0);
+    tableInventory = new JTable(tableModel);
+    jScrollPane1.setViewportView(tableInventory);
+    tableInventory.setBackground(new Color(255, 204, 102));
+}
+    
+     private void loadInventoryFromDatabase() {
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement("SELECT ingredient_name, stock FROM inventory");
+             ResultSet rs = stmt.executeQuery()) {
+            tableModel.setRowCount(0); // Clear existing rows
+            while (rs.next()) {
+                String ingredient = rs.getString("ingredient_name");
+                String stock = rs.getString("stock");
+                tableModel.addRow(new Object[]{ingredient, stock});
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error loading inventory: " + e.getMessage());
+        }
+    }
+
+    private boolean isValidStockInput(String stockInput) {
+        return stockInput.matches("^\\d+\\s*g$");
     }
 
     private void setupActionListeners() {
-        // Add button action
         addButton.addActionListener((ActionEvent e) -> {
             JTextField ingredientField = new JTextField();
             JTextField stockField = new JTextField();
 
             Object[] message = {
                 "Ingredient Name:", ingredientField,
-                "Stock:", stockField
+                "Stock (e.g., 100g or 100 g):", stockField
             };
 
             int option = JOptionPane.showConfirmDialog(
@@ -92,13 +118,27 @@ public class Inventory extends javax.swing.JFrame {
                     return;
                 }
 
-                try {
-                    int stock = Integer.parseInt(stockStr);
-                    tableModel.addRow(new Object[]{ingredient, stock});
-                } catch (NumberFormatException ex) {
+                if (!isValidStockInput(stockStr)) {
                     JOptionPane.showMessageDialog(
                         null,
-                        "Stock must be a valid number!",
+                        "Stock must be a number followed by 'g' (for grams), e.g., 100g or 100 g.",
+                        "Invalid Stock",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
+
+                try (Connection conn = getConnection();
+                     PreparedStatement stmt = conn.prepareStatement(
+                         "INSERT INTO inventory (ingredient_name, stock) VALUES (?, ?)")) {
+                    stmt.setString(1, ingredient);
+                    stmt.setString(2, stockStr);
+                    stmt.executeUpdate();
+                    loadInventoryFromDatabase(); // Refresh table
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Database error: " + ex.getMessage(),
                         "Error",
                         JOptionPane.ERROR_MESSAGE
                     );
@@ -106,10 +146,8 @@ public class Inventory extends javax.swing.JFrame {
             }
         });
 
-        // Delete button action
         deleteButton.addActionListener((ActionEvent e) -> {
             int selectedRow = tableInventory.getSelectedRow();
-
             if (selectedRow == -1) {
                 JOptionPane.showMessageDialog(
                     null,
@@ -118,14 +156,26 @@ public class Inventory extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE
                 );
             } else {
-                tableModel.removeRow(selectedRow);
+                String ingredient = tableModel.getValueAt(selectedRow, 0).toString();
+                try (Connection conn = getConnection();
+                     PreparedStatement stmt = conn.prepareStatement(
+                         "DELETE FROM inventory WHERE ingredient_name = ?")) {
+                    stmt.setString(1, ingredient);
+                    stmt.executeUpdate();
+                    loadInventoryFromDatabase(); // Refresh table
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Database error: " + ex.getMessage(),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                }
             }
         });
 
-        // Update button action
         updateButton.addActionListener((ActionEvent e) -> {
             int selectedRow = tableInventory.getSelectedRow();
-
             if (selectedRow == -1) {
                 JOptionPane.showMessageDialog(
                     null,
@@ -139,40 +189,57 @@ public class Inventory extends javax.swing.JFrame {
             String currentIngredient = tableModel.getValueAt(selectedRow, 0).toString();
             String currentStock = tableModel.getValueAt(selectedRow, 1).toString();
 
+            JTextField ingredientField = new JTextField(currentIngredient);
             JTextField stockField = new JTextField(currentStock);
 
             Object[] message = {
-                "Ingredient: " + currentIngredient,
-                "New Stock:", stockField
+                "Ingredient Name:", ingredientField,
+                "Stock (e.g., 100g or 100 g):", stockField
             };
 
             int option = JOptionPane.showConfirmDialog(
                 null,
                 message,
-                "Update Stock",
+                "Update Ingredient",
                 JOptionPane.OK_CANCEL_OPTION
             );
 
             if (option == JOptionPane.OK_OPTION) {
+                String newIngredient = ingredientField.getText().trim();
                 String newStockStr = stockField.getText().trim();
 
-                if (newStockStr.isEmpty()) {
+                if (newIngredient.isEmpty() || newStockStr.isEmpty()) {
                     JOptionPane.showMessageDialog(
                         null,
-                        "Stock field is required!",
+                        "Both fields are required!",
                         "Error",
                         JOptionPane.ERROR_MESSAGE
                     );
                     return;
                 }
 
-                try {
-                    int newStock = Integer.parseInt(newStockStr);
-                    tableModel.setValueAt(newStock, selectedRow, 1);
-                } catch (NumberFormatException ex) {
+                if (!isValidStockInput(newStockStr)) {
                     JOptionPane.showMessageDialog(
                         null,
-                        "Stock must be a valid number!",
+                        "Stock must be a number followed by 'g' (for grams), e.g., 100g or 100 g.",
+                        "Invalid Stock",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
+
+                try (Connection conn = getConnection();
+                     PreparedStatement stmt = conn.prepareStatement(
+                         "UPDATE inventory SET ingredient_name=?, stock=? WHERE ingredient_name=?")) {
+                    stmt.setString(1, newIngredient);
+                    stmt.setString(2, newStockStr);
+                    stmt.setString(3, currentIngredient);
+                    stmt.executeUpdate();
+                    loadInventoryFromDatabase(); // Refresh table
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Database error: " + ex.getMessage(),
                         "Error",
                         JOptionPane.ERROR_MESSAGE
                     );
@@ -1500,6 +1567,7 @@ public class Inventory extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void DashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardActionPerformed
