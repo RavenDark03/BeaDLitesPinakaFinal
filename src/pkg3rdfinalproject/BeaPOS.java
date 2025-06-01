@@ -1052,7 +1052,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryshortcake6x3sizebtn = new javax.swing.JToggleButton();
         strawberryshortcake5x3sizebtn = new javax.swing.JToggleButton();
         strawberryshortcake8x3sizebtn = new javax.swing.JToggleButton();
-        jToggleButton10 = new javax.swing.JToggleButton();
+        strawberryToppings = new javax.swing.JToggleButton();
         strawberryshortcake4x3sizebtn = new javax.swing.JToggleButton();
         jLabel71 = new javax.swing.JLabel();
         strawberryshortcakeradioButton = new javax.swing.JRadioButton();
@@ -1947,9 +1947,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryshortcake8x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
         strawberryshortcake8x3sizebtn.setText("8x3\"");
 
-        jToggleButton10.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton10.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
+        strawberryToppings.setBackground(new java.awt.Color(255, 255, 153));
+        strawberryToppings.setForeground(new java.awt.Color(255, 204, 102));
+        strawberryToppings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
         strawberryshortcake4x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
         strawberryshortcake4x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -1978,7 +1978,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                                 .addGap(4, 4, 4)
                                 .addComponent(jLabel71)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(strawberryToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2019,7 +2019,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                             .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(strawberryToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel71))))
                 .addGap(13, 13, 13))
         );
@@ -5382,7 +5382,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton18;
     private javax.swing.JToggleButton jToggleButton19;
     private javax.swing.JToggleButton jToggleButton23;
@@ -5434,6 +5433,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel sliceCheesecakePrice;
     private javax.swing.JLabel slicecheesecakelblqty;
     private javax.swing.JLabel strawberryShortCakePrice;
+    private javax.swing.JToggleButton strawberryToppings;
     private javax.swing.JToggleButton strawberryshortcake4x3sizebtn;
     private javax.swing.JToggleButton strawberryshortcake5x3sizebtn;
     private javax.swing.JToggleButton strawberryshortcake6x3sizebtn;

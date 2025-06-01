@@ -1297,7 +1297,7 @@
                                                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                               <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jToggleButton10" min="-2" pref="33" max="-2" attributes="0"/>
+                                                              <Component id="strawberryToppings" min="-2" pref="33" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -1353,7 +1353,7 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jToggleButton10" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                          <Component id="strawberryToppings" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                                           <Component id="jLabel71" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
@@ -1570,7 +1570,7 @@
                                         <Property name="text" type="java.lang.String" value="8x3&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton10">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryToppings">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>

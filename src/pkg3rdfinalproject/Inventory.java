@@ -59,7 +59,6 @@ public class Inventory extends javax.swing.JFrame {
         
         loadInventoryFromDatabase();
         
-       
     }
     private void setupInventoryTable() {
     String[] columnNames = {"Ingredient", "Stock"};
@@ -85,169 +84,171 @@ public class Inventory extends javax.swing.JFrame {
     }
 
     private boolean isValidStockInput(String stockInput) {
-        return stockInput.matches("^\\d+\\s*g$");
-    }
+    // Accepts: 100g, 100 g, 100.5g, 100ml, 100 ml, 100.5 ml, etc.
+    return stockInput.matches("^\\d+(\\.\\d+)?\\s*(g|gram|grams|ml|ML)$");
+}
 
-    private void setupActionListeners() {
-        addButton.addActionListener((ActionEvent e) -> {
-            JTextField ingredientField = new JTextField();
-            JTextField stockField = new JTextField();
-
-            Object[] message = {
-                "Ingredient Name:", ingredientField,
-                "Stock (e.g., 100g or 100 g):", stockField
-            };
-
-            int option = JOptionPane.showConfirmDialog(
+// Helper method to prompt repeatedly until valid stock input is given
+private String promptForValidStock() {
+    while (true) {
+        String input = JOptionPane.showInputDialog(
+            null,
+            "Stock (e.g., 100g, 100 grams, 250ml, 150 ml):",
+            "Enter Stock",
+            JOptionPane.PLAIN_MESSAGE
+        );
+        if (input == null) return null; // User cancelled
+        input = input.trim();
+        if (isValidStockInput(input)) {
+            return input;
+        } else {
+            JOptionPane.showMessageDialog(
                 null,
-                message,
-                "Add Ingredient",
-                JOptionPane.OK_CANCEL_OPTION
+                "Stock must be a number (optionally with decimals) followed by a unit: 'g', 'gram', 'grams', 'ml', or 'ML'.\nExamples: 100g, 100 grams, 250ml, 150 ml",
+                "Invalid Stock",
+                JOptionPane.ERROR_MESSAGE
             );
+        }
+    }
+}
 
-            if (option == JOptionPane.OK_OPTION) {
-                String ingredient = ingredientField.getText().trim();
-                String stockStr = stockField.getText().trim();
+private void setupActionListeners() {
+    addButton.addActionListener((ActionEvent e) -> {
+        JTextField ingredientField = new JTextField();
 
-                if (ingredient.isEmpty() || stockStr.isEmpty()) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Both fields are required!",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                    return;
-                }
+        Object[] message = {
+            "Ingredient Name:", ingredientField
+        };
 
-                if (!isValidStockInput(stockStr)) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Stock must be a number followed by 'g' (for grams), e.g., 100g or 100 g.",
-                        "Invalid Stock",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                    return;
-                }
+        int option = JOptionPane.showConfirmDialog(
+            null,
+            message,
+            "Add Ingredient",
+            JOptionPane.OK_CANCEL_OPTION
+        );
 
-                try (Connection conn = getConnection();
-                     PreparedStatement stmt = conn.prepareStatement(
-                         "INSERT INTO inventory (ingredient_name, stock) VALUES (?, ?)")) {
-                    stmt.setString(1, ingredient);
-                    stmt.setString(2, stockStr);
-                    stmt.executeUpdate();
-                    loadInventoryFromDatabase(); // Refresh table
-                } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Database error: " + ex.getMessage(),
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                }
-            }
-        });
-
-        deleteButton.addActionListener((ActionEvent e) -> {
-            int selectedRow = tableInventory.getSelectedRow();
-            if (selectedRow == -1) {
+        if (option == JOptionPane.OK_OPTION) {
+            String ingredient = ingredientField.getText().trim();
+            if (ingredient.isEmpty()) {
                 JOptionPane.showMessageDialog(
                     null,
-                    "Please select a row to delete!",
-                    "Error",
-                    JOptionPane.ERROR_MESSAGE
-                );
-            } else {
-                String ingredient = tableModel.getValueAt(selectedRow, 0).toString();
-                try (Connection conn = getConnection();
-                     PreparedStatement stmt = conn.prepareStatement(
-                         "DELETE FROM inventory WHERE ingredient_name = ?")) {
-                    stmt.setString(1, ingredient);
-                    stmt.executeUpdate();
-                    loadInventoryFromDatabase(); // Refresh table
-                } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Database error: " + ex.getMessage(),
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                }
-            }
-        });
-
-        updateButton.addActionListener((ActionEvent e) -> {
-            int selectedRow = tableInventory.getSelectedRow();
-            if (selectedRow == -1) {
-                JOptionPane.showMessageDialog(
-                    null,
-                    "Please select a row to update!",
+                    "Ingredient name is required!",
                     "Error",
                     JOptionPane.ERROR_MESSAGE
                 );
                 return;
             }
 
-            String currentIngredient = tableModel.getValueAt(selectedRow, 0).toString();
-            String currentStock = tableModel.getValueAt(selectedRow, 1).toString();
+            String stockStr = promptForValidStock();
+            if (stockStr == null) return; // User cancelled
 
-            JTextField ingredientField = new JTextField(currentIngredient);
-            JTextField stockField = new JTextField(currentStock);
-
-            Object[] message = {
-                "Ingredient Name:", ingredientField,
-                "Stock (e.g., 100g or 100 g):", stockField
-            };
-
-            int option = JOptionPane.showConfirmDialog(
-                null,
-                message,
-                "Update Ingredient",
-                JOptionPane.OK_CANCEL_OPTION
-            );
-
-            if (option == JOptionPane.OK_OPTION) {
-                String newIngredient = ingredientField.getText().trim();
-                String newStockStr = stockField.getText().trim();
-
-                if (newIngredient.isEmpty() || newStockStr.isEmpty()) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Both fields are required!",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                    return;
-                }
-
-                if (!isValidStockInput(newStockStr)) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Stock must be a number followed by 'g' (for grams), e.g., 100g or 100 g.",
-                        "Invalid Stock",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                    return;
-                }
-
-                try (Connection conn = getConnection();
-                     PreparedStatement stmt = conn.prepareStatement(
-                         "UPDATE inventory SET ingredient_name=?, stock=? WHERE ingredient_name=?")) {
-                    stmt.setString(1, newIngredient);
-                    stmt.setString(2, newStockStr);
-                    stmt.setString(3, currentIngredient);
-                    stmt.executeUpdate();
-                    loadInventoryFromDatabase(); // Refresh table
-                } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(
-                        null,
-                        "Database error: " + ex.getMessage(),
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                    );
-                }
+            try (Connection conn = getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                     "INSERT INTO inventory (ingredient_name, stock) VALUES (?, ?)")) {
+                stmt.setString(1, ingredient);
+                stmt.setString(2, stockStr);
+                stmt.executeUpdate();
+                loadInventoryFromDatabase(); // Refresh table
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Database error: " + ex.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
             }
-        });
-    }
+        }
+    });
+
+    deleteButton.addActionListener((ActionEvent e) -> {
+        int selectedRow = tableInventory.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(
+                null,
+                "Please select a row to delete!",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            );
+        } else {
+            String ingredient = tableModel.getValueAt(selectedRow, 0).toString();
+            try (Connection conn = getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                     "DELETE FROM inventory WHERE ingredient_name = ?")) {
+                stmt.setString(1, ingredient);
+                stmt.executeUpdate();
+                loadInventoryFromDatabase(); // Refresh table
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Database error: " + ex.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
+            }
+        }
+    });
+
+    updateButton.addActionListener((ActionEvent e) -> {
+        int selectedRow = tableInventory.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(
+                null,
+                "Please select a row to update!",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+
+        String currentIngredient = tableModel.getValueAt(selectedRow, 0).toString();
+
+        JTextField ingredientField = new JTextField(currentIngredient);
+
+        Object[] message = {
+            "Ingredient Name:", ingredientField
+        };
+
+        int option = JOptionPane.showConfirmDialog(
+            null,
+            message,
+            "Update Ingredient",
+            JOptionPane.OK_CANCEL_OPTION
+        );
+
+        if (option == JOptionPane.OK_OPTION) {
+            String newIngredient = ingredientField.getText().trim();
+            if (newIngredient.isEmpty()) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Ingredient name is required!",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
+                return;
+            }
+
+            String newStockStr = promptForValidStock();
+            if (newStockStr == null) return; // User cancelled
+
+            try (Connection conn = getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                     "UPDATE inventory SET ingredient_name=?, stock=? WHERE ingredient_name=?")) {
+                stmt.setString(1, newIngredient);
+                stmt.setString(2, newStockStr);
+                stmt.setString(3, currentIngredient);
+                stmt.executeUpdate();
+                loadInventoryFromDatabase(); // Refresh table
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Database error: " + ex.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
+            }
+        }
+    });
+}
     
     
     
