@@ -23,8 +23,86 @@ public class OrdersItems extends javax.swing.JFrame {
     
     public OrdersItems() {
         initComponents();
+        
+        
+        
+        
+        //action listeners for orders
+        tableModel = new DefaultTableModel(new Object[]{"Product", "Quantity", "Total"}, 0) {
+        public boolean isCellEditable(int row, int column) {
+            return false; // Make table non-editable
+        }
+    };
+    TableOrders.setModel(tableModel);
+
+    // Load orders into the table
+    loadOrdersToTable();
+
+    // Update details when a row is selected
+    TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
+                int row = TableOrders.getSelectedRow();
+                displayOrderDetailsForRow(row);
+            }
+        }
+    });
 
     }
+    
+    private void loadOrdersToTable() {
+    tableModel.setRowCount(0); // Clear table
+
+    try (Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+         PreparedStatement stmt = conn.prepareStatement(
+                 "SELECT id, product_name, quantity, total, customer_name, customer_email, payment_method FROM orders")) {
+
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            int orderId = rs.getInt("id");
+            String productName = rs.getString("product_name");
+            int quantity = rs.getInt("quantity");
+            double total = rs.getDouble("total");
+            // Add row to table
+            tableModel.addRow(new Object[]{productName, quantity, total});
+        }
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
+
+// Show customer details in labels when a row is selected
+private void displayOrderDetailsForRow(int row) {
+    // Get product name, quantity, total from the selected row (you may need to fetch order ID if you want to get more details)
+    String productName = (String) tableModel.getValueAt(row, 0);
+    int quantity = (int) tableModel.getValueAt(row, 1);
+    double total = (double) tableModel.getValueAt(row, 2);
+
+    try (Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+         PreparedStatement stmt = conn.prepareStatement(
+                 "SELECT customer_name, customer_email, payment_method FROM orders WHERE product_name=? AND quantity=? AND total=?")) {
+        stmt.setString(1, productName);
+        stmt.setInt(2, quantity);
+        stmt.setDouble(3, total);
+
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            String customerName = rs.getString("customer_name");
+            String customerEmail = rs.getString("customer_email");
+            String paymentMethod = rs.getString("payment_method");
+
+            OrderNameCustomerLabel.setText("Name: " + customerName);
+            OrdersGmailofCustomerLabel.setText("Email: " + customerEmail);
+            paymentMethodLabel.setText("Payment: " + paymentMethod);
+            AmountofPurchasedProductLabel.setText("Total: ₱" + String.format("%.2f", total));
+        }
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
     
    
 
