@@ -4,6 +4,14 @@
  */
 package pkg3rdfinalproject;
 
+
+import java.awt.Color;
+import java.awt.Component;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author A315
@@ -12,9 +20,165 @@ public class Inventory extends javax.swing.JFrame {
 
     /**
      * Creates new form Inventory
+     * 
+     * 
+     * 
      */
+    
+
+    private DefaultTableModel tableModel;
     public Inventory() {
         initComponents();
+        
+        setupInventoryTable();
+        setupActionListeners();
+        
+        tableInventory.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            Component cell = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+            cell.setBackground(new Color(255, 204, 102)); // Background color
+            return cell;
+        }
+    });
+
+    jScrollPane1.setViewportView(tableInventory);
+        
+        
+        
+       
+    }
+    private void setupInventoryTable() {
+        // Table setup
+        String[] columnNames = {"Ingredient", "Stock"};
+        tableModel = new DefaultTableModel(columnNames, 0);
+        tableInventory = new JTable(tableModel);
+        jScrollPane1.setViewportView(tableInventory);
+        
+        
+        tableInventory.setBackground(new Color(255, 204, 102));
+        
+    }
+
+    private void setupActionListeners() {
+        // Add button action
+        addButton.addActionListener((ActionEvent e) -> {
+            JTextField ingredientField = new JTextField();
+            JTextField stockField = new JTextField();
+
+            Object[] message = {
+                "Ingredient Name:", ingredientField,
+                "Stock:", stockField
+            };
+
+            int option = JOptionPane.showConfirmDialog(
+                null,
+                message,
+                "Add Ingredient",
+                JOptionPane.OK_CANCEL_OPTION
+            );
+
+            if (option == JOptionPane.OK_OPTION) {
+                String ingredient = ingredientField.getText().trim();
+                String stockStr = stockField.getText().trim();
+
+                if (ingredient.isEmpty() || stockStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Both fields are required!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
+
+                try {
+                    int stock = Integer.parseInt(stockStr);
+                    tableModel.addRow(new Object[]{ingredient, stock});
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Stock must be a valid number!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                }
+            }
+        });
+
+        // Delete button action
+        deleteButton.addActionListener((ActionEvent e) -> {
+            int selectedRow = tableInventory.getSelectedRow();
+
+            if (selectedRow == -1) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Please select a row to delete!",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
+            } else {
+                tableModel.removeRow(selectedRow);
+            }
+        });
+
+        // Update button action
+        updateButton.addActionListener((ActionEvent e) -> {
+            int selectedRow = tableInventory.getSelectedRow();
+
+            if (selectedRow == -1) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Please select a row to update!",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                );
+                return;
+            }
+
+            String currentIngredient = tableModel.getValueAt(selectedRow, 0).toString();
+            String currentStock = tableModel.getValueAt(selectedRow, 1).toString();
+
+            JTextField stockField = new JTextField(currentStock);
+
+            Object[] message = {
+                "Ingredient: " + currentIngredient,
+                "New Stock:", stockField
+            };
+
+            int option = JOptionPane.showConfirmDialog(
+                null,
+                message,
+                "Update Stock",
+                JOptionPane.OK_CANCEL_OPTION
+            );
+
+            if (option == JOptionPane.OK_OPTION) {
+                String newStockStr = stockField.getText().trim();
+
+                if (newStockStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Stock field is required!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
+
+                try {
+                    int newStock = Integer.parseInt(newStockStr);
+                    tableModel.setValueAt(newStock, selectedRow, 1);
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Stock must be a valid number!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    );
+                }
+            }
+        });
     }
     
     
