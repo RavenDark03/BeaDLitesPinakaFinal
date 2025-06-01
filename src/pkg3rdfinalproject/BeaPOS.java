@@ -56,22 +56,38 @@ private String lastPaymentMethod = null;
     }
 }
     private void addToCart(String name, int quantity, double price) {
+        removeProductFromCart(name); // Avoid duplicates
         cartProducts.add(new Product(name, quantity, price));
         String formatted = String.format("%s | Qty: %d | ₱%.2f", name, quantity, price * quantity);
         billListModel.addElement(formatted);
     }
-   private void saveOrderToDatabase() {
+    private void saveOrderToDatabase() {
         double orderTotal = parseTotalAmountLabel();
 
+        // Build summary strings for products and quantities
+        StringBuilder productNamesSummary = new StringBuilder();
+        StringBuilder productQuantitiesSummary = new StringBuilder();
+        for (int i = 0; i < cartProducts.size(); i++) {
+            Product prod = cartProducts.get(i);
+            productNamesSummary.append(prod.getName());
+            productQuantitiesSummary.append(prod.getQuantity());
+            if (i < cartProducts.size() - 1) {
+                productNamesSummary.append(", ");
+                productQuantitiesSummary.append(", ");
+            }
+        }
+
         try (Connection conn = getConnection()) {
-            // Insert into orders table
-            String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, payment_method) VALUES (?, ?, ?, ?, ?)";
+            // Insert into orders table with summary columns
+            String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, payment_method, product_names, product_quantities) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement orderStmt = conn.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS);
             orderStmt.setString(1, savedCustomerName);
             orderStmt.setString(2, savedCustomerEmail);
             orderStmt.setString(3, savedCustomerContact);
             orderStmt.setDouble(4, orderTotal);
             orderStmt.setString(5, lastPaymentMethod);
+            orderStmt.setString(6, productNamesSummary.toString());
+            orderStmt.setString(7, productQuantitiesSummary.toString());
             orderStmt.executeUpdate();
 
             // Get generated order_id
@@ -84,7 +100,7 @@ private String lastPaymentMethod = null;
                 return;
             }
 
-            // Insert each product into order_items table
+            // Insert each product into order_items table (normalized for future use)
             String itemSql = "INSERT INTO order_items (order_id, product_name, product_quantity) VALUES (?, ?, ?)";
             PreparedStatement itemStmt = conn.prepareStatement(itemSql);
 
@@ -930,6 +946,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
     String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * price);
     billListModel.addElement(entry);
+    cartProducts.add(new Product(productName, quantity, price)); 
     updateTotalAmountLabel();
 }
 
@@ -951,6 +968,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
     String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * price);
     billListModel.addElement(entry);
+    cartProducts.add(new Product(productName, quantity, price));
     updateTotalAmountLabel();
 }
 
@@ -961,6 +979,25 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         if(choice == JOptionPane.YES_OPTION){
             System.exit(0);
         }
+    }
+    private void removeProductFromCart(String productName) {
+        cartProducts.removeIf(p -> p.getName().equals(productName));
+    }
+    
+    public void addFondantCakeToBill(String size, int price) {
+        String productName = "Fondant Custom Cake (" + size + ")";
+        // Remove existing
+        for (int i = 0; i < billListModel.size(); i++) {
+            if (billListModel.get(i).startsWith(productName + " |")) {
+                billListModel.remove(i);
+                removeProductFromCart(productName);
+                break;
+            }
+        }
+        String entry = String.format("%s | Qty: %d | ₱%d", productName, 1, price);
+        billListModel.addElement(entry);
+        cartProducts.add(new Product(productName, 1, price));
+        updateTotalAmountLabel();
     }
     
     @SuppressWarnings("unchecked")
