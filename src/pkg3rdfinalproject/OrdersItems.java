@@ -39,38 +39,73 @@ public class OrdersItems extends javax.swing.JFrame {
              "SELECT id, order_details, order_total FROM orders ORDER BY id DESC")) {
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
-            int id = rs.getInt("id");
+            int orderId = rs.getInt("id");
             String orderDetails = rs.getString("order_details");
             double total = rs.getDouble("order_total");
-            // For demo, display only first product in order_details
+
             String[] lines = orderDetails.split("\\n");
-            String firstProduct = lines.length > 0 ? lines[0] : "";
-            String amount = ""; // You can parse amount from order_details if you store it
-            model.addRow(new Object[]{firstProduct, amount, total});
+            for (String line : lines) {
+                if (line.trim().isEmpty()) continue;
+                String product = "";
+                String quantity = "";
+                try {
+                    String[] prodAndRest = line.split(" - ")[0].split(" x ");
+                    product = prodAndRest[0].trim();
+                    quantity = prodAndRest.length > 1 ? prodAndRest[1].trim() : "";
+                } catch (Exception e) {
+                    product = line.trim();
+                    quantity = "";
+                }
+                // Add orderId as a hidden 4th column
+                model.addRow(new Object[]{product, quantity, total, orderId});
+            }
+        }
+    } catch (SQLException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+    // Hide OrderID column
+    if (TableOrders.getColumnCount() > 3) {
+        TableOrders.getColumnModel().getColumn(3).setMinWidth(0);
+        TableOrders.getColumnModel().getColumn(3).setMaxWidth(0);
+        TableOrders.getColumnModel().getColumn(3).setWidth(0);
+}
+
+// Add this to set up the table row selection listener:
+    }
+    private void setupTableSelectionListener() {
+    TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
+                int selectedRow = TableOrders.getSelectedRow();
+                Object orderIdObj = TableOrders.getValueAt(selectedRow, 3); // 3 is OrderID column
+                if (orderIdObj != null) {
+                    int orderId = Integer.parseInt(orderIdObj.toString());
+                    loadOrderDetailsByOrderId(orderId);
+                }
+            }
+        }
+    });
+}
+    private void loadOrderDetailsByOrderId(int orderId) {
+    try (Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+         PreparedStatement stmt = conn.prepareStatement(
+             "SELECT customer_name, customer_email, customer_contact, order_total FROM orders WHERE id = ?")) {
+        stmt.setInt(1, orderId);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            OrderNameCustomerLabel.setText("Name Customer: " + rs.getString("customer_name"));
+            OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
+            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact"));
+            AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
         }
     } catch (SQLException ex) {
         javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
     }
 }
 
-// Add this to set up the table row selection listener:
-private void setupTableSelectionListener() {
-    TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-        @Override
-        public void valueChanged(ListSelectionEvent e) {
-            if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
-                int selectedRow = TableOrders.getSelectedRow();
-                Object totalObj = TableOrders.getValueAt(selectedRow, 2);
-                if (totalObj != null) {
-                    double total = Double.parseDouble(totalObj.toString());
-                    loadOrderDetailsByTotal(total);
-                }
-            }
-        }
-    });
-}
-
- // load order information into table
+    // load order information into table
     private void loadOrderDetailsByTotal(double total) {
     try (Connection conn = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
