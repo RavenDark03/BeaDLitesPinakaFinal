@@ -34,6 +34,13 @@ import pkg3rdfinalproject.JavaMailSender;
  */
 public class BeaPOS extends javax.swing.JFrame {
     
+    
+    
+private String savedCustomerName = null;
+private String savedCustomerEmail = null;
+private String savedCustomerContact = null;
+private String lastPaymentMethod = null;
+    
     private Connection getConnection() throws SQLException {
     String url = "jdbc:mysql://localhost:3306/bea_d_lites";
     String user = "root";
@@ -49,22 +56,23 @@ public class BeaPOS extends javax.swing.JFrame {
     }
 }
     
-    private void saveOrderToDatabase(String customerName, String customerEmail, String customerContact) {
+   private void saveOrderToDatabase() {
     StringBuilder orderDetails = new StringBuilder();
     for (int i = 0; i < billListModel.size(); i++) {
         orderDetails.append(billListModel.get(i)).append("\n");
     }
     String orderDetailsStr = orderDetails.toString();
-    double orderTotal = parseTotalAmountLabel(); // You need to implement parseTotalAmountLabel()
+    double orderTotal = parseTotalAmountLabel();
 
     try (Connection conn = getConnection();
          PreparedStatement stmt = conn.prepareStatement(
-             "INSERT INTO orders (customer_name, customer_email, customer_contact, order_details, order_total) VALUES (?, ?, ?, ?, ?)")) {
-        stmt.setString(1, customerName);
-        stmt.setString(2, customerEmail);
-        stmt.setString(3, customerContact);
+             "INSERT INTO orders (customer_name, customer_email, customer_contact, order_details, order_total, payment_method) VALUES (?, ?, ?, ?, ?, ?)")) {
+        stmt.setString(1, savedCustomerName);
+        stmt.setString(2, savedCustomerEmail);
+        stmt.setString(3, savedCustomerContact);
         stmt.setString(4, orderDetailsStr);
         stmt.setDouble(5, orderTotal);
+        stmt.setString(6, lastPaymentMethod);
         stmt.executeUpdate();
         JOptionPane.showMessageDialog(this, "Order completed and saved!");
     } catch (SQLException ex) {
@@ -72,30 +80,6 @@ public class BeaPOS extends javax.swing.JFrame {
     }
 }
     
-    private void promptAndSaveOrder() {
-    JTextField nameField = new JTextField();
-    JTextField emailField = new JTextField();
-    JTextField contactField = new JTextField();
-
-    Object[] message = {
-        "Customer Name:", nameField,
-        "Email:", emailField,
-        "Contact Number:", contactField
-    };
-    int option = JOptionPane.showConfirmDialog(
-        this, message, "Enter Customer Information", JOptionPane.OK_CANCEL_OPTION);
-
-    if (option == JOptionPane.OK_OPTION) {
-        String name = nameField.getText().trim();
-        String email = emailField.getText().trim();
-        String contact = contactField.getText().trim();
-        if (name.isEmpty() || email.isEmpty() || contact.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "All fields are required.");
-            return;
-        }
-        saveOrderToDatabase(name, email, contact);
-    }
-}
 
     
     
@@ -618,12 +602,15 @@ jRadioButton17.addItemListener(e -> {
     //action listener for receipt 
     payByCashBtn.addActionListener(e -> {
     // 1. Collect customer info
-    CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
-infoFrame.setVisible(true);
-if (!infoFrame.isSubmitted()) return;
-String customerName = infoFrame.customerName;
-String customerEmail = infoFrame.customerEmail;
-String customerContact = infoFrame.customerContact;
+    if (savedCustomerName == null) {
+        CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
+        infoFrame.setVisible(true);
+        if (!infoFrame.isSubmitted()) return;
+        savedCustomerName = infoFrame.customerName;
+        savedCustomerEmail = infoFrame.customerEmail;
+        savedCustomerContact = infoFrame.customerContact;
+    }
+    lastPaymentMethod = "Cash";
 
     // 2. Gather bill items (assuming billListModel holds your items in the format: "Product | Qty: n | ₱amount")
     StringBuilder itemsHtml = new StringBuilder();
@@ -719,9 +706,9 @@ String customerContact = infoFrame.customerContact;
 </html>
 """,
         java.time.LocalDate.now(),
-        customerName,
-        customerEmail,
-        customerContact,
+        savedCustomerName,
+        savedCustomerEmail,
+        savedCustomerContact,
         itemsHtml.toString(),
         total,
         paid,
@@ -733,25 +720,34 @@ String customerContact = infoFrame.customerContact;
 
     // 5. Send the email using JavaMailSender
     try {
-        JavaMailSender.sendHtmlEmail(customerEmail, "Your Purchase Receipt", htmlReceipt);
-        JOptionPane.showMessageDialog(this, "Receipt emailed to " + customerEmail);
+        JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
+        JOptionPane.showMessageDialog(this, "Receipt emailed to " + savedCustomerEmail);
         billListModel.clear();
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
-    promptAndSaveOrder();
+    
+    saveOrderToDatabase();
+    
+    savedCustomerName = null;
+    savedCustomerEmail = null;
+    savedCustomerContact = null;
+    lastPaymentMethod = null;
+    billListModel.clear();
 });
     
     
     payByGCASHBtn.addActionListener(e -> {
     // 1. Collect customer info using your modal dialog
-    CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
-    infoFrame.setVisible(true);
-    if (!infoFrame.isSubmitted()) return;
-
-    String customerName = infoFrame.customerName;
-    String customerEmail = infoFrame.customerEmail;
-    String customerContact = infoFrame.customerContact;
+    if (savedCustomerName == null) {
+        CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
+        infoFrame.setVisible(true);
+        if (!infoFrame.isSubmitted()) return;
+        savedCustomerName = infoFrame.customerName;
+        savedCustomerEmail = infoFrame.customerEmail;
+        savedCustomerContact = infoFrame.customerContact;
+    }
+    lastPaymentMethod = "GCash";
 
     // 2. Calculate total from your billListModel (same as in the cash button)
     StringBuilder itemsHtml = new StringBuilder();
@@ -850,23 +846,30 @@ String customerContact = infoFrame.customerContact;
 </html>
 """,
         java.time.LocalDate.now(),
-        customerName,
-        customerEmail,
-        customerContact,
+        savedCustomerName,
+        savedCustomerEmail,
+        savedCustomerContact,
         itemsHtml.toString(),
         total
     );
 
     // 7. Send the email
     try {
-        JavaMailSender.sendHtmlEmail(customerEmail, "Your Purchase Receipt", htmlReceipt);
-        JOptionPane.showMessageDialog(this, "Receipt emailed to " + customerEmail);
+        JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
+        JOptionPane.showMessageDialog(this, "Receipt emailed to " + savedCustomerEmail);
         billListModel.clear();
     } catch (Exception ex) {
         ex.printStackTrace();
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
-    promptAndSaveOrder();
+   
+    saveOrderToDatabase();
+    
+    savedCustomerName = null;
+    savedCustomerEmail = null;
+    savedCustomerContact = null;
+    lastPaymentMethod = null;
+    billListModel.clear();
 });
 
     

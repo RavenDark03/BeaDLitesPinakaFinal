@@ -17,7 +17,7 @@ import java.awt.*;
 import java.sql.*;
 public class OrdersItems extends javax.swing.JFrame {
 
-  
+
     
     private DefaultTableModel tableModel;
     
