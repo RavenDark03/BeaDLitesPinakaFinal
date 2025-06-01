@@ -456,7 +456,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrdersCashorGcashLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="paymentMethodLabel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -497,7 +497,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                                          <Component id="OrdersCashorGcashLabel" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Component id="paymentMethodLabel" min="-2" pref="21" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -528,7 +528,7 @@
                             <Property name="text" type="java.lang.String" value="Gmail of Customer"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersCashorGcashLabel">
+                        <Component class="javax.swing.JLabel" name="paymentMethodLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="12" style="1"/>

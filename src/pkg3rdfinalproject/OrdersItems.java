@@ -24,92 +24,6 @@ public class OrdersItems extends javax.swing.JFrame {
     public OrdersItems() {
         initComponents();
 
-        // Initialize labels
-        
-
-        // Table setup
-        tableModel = new DefaultTableModel(new Object[]{"Product", "Quantity", "Total"}, 0) {
-            // Make cells not editable
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-       
-        
-
-        // Load data
-        loadOrdersToTable();
-
-        // Add selection listener
-        TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
-                    int row = TableOrders.getSelectedRow();
-                    displayOrderDetailsForRow(row);
-                }
-            }
-        });
-    }
-
-    private void loadOrdersToTable() {
-        tableModel.setRowCount(0); // clear
-
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-             PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT id, order_details, order_total FROM orders")) {
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                int orderId = rs.getInt("id");
-                String details = rs.getString("order_details");
-                double total = rs.getDouble("order_total");
-
-                // For display: Show first product and "..." if multiple products
-                String productDisplay = details.split("\n")[0];
-                if (details.contains("\n")) {
-                    productDisplay += " ...";
-                }
-
-                tableModel.addRow(new Object[]{productDisplay, "", total});
-                // Store orderId as hidden user data for row selection (optional: or use a map)
-                TableOrders.setValueAt(orderId, tableModel.getRowCount() - 1, 1); // hidden in "Amount" column
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
-        }
-    }
-
-    private void displayOrderDetailsForRow(int row) {
-        // We use product name and total to look up the order again for safety
-        String productDisplay = (String) tableModel.getValueAt(row, 0);
-        double total = (double) tableModel.getValueAt(row, 2);
-
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-             PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT customer_name, customer_email, customer_contact, order_details, order_total " +
-                             "FROM orders WHERE order_total=?")) {
-            stmt.setDouble(1, total);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                String name = rs.getString("customer_name");
-                String email = rs.getString("customer_email");
-                String paymentMethod = rs.getString("customer_contact"); // If you have a dedicated payment_method column, change this
-                double orderTotal = rs.getDouble("order_total");
-                String orderDetails = rs.getString("order_details"); ////
-
-                OrderNameCustomerLabel.setText("Customer Name: " + name);
-                OrdersGmailofCustomerLabel.setText("Email: " + email);
-                OrdersCashorGcashLabel.setText("Payment/Contact: " + paymentMethod);
-                AmountofPurchasedProductLabel.setText("Total: ₱" + String.format("%.2f", orderTotal));
-
-                // Optionally, show order details in a dialog
-                // JOptionPane.showMessageDialog(this, orderDetails, "Order Details", JOptionPane.INFORMATION_MESSAGE);
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
-        }
     }
     
    
@@ -143,7 +57,7 @@ public class OrdersItems extends javax.swing.JFrame {
         jPanel21 = new javax.swing.JPanel();
         OrderNameCustomerLabel = new javax.swing.JLabel();
         OrdersGmailofCustomerLabel = new javax.swing.JLabel();
-        OrdersCashorGcashLabel = new javax.swing.JLabel();
+        paymentMethodLabel = new javax.swing.JLabel();
         AmountofPurchasedProductLabel = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
@@ -1322,9 +1236,9 @@ public class OrdersItems extends javax.swing.JFrame {
         OrdersGmailofCustomerLabel.setForeground(new java.awt.Color(225, 135, 44));
         OrdersGmailofCustomerLabel.setText("Gmail of Customer");
 
-        OrdersCashorGcashLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersCashorGcashLabel.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersCashorGcashLabel.setText("Cash/Gcash");
+        paymentMethodLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        paymentMethodLabel.setForeground(new java.awt.Color(225, 135, 44));
+        paymentMethodLabel.setText("Cash/Gcash");
 
         AmountofPurchasedProductLabel.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         AmountofPurchasedProductLabel.setForeground(new java.awt.Color(225, 135, 44));
@@ -1347,7 +1261,7 @@ public class OrdersItems extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel21Layout.createSequentialGroup()
                         .addComponent(jLabel105)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrdersCashorGcashLabel))
+                        .addComponent(paymentMethodLabel))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel21Layout.createSequentialGroup()
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel103)
@@ -1378,7 +1292,7 @@ public class OrdersItems extends javax.swing.JFrame {
                         .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(OrdersCashorGcashLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(paymentMethodLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -1541,7 +1455,6 @@ public class OrdersItems extends javax.swing.JFrame {
     private javax.swing.JToggleButton Inventory;
     private javax.swing.JLabel OrderNameCustomerLabel;
     private javax.swing.JToggleButton Orders;
-    private javax.swing.JLabel OrdersCashorGcashLabel;
     private javax.swing.JLabel OrdersGmailofCustomerLabel;
     private javax.swing.JToggleButton PointOfSale;
     private javax.swing.JTable TableOrders;
@@ -1561,5 +1474,6 @@ public class OrdersItems extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel paymentMethodLabel;
     // End of variables declaration//GEN-END:variables
 }
