@@ -97,7 +97,7 @@ public class OrdersItems extends javax.swing.JFrame {
                 String email = rs.getString("customer_email");
                 String paymentMethod = rs.getString("customer_contact"); // If you have a dedicated payment_method column, change this
                 double orderTotal = rs.getDouble("order_total");
-                String orderDetails = rs.getString("order_details");
+                String orderDetails = rs.getString("order_details"); ////
 
                 OrderNameCustomerLabel.setText("Customer Name: " + name);
                 OrdersGmailofCustomerLabel.setText("Email: " + email);
