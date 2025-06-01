@@ -1297,7 +1297,7 @@
                                                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                               <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="strawberryToppings" min="-2" pref="33" max="-2" attributes="0"/>
+                                                              <Component id="strawberryToppingsShortcake" min="-2" pref="33" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -1353,7 +1353,7 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="strawberryToppings" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                          <Component id="strawberryToppingsShortcake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                                           <Component id="jLabel71" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
@@ -1570,7 +1570,7 @@
                                         <Property name="text" type="java.lang.String" value="8x3&quot;"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="strawberryToppings">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryToppingsShortcake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -1914,9 +1914,9 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel57" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton18" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="caramelToppingsLecheFlan" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton19" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="lecheFlanToppingsCake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -1949,8 +1949,8 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabel57" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton18" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton19" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="caramelToppingsLecheFlan" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="lecheFlanToppingsCake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                           </Group>
@@ -2178,7 +2178,7 @@
                                         <Property name="text" type="java.lang.String" value="Topping:"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton18">
+                                    <Component class="javax.swing.JToggleButton" name="caramelToppingsLecheFlan">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2191,7 +2191,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton19">
+                                    <Component class="javax.swing.JToggleButton" name="lecheFlanToppingsCake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2246,13 +2246,13 @@
                                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                       <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton23" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="blueberryToppingsCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton24" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="mangoToppingsCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton25" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="biscoffToppingsCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton26" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="strawberryToppingsCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jRadioButton8" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -2279,10 +2279,10 @@
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton23" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton24" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton25" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton26" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="blueberryToppingsCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="mangoToppingsCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="biscoffToppingsCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="strawberryToppingsCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                                   <Component id="jLabel61" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -2472,7 +2472,7 @@
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn8CheesecakeActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton23">
+                                    <Component class="javax.swing.JToggleButton" name="blueberryToppingsCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2485,7 +2485,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton24">
+                                    <Component class="javax.swing.JToggleButton" name="mangoToppingsCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2498,7 +2498,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton25">
+                                    <Component class="javax.swing.JToggleButton" name="biscoffToppingsCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2511,7 +2511,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton26">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryToppingsCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2573,13 +2573,13 @@
                                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                       <Component id="jLabel66" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton28" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="blueberryToppingsSliceCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton29" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="mangoToppingsSliceCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton30" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="biscoffToppingsSliceCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jToggleButton31" min="-2" pref="33" max="-2" attributes="0"/>
+                                                      <Component id="strawberryToppingsSliceCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jRadioButton7" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -2603,10 +2603,10 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jToggleButton28" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton29" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton30" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                                                  <Component id="jToggleButton31" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="blueberryToppingsSliceCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="mangoToppingsSliceCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="biscoffToppingsSliceCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="strawberryToppingsSliceCheesecake" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
                                                   <Component id="jLabel66" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -2782,7 +2782,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton28">
+                                    <Component class="javax.swing.JToggleButton" name="blueberryToppingsSliceCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2795,7 +2795,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton29">
+                                    <Component class="javax.swing.JToggleButton" name="mangoToppingsSliceCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2808,7 +2808,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton30">
+                                    <Component class="javax.swing.JToggleButton" name="biscoffToppingsSliceCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>
@@ -2821,7 +2821,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JToggleButton" name="jToggleButton31">
+                                    <Component class="javax.swing.JToggleButton" name="strawberryToppingsSliceCheesecake">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="99" green="ff" red="ff" type="rgb"/>

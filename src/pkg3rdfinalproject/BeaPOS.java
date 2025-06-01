@@ -1052,7 +1052,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryshortcake6x3sizebtn = new javax.swing.JToggleButton();
         strawberryshortcake5x3sizebtn = new javax.swing.JToggleButton();
         strawberryshortcake8x3sizebtn = new javax.swing.JToggleButton();
-        strawberryToppings = new javax.swing.JToggleButton();
+        strawberryToppingsShortcake = new javax.swing.JToggleButton();
         strawberryshortcake4x3sizebtn = new javax.swing.JToggleButton();
         jLabel71 = new javax.swing.JLabel();
         strawberryshortcakeradioButton = new javax.swing.JRadioButton();
@@ -1080,8 +1080,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn6x2CaramelFlan = new javax.swing.JToggleButton();
         btn5x2CaramelFlan = new javax.swing.JToggleButton();
         jLabel57 = new javax.swing.JLabel();
-        jToggleButton18 = new javax.swing.JToggleButton();
-        jToggleButton19 = new javax.swing.JToggleButton();
+        caramelToppingsLecheFlan = new javax.swing.JToggleButton();
+        lecheFlanToppingsCake = new javax.swing.JToggleButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
@@ -1093,10 +1093,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel34 = new javax.swing.JPanel();
         cheeseCakePrice = new javax.swing.JLabel();
         btn8Cheesecake = new javax.swing.JToggleButton();
-        jToggleButton23 = new javax.swing.JToggleButton();
-        jToggleButton24 = new javax.swing.JToggleButton();
-        jToggleButton25 = new javax.swing.JToggleButton();
-        jToggleButton26 = new javax.swing.JToggleButton();
+        blueberryToppingsCheesecake = new javax.swing.JToggleButton();
+        mangoToppingsCheesecake = new javax.swing.JToggleButton();
+        biscoffToppingsCheesecake = new javax.swing.JToggleButton();
+        strawberryToppingsCheesecake = new javax.swing.JToggleButton();
         jRadioButton8 = new javax.swing.JRadioButton();
         jLabel61 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
@@ -1108,10 +1108,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnPlusSliceCheesecake = new javax.swing.JButton();
         jPanel38 = new javax.swing.JPanel();
         sliceCheesecakePrice = new javax.swing.JLabel();
-        jToggleButton28 = new javax.swing.JToggleButton();
-        jToggleButton29 = new javax.swing.JToggleButton();
-        jToggleButton30 = new javax.swing.JToggleButton();
-        jToggleButton31 = new javax.swing.JToggleButton();
+        blueberryToppingsSliceCheesecake = new javax.swing.JToggleButton();
+        mangoToppingsSliceCheesecake = new javax.swing.JToggleButton();
+        biscoffToppingsSliceCheesecake = new javax.swing.JToggleButton();
+        strawberryToppingsSliceCheesecake = new javax.swing.JToggleButton();
         jRadioButton7 = new javax.swing.JRadioButton();
         jLabel66 = new javax.swing.JLabel();
         jPanel39 = new javax.swing.JPanel();
@@ -1947,9 +1947,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryshortcake8x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
         strawberryshortcake8x3sizebtn.setText("8x3\"");
 
-        strawberryToppings.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryToppings.setForeground(new java.awt.Color(255, 204, 102));
-        strawberryToppings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
+        strawberryToppingsShortcake.setBackground(new java.awt.Color(255, 255, 153));
+        strawberryToppingsShortcake.setForeground(new java.awt.Color(255, 204, 102));
+        strawberryToppingsShortcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
         strawberryshortcake4x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
         strawberryshortcake4x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -1978,7 +1978,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                                 .addGap(4, 4, 4)
                                 .addComponent(jLabel71)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(strawberryToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(strawberryToppingsShortcake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2019,7 +2019,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                             .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(strawberryToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(strawberryToppingsShortcake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel71))))
                 .addGap(13, 13, 13))
         );
@@ -2291,13 +2291,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jLabel57.setForeground(new java.awt.Color(225, 135, 44));
         jLabel57.setText("Topping:");
 
-        jToggleButton18.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton18.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/caramel.png"))); // NOI18N
+        caramelToppingsLecheFlan.setBackground(new java.awt.Color(255, 255, 153));
+        caramelToppingsLecheFlan.setForeground(new java.awt.Color(255, 204, 102));
+        caramelToppingsLecheFlan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/caramel.png"))); // NOI18N
 
-        jToggleButton19.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton19.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pudding.png"))); // NOI18N
+        lecheFlanToppingsCake.setBackground(new java.awt.Color(255, 255, 153));
+        lecheFlanToppingsCake.setForeground(new java.awt.Color(255, 204, 102));
+        lecheFlanToppingsCake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pudding.png"))); // NOI18N
 
         jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(225, 135, 44));
@@ -2329,9 +2329,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addComponent(jLabel57)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(caramelToppingsLecheFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jToggleButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lecheFlanToppingsCake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jRadioButton2))
                 .addGap(6, 6, 6))
         );
@@ -2356,8 +2356,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel57)
-                    .addComponent(jToggleButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(caramelToppingsLecheFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lecheFlanToppingsCake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13))
         );
 
@@ -2468,21 +2468,21 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             }
         });
 
-        jToggleButton23.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton23.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
+        blueberryToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        blueberryToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        blueberryToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
 
-        jToggleButton24.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton24.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
+        mangoToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        mangoToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        mangoToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
 
-        jToggleButton25.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton25.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
+        biscoffToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        biscoffToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        biscoffToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
 
-        jToggleButton26.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton26.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
+        strawberryToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        strawberryToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        strawberryToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
         jRadioButton8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton8.setForeground(new java.awt.Color(225, 135, 44));
@@ -2512,13 +2512,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addGap(4, 4, 4)
                         .addComponent(jLabel61)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(blueberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jToggleButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mangoToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(biscoffToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(strawberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jRadioButton8))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -2538,10 +2538,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                     .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(blueberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mangoToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(biscoffToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strawberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel61))
                 .addGap(13, 13, 13))
         );
@@ -2644,21 +2644,21 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jToggleButton28.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton28.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
+        blueberryToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        blueberryToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        blueberryToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
 
-        jToggleButton29.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton29.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
+        mangoToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        mangoToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        mangoToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
 
-        jToggleButton30.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton30.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
+        biscoffToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        biscoffToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        biscoffToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
 
-        jToggleButton31.setBackground(new java.awt.Color(255, 255, 153));
-        jToggleButton31.setForeground(new java.awt.Color(255, 204, 102));
-        jToggleButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
+        strawberryToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
+        strawberryToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
+        strawberryToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
         jRadioButton7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jRadioButton7.setForeground(new java.awt.Color(209, 127, 45));
@@ -2685,13 +2685,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addGap(4, 4, 4)
                         .addComponent(jLabel66)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(blueberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jToggleButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mangoToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(biscoffToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(strawberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jRadioButton7))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -2709,10 +2709,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                     .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(blueberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mangoToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(biscoffToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strawberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel66))
                 .addGap(13, 13, 13))
         );
@@ -5186,6 +5186,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel bentocakelbl;
     private javax.swing.JLabel billLabel;
     private javax.swing.JList<String> billList;
+    private javax.swing.JToggleButton biscoffToppingsCheesecake;
+    private javax.swing.JToggleButton biscoffToppingsSliceCheesecake;
+    private javax.swing.JToggleButton blueberryToppingsCheesecake;
+    private javax.swing.JToggleButton blueberryToppingsSliceCheesecake;
     private javax.swing.JPanel breadsandsweetsPanel;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
@@ -5245,6 +5249,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JToggleButton btnUbeHalayaCheesedesal;
     private javax.swing.JPanel cakesPanel;
     private javax.swing.JLabel caramelFlanDeLecheCakePrice;
+    private javax.swing.JToggleButton caramelToppingsLecheFlan;
     private javax.swing.JLabel cheeseCakePrice;
     private javax.swing.JButton customCakeButton;
     private javax.swing.JLabel dateLabel;
@@ -5382,16 +5387,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JToggleButton jToggleButton18;
-    private javax.swing.JToggleButton jToggleButton19;
-    private javax.swing.JToggleButton jToggleButton23;
-    private javax.swing.JToggleButton jToggleButton24;
-    private javax.swing.JToggleButton jToggleButton25;
-    private javax.swing.JToggleButton jToggleButton26;
-    private javax.swing.JToggleButton jToggleButton28;
-    private javax.swing.JToggleButton jToggleButton29;
-    private javax.swing.JToggleButton jToggleButton30;
-    private javax.swing.JToggleButton jToggleButton31;
     private javax.swing.JLabel lbPhpBananaLoaf;
     private javax.swing.JLabel lbPhpBrownies;
     private javax.swing.JLabel lbPhpClassicCinnamon;
@@ -5409,6 +5404,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel lbzeroMuffin;
     private javax.swing.JLabel lbzeroUbePandesal;
     private javax.swing.JLabel lbzeroqty;
+    private javax.swing.JToggleButton lecheFlanToppingsCake;
     private javax.swing.JToggleButton mangoBravo4x2button;
     private javax.swing.JToggleButton mangoBravo5x2button;
     private javax.swing.JToggleButton mangoBravo6x2button;
@@ -5417,6 +5413,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel mangoPrice;
     private javax.swing.JRadioButton mangoRadioButton;
     private javax.swing.JToggleButton mangoToppings;
+    private javax.swing.JToggleButton mangoToppingsCheesecake;
+    private javax.swing.JToggleButton mangoToppingsSliceCheesecake;
     private javax.swing.JLabel mangobravotublblqty;
     private javax.swing.JLabel miniCupcakesPrice;
     private javax.swing.JButton minusButtonMango;
@@ -5433,7 +5431,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel sliceCheesecakePrice;
     private javax.swing.JLabel slicecheesecakelblqty;
     private javax.swing.JLabel strawberryShortCakePrice;
-    private javax.swing.JToggleButton strawberryToppings;
+    private javax.swing.JToggleButton strawberryToppingsCheesecake;
+    private javax.swing.JToggleButton strawberryToppingsShortcake;
+    private javax.swing.JToggleButton strawberryToppingsSliceCheesecake;
     private javax.swing.JToggleButton strawberryshortcake4x3sizebtn;
     private javax.swing.JToggleButton strawberryshortcake5x3sizebtn;
     private javax.swing.JToggleButton strawberryshortcake6x3sizebtn;
