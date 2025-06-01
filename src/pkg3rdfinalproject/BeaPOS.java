@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JTextField;
 import pkg3rdfinalproject.CustomerInfoFrame;
 import pkg3rdfinalproject.JavaMailSender;
 
@@ -39,7 +40,14 @@ public class BeaPOS extends javax.swing.JFrame {
     String password = "root";
     return DriverManager.getConnection(url, user, password);
 }
-    
+    private double parseTotalAmountLabel() {
+    try {
+        String text = totalAmountLabel.getText().replace("₱", "").replace(",", "").trim();
+        return Double.parseDouble(text);
+    } catch (NumberFormatException e) {
+        return 0.0;
+    }
+}
     
     private void saveOrderToDatabase(String customerName, String customerEmail, String customerContact) {
     StringBuilder orderDetails = new StringBuilder();
@@ -64,14 +72,33 @@ public class BeaPOS extends javax.swing.JFrame {
     }
 }
     
-    private double parseTotalAmountLabel() {
-    try {
-        String text = totalAmountLabel.getText().replace("₱", "").replace(",", "").trim();
-        return Double.parseDouble(text);
-    } catch (NumberFormatException e) {
-        return 0.0;
+    private void promptAndSaveOrder() {
+    JTextField nameField = new JTextField();
+    JTextField emailField = new JTextField();
+    JTextField contactField = new JTextField();
+
+    Object[] message = {
+        "Customer Name:", nameField,
+        "Email:", emailField,
+        "Contact Number:", contactField
+    };
+    int option = JOptionPane.showConfirmDialog(
+        this, message, "Enter Customer Information", JOptionPane.OK_CANCEL_OPTION);
+
+    if (option == JOptionPane.OK_OPTION) {
+        String name = nameField.getText().trim();
+        String email = emailField.getText().trim();
+        String contact = contactField.getText().trim();
+        if (name.isEmpty() || email.isEmpty() || contact.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields are required.");
+            return;
+        }
+        saveOrderToDatabase(name, email, contact);
     }
 }
+
+    
+    
     
     
     //mango bravo
@@ -712,6 +739,7 @@ String customerContact = infoFrame.customerContact;
     } catch (Exception ex) {
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
+    promptAndSaveOrder();
 });
     
     
@@ -838,6 +866,7 @@ String customerContact = infoFrame.customerContact;
         ex.printStackTrace();
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
+    promptAndSaveOrder();
 });
 
     

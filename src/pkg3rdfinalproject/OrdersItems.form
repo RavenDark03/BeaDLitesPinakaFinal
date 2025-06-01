@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -341,10 +341,9 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane1" alignment="0" pref="899" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" alignment="0" pref="905" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="jPanel21" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -364,10 +363,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane1" pref="442" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jPanel21" max="32767" attributes="0"/>
-                                  <Component id="jPanel7" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jPanel21" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="56" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -403,13 +399,13 @@
                         <Component class="javax.swing.JTable" name="TableOrders">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="66" green="cc" red="ff" type="rgb"/>
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="12" style="1"/>
                             </Property>
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
+                              <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="3" rowCount="1000">
@@ -419,172 +415,6 @@
                               </Table>
                             </Property>
                           </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
-                    <Container class="javax.swing.JPanel" name="jPanel7">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="66" green="cc" red="ff" type="rgb"/>
-                        </Property>
-                      </Properties>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="OrdersTotal1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jLabel99" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrdersTotalAmount1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="OrdersShipping1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrdersSubtotal1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel98" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="OrderShippingAmount1" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="OrdersSubtotalAmount1" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                          <Component id="OrdersSubtotal1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrdersSubtotalAmount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel97" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                          <Component id="OrdersShipping1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderShippingAmount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel98" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel51" min="-2" pref="16" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="OrdersTotalAmount1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="OrdersTotal1" alignment="0" pref="20" max="32767" attributes="0"/>
-                                      <Component id="jLabel99" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="OrdersSubtotal1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="12" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Subtotal"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersShipping1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="12" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Shipping"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersTotal1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="12" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Total"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel51">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="12" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="____________________________________"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersTotalAmount1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="10" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Amount"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrderShippingAmount1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="10" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Amount"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersSubtotalAmount1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="10" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Amount"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel97">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel98">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel99">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -604,7 +434,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrdersCashGcash1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrdersCashorGcashLabel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -613,17 +443,13 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="OrderNameCustomer1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrdersGmailofCustomer1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OrderNameCustomerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OrdersGmailofCustomerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="OrdersNumberCashGcash1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="OrdersCity1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="OrdersCountry1" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace pref="621" max="32767" attributes="0"/>
+                                  <Component id="AmountofPurchasedProductLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -633,27 +459,23 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrdersCountry1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderNameCustomer1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderNameCustomerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel103" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="OrdersCity1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="OrdersGmailofCustomer1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrdersGmailofCustomerLabel" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel104" min="-2" pref="16" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="OrdersNumberCashGcash1" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="AmountofPurchasedProductLabel" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <Component id="jLabel105" alignment="1" min="-2" pref="16" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                                          <Component id="OrdersCashGcash1" min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Component id="OrdersCashorGcashLabel" min="-2" pref="21" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -662,7 +484,7 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="OrderNameCustomer1">
+                        <Component class="javax.swing.JLabel" name="OrderNameCustomerLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="12" style="1"/>
@@ -673,7 +495,7 @@
                             <Property name="text" type="java.lang.String" value="Name Customer"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersGmailofCustomer1">
+                        <Component class="javax.swing.JLabel" name="OrdersGmailofCustomerLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="12" style="1"/>
@@ -684,7 +506,7 @@
                             <Property name="text" type="java.lang.String" value="Gmail of Customer"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersCashGcash1">
+                        <Component class="javax.swing.JLabel" name="OrdersCashorGcashLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="12" style="1"/>
@@ -695,7 +517,7 @@
                             <Property name="text" type="java.lang.String" value="Cash/Gcash"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersNumberCashGcash1">
+                        <Component class="javax.swing.JLabel" name="AmountofPurchasedProductLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="10" style="1"/>
@@ -705,30 +527,6 @@
                             </Property>
                             <Property name="horizontalAlignment" type="int" value="4"/>
                             <Property name="text" type="java.lang.String" value="Amount of Cash/NumberGcash"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersCity1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="10" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="horizontalAlignment" type="int" value="4"/>
-                            <Property name="text" type="java.lang.String" value="City"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="OrdersCountry1">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="10" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="2c" green="87" red="e1" type="rgb"/>
-                            </Property>
-                            <Property name="horizontalAlignment" type="int" value="4"/>
-                            <Property name="text" type="java.lang.String" value="Country"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel103">

@@ -8,14 +8,87 @@ package pkg3rdfinalproject;
  *
  * @author A315
  */
+
+import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.sql.*;
 public class OrdersItems extends javax.swing.JFrame {
 
     /**
      * Creates new form OrdersItems
      */
+    private javax.swing.table.DefaultTableModel tableModel;
+    
     public OrdersItems() {
         initComponents();
+        
+        loadOrdersToTable();
+    setupTableSelectionListener();
     }
+    
+    private void loadOrdersToTable() {
+    DefaultTableModel model = (DefaultTableModel) TableOrders.getModel();
+    model.setRowCount(0); // Clear any existing rows
+
+    try (Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+         PreparedStatement stmt = conn.prepareStatement(
+             "SELECT id, order_details, order_total FROM orders ORDER BY id DESC")) {
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String orderDetails = rs.getString("order_details");
+            double total = rs.getDouble("order_total");
+            // For demo, display only first product in order_details
+            String[] lines = orderDetails.split("\\n");
+            String firstProduct = lines.length > 0 ? lines[0] : "";
+            String amount = ""; // You can parse amount from order_details if you store it
+            model.addRow(new Object[]{firstProduct, amount, total});
+        }
+    } catch (SQLException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
+
+// Add this to set up the table row selection listener:
+private void setupTableSelectionListener() {
+    TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
+                int selectedRow = TableOrders.getSelectedRow();
+                Object totalObj = TableOrders.getValueAt(selectedRow, 2);
+                if (totalObj != null) {
+                    double total = Double.parseDouble(totalObj.toString());
+                    loadOrderDetailsByTotal(total);
+                }
+            }
+        }
+    });
+}
+
+// Add this to load the order info and set labels (adjust field names if needed):
+private void loadOrderDetailsByTotal(double total) {
+    try (Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+         PreparedStatement stmt = conn.prepareStatement(
+             "SELECT customer_name, customer_email, customer_contact, order_total FROM orders WHERE order_total = ? LIMIT 1")) {
+        stmt.setDouble(1, total);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            OrderNameCustomerLabel.setText("Name Customer: " + rs.getString("customer_name"));
+            OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
+            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact")); // Adjust if you have a payment_method column
+            AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
+            // If you also have city/country, set OrdersCity1/OrdersCountry1 here
+        }
+    } catch (SQLException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+    }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,24 +116,11 @@ public class OrdersItems extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TableOrders = new javax.swing.JTable();
-        jPanel7 = new javax.swing.JPanel();
-        OrdersSubtotal1 = new javax.swing.JLabel();
-        OrdersShipping1 = new javax.swing.JLabel();
-        OrdersTotal1 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        OrdersTotalAmount1 = new javax.swing.JLabel();
-        OrderShippingAmount1 = new javax.swing.JLabel();
-        OrdersSubtotalAmount1 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
-        OrderNameCustomer1 = new javax.swing.JLabel();
-        OrdersGmailofCustomer1 = new javax.swing.JLabel();
-        OrdersCashGcash1 = new javax.swing.JLabel();
-        OrdersNumberCashGcash1 = new javax.swing.JLabel();
-        OrdersCity1 = new javax.swing.JLabel();
-        OrdersCountry1 = new javax.swing.JLabel();
+        OrderNameCustomerLabel = new javax.swing.JLabel();
+        OrdersGmailofCustomerLabel = new javax.swing.JLabel();
+        OrdersCashorGcashLabel = new javax.swing.JLabel();
+        AmountofPurchasedProductLabel = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
@@ -201,9 +261,9 @@ public class OrdersItems extends javax.swing.JFrame {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        TableOrders.setBackground(new java.awt.Color(255, 204, 102));
+        TableOrders.setBackground(new java.awt.Color(255, 255, 255));
         TableOrders.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        TableOrders.setForeground(new java.awt.Color(225, 135, 44));
+        TableOrders.setForeground(new java.awt.Color(0, 0, 0));
         TableOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -1228,121 +1288,24 @@ public class OrdersItems extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TableOrders);
 
-        jPanel7.setBackground(new java.awt.Color(255, 204, 102));
-
-        OrdersSubtotal1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersSubtotal1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersSubtotal1.setText("Subtotal");
-
-        OrdersShipping1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersShipping1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersShipping1.setText("Shipping");
-
-        OrdersTotal1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersTotal1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersTotal1.setText("Total");
-
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel51.setText("____________________________________");
-
-        OrdersTotalAmount1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrdersTotalAmount1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersTotalAmount1.setText("Amount");
-
-        OrderShippingAmount1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrderShippingAmount1.setForeground(new java.awt.Color(225, 135, 44));
-        OrderShippingAmount1.setText("Amount");
-
-        OrdersSubtotalAmount1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrdersSubtotalAmount1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersSubtotalAmount1.setText("Amount");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(OrdersTotal1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel99)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrdersTotalAmount1))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel51)
-                        .addGap(0, 10, Short.MAX_VALUE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrdersShipping1)
-                            .addComponent(OrdersSubtotal1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel98)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderShippingAmount1))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel97)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrdersSubtotalAmount1)))))
-                .addContainerGap())
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(OrdersSubtotal1)
-                        .addComponent(OrdersSubtotalAmount1))
-                    .addComponent(jLabel97, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(OrdersShipping1)
-                        .addComponent(OrderShippingAmount1))
-                    .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(OrdersTotalAmount1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OrdersTotal1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
         jPanel21.setBackground(new java.awt.Color(255, 204, 102));
 
-        OrderNameCustomer1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrderNameCustomer1.setForeground(new java.awt.Color(225, 135, 44));
-        OrderNameCustomer1.setText("Name Customer");
+        OrderNameCustomerLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        OrderNameCustomerLabel.setForeground(new java.awt.Color(225, 135, 44));
+        OrderNameCustomerLabel.setText("Name Customer");
 
-        OrdersGmailofCustomer1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersGmailofCustomer1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersGmailofCustomer1.setText("Gmail of Customer");
+        OrdersGmailofCustomerLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        OrdersGmailofCustomerLabel.setForeground(new java.awt.Color(225, 135, 44));
+        OrdersGmailofCustomerLabel.setText("Gmail of Customer");
 
-        OrdersCashGcash1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        OrdersCashGcash1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersCashGcash1.setText("Cash/Gcash");
+        OrdersCashorGcashLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        OrdersCashorGcashLabel.setForeground(new java.awt.Color(225, 135, 44));
+        OrdersCashorGcashLabel.setText("Cash/Gcash");
 
-        OrdersNumberCashGcash1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrdersNumberCashGcash1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersNumberCashGcash1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        OrdersNumberCashGcash1.setText("Amount of Cash/NumberGcash");
-
-        OrdersCity1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrdersCity1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersCity1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        OrdersCity1.setText("City");
-
-        OrdersCountry1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        OrdersCountry1.setForeground(new java.awt.Color(225, 135, 44));
-        OrdersCountry1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        OrdersCountry1.setText("Country");
+        AmountofPurchasedProductLabel.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        AmountofPurchasedProductLabel.setForeground(new java.awt.Color(225, 135, 44));
+        AmountofPurchasedProductLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        AmountofPurchasedProductLabel.setText("Amount of Cash/NumberGcash");
 
         jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile.png"))); // NOI18N
 
@@ -1360,20 +1323,17 @@ public class OrdersItems extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel21Layout.createSequentialGroup()
                         .addComponent(jLabel105)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrdersCashGcash1))
+                        .addComponent(OrdersCashorGcashLabel))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel21Layout.createSequentialGroup()
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel103)
                             .addComponent(jLabel104))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderNameCustomer1)
-                            .addComponent(OrdersGmailofCustomer1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(OrdersNumberCashGcash1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OrdersCity1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OrdersCountry1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(OrderNameCustomerLabel)
+                            .addComponent(OrdersGmailofCustomerLabel))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 621, Short.MAX_VALUE)
+                .addComponent(AmountofPurchasedProductLabel)
                 .addContainerGap())
         );
         jPanel21Layout.setVerticalGroup(
@@ -1381,23 +1341,20 @@ public class OrdersItems extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(OrdersCountry1)
-                    .addComponent(OrderNameCustomer1)
+                    .addComponent(OrderNameCustomerLabel)
                     .addComponent(jLabel103))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addComponent(OrdersCity1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(OrdersGmailofCustomer1)
+                    .addComponent(OrdersGmailofCustomerLabel)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 14, Short.MAX_VALUE)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(OrdersNumberCashGcash1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AmountofPurchasedProductLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(OrdersCashGcash1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(OrdersCashorGcashLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -1408,10 +1365,9 @@ public class OrdersItems extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(4, 4, 4)
                         .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel9)
@@ -1426,9 +1382,7 @@ public class OrdersItems extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -1499,6 +1453,7 @@ public class OrdersItems extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void DashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardActionPerformed
@@ -1557,21 +1512,13 @@ public class OrdersItems extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AmountofPurchasedProductLabel;
     private javax.swing.JToggleButton Dashboard;
     private javax.swing.JToggleButton Inventory;
-    private javax.swing.JLabel OrderNameCustomer1;
-    private javax.swing.JLabel OrderShippingAmount1;
+    private javax.swing.JLabel OrderNameCustomerLabel;
     private javax.swing.JToggleButton Orders;
-    private javax.swing.JLabel OrdersCashGcash1;
-    private javax.swing.JLabel OrdersCity1;
-    private javax.swing.JLabel OrdersCountry1;
-    private javax.swing.JLabel OrdersGmailofCustomer1;
-    private javax.swing.JLabel OrdersNumberCashGcash1;
-    private javax.swing.JLabel OrdersShipping1;
-    private javax.swing.JLabel OrdersSubtotal1;
-    private javax.swing.JLabel OrdersSubtotalAmount1;
-    private javax.swing.JLabel OrdersTotal1;
-    private javax.swing.JLabel OrdersTotalAmount1;
+    private javax.swing.JLabel OrdersCashorGcashLabel;
+    private javax.swing.JLabel OrdersGmailofCustomerLabel;
     private javax.swing.JToggleButton PointOfSale;
     private javax.swing.JTable TableOrders;
     private javax.swing.JButton jButton1;
@@ -1582,18 +1529,13 @@ public class OrdersItems extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
