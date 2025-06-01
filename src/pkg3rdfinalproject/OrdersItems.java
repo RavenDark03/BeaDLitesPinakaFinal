@@ -37,7 +37,6 @@ public class OrdersItems extends javax.swing.JFrame {
         Dashboard = new javax.swing.JToggleButton();
         Orders = new javax.swing.JToggleButton();
         Inventory = new javax.swing.JToggleButton();
-        Product = new javax.swing.JToggleButton();
         PointOfSale = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -127,17 +126,6 @@ public class OrdersItems extends javax.swing.JFrame {
             }
         });
 
-        Product.setBackground(new java.awt.Color(255, 255, 153));
-        Product.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Product.setForeground(new java.awt.Color(225, 135, 44));
-        Product.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/box.png"))); // NOI18N
-        Product.setBorder(null);
-        Product.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProductActionPerformed(evt);
-            }
-        });
-
         PointOfSale.setBackground(new java.awt.Color(255, 255, 153));
         PointOfSale.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         PointOfSale.setForeground(new java.awt.Color(225, 135, 44));
@@ -172,7 +160,6 @@ public class OrdersItems extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
             .addComponent(Orders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Inventory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PointOfSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
@@ -195,13 +182,11 @@ public class OrdersItems extends javax.swing.JFrame {
                 .addComponent(Orders, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(Inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(Product, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(35, 35, 35)
                 .addComponent(PointOfSale, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(65, 65, 65)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 153));
@@ -1404,11 +1389,8 @@ public class OrdersItems extends javax.swing.JFrame {
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addComponent(OrdersCity1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrdersGmailofCustomer1)
-                            .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(OrdersGmailofCustomer1)
+                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(OrdersNumberCashGcash1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1424,20 +1406,17 @@ public class OrdersItems extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1534,10 +1513,6 @@ public class OrdersItems extends javax.swing.JFrame {
 
     }//GEN-LAST:event_InventoryActionPerformed
 
-    private void ProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductActionPerformed
-
-    }//GEN-LAST:event_ProductActionPerformed
-
     private void PointOfSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointOfSaleActionPerformed
 
     }//GEN-LAST:event_PointOfSaleActionPerformed
@@ -1584,62 +1559,40 @@ public class OrdersItems extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Dashboard;
     private javax.swing.JToggleButton Inventory;
-    private javax.swing.JLabel OrderNameCustomer;
     private javax.swing.JLabel OrderNameCustomer1;
-    private javax.swing.JLabel OrderShippingAmount;
     private javax.swing.JLabel OrderShippingAmount1;
     private javax.swing.JToggleButton Orders;
-    private javax.swing.JLabel OrdersCashGcash;
     private javax.swing.JLabel OrdersCashGcash1;
-    private javax.swing.JLabel OrdersCity;
     private javax.swing.JLabel OrdersCity1;
-    private javax.swing.JLabel OrdersCountry;
     private javax.swing.JLabel OrdersCountry1;
-    private javax.swing.JLabel OrdersGmailofCustomer;
     private javax.swing.JLabel OrdersGmailofCustomer1;
-    private javax.swing.JLabel OrdersNumberCashGcash;
     private javax.swing.JLabel OrdersNumberCashGcash1;
-    private javax.swing.JLabel OrdersShipping;
     private javax.swing.JLabel OrdersShipping1;
-    private javax.swing.JLabel OrdersSubtotal;
     private javax.swing.JLabel OrdersSubtotal1;
-    private javax.swing.JLabel OrdersSubtotalAmount;
     private javax.swing.JLabel OrdersSubtotalAmount1;
-    private javax.swing.JLabel OrdersTotal;
     private javax.swing.JLabel OrdersTotal1;
-    private javax.swing.JLabel OrdersTotalAmount;
     private javax.swing.JLabel OrdersTotalAmount1;
     private javax.swing.JToggleButton PointOfSale;
-    private javax.swing.JToggleButton Product;
     private javax.swing.JTable TableOrders;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

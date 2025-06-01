@@ -40,7 +40,6 @@ public class Dashboard extends javax.swing.JFrame {
         Dashboard = new javax.swing.JToggleButton();
         Orders = new javax.swing.JToggleButton();
         Inventory = new javax.swing.JToggleButton();
-        Product = new javax.swing.JToggleButton();
         PointOfSale = new javax.swing.JToggleButton();
         logOutbtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -151,17 +150,6 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        Product.setBackground(new java.awt.Color(255, 255, 153));
-        Product.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Product.setForeground(new java.awt.Color(225, 135, 44));
-        Product.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/box.png"))); // NOI18N
-        Product.setBorder(null);
-        Product.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProductActionPerformed(evt);
-            }
-        });
-
         PointOfSale.setBackground(new java.awt.Color(255, 255, 153));
         PointOfSale.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         PointOfSale.setForeground(new java.awt.Color(225, 135, 44));
@@ -196,7 +184,6 @@ public class Dashboard extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Orders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Inventory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PointOfSale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(32, Short.MAX_VALUE)
@@ -219,13 +206,11 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(Orders, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(Inventory, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(Product, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(35, 35, 35)
                 .addComponent(PointOfSale, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(65, 65, 65)
                 .addComponent(logOutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 153));
@@ -776,10 +761,6 @@ public class Dashboard extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_PointOfSaleActionPerformed
 
-    private void ProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductActionPerformed
-       
-    }//GEN-LAST:event_ProductActionPerformed
-
     private void InventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InventoryActionPerformed
        
     }//GEN-LAST:event_InventoryActionPerformed
@@ -833,7 +814,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JToggleButton Inventory;
     private javax.swing.JToggleButton Orders;
     private javax.swing.JToggleButton PointOfSale;
-    private javax.swing.JToggleButton Product;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
