@@ -17,113 +17,102 @@ import java.awt.*;
 import java.sql.*;
 public class OrdersItems extends javax.swing.JFrame {
 
-    /**
-     * Creates new form OrdersItems
-     */
-   
+  
+    
+    private DefaultTableModel tableModel;
     
     public OrdersItems() {
         initComponents();
+
+        // Initialize labels
         
+
+        // Table setup
+        tableModel = new DefaultTableModel(new Object[]{"Product", "Quantity", "Total"}, 0) {
+            // Make cells not editable
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+       
+        
+
+        // Load data
         loadOrdersToTable();
-    setupTableSelectionListener();
+
+        // Add selection listener
+        TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
+                    int row = TableOrders.getSelectedRow();
+                    displayOrderDetailsForRow(row);
+                }
+            }
+        });
+    }
+
+    private void loadOrdersToTable() {
+        tableModel.setRowCount(0); // clear
+
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT id, order_details, order_total FROM orders")) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                int orderId = rs.getInt("id");
+                String details = rs.getString("order_details");
+                double total = rs.getDouble("order_total");
+
+                // For display: Show first product and "..." if multiple products
+                String productDisplay = details.split("\n")[0];
+                if (details.contains("\n")) {
+                    productDisplay += " ...";
+                }
+
+                tableModel.addRow(new Object[]{productDisplay, "", total});
+                // Store orderId as hidden user data for row selection (optional: or use a map)
+                TableOrders.setValueAt(orderId, tableModel.getRowCount() - 1, 1); // hidden in "Amount" column
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+        }
+    }
+
+    private void displayOrderDetailsForRow(int row) {
+        // We use product name and total to look up the order again for safety
+        String productDisplay = (String) tableModel.getValueAt(row, 0);
+        double total = (double) tableModel.getValueAt(row, 2);
+
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT customer_name, customer_email, customer_contact, order_details, order_total " +
+                             "FROM orders WHERE order_total=?")) {
+            stmt.setDouble(1, total);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                String name = rs.getString("customer_name");
+                String email = rs.getString("customer_email");
+                String paymentMethod = rs.getString("customer_contact"); // If you have a dedicated payment_method column, change this
+                double orderTotal = rs.getDouble("order_total");
+                String orderDetails = rs.getString("order_details");
+
+                OrderNameCustomerLabel.setText("Customer Name: " + name);
+                OrdersGmailofCustomerLabel.setText("Email: " + email);
+                OrdersCashorGcashLabel.setText("Payment/Contact: " + paymentMethod);
+                AmountofPurchasedProductLabel.setText("Total: ₱" + String.format("%.2f", orderTotal));
+
+                // Optionally, show order details in a dialog
+                // JOptionPane.showMessageDialog(this, orderDetails, "Order Details", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
+        }
     }
     
-    private void loadOrdersToTable() {
-    DefaultTableModel model = (DefaultTableModel) TableOrders.getModel();
-    model.setRowCount(0); // Clear any existing rows
-
-    try (Connection conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-         PreparedStatement stmt = conn.prepareStatement(
-             "SELECT id, order_details, order_total FROM orders ORDER BY id DESC")) {
-        ResultSet rs = stmt.executeQuery();
-        while (rs.next()) {
-            int orderId = rs.getInt("id");
-            String orderDetails = rs.getString("order_details");
-            double total = rs.getDouble("order_total");
-
-            String[] lines = orderDetails.split("\\n");
-            for (String line : lines) {
-                if (line.trim().isEmpty()) continue;
-                String product = "";
-                String quantity = "";
-                try {
-                    String[] prodAndRest = line.split(" - ")[0].split(" x ");
-                    product = prodAndRest[0].trim();
-                    quantity = prodAndRest.length > 1 ? prodAndRest[1].trim() : "";
-                } catch (Exception e) {
-                    product = line.trim();
-                    quantity = "";
-                }
-                // Add orderId as a hidden 4th column
-                model.addRow(new Object[]{product, quantity, total, orderId});
-            }
-        }
-    } catch (SQLException ex) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
-    }
-    // Hide OrderID column
-    if (TableOrders.getColumnCount() > 3) {
-        TableOrders.getColumnModel().getColumn(3).setMinWidth(0);
-        TableOrders.getColumnModel().getColumn(3).setMaxWidth(0);
-        TableOrders.getColumnModel().getColumn(3).setWidth(0);
-}
-
-// Add this to set up the table row selection listener:
-    }
-    private void setupTableSelectionListener() {
-    TableOrders.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-        @Override
-        public void valueChanged(ListSelectionEvent e) {
-            if (!e.getValueIsAdjusting() && TableOrders.getSelectedRow() != -1) {
-                int selectedRow = TableOrders.getSelectedRow();
-                Object orderIdObj = TableOrders.getValueAt(selectedRow, 3); // 3 is OrderID column
-                if (orderIdObj != null) {
-                    int orderId = Integer.parseInt(orderIdObj.toString());
-                    loadOrderDetailsByOrderId(orderId);
-                }
-            }
-        }
-    });
-}
-    private void loadOrderDetailsByOrderId(int orderId) {
-    try (Connection conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-         PreparedStatement stmt = conn.prepareStatement(
-             "SELECT customer_name, customer_email, customer_contact, order_total FROM orders WHERE id = ?")) {
-        stmt.setInt(1, orderId);
-        ResultSet rs = stmt.executeQuery();
-        if (rs.next()) {
-            OrderNameCustomerLabel.setText("Name Customer: " + rs.getString("customer_name"));
-            OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
-            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact"));
-            AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
-        }
-    } catch (SQLException ex) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
-    }
-}
-
-    // load order information into table
-    private void loadOrderDetailsByTotal(double total) {
-    try (Connection conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/bea_d_lites", "root", "root");
-        PreparedStatement stmt = conn.prepareStatement(
-             "SELECT customer_name, customer_email, customer_contact, order_total FROM orders WHERE order_total = ? LIMIT 1")) {
-        stmt.setDouble(1, total);
-        ResultSet rs = stmt.executeQuery();
-        if (rs.next()) {
-            OrderNameCustomerLabel.setText("Name Customer: " + rs.getString("customer_name"));
-            OrdersGmailofCustomerLabel.setText("Gmail of Customer: " + rs.getString("customer_email"));
-            OrdersCashorGcashLabel.setText("Cash/Gcash: " + rs.getString("customer_contact")); 
-            AmountofPurchasedProductLabel.setText("Amount: ₱" + String.format("%.2f", rs.getDouble("order_total")));
-            
-        }
-    } catch (SQLException ex) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage());
-    }
-}
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
