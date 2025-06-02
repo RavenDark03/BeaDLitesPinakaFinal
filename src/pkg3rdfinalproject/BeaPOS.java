@@ -59,25 +59,33 @@ private void saveOrderToDatabase() {
     double orderTotal = parseTotalAmountLabel();
     StringBuilder productNames = new StringBuilder();
     StringBuilder productQuantities = new StringBuilder();
+    StringBuilder productToppings = new StringBuilder(); // Add this
+
     for (int i = 0; i < billListModel.size(); i++) {
         String entry = billListModel.get(i);
         String[] parts = entry.split("\\|");
-        if (parts.length >= 2) {
+        if (parts.length >= 3) {
             String productName = parts[0].trim();
             String quantity = parts[1].replace("Qty:", "").trim();
+            String toppings = (parts.length > 3 && parts[3].contains("Toppings:")) 
+                ? parts[3].replace("Toppings:", "").trim() 
+                : "";
             if (productNames.length() > 0) {
                 productNames.append(",");
                 productQuantities.append(",");
+                productToppings.append(",");
             }
             productNames.append(productName);
             productQuantities.append(quantity);
+            productToppings.append(toppings);
         }
     }
     String productNamesString = productNames.toString();
     String productQuantitiesString = productQuantities.toString();
-    
+    String productToppingsString = productToppings.toString();
+
     try (Connection conn = getConnection()) {
-        String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, order_date, payment_method, product_names, product_quantities) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String orderSql = "INSERT INTO orders (customer_name, customer_email, customer_contact, order_total, order_date, payment_method, product_names, product_quantities, toppings) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement orderStmt = conn.prepareStatement(orderSql, Statement.RETURN_GENERATED_KEYS);
         orderStmt.setString(1, savedCustomerName);
         orderStmt.setString(2, savedCustomerEmail);
@@ -87,6 +95,7 @@ private void saveOrderToDatabase() {
         orderStmt.setString(6, lastPaymentMethod);
         orderStmt.setString(7, productNamesString);
         orderStmt.setString(8, productQuantitiesString);
+        orderStmt.setString(9, productToppingsString); // Add this
         orderStmt.executeUpdate();
         // rest of your code
     } catch (SQLException ex) {
