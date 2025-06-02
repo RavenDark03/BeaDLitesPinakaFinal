@@ -18,11 +18,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import javax.swing.DefaultListModel;
-import javax.swing.JTextField;
-import pkg3rdfinalproject.CustomerInfoFrame;
-import pkg3rdfinalproject.JavaMailSender;
-import java.util.ArrayList;
-import java.util.List;
+
 //import pkg3rdfinalproject.Product;
 
 
@@ -111,7 +107,7 @@ private void saveOrderToDatabase() {
         savedCustomerContact = null;
         lastPaymentMethod = null;
     }
-
+    
     
     
     
@@ -189,20 +185,34 @@ private void saveOrderToDatabase() {
    
     
    
-
+    //variables for sizes of products
+    private String selectedMangoBravoSize = "";
+    private String selectedRedVelvetSize = "";
+    private String selectedStrawberryShortcakeSize = "";
+    private String selectedBentoCakeSize = "";
+    private String selectedCheesecakeSize = "";
+    private String selectedCaramelFlanSize = "";
+    private String selectedSliceCheesecakeSize = "";
+    private String selectedMangoBravoTubPieces = "";
+    private String selectedMiniCupcakesPieces = "";
+    private String selectedPiscesCupcakePieces = "";
+    private String selectedYemaCakeSize = "";
+    private String selectedUbePandesalVariety = "";
+    private String selectedBananaLoafVariety = "";
+    private String selectedBrowniesPieces= "";
+    private String selectedClassicCinnamonPieces = "";
+    private String selectedMilkyCheeseDonutPieces = "";
+    private String selectedBananaMuffinPieces = "";
+    
+    
+   
 
 
     
     /**
      * Creates new form BeaPOS
      */
-   DefaultListModel<String> billListModel = new DefaultListModel<>();
-    
-
-    
-    
-    
-    
+   DefaultListModel<String> billListModel = new DefaultListModel<>();    
     // At class level
     
 
@@ -218,10 +228,10 @@ private void saveOrderToDatabase() {
                 confirmExit();
             }
         });
-        billList.setModel(billListModel);
+    billList.setModel(billListModel);
     
         
-        
+     
         
         
         
@@ -232,9 +242,10 @@ private void saveOrderToDatabase() {
     String formattedDate = today.format(formatter);
     dateLabel.setText(formattedDate);
         
-    // mango bravo action listeners
+    //mango bravo action listeners
     mangoBravo6x2button.addActionListener(e -> { // 6x2
     mangoBasePrice = 699;
+    selectedMangoBravoSize = "6x2";
     
     updateMangoPrice();
     
@@ -244,6 +255,7 @@ private void saveOrderToDatabase() {
     
     mangoBravo5x2button.addActionListener(e -> { // 5x2
     mangoBasePrice = 399;
+    selectedMangoBravoSize = "5x2";
     
     updateMangoPrice();
     
@@ -251,6 +263,7 @@ private void saveOrderToDatabase() {
     
     mangoBravo4x2button.addActionListener(e -> { // 4x2
     mangoBasePrice = 299;
+    selectedMangoBravoSize = "4x2";
     
     updateMangoPrice();
     
@@ -260,11 +273,14 @@ private void saveOrderToDatabase() {
     //red velvet action listeners
     redVelvet6x2sizebutton.addActionListener(e->{
     redVelvetBasePrice = 799;
+    selectedRedVelvetSize = "6x2";
+    
     updateRedVelvetPrice();
     });
     
     redVelvet5x2sizeButton.addActionListener(e->{
     redVelvetBasePrice = 499;
+    selectedRedVelvetSize = "5x2";
     updateRedVelvetPrice();
     });
     
@@ -272,93 +288,129 @@ private void saveOrderToDatabase() {
     //strawberry shortcake listeners
     strawberryshortcake4x3sizebtn.addActionListener(e->{
     strawberryShortcakeBasePrice = 299;
+    selectedStrawberryShortcakeSize = "4x3";
     updateStrawberryShortPrice();    
     });
     
     strawberryshortcake5x3sizebtn.addActionListener(e->{
     strawberryShortcakeBasePrice = 499;
+    selectedStrawberryShortcakeSize = "5x3";
     updateStrawberryShortPrice();  
     });
     strawberryshortcake6x3sizebtn.addActionListener(e->{
-    strawberryShortcakeBasePrice = 699;    
+    strawberryShortcakeBasePrice = 699;
+    selectedStrawberryShortcakeSize = "6x3";    
     });
     strawberryshortcake8x3sizebtn.addActionListener(e->{
-    strawberryShortcakeBasePrice = 999; 
+    strawberryShortcakeBasePrice = 999;
+    selectedStrawberryShortcakeSize = "8x3";
     updateStrawberryShortPrice();     
     });
     
     
     //bento cake listener
     bentoCakeSizebutton.addActionListener(e->{
-    bentoCakeBasePrice = 340; 
+    bentoCakeBasePrice = 340;
+    selectedBentoCakeSize = "4x2 + 2pcs Cupcake";
     updateBentoCakePrice();     
     });
     
     //chesecake 
     btn8Cheesecake.addActionListener(e->{
-    cheesecakeBasePrice = 1400; 
+    cheesecakeBasePrice = 1400;
+    selectedCheesecakeSize = "8";
     updateCheeseCakePrice();     
     });
     
     //caramel de leche flan 
     btn6x2CaramelFlan.addActionListener(e->{
         caramelFlanBasePrice = 699;
+        selectedCaramelFlanSize  = "6x2";
         updateCaramelLechePrice();
         
+        
     });
+    
+    
     btn5x2CaramelFlan.addActionListener(e->{
         caramelFlanBasePrice = 399;
+        selectedCaramelFlanSize  = "5x2";
         updateCaramelLechePrice();
     });
     btn4x2CaramelFlan.addActionListener(e->{
         caramelFlanBasePrice = 299;
+        selectedCaramelFlanSize  = "4x2";
         updateCaramelLechePrice();
+    });
+    
+    //mangoBravotub
+    mangoBravoTub.addActionListener(e->{
+        mangoBravoTubBasePrice = 170;
+        selectedMangoBravoTubPieces  = "1 Tub";
+        updateMangoBravoTubPrice();
+    });
+    
+    //slice Cheesecake
+    btnSliceCheesecakePiece.addActionListener(e->{
+        slicecheesecakeBasePrice = 170;
+        selectedSliceCheesecakeSize  = "1 Tub";
+        updateSliceCheesecakePrice();
     });
     
     //mini cupcakes
     btn6PcsMiniCupcake.addActionListener(e->{
         miniCupcakesBasePrice = 98;
+        selectedMiniCupcakesPieces = "6pcs";
         updateMiniCupcakesPrice();
         
     });
     btn12PcsMiniCupcake.addActionListener(e->{
         miniCupcakesBasePrice = 169;
+        selectedMiniCupcakesPieces = "12pcs";
         updateMiniCupcakesPrice();
     });
     
     //pisces cupcakes
     btn1pcPisces.addActionListener(e->{ 
         piscesCupcakesBasePrice = 55;
+        selectedPiscesCupcakePieces = "1pc";
         updatePiscesCupcakesPrice();        
     });
     btn3PcsPisces.addActionListener(e->{ 
         piscesCupcakesBasePrice = 99;
+        selectedPiscesCupcakePieces = "3pcs";
         updatePiscesCupcakesPrice();        
     });
     btn4PcsPisces.addActionListener(e->{ 
         piscesCupcakesBasePrice = 149;
+        selectedPiscesCupcakePieces = "4pcs";
         updatePiscesCupcakesPrice();        
     });
     btn6PcsPisces.addActionListener(e->{ 
         piscesCupcakesBasePrice = 300;
+        selectedPiscesCupcakePieces = "6pcs";
         updatePiscesCupcakesPrice();        
     });
     btn12PcsPisces.addActionListener(e->{ 
         piscesCupcakesBasePrice = 600;
+        selectedPiscesCupcakePieces = "12pcs";
         updatePiscesCupcakesPrice();        
     });
     
     //yema cake
     btn6x2Yemacake.addActionListener(e->{
         yemaCakeBasePrice = 699;
+        selectedYemaCakeSize = "6x2";
         updateYemaCakePrice();
     });
     btn5x2Yemacake.addActionListener(e->{
         yemaCakeBasePrice = 399;
+        selectedYemaCakeSize = "5x2";
         updateYemaCakePrice();
     });
     btn4x2Yemacake.addActionListener(e->{
         yemaCakeBasePrice = 299;
+        selectedYemaCakeSize = "4x2";
         updateYemaCakePrice();
     });
     
@@ -366,60 +418,72 @@ private void saveOrderToDatabase() {
     //ube pandesal 
     btnUbeCheesedesal.addActionListener(e->{
         ubePandesalBasePrice = 170;
+        selectedUbePandesalVariety = "Ube Cheesedesal";
         updateCheesePandesalPrice();
     });
     btnUbeHalayaCheesedesal.addActionListener(e->{
         ubePandesalBasePrice = 185;
+        selectedUbePandesalVariety = "Ube Halaya Cheesedesal";
         updateCheesePandesalPrice();
     });
     
     //bananaloaf 
     btnMoistBananaChocoChipLoaf.addActionListener(e->{
         bananaLoafBasePrice =  160;
+        selectedBananaLoafVariety = "Moist Banana Choco Chip Loaf";
         updateBananaLoafPrice();
     });
     btnMoistBananaChocoChipAlmondLoaf.addActionListener(e->{
         bananaLoafBasePrice =  190;
+        selectedBananaLoafVariety = "Moist Banana Choco Chip Almond Loaf";
         updateBananaLoafPrice();
     });
     
     //brownies
     btn6PcsBrownies.addActionListener(e->{
         browniesBasePrice = 150;
+        selectedBrowniesPieces = "6pcs";
         updateBrowniesPrice();
     });
     btn12PcsBrownies.addActionListener(e->{
         browniesBasePrice = 280;
+        selectedBrowniesPieces = "12pcs";
         updateBrowniesPrice();
     });
     btn30PcsBrownies.addActionListener(e->{
         browniesBasePrice = 750;
+        selectedBrowniesPieces = "30pcs";
         updateBrowniesPrice();
     });
     
     //classicCinnamon
     btnBoxof4ClassicCinnamon.addActionListener(e->{
         classicCinnamonBasePrice = 185;
+        selectedClassicCinnamonPieces = "Box of 4";
         updateCinnamonPrice();
     });
     btnBoxof6ClassicCinnamon.addActionListener(e->{
         classicCinnamonBasePrice = 280;
+         selectedClassicCinnamonPieces = "Box of 6";
         updateCinnamonPrice();
     });
     
     //milky cheese Donut
     btn5PcsMilkyDonut.addActionListener(e->{
         milkyCheeseDonutBasePrice = 125;
+        selectedMilkyCheeseDonutPieces = "5pcs";
         updateMilkyCheeseDonutPrice();
     });
     btn10PcsMilkyDonut.addActionListener(e->{
         milkyCheeseDonutBasePrice = 240;
+        selectedMilkyCheeseDonutPieces = "10pcs";
         updateMilkyCheeseDonutPrice();
     });
     
     //banana muffim
     btn6PcsBananaMuffin.addActionListener(e->{
         bananaMuffinBasePrice = 109;
+        selectedBananaMuffinPieces = "6pcs";
         updateBananaMuffinPrice();
     });
     
@@ -428,157 +492,354 @@ private void saveOrderToDatabase() {
     
     //actionlisteners for radiobuttons
    // Mango Bravo
-mangoRadioButton.addItemListener(e -> {
-    if (mangoRadioButton.isSelected()) {
-        addOrUpdateBillItem("Mango Bravo", mangoQty, mangoBasePrice);
-    } else {
-        addOrUpdateBillItem("Mango Bravo", 0, mangoBasePrice);
+    mangoRadioButton.addItemListener(e -> {
+    // Assume selectedMangoBravoSize is a String and mangoQty is an int
+    String size = selectedMangoBravoSize;
+    int qty = mangoQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        mangoRadioButton.setSelected(false);
+        return;
+        
     }
+
+    // If all okay, continue as usual
+    String toppings = getSelectedToppingsByProduct("Mango Bravo");
+    addOrUpdateBillItem("Mango Bravo", qty, mangoBasePrice, size, toppings);
+    
 });
 
-// Red Velvet Cake
-redVelvetRadioButton.addItemListener(e -> {
-    if (redVelvetRadioButton.isSelected()) {
-        addOrUpdateBillItem("Red Velvet Cake", redVelvetQty, redVelvetBasePrice);
-    } else {
-        addOrUpdateBillItem("Red Velvet Cake", 0, redVelvetBasePrice);
+// Red Velvet Cake  
+    redVelvetRadioButton.addItemListener(e -> {
+    String size = selectedRedVelvetSize;
+    int qty = redVelvetQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        redVelvetRadioButton.setSelected(false);
+        return;
     }
+
+    // If all okay, continue as usual
+    String toppings = getSelectedToppingsByProduct("Red Velvet");
+    addOrUpdateBillItem("Mango Bravo", qty, redVelvetBasePrice, size, toppings);
 });
 
 // Strawberry Shortcake
-strawberryshortcakeradioButton.addItemListener(e -> {
-    if (strawberryshortcakeradioButton.isSelected()) {
-        addOrUpdateBillItem("Strawberry Shortcake", strawberryShortcakeQty, strawberryShortcakeBasePrice);
-    } else {
-        addOrUpdateBillItem("Strawberry Shortcake", 0, strawberryShortcakeBasePrice);
+    strawberryshortcakeradioButton.addItemListener(e -> {
+    String size = selectedStrawberryShortcakeSize;
+    int qty = strawberryShortcakeQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        strawberryshortcakeradioButton.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Strawberry Shortcake");
+    addOrUpdateBillItem("Strawberry Shortcake", qty, strawberryShortcakeBasePrice, size, toppings);
 });
 
 // Bento Cake
-bentoCakeRadioButton.addItemListener(e -> {
-    if (bentoCakeRadioButton.isSelected()) {
-        addOrUpdateBillItem("Bento Cake", bentoCakeQty, bentoCakeBasePrice);
-    } else {
-        addOrUpdateBillItem("Bento Cake", 0, bentoCakeBasePrice);
+    bentoCakeRadioButton.addItemListener(e -> {
+    String size = selectedBentoCakeSize;
+    int qty = bentoCakeQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        bentoCakeRadioButton.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Bento Cake");
+    addOrUpdateBillItem("Bento Cake", qty, bentoCakeBasePrice, size, toppings);
 });
 
 // Caramel Flan de Leche
-jRadioButton2.addItemListener(e -> {
-    if (jRadioButton2.isSelected()) {
-        addOrUpdateBillItem("Caramel Flan de Leche", caramelFlanQty, caramelFlanBasePrice);
-    } else {
-        addOrUpdateBillItem("Caramel Flan de Leche", 0, caramelFlanBasePrice);
+    caramelFlanRadio.addItemListener(e -> {
+    String size = selectedCaramelFlanSize;
+    int qty = caramelFlanQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        caramelFlanRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Caramel Flan");
+    addOrUpdateBillItem("Caramel Flan de Leche", qty, caramelFlanBasePrice, size, toppings);
 });
 
 // Cheesecake
-jRadioButton8.addItemListener(e -> {
-    if (jRadioButton8.isSelected()) {
-        addOrUpdateBillItem("Cheesecake", cheesecakeQuantity, cheesecakeBasePrice);
-    } else {
-        addOrUpdateBillItem("Cheesecake", 0, cheesecakeBasePrice);
+    cheeseCakeRadio.addItemListener(e -> {
+    String size = selectedCheesecakeSize;
+    int qty = cheesecakeQuantity; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        cheeseCakeRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Cheesecake");
+    addOrUpdateBillItem("Cheesecake", qty, cheesecakeBasePrice, size, toppings);
 });
 
 // Slice Cheesecake
-jRadioButton7.addItemListener(e -> {
-    if (jRadioButton7.isSelected()) {
-        addOrUpdateBillItem("Slice Cheesecake", slicecheesecakeQty, slicecheesecakeBasePrice);
-    } else {
-        addOrUpdateBillItem("Slice Cheesecake", 0, slicecheesecakeBasePrice);
+    sliceCheesecakeRadio.addItemListener(e -> {
+    String size = selectedSliceCheesecakeSize;
+    int qty = cheesecakeQuantity; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        sliceCheesecakeRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Cheesecake");
+    addOrUpdateBillItem("Cheesecake", qty, cheesecakeBasePrice, size, toppings);
 });
 
 // Mango Bravo Tub
-jRadioButton1.addItemListener(e -> {
-    if (jRadioButton1.isSelected()) {
-        addOrUpdateBillItem("Mango Bravo Tub", mangoBravoTubQty, mangoBravoTubBasePrice);
-    } else {
-        addOrUpdateBillItem("Mango Bravo Tub", 0, mangoBravoTubBasePrice);
+    mangoBravoTubRadio.addItemListener(e -> {
+    String size = selectedMangoBravoTubPieces;
+    int qty = mangoBravoTubQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        mangoBravoTubRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Mango Bravo Tub");
+    addOrUpdateBillItem("Mango Bravo Tub", qty, mangoBravoTubBasePrice, size, toppings);
+    
 });
 
 // Mini Cupcakes
-jRadioButton4.addItemListener(e -> {
-    if (jRadioButton4.isSelected()) {
-        addOrUpdateBillItem("Mini Cupcakes", miniCupcakesQty, miniCupcakesBasePrice);
-    } else {
-        addOrUpdateBillItem("Mini Cupcakes", 0, miniCupcakesBasePrice);
+    miniCupcakesRadio.addItemListener(e -> {
+    String size = selectedMiniCupcakesPieces;
+    int qty = miniCupcakesQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        miniCupcakesRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Mini Cupcakes");
+    addOrUpdateBillItem("Mini Cupcakes", qty, miniCupcakesBasePrice, size, toppings);
 });
 
 // Pisces Cupcake
-jRadioButton5.addItemListener(e -> {
-    if (jRadioButton5.isSelected()) {
-        addOrUpdateBillItem("Pisces Cupcake", piscesCupcakesQty, piscesCupcakesBasePrice);
-    } else {
-        addOrUpdateBillItem("Pisces Cupcake", 0, piscesCupcakesBasePrice);
+    piscesRadio.addItemListener(e -> {
+    
+    String size = selectedPiscesCupcakePieces;
+    int qty = piscesCupcakesQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        piscesRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Pisces Cupcakes");
+    addOrUpdateBillItem("Pisces Cupcakes", qty, piscesCupcakesBasePrice, size, toppings);
 });
 
 // Yema Cake
-jRadioButton20.addItemListener(e -> {
-    if (jRadioButton20.isSelected()) {
-        addOrUpdateBillItem("Yema Cake", yemaCakeQty, yemaCakeBasePrice);
-    } else {
-        addOrUpdateBillItem("Yema Cake", 0, yemaCakeBasePrice);
+    yemaCakeRadio.addItemListener(e -> {
+    String size = selectedYemaCakeSize;
+    int qty = yemaCakeQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        yemaCakeRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Yema Cake");
+    addOrUpdateBillItem("Yema Cake", qty, yemaCakeBasePrice, size, toppings);
 });
    
 
 // Ube Pandesal
-jRadioButton12.addItemListener(e -> {
-    if (jRadioButton12.isSelected()) {
-        addOrUpdateBillItem("Ube Pandesal", ubePandesalQty, ubePandesalBasePrice);
-    } else {
-        addOrUpdateBillItem("Ube Pandesal", 0, ubePandesalBasePrice);
+    ubePandesalRadio.addItemListener(e -> {
+    String size = selectedUbePandesalVariety;
+    int qty = ubePandesalQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        ubePandesalRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Ube Pandesal");
+    addOrUpdateBillItem("Ube Pandesal", qty, yemaCakeBasePrice, size, toppings);
 });
 
 // Banana Loaf
-jRadioButton13.addItemListener(e -> {
-    if (jRadioButton13.isSelected()) {
-        addOrUpdateBillItem("Banana Loaf", bananaLoafQty, bananaLoafBasePrice);
-    } else {
-        addOrUpdateBillItem("Banana Loaf", 0, bananaLoafBasePrice);
+    BananaLoafRadio.addItemListener(e -> {
+    String size = selectedBananaLoafVariety;
+    int qty = bananaLoafQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        BananaLoafRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Banana Loaf");
+    addOrUpdateBillItem("Banana Loaf", qty, bananaLoafBasePrice, size, toppings);
 });
 
 // Brownies
-jRadioButton14.addItemListener(e -> {
-    if (jRadioButton14.isSelected()) {
-        addOrUpdateBillItem("Brownies", browniesQty, browniesBasePrice);
-    } else {
-        addOrUpdateBillItem("Brownies", 0, browniesBasePrice);
+    browniesRadio.addItemListener(e -> {
+    String size = selectedBrowniesPieces;
+    int qty = browniesQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        browniesRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Brownies");
+    addOrUpdateBillItem("Brownies", qty, browniesBasePrice, size, toppings);
+    
 });
 
 // Classic
-jRadioButton15.addItemListener(e -> {
-    if (jRadioButton15.isSelected()) {
-        addOrUpdateBillItem("Classic", classicCinnamonQty, classicCinnamonBasePrice);
-    } else {
-        addOrUpdateBillItem("Classic", 0, classicCinnamonBasePrice);
+    classicCinnamonRadio.addItemListener(e -> {
+    String size = selectedClassicCinnamonPieces;
+    int qty = classicCinnamonQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        classicCinnamonRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Classic Cinnamon");
+    addOrUpdateBillItem("Classic Cinnamon", qty, classicCinnamonBasePrice, size, toppings);
 });
 
 // Milky Cheese Donut
-jRadioButton16.addItemListener(e -> {
-    if (jRadioButton16.isSelected()) {
-        addOrUpdateBillItem("Milky Cheese Donut", milkyCheeseDonutQty, milkyCheeseDonutBasePrice);
-    } else {
-        addOrUpdateBillItem("Milky Cheese Donut", 0, milkyCheeseDonutBasePrice);
+    milkyCheeseRadio.addItemListener(e -> {
+    String size = selectedMilkyCheeseDonutPieces;
+    int qty = milkyCheeseDonutQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        milkyCheeseRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Milky Cheese");
+    addOrUpdateBillItem("Milky Cheese Donut", qty, milkyCheeseDonutBasePrice, size, toppings);
 });
 
 // Banana Muffin
-jRadioButton17.addItemListener(e -> {
-    if (jRadioButton17.isSelected()) {
-        addOrUpdateBillItem("Banana Muffin", bananaMuffinQty, bananaMuffinBasePrice);
-    } else {
-        addOrUpdateBillItem("Banana Muffin", 0, bananaMuffinBasePrice);
+    bananaMuffinRadio.addItemListener(e -> {
+    String size = selectedBananaMuffinPieces;
+    int qty = bananaMuffinQty; // Or get the value from your quantity control
+
+    // Check if size or quantity is not set
+    if (size == null || size.isEmpty() || qty <= 0) {
+        // Show error message and unselect the radio button
+        JOptionPane.showMessageDialog(null,
+            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Selection Error",
+            JOptionPane.ERROR_MESSAGE);
+        // Uncheck the radio button programmatically
+        bananaMuffinRadio.setSelected(false);
+        return;
     }
+    String toppings = getSelectedToppingsByProduct("Banana Muffin");
+    addOrUpdateBillItem("Banana Muffin", qty, bananaMuffinBasePrice, size, toppings);
 });
     
     btnCustomeCakeIcingCake.addActionListener(e -> {
@@ -594,7 +855,7 @@ jRadioButton17.addItemListener(e -> {
     
     
     customCakeButton.addActionListener(e -> {
-    // Regex: number, 'x', number, optional letters (e.g., 8x2, 10x4in, 6x2cm)
+    
     String sizePattern = "^\\d+x\\d+[a-zA-Z]*$";
     String size = null;
     while (true) {
@@ -749,8 +1010,6 @@ jRadioButton17.addItemListener(e -> {
             
             
     );
-    
-
     // 5. Send the email using JavaMailSender
     try {
         JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
@@ -769,7 +1028,7 @@ jRadioButton17.addItemListener(e -> {
     billListModel.clear();
     resetCart();
     setTotalAmount();
-});
+    });
     
     
     payByGCASHBtn.addActionListener(e -> {
@@ -804,7 +1063,7 @@ jRadioButton17.addItemListener(e -> {
         }
     }
 
-    // 3. Generate the GCash QR string (use your merchant QR data, or a placeholder for demo)
+    // 3. Generate the GCash QR string 
     // For real use, replace with your real GCash QR string.
     String gcashQRString = "00020101021127830012com.p2pqrpay0111GXCHPHM2XXX02089996440303152170200000006560417DWQM4TK3JDNYRIX0S5204601653036085802PH5915MA****W MA*C S.6005Sibul6104123463043B33"; // e.g., from your merchant QR or link
 
@@ -913,6 +1172,78 @@ jRadioButton17.addItemListener(e -> {
 
     
       }
+    
+    
+    //methods for getting the toppings
+    private String getSelectedToppingsByProduct(String productName) {
+    StringBuilder toppings = new StringBuilder();
+    switch (productName) {
+        case "Mango Bravo":
+            if (mangoToppings.isSelected()) toppings.append("Mango Toppings");
+            break;
+        case "Stawberry Shortcake":
+            if (strawberryToppingsShortcake.isSelected()) 
+                toppings.append("Strawberry Toppings, ");
+            
+            if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
+            break;
+        case "Cheesecake":
+            if (blueberryToppingsCheesecake.isSelected()) toppings.append("Blueberry Toppings, ");
+            if (mangoToppingsCheesecake.isSelected()) toppings.append("Mango Toppings, ");
+            if (biscoffToppingsCheesecake.isSelected()) toppings.append("Biscoff Toppings, ");
+            if (strawberryToppingsCheesecake.isSelected()) toppings.append("Strawberry Toppings, ");
+          
+            if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
+            break;
+            
+            
+        case "Caramel Flan":
+             if (caramelToppingsLecheFlan.isSelected()) toppings.append("Caramel Toppings, ");
+             if(lecheFlanToppingsCake.isSelected()) toppings.append("Leche Flan Toppings, ");
+             if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
+             break;
+        case "Slice Cheesecake":
+            if (blueberryToppingsSliceCheesecake.isSelected()) toppings.append("Blueberry Toppings, ");
+             if(mangoToppingsSliceCheesecake.isSelected()) toppings.append("Mango Toppings, ");
+             if (biscoffToppingsSliceCheesecake.isSelected()) toppings.append("Biscoff Toppings, ");
+             if (strawberryToppingsSliceCheesecake.isSelected()) toppings.append("Strawberry Toppings, ");
+             if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
+             break;
+        case "Red Velvet":
+        case "Bento Cake":
+        case "Mango Bravo Tub":
+        case "Mini Cupcakes":
+        case "Pisces Cupcakes":
+        case "Ube Pandesal":
+        case "Banana Loaf":
+        case "Brownies":
+        case "Classic Cinnamon":
+        case "Milky Cheese Donut":
+        case "Banana Muffin":
+             return "None";
+        
+        default:
+            return "None";
+    }
+    return toppings.length() > 0 ? toppings.toString() : "None";
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //methods for actionListeners
     public void setTotalAmount(){
         totalAmountLabel.setText("₱"+ 0.00);
@@ -947,6 +1278,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
      * @param quantity
      * @param price
      */
+
     public void addMinimalistCustomCakeToBill(String cakeSize, int quantity, int price) {
     if (quantity <= 0) return;
     String productName = "Custom Minimalist Cake (" + cakeSize + ")";
@@ -1091,7 +1423,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jLabel57 = new javax.swing.JLabel();
         caramelToppingsLecheFlan = new javax.swing.JToggleButton();
         lecheFlanToppingsCake = new javax.swing.JToggleButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        caramelFlanRadio = new javax.swing.JRadioButton();
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
@@ -1106,7 +1438,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         mangoToppingsCheesecake = new javax.swing.JToggleButton();
         biscoffToppingsCheesecake = new javax.swing.JToggleButton();
         strawberryToppingsCheesecake = new javax.swing.JToggleButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        cheeseCakeRadio = new javax.swing.JRadioButton();
         jLabel61 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jPanel36 = new javax.swing.JPanel();
@@ -1121,8 +1453,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         mangoToppingsSliceCheesecake = new javax.swing.JToggleButton();
         biscoffToppingsSliceCheesecake = new javax.swing.JToggleButton();
         strawberryToppingsSliceCheesecake = new javax.swing.JToggleButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        sliceCheesecakeRadio = new javax.swing.JRadioButton();
         jLabel66 = new javax.swing.JLabel();
+        btnSliceCheesecakePiece = new javax.swing.JToggleButton();
         jPanel39 = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
@@ -1132,7 +1465,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnPlusMangoBravoTub = new javax.swing.JButton();
         jPanel42 = new javax.swing.JPanel();
         mangoBravoTubPrice = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        mangoBravoTubRadio = new javax.swing.JRadioButton();
+        mangoBravoTub = new javax.swing.JToggleButton();
         jPanel43 = new javax.swing.JPanel();
         jPanel44 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
@@ -1144,7 +1478,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         miniCupcakesPrice = new javax.swing.JLabel();
         btn6PcsMiniCupcake = new javax.swing.JToggleButton();
         btn12PcsMiniCupcake = new javax.swing.JToggleButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        miniCupcakesRadio = new javax.swing.JRadioButton();
         jPanel47 = new javax.swing.JPanel();
         jPanel48 = new javax.swing.JPanel();
         jLabel78 = new javax.swing.JLabel();
@@ -1159,7 +1493,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn4PcsPisces = new javax.swing.JToggleButton();
         btn6PcsPisces = new javax.swing.JToggleButton();
         btn12PcsPisces = new javax.swing.JToggleButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        piscesRadio = new javax.swing.JRadioButton();
         jPanel55 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
@@ -1187,7 +1521,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnPlusYemaCake = new javax.swing.JButton();
         jPanel95 = new javax.swing.JPanel();
         lbPhpYemaCake = new javax.swing.JLabel();
-        jRadioButton20 = new javax.swing.JRadioButton();
+        yemaCakeRadio = new javax.swing.JRadioButton();
         btn6x2Yemacake = new javax.swing.JToggleButton();
         btn5x2Yemacake = new javax.swing.JToggleButton();
         btn4x2Yemacake = new javax.swing.JToggleButton();
@@ -1205,7 +1539,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lbPhpUbePandesal = new javax.swing.JLabel();
         btnUbeCheesedesal = new javax.swing.JToggleButton();
         btnUbeHalayaCheesedesal = new javax.swing.JToggleButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        ubePandesalRadio = new javax.swing.JRadioButton();
         jPanel63 = new javax.swing.JPanel();
         jPanel64 = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
@@ -1217,7 +1551,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lbPhpBananaLoaf = new javax.swing.JLabel();
         btnMoistBananaChocoChipLoaf = new javax.swing.JToggleButton();
         btnMoistBananaChocoChipAlmondLoaf = new javax.swing.JToggleButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
+        BananaLoafRadio = new javax.swing.JRadioButton();
         jPanel67 = new javax.swing.JPanel();
         jPanel68 = new javax.swing.JPanel();
         jLabel86 = new javax.swing.JLabel();
@@ -1229,7 +1563,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lbPhpBrownies = new javax.swing.JLabel();
         btn6PcsBrownies = new javax.swing.JToggleButton();
         btn12PcsBrownies = new javax.swing.JToggleButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
+        browniesRadio = new javax.swing.JRadioButton();
         btn30PcsBrownies = new javax.swing.JToggleButton();
         jPanel72 = new javax.swing.JPanel();
         jPanel73 = new javax.swing.JPanel();
@@ -1242,7 +1576,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lbPhpClassicCinnamon = new javax.swing.JLabel();
         btnBoxof4ClassicCinnamon = new javax.swing.JToggleButton();
         btnBoxof6ClassicCinnamon = new javax.swing.JToggleButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
+        classicCinnamonRadio = new javax.swing.JRadioButton();
         jPanel76 = new javax.swing.JPanel();
         jPanel77 = new javax.swing.JPanel();
         jLabel92 = new javax.swing.JLabel();
@@ -1254,7 +1588,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lbPhpMilkyDonut = new javax.swing.JLabel();
         btn5PcsMilkyDonut = new javax.swing.JToggleButton();
         btn10PcsMilkyDonut = new javax.swing.JToggleButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
+        milkyCheeseRadio = new javax.swing.JRadioButton();
         jPanel80 = new javax.swing.JPanel();
         jPanel81 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
@@ -1264,7 +1598,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnPlusMuffin = new javax.swing.JButton();
         jPanel83 = new javax.swing.JPanel();
         lbPhpMuffin = new javax.swing.JLabel();
-        jRadioButton17 = new javax.swing.JRadioButton();
+        bananaMuffinRadio = new javax.swing.JRadioButton();
         btn6PcsBananaMuffin = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -2308,9 +2642,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         lecheFlanToppingsCake.setForeground(new java.awt.Color(255, 204, 102));
         lecheFlanToppingsCake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pudding.png"))); // NOI18N
 
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton2.setText("Caramel flan de leche cake");
+        caramelFlanRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        caramelFlanRadio.setForeground(new java.awt.Color(225, 135, 44));
+        caramelFlanRadio.setText("Caramel flan de leche cake");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -2341,14 +2675,14 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addComponent(caramelToppingsLecheFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
                         .addComponent(lecheFlanToppingsCake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton2))
+                    .addComponent(caramelFlanRadio))
                 .addGap(6, 6, 6))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton2)
+                .addComponent(caramelFlanRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel27Layout.createSequentialGroup()
@@ -2493,9 +2827,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
         strawberryToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
-        jRadioButton8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton8.setText("Cheesecake");
+        cheeseCakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cheeseCakeRadio.setForeground(new java.awt.Color(225, 135, 44));
+        cheeseCakeRadio.setText("Cheesecake");
 
         jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel61.setForeground(new java.awt.Color(225, 135, 44));
@@ -2528,14 +2862,14 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addComponent(biscoffToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(strawberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton8))
+                    .addComponent(cheeseCakeRadio))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton8)
+                .addComponent(cheeseCakeRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel31Layout.createSequentialGroup()
@@ -2669,13 +3003,18 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         strawberryToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
         strawberryToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
 
-        jRadioButton7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(209, 127, 45));
-        jRadioButton7.setText("Slice Cheesecake");
+        sliceCheesecakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        sliceCheesecakeRadio.setForeground(new java.awt.Color(209, 127, 45));
+        sliceCheesecakeRadio.setText("Slice Cheesecake");
 
         jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel66.setForeground(new java.awt.Color(225, 135, 44));
         jLabel66.setText("Topping:");
+
+        btnSliceCheesecakePiece.setBackground(new java.awt.Color(255, 255, 153));
+        btnSliceCheesecakePiece.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSliceCheesecakePiece.setForeground(new java.awt.Color(225, 135, 44));
+        btnSliceCheesecakePiece.setText("1 pc");
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -2689,7 +3028,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSliceCheesecakePiece, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel35Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(jLabel66)
@@ -2701,20 +3041,22 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addComponent(biscoffToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(strawberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton7))
+                    .addComponent(sliceCheesecakeRadio))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton7)
+                .addComponent(sliceCheesecakeRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel35Layout.createSequentialGroup()
                         .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSliceCheesecakePiece))
                     .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2823,9 +3165,14 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton1.setText("Mango Bravo Tub");
+        mangoBravoTubRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mangoBravoTubRadio.setForeground(new java.awt.Color(225, 135, 44));
+        mangoBravoTubRadio.setText("Mango Bravo Tub");
+
+        mangoBravoTub.setBackground(new java.awt.Color(255, 255, 153));
+        mangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
+        mangoBravoTub.setText("1 pc");
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -2839,9 +3186,10 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jRadioButton1))
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(mangoBravoTubRadio))
+                .addGap(0, 38, Short.MAX_VALUE))
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2849,15 +3197,17 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap()
                 .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel39Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(mangoBravoTubRadio)
                         .addGap(51, 51, 51)
-                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(58, Short.MAX_VALUE))
                     .addGroup(jPanel39Layout.createSequentialGroup()
                         .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(mangoBravoTub)
+                        .addGap(38, 38, 38))))
         );
 
         jPanel43.setBackground(new java.awt.Color(255, 204, 102));
@@ -2940,7 +3290,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         miniCupcakesPrice.setBackground(new java.awt.Color(255, 255, 153));
         miniCupcakesPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         miniCupcakesPrice.setForeground(new java.awt.Color(225, 135, 44));
-        miniCupcakesPrice.setText("Php 0,00");
+        miniCupcakesPrice.setText("Php 0.00");
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
@@ -2969,9 +3319,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn12PcsMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
         btn12PcsMiniCupcake.setText("12PCS");
 
-        jRadioButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton4.setText("Mini Cupcakes");
+        miniCupcakesRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        miniCupcakesRadio.setForeground(new java.awt.Color(225, 135, 44));
+        miniCupcakesRadio.setText("Mini Cupcakes");
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
@@ -2990,14 +3340,14 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                         .addComponent(btn6PcsMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn12PcsMiniCupcake))
-                    .addComponent(jRadioButton4))
+                    .addComponent(miniCupcakesRadio))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton4)
+                .addComponent(miniCupcakesRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
@@ -3138,9 +3488,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn12PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
         btn12PcsPisces.setText("12 PCS");
 
-        jRadioButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton5.setText("Pisces Cupcake");
+        piscesRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        piscesRadio.setForeground(new java.awt.Color(225, 135, 44));
+        piscesRadio.setText("Pisces Cupcake");
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -3165,14 +3515,14 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                             .addComponent(btn4PcsPisces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn12PcsPisces))
-                    .addComponent(jRadioButton5))
+                    .addComponent(piscesRadio))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel47Layout.setVerticalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton5)
+                .addComponent(piscesRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
@@ -3542,9 +3892,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jRadioButton20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton20.setForeground(new java.awt.Color(209, 127, 45));
-        jRadioButton20.setText("Yema Cake");
+        yemaCakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        yemaCakeRadio.setForeground(new java.awt.Color(209, 127, 45));
+        yemaCakeRadio.setText("Yema Cake");
 
         btn6x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
         btn6x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -3574,7 +3924,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap()
                 .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel92Layout.createSequentialGroup()
-                        .addComponent(jRadioButton20)
+                        .addComponent(yemaCakeRadio)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel92Layout.createSequentialGroup()
                         .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3604,7 +3954,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton20)
+                .addComponent(yemaCakeRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel92Layout.createSequentialGroup()
@@ -3681,7 +4031,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel92, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(cakesPanel);
@@ -3694,7 +4044,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
 
         jTabbedPane1.addTab("cakes", jPanel71);
@@ -3813,9 +4163,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnUbeHalayaCheesedesal.setForeground(new java.awt.Color(225, 135, 44));
         btnUbeHalayaCheesedesal.setText("Ube  Halaya Cheesedesal");
 
-        jRadioButton12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton12.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton12.setText("Ube Pandesal");
+        ubePandesalRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ubePandesalRadio.setForeground(new java.awt.Color(225, 135, 44));
+        ubePandesalRadio.setText("Ube Pandesal");
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
@@ -3827,7 +4177,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                     .addComponent(btnUbeCheesedesal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel59Layout.createSequentialGroup()
                         .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton12)
+                            .addComponent(ubePandesalRadio)
                             .addGroup(jPanel59Layout.createSequentialGroup()
                                 .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3842,7 +4192,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel59Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton12)
+                .addComponent(ubePandesalRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3965,9 +4315,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnMoistBananaChocoChipAlmondLoaf.setForeground(new java.awt.Color(225, 135, 44));
         btnMoistBananaChocoChipAlmondLoaf.setText("Moist Banana Choco Chip Almond Loaf");
 
-        jRadioButton13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton13.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton13.setText("Banana Loaf");
+        BananaLoafRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BananaLoafRadio.setForeground(new java.awt.Color(225, 135, 44));
+        BananaLoafRadio.setText("Banana Loaf");
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
@@ -3976,7 +4326,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             .addGroup(jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton13)
+                    .addComponent(BananaLoafRadio)
                     .addGroup(jPanel63Layout.createSequentialGroup()
                         .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3992,7 +4342,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton13)
+                .addComponent(BananaLoafRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4115,9 +4465,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn12PcsBrownies.setForeground(new java.awt.Color(225, 135, 44));
         btn12PcsBrownies.setText("12 PCS");
 
-        jRadioButton14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton14.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton14.setText("Brownies");
+        browniesRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        browniesRadio.setForeground(new java.awt.Color(225, 135, 44));
+        browniesRadio.setText("Brownies");
 
         btn30PcsBrownies.setBackground(new java.awt.Color(255, 255, 153));
         btn30PcsBrownies.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -4131,7 +4481,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             .addGroup(jPanel67Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton14)
+                    .addComponent(browniesRadio)
                     .addGroup(jPanel67Layout.createSequentialGroup()
                         .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4150,7 +4500,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel67Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton14)
+                .addComponent(browniesRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4275,9 +4625,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btnBoxof6ClassicCinnamon.setForeground(new java.awt.Color(225, 135, 44));
         btnBoxof6ClassicCinnamon.setText("Box of 6");
 
-        jRadioButton15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton15.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton15.setText("Classic Cinnamon Roll");
+        classicCinnamonRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        classicCinnamonRadio.setForeground(new java.awt.Color(225, 135, 44));
+        classicCinnamonRadio.setText("Classic Cinnamon Roll");
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
         jPanel72.setLayout(jPanel72Layout);
@@ -4286,7 +4636,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             .addGroup(jPanel72Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton15)
+                    .addComponent(classicCinnamonRadio)
                     .addGroup(jPanel72Layout.createSequentialGroup()
                         .addComponent(jPanel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4303,7 +4653,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel72Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton15)
+                .addComponent(classicCinnamonRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4426,9 +4776,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         btn10PcsMilkyDonut.setForeground(new java.awt.Color(225, 135, 44));
         btn10PcsMilkyDonut.setText("10 PCS");
 
-        jRadioButton16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton16.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton16.setText("Milky Cheese Donut");
+        milkyCheeseRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        milkyCheeseRadio.setForeground(new java.awt.Color(225, 135, 44));
+        milkyCheeseRadio.setText("Milky Cheese Donut");
 
         javax.swing.GroupLayout jPanel76Layout = new javax.swing.GroupLayout(jPanel76);
         jPanel76.setLayout(jPanel76Layout);
@@ -4437,7 +4787,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             .addGroup(jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton16)
+                    .addComponent(milkyCheeseRadio)
                     .addGroup(jPanel76Layout.createSequentialGroup()
                         .addComponent(jPanel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4454,7 +4804,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel76Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton16)
+                .addComponent(milkyCheeseRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel76Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4567,9 +4917,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap())
         );
 
-        jRadioButton17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jRadioButton17.setForeground(new java.awt.Color(225, 135, 44));
-        jRadioButton17.setText("Banana Muffin");
+        bananaMuffinRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bananaMuffinRadio.setForeground(new java.awt.Color(225, 135, 44));
+        bananaMuffinRadio.setText("Banana Muffin");
 
         btn6PcsBananaMuffin.setBackground(new java.awt.Color(255, 255, 153));
         btn6PcsBananaMuffin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -4583,7 +4933,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             .addGroup(jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton17)
+                    .addComponent(bananaMuffinRadio)
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jPanel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4597,7 +4947,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel80Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton17)
+                .addComponent(bananaMuffinRadio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4705,7 +5055,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     
     
     
-    private void addOrUpdateBillItem(String productName, int quantity, int unitPrice) {
+    private void addOrUpdateBillItem(String productName, int quantity, int unitPrice, String size, String toppings) {
     if (quantity <= 0) {
         // Remove the item from the billList
         for (int i = 0; i < billListModel.size(); i++) {
@@ -4714,6 +5064,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 break;
             }
         }
+        updateTotalAmountLabel();
         return;
     }
     // Remove existing entry (to avoid duplicates)
@@ -4723,9 +5074,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             break;
         }
     }
-    // Add updated entry
-    String entry = String.format("%s | Qty: %d | ₱%d", productName, quantity, quantity * unitPrice);
+    // Build the entry string with size and toppings
+    String entry = String.format(
+        "%s | Qty: %d | ₱%d | Size: %s | Toppings: %s",
+        productName, quantity, quantity * unitPrice, size, toppings
+    );
     billListModel.addElement(entry);
+
     updateTotalAmountLabel();
 }
     
@@ -4753,7 +5108,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private void updateMangoPrice() {
     int total = (mangoBasePrice) * mangoQty;
     mangoPrice.setText("Php: " + total + ".00");
-}
+    }
     private void updateRedVelvetPrice(){
        int total = (redVelvetBasePrice) * redVelvetQty;
        redVelvetCakePrice.setText("Php: " + total + ".00"); 
@@ -4830,9 +5185,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
     
     
-    
-    
-    
     private void btnCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCakeActionPerformed
       jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_btnCakeActionPerformed
@@ -4862,17 +5214,16 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }//GEN-LAST:event_txtSearchFocusLost
 
     private void minusButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonMangoActionPerformed
-       if (mangoQty > 0) {
+    if (mangoQty > 0) {
         mangoQty--;
     }
     mangoBravoQuantity.setText(String.valueOf(mangoQty));
     updateMangoPrice();
-
     
-    if (mangoQty == 0) {
-        mangoRadioButton.setSelected(false);
-       
-    }
+    
+//    if (mangoQty == 0) {
+//        mangoRadioButton.setSelected(false);
+//    }
     }//GEN-LAST:event_minusButtonMangoActionPerformed
 
     private void redVelvetMinusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redVelvetMinusButtonActionPerformed
@@ -5182,11 +5533,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton BananaLoafRadio;
     private javax.swing.JPanel BillPanel;
     private javax.swing.JPanel Jpanel;
     private javax.swing.JButton RedVelvetPlusButton;
     private javax.swing.JButton addButtonMango;
     private javax.swing.JButton backButton;
+    private javax.swing.JRadioButton bananaMuffinRadio;
     private javax.swing.JButton bentoCakePlusButton;
     private javax.swing.JLabel bentoCakePrice;
     private javax.swing.JRadioButton bentoCakeRadioButton;
@@ -5200,6 +5553,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JToggleButton blueberryToppingsCheesecake;
     private javax.swing.JToggleButton blueberryToppingsSliceCheesecake;
     private javax.swing.JPanel breadsandsweetsPanel;
+    private javax.swing.JRadioButton browniesRadio;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
     private javax.swing.JToggleButton btn12PcsMiniCupcake;
@@ -5254,12 +5608,16 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JButton btnPlusSliceCheesecake;
     private javax.swing.JButton btnPlusUbePandesal;
     private javax.swing.JButton btnPlusYemaCake;
+    private javax.swing.JToggleButton btnSliceCheesecakePiece;
     private javax.swing.JToggleButton btnUbeCheesedesal;
     private javax.swing.JToggleButton btnUbeHalayaCheesedesal;
     private javax.swing.JPanel cakesPanel;
     private javax.swing.JLabel caramelFlanDeLecheCakePrice;
+    private javax.swing.JRadioButton caramelFlanRadio;
     private javax.swing.JToggleButton caramelToppingsLecheFlan;
     private javax.swing.JLabel cheeseCakePrice;
+    private javax.swing.JRadioButton cheeseCakeRadio;
+    private javax.swing.JRadioButton classicCinnamonRadio;
     private javax.swing.JButton customCakeButton;
     private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel jLabel1;
@@ -5379,19 +5737,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JPanel jPanel93;
     private javax.swing.JPanel jPanel94;
     private javax.swing.JPanel jPanel95;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -5418,18 +5763,23 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JToggleButton mangoBravo5x2button;
     private javax.swing.JToggleButton mangoBravo6x2button;
     private javax.swing.JLabel mangoBravoQuantity;
+    private javax.swing.JToggleButton mangoBravoTub;
     private javax.swing.JLabel mangoBravoTubPrice;
+    private javax.swing.JRadioButton mangoBravoTubRadio;
     private javax.swing.JLabel mangoPrice;
     private javax.swing.JRadioButton mangoRadioButton;
     private javax.swing.JToggleButton mangoToppings;
     private javax.swing.JToggleButton mangoToppingsCheesecake;
     private javax.swing.JToggleButton mangoToppingsSliceCheesecake;
     private javax.swing.JLabel mangobravotublblqty;
+    private javax.swing.JRadioButton milkyCheeseRadio;
     private javax.swing.JLabel miniCupcakesPrice;
+    private javax.swing.JRadioButton miniCupcakesRadio;
     private javax.swing.JButton minusButtonMango;
     private javax.swing.JToggleButton payByCashBtn;
     private javax.swing.JToggleButton payByGCASHBtn;
     private javax.swing.JLabel piscesCupcakesPrice;
+    private javax.swing.JRadioButton piscesRadio;
     private javax.swing.JPanel productsPanel;
     private javax.swing.JToggleButton redVelvet5x2sizeButton;
     private javax.swing.JToggleButton redVelvet6x2sizebutton;
@@ -5438,6 +5788,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JRadioButton redVelvetRadioButton;
     private javax.swing.JLabel redvelvetlabel;
     private javax.swing.JLabel sliceCheesecakePrice;
+    private javax.swing.JRadioButton sliceCheesecakeRadio;
     private javax.swing.JLabel slicecheesecakelblqty;
     private javax.swing.JLabel strawberryShortCakePrice;
     private javax.swing.JToggleButton strawberryToppingsCheesecake;
@@ -5454,6 +5805,8 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel totalAmountLabel;
     private javax.swing.JLabel totalstaticlabel;
     private javax.swing.JTextField txtSearch;
+    private javax.swing.JRadioButton ubePandesalRadio;
     private javax.swing.JLabel yemaCakeLabelQty;
+    private javax.swing.JRadioButton yemaCakeRadio;
     // End of variables declaration//GEN-END:variables
 }

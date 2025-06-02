@@ -583,7 +583,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" alignment="0" pref="695" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -679,7 +679,7 @@
                                               <Component id="jPanel88" min="-2" pref="200" max="-2" attributes="0"/>
                                               <Component id="jPanel92" min="-2" pref="200" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                                          <EmptySpace pref="78" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1918,7 +1918,7 @@
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                       <Component id="lecheFlanToppingsCake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="caramelFlanRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                           </Group>
@@ -1928,7 +1928,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="caramelFlanRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
@@ -2204,7 +2204,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+                                    <Component class="javax.swing.JRadioButton" name="caramelFlanRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -2254,7 +2254,7 @@
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="strawberryToppingsCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jRadioButton8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cheeseCakeRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
@@ -2264,7 +2264,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cheeseCakeRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
@@ -2524,7 +2524,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+                                    <Component class="javax.swing.JRadioButton" name="cheeseCakeRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -2567,6 +2567,7 @@
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jPanel38" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jPanel37" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="btnSliceCheesecakePiece" min="-2" pref="63" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
@@ -2581,7 +2582,7 @@
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="strawberryToppingsSliceCheesecake" min="-2" pref="33" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jRadioButton7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="sliceCheesecakeRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
@@ -2591,15 +2592,17 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                                              <Component id="sliceCheesecakeRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
                                                       <Component id="jPanel37" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jPanel38" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="btnSliceCheesecakePiece" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jPanel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jPanel36" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2834,7 +2837,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+                                    <Component class="javax.swing.JRadioButton" name="sliceCheesecakeRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -2854,6 +2857,20 @@
                                           <Color blue="2c" green="87" red="e1" type="rgb"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Topping:"/>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JToggleButton" name="btnSliceCheesecakePiece">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Segoe UI" size="12" style="1"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="2c" green="87" red="e1" type="rgb"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="1 pc"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
@@ -2877,11 +2894,12 @@
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jPanel42" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jPanel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="mangoBravoTub" min="-2" pref="63" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="mangoBravoTubRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -2891,18 +2909,20 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="mangoBravoTubRadio" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                                                       <Component id="jPanel40" min="-2" pref="69" max="-2" attributes="0"/>
+                                                      <EmptySpace pref="58" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Component id="jPanel41" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="jPanel42" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="mangoBravoTub" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="58" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -3075,7 +3095,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                                    <Component class="javax.swing.JRadioButton" name="mangoBravoTubRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -3084,6 +3104,20 @@
                                           <Color blue="2c" green="87" red="e1" type="rgb"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Mango Bravo Tub"/>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JToggleButton" name="mangoBravoTub">
+                                      <Properties>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Segoe UI" size="12" style="1"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="2c" green="87" red="e1" type="rgb"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="1 pc"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
@@ -3114,7 +3148,7 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="btn12PcsMiniCupcake" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jRadioButton4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="miniCupcakesRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -3124,7 +3158,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="miniCupcakesRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="1" attributes="0">
@@ -3313,7 +3347,7 @@
                                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                               <Color blue="2c" green="87" red="e1" type="rgb"/>
                                             </Property>
-                                            <Property name="text" type="java.lang.String" value="Php 0,00"/>
+                                            <Property name="text" type="java.lang.String" value="Php 0.00"/>
                                           </Properties>
                                         </Component>
                                       </SubComponents>
@@ -3346,7 +3380,7 @@
                                         <Property name="text" type="java.lang.String" value="12PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                                    <Component class="javax.swing.JRadioButton" name="miniCupcakesRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -3393,7 +3427,7 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="btn12PcsPisces" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jRadioButton5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="piscesRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
@@ -3403,7 +3437,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                                              <Component id="piscesRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
@@ -3673,7 +3707,7 @@
                                         <Property name="text" type="java.lang.String" value="12 PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                                    <Component class="javax.swing.JRadioButton" name="piscesRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -4121,7 +4155,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="yemaCakeRadio" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
@@ -4165,7 +4199,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="yemaCakeRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Group type="102" attributes="0">
@@ -4354,7 +4388,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton20">
+                                    <Component class="javax.swing.JRadioButton" name="yemaCakeRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -4521,7 +4555,7 @@
                                                   <Component id="btnUbeCheesedesal" alignment="0" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jRadioButton12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="ubePandesalRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="jPanel60" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
@@ -4543,7 +4577,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ubePandesalRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel60" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4756,7 +4790,7 @@
                                         <Property name="text" type="java.lang.String" value="Ube  Halaya Cheesedesal"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+                                    <Component class="javax.swing.JRadioButton" name="ubePandesalRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -4782,7 +4816,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="BananaLoafRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel64" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -4804,7 +4838,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton13" min="-2" max="-2" attributes="0"/>
+                                              <Component id="BananaLoafRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel64" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5017,7 +5051,7 @@
                                         <Property name="text" type="java.lang.String" value="Moist Banana Choco Chip Almond Loaf"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+                                    <Component class="javax.swing.JRadioButton" name="BananaLoafRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -5043,7 +5077,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="browniesRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel68" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -5069,7 +5103,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton14" min="-2" max="-2" attributes="0"/>
+                                              <Component id="browniesRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel68" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5285,7 +5319,7 @@
                                         <Property name="text" type="java.lang.String" value="12 PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+                                    <Component class="javax.swing.JRadioButton" name="browniesRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -5325,7 +5359,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="classicCinnamonRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel73" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -5348,7 +5382,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton15" min="-2" max="-2" attributes="0"/>
+                                              <Component id="classicCinnamonRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel73" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5562,7 +5596,7 @@
                                         <Property name="text" type="java.lang.String" value="Box of 6"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton15">
+                                    <Component class="javax.swing.JRadioButton" name="classicCinnamonRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -5588,7 +5622,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="milkyCheeseRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel77" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -5611,7 +5645,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton16" min="-2" max="-2" attributes="0"/>
+                                              <Component id="milkyCheeseRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel77" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5825,7 +5859,7 @@
                                         <Property name="text" type="java.lang.String" value="10 PCS"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton16">
+                                    <Component class="javax.swing.JRadioButton" name="milkyCheeseRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
@@ -5851,7 +5885,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="bananaMuffinRadio" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jPanel81" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -5870,7 +5904,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jRadioButton17" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bananaMuffinRadio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="10" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jPanel81" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -6053,7 +6087,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton17">
+                                    <Component class="javax.swing.JRadioButton" name="bananaMuffinRadio">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Segoe UI" size="12" style="1"/>
