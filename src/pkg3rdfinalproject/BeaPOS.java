@@ -525,7 +525,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Red Velvet Cake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -535,7 +535,7 @@ private void saveOrderToDatabase() {
 
     // If all okay, continue as usual
     String toppings = getSelectedToppingsByProduct("Red Velvet");
-    addOrUpdateBillItem("Mango Bravo", qty, redVelvetBasePrice, size, toppings);
+    addOrUpdateBillItem("Red Velvet", qty, redVelvetBasePrice, size, toppings);
 });
 
 // Strawberry Shortcake
@@ -547,14 +547,14 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Strawberry Shortcake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
         strawberryshortcakeradioButton.setSelected(false);
         return;
     }
-    String toppings = getSelectedToppingsByProduct("Strawberry Shortcake");
+    String toppings = getSelectedToppingsByProduct("Stawberry Shortcake");
     addOrUpdateBillItem("Strawberry Shortcake", qty, strawberryShortcakeBasePrice, size, toppings);
 });
 
@@ -567,7 +567,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Bento Cake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -587,7 +587,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Caramel Flan de Leche.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -607,7 +607,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Cheesecake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -627,7 +627,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Slice Cheesecake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -647,7 +647,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Mango Bravo Tub.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -668,7 +668,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Mini Cupcakes.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -689,7 +689,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Pisces Cupcakes.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -709,7 +709,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Yema Cake.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -730,7 +730,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Ube Pandesal.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -750,7 +750,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Banana Loaf.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -770,7 +770,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Brownies.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -791,7 +791,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Classic Cinnamon.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -811,7 +811,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Milky Cheese Donut.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -831,7 +831,7 @@ private void saveOrderToDatabase() {
     if (size == null || size.isEmpty() || qty <= 0) {
         // Show error message and unselect the radio button
         JOptionPane.showMessageDialog(null,
-            "Please select a size and enter a quantity before adding Mango Bravo.",
+            "Please select a size and enter a quantity before adding Banana Muffin.",
             "Selection Error",
             JOptionPane.ERROR_MESSAGE);
         // Uncheck the radio button programmatically
@@ -5053,6 +5053,33 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    private void updateTotalAmountLabel() {
+    int total = 0;
+    for (int i = 0; i < billListModel.size(); i++) {
+        String entry = billListModel.get(i);
+        // Find the first occurrence of "₱" after "Qty:"
+        int pesoIndex = entry.indexOf("₱");
+        if (pesoIndex != -1) {
+            // Find the next " |" after "₱" to get only the price
+            int endIndex = entry.indexOf("|", pesoIndex);
+            String priceStr;
+            if (endIndex != -1) {
+                priceStr = entry.substring(pesoIndex + 1, endIndex).trim();
+            } else {
+                priceStr = entry.substring(pesoIndex + 1).trim();
+            }
+            // Remove commas if price is formatted with them
+            priceStr = priceStr.replace(",", "");
+            try {
+                int itemTotal = Integer.parseInt(priceStr);
+                total += itemTotal;
+            } catch (NumberFormatException e) {
+                // Skip this entry if parsing fails
+            }
+        }
+    }
+    totalAmountLabel.setText(String.format("₱%,.2f", (double) total));
+}
     
     
     private void addOrUpdateBillItem(String productName, int quantity, int unitPrice, String size, String toppings) {
@@ -5085,25 +5112,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
 }
     
     
-    private void updateTotalAmountLabel() {
-    int total = 0;
-    // Sum all item totals from billListModel
-    for (int i = 0; i < billListModel.size(); i++) {
-        String entry = billListModel.get(i);
-        // Entry format: "Product Name | Qty: X | ₱Y"
-        int pesoIndex = entry.lastIndexOf("₱");
-        if (pesoIndex != -1) {
-            try {
-                int itemTotal = Integer.parseInt(entry.substring(pesoIndex + 1).trim());
-                total += itemTotal;
-            } catch (NumberFormatException e) {
-                // Ignore parse errors
-            }
-        }
-    }
-    totalAmountLabel.setText(String.format("₱%,.2f", (double) total));
-}
-    
+        
     
     private void updateMangoPrice() {
     int total = (mangoBasePrice) * mangoQty;
