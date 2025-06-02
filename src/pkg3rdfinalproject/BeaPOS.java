@@ -910,14 +910,32 @@ private void saveOrderToDatabase() {
     
     //action listener for receipt 
     payByCashBtn.addActionListener(e -> {
-    // 1. Collect customer info
-    if (savedCustomerName == null) {
+    // 0. Prevent payment if bill is empty
+    if (billListModel.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Cart is empty. Please add items before proceeding to payment.", "Empty Cart", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // 1. Collect customer info (loop until valid contact number or cancel)
+    while (savedCustomerName == null) {
         CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
         infoFrame.setVisible(true);
-        if (!infoFrame.isSubmitted()) return;
+        if (!infoFrame.isSubmitted()) {
+            // User cancelled
+            return;
+        }
+        String contact = infoFrame.customerContact;
+        if (!contact.matches("^09\\d{9}$")) {
+            JOptionPane.showMessageDialog(this,
+                "Invalid contact number. Please enter a number starting with 09 and 11 digits long.",
+                "Invalid Contact Number",
+                JOptionPane.ERROR_MESSAGE);
+            // Loop again
+            continue;
+        }
         savedCustomerName = infoFrame.customerName;
         savedCustomerEmail = infoFrame.customerEmail;
-        savedCustomerContact = infoFrame.customerContact;
+        savedCustomerContact = contact;
     }
     lastPaymentMethod = "Cash";
 
@@ -926,7 +944,6 @@ private void saveOrderToDatabase() {
     int total = 0;
     for (int i = 0; i < billListModel.size(); i++) {
         String entry = billListModel.get(i);
-        // Parse entry, e.g., "Red Velvet Cupcake | Qty: 2 | ₱140"
         String[] parts = entry.split("\\|");
         if (parts.length == 3) {
             String itemName = parts[0].trim();
@@ -943,10 +960,24 @@ private void saveOrderToDatabase() {
     }
 
     // 3. Ask for paid amount (cash)
-    String paidStr = JOptionPane.showInputDialog(this, "Enter cash amount paid:", total);
-    int paid = total;
-    try { paid = Integer.parseInt(paidStr.trim()); } catch (Exception ex) {}
-    int change = Math.max(0, paid - total);
+    int paid = 0;
+    while (true) {
+        String paidStr = JOptionPane.showInputDialog(this, "Enter cash amount paid:", total);
+        if (paidStr == null) return; // Cancelled
+        paidStr = paidStr.trim();
+        try {
+            paid = Integer.parseInt(paidStr);
+            if (paid < total) {
+                JOptionPane.showMessageDialog(this, "Amount paid is less than the total. Please enter a valid amount.", "Insufficient Payment", JOptionPane.WARNING_MESSAGE);
+                continue;
+            }
+            break; // Valid input
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid number.", "Invalid Input", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+    int change = paid - total;
+
 
     // 4. Prepare HTML receipt using String.format for cleaner code
     String htmlReceipt = String.format("""
@@ -1047,18 +1078,36 @@ private void saveOrderToDatabase() {
     
     
     payByGCASHBtn.addActionListener(e -> {
-    // 1. Collect customer info using your modal dialog
-    if (savedCustomerName == null) {
+    // 0. Prevent payment if bill is empty
+    if (billListModel.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Cart is empty. Please add items before proceeding to payment.", "Empty Cart", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // 1. Collect customer info (loop until valid contact number or cancel)
+    while (savedCustomerName == null) {
         CustomerInfoFrame infoFrame = new CustomerInfoFrame(this);
         infoFrame.setVisible(true);
-        if (!infoFrame.isSubmitted()) return;
+        if (!infoFrame.isSubmitted()) {
+            // User cancelled
+            return;
+        }
+        String contact = infoFrame.customerContact;
+        if (!contact.matches("^09\\d{9}$")) {
+            JOptionPane.showMessageDialog(this,
+                "Invalid contact number. Please enter a number starting with 09 and 11 digits long.",
+                "Invalid Contact Number",
+                JOptionPane.ERROR_MESSAGE);
+            // Loop again
+            continue;
+        }
         savedCustomerName = infoFrame.customerName;
         savedCustomerEmail = infoFrame.customerEmail;
-        savedCustomerContact = infoFrame.customerContact;
+        savedCustomerContact = contact;
     }
     lastPaymentMethod = "GCash";
 
-    // 2. Calculate total from your billListModel (same as in the cash button)
+    // 2. Calculate total from your billListModel
     StringBuilder itemsHtml = new StringBuilder();
     int total = 0;
     for (int i = 0; i < billListModel.size(); i++) {
@@ -1079,11 +1128,7 @@ private void saveOrderToDatabase() {
     }
 
     // 3. Generate the GCash QR string 
-    // For real use, replace with your real GCash QR string.
-    String gcashQRString = "00020101021127830012com.p2pqrpay0111GXCHPHM2XXX02089996440303152170200000006560417DWQM4TK3JDNYRIX0S5204601653036085802PH5915MA****W MA*C S.6005Sibul6104123463043B33"; // e.g., from your merchant QR or link
-
-    // If you want to encode the amount, and your QR supports it, append/format as needed.
-    // For most static GCash QRs, you can't change the amount dynamically.
+    String gcashQRString = "00020101021127830012com.p2pqrpay0111GXCHPHM2XXX02089996440303152170200000006560417DWQM4TK3JDNYRIX0S5204601653036085802PH5915MA****W MA*C S.6005Sibul6104123463043B33"; // Replace with your merchant QR
 
     // 4. Show the QR code dialog
     GCashQRDialog.showGCashQR(gcashQRString);
@@ -1092,7 +1137,7 @@ private void saveOrderToDatabase() {
     int confirm = JOptionPane.showConfirmDialog(this, "Has the payment been completed via GCash?", "Confirm Payment", JOptionPane.YES_NO_OPTION);
     if (confirm != JOptionPane.YES_OPTION) return;
 
-    // 6. Prepare HTML receipt (reuse your template)
+    // 6. Prepare HTML receipt
     String htmlReceipt = String.format("""
 <html lang="en">
 <head>
@@ -1166,7 +1211,6 @@ private void saveOrderToDatabase() {
     try {
         JavaMailSender.sendHtmlEmail(savedCustomerEmail, "Your Purchase Receipt", htmlReceipt);
         JOptionPane.showMessageDialog(this, "Receipt emailed to " + savedCustomerEmail);
-        
     } catch (Exception ex) {
         ex.printStackTrace();
         JOptionPane.showMessageDialog(this, "Failed to send email: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -1242,20 +1286,6 @@ private void saveOrderToDatabase() {
         return "None";
     }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
