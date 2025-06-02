@@ -55,27 +55,42 @@ private void saveOrderToDatabase() {
     double orderTotal = parseTotalAmountLabel();
     StringBuilder productNames = new StringBuilder();
     StringBuilder productQuantities = new StringBuilder();
-    StringBuilder productToppings = new StringBuilder(); // Add this
+    StringBuilder productToppings = new StringBuilder();
 
     for (int i = 0; i < billListModel.size(); i++) {
         String entry = billListModel.get(i);
         String[] parts = entry.split("\\|");
-        if (parts.length >= 3) {
-            String productName = parts[0].trim();
-            String quantity = parts[1].replace("Qty:", "").trim();
-            String toppings = (parts.length > 3 && parts[3].contains("Toppings:")) 
-                ? parts[3].replace("Toppings:", "").trim() 
-                : "";
-            if (productNames.length() > 0) {
-                productNames.append(",");
-                productQuantities.append(",");
-                productToppings.append(",");
+
+        // Product Name
+        String productName = parts[0].trim();
+
+        // Quantity
+        String quantity = (parts.length > 1) ? parts[1].replace("Qty:", "").trim() : "1";
+
+        // Toppings: search for "Toppings:" in whole entry
+        String toppings = "None";
+        int toppingsIndex = entry.indexOf("Toppings:");
+        if (toppingsIndex != -1) {
+            toppings = entry.substring(toppingsIndex + "Toppings:".length()).trim();
+            // If there are further fields after toppings, only take up to next " |" or end
+            int nextField = toppings.indexOf("|");
+            if (nextField != -1) {
+                toppings = toppings.substring(0, nextField).trim();
             }
-            productNames.append(productName);
-            productQuantities.append(quantity);
-            productToppings.append(toppings);
+            if (toppings.isEmpty()) toppings = "None";
         }
+
+        // Only append commas if not the first product
+        if (productNames.length() > 0) {
+            productNames.append(",");
+            productQuantities.append(",");
+            productToppings.append(",");
+        }
+        productNames.append(productName);
+        productQuantities.append(quantity);
+        productToppings.append(toppings);
     }
+
     String productNamesString = productNames.toString();
     String productQuantitiesString = productQuantities.toString();
     String productToppingsString = productToppings.toString();
@@ -91,7 +106,7 @@ private void saveOrderToDatabase() {
         orderStmt.setString(6, lastPaymentMethod);
         orderStmt.setString(7, productNamesString);
         orderStmt.setString(8, productQuantitiesString);
-        orderStmt.setString(9, productToppingsString); // Add this
+        orderStmt.setString(9, productToppingsString);
         orderStmt.executeUpdate();
         // rest of your code
     } catch (SQLException ex) {
@@ -1181,34 +1196,27 @@ private void saveOrderToDatabase() {
         case "Mango Bravo":
             if (mangoToppings.isSelected()) toppings.append("Mango Toppings");
             break;
-        case "Stawberry Shortcake":
+        case "Strawberry Shortcake": // fixed typo
             if (strawberryToppingsShortcake.isSelected()) 
                 toppings.append("Strawberry Toppings, ");
-            
-            if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
             break;
         case "Cheesecake":
             if (blueberryToppingsCheesecake.isSelected()) toppings.append("Blueberry Toppings, ");
             if (mangoToppingsCheesecake.isSelected()) toppings.append("Mango Toppings, ");
             if (biscoffToppingsCheesecake.isSelected()) toppings.append("Biscoff Toppings, ");
             if (strawberryToppingsCheesecake.isSelected()) toppings.append("Strawberry Toppings, ");
-          
-            if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
             break;
-            
-            
         case "Caramel Flan":
-             if (caramelToppingsLecheFlan.isSelected()) toppings.append("Caramel Toppings, ");
-             if(lecheFlanToppingsCake.isSelected()) toppings.append("Leche Flan Toppings, ");
-             if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
-             break;
+            if (caramelToppingsLecheFlan.isSelected()) toppings.append("Caramel Toppings, ");
+            if (lecheFlanToppingsCake.isSelected()) toppings.append("Leche Flan Toppings, ");
+            break;
         case "Slice Cheesecake":
             if (blueberryToppingsSliceCheesecake.isSelected()) toppings.append("Blueberry Toppings, ");
-             if(mangoToppingsSliceCheesecake.isSelected()) toppings.append("Mango Toppings, ");
-             if (biscoffToppingsSliceCheesecake.isSelected()) toppings.append("Biscoff Toppings, ");
-             if (strawberryToppingsSliceCheesecake.isSelected()) toppings.append("Strawberry Toppings, ");
-             if (toppings.length() > 0) toppings.setLength(toppings.length() - 2);
-             break;
+            if (mangoToppingsSliceCheesecake.isSelected()) toppings.append("Mango Toppings, ");
+            if (biscoffToppingsSliceCheesecake.isSelected()) toppings.append("Biscoff Toppings, ");
+            if (strawberryToppingsSliceCheesecake.isSelected()) toppings.append("Strawberry Toppings, ");
+            break;
+        // No toppings for these products
         case "Red Velvet":
         case "Bento Cake":
         case "Mango Bravo Tub":
@@ -1220,12 +1228,19 @@ private void saveOrderToDatabase() {
         case "Classic Cinnamon":
         case "Milky Cheese Donut":
         case "Banana Muffin":
-             return "None";
-        
+            return "None";
         default:
             return "None";
     }
-    return toppings.length() > 0 ? toppings.toString() : "None";
+    // Remove trailing comma and space, if any
+    if (toppings.length() > 0) {
+        if (toppings.charAt(toppings.length() - 2) == ',' && toppings.charAt(toppings.length() - 1) == ' ') {
+            toppings.setLength(toppings.length() - 2);
+        }
+        return toppings.toString();
+    } else {
+        return "None";
+    }
 }
     
     
