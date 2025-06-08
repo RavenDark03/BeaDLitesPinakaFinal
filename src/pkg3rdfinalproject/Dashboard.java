@@ -45,17 +45,16 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        totalOrdersQtyLabel = new javax.swing.JLabel();
+        totalOrdersbyWeekComboBox = new javax.swing.JComboBox<>();
         jPanel11 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
+        totalOrdersProductionQtyLabel = new javax.swing.JLabel();
+        OrderProductionListButton = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        totalOrdersCompletedQtyLabel = new javax.swing.JLabel();
+        totalOrdersCompletedbyWeekComboBox = new javax.swing.JComboBox<>();
         jPanel15 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -64,25 +63,16 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
+        FirstTopSellingProductNameLabel = new javax.swing.JLabel();
+        SecondTopSellingProductNameLabel = new javax.swing.JLabel();
+        ThirdTopSellingProductNameLabel = new javax.swing.JLabel();
+        FirstTopSellingProductNameLabelOrderQuantity = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
@@ -212,15 +202,15 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Total Orders");
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Total Orders");
+        totalOrdersQtyLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalOrdersQtyLabel.setForeground(new java.awt.Color(225, 135, 44));
+        totalOrdersQtyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalOrdersQtyLabel.setText("Total Orders");
 
-        jComboBox3.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(225, 135, 44));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1–10 January", "11–20 January", "21–31 January", "1–10 February", "11–20 February", "21–28 February", "1–10 March", "11–20 March", "21–31 March", "1–10 April", "11–20 April", "21–30 April", "1–10 May", "11–20 May", "21–31 May", "1–10 July", "11–20 July", "21–31 July", "1–10 August", "11–20 August", "21–31 August", "1–10 September", "11–20 September", "21–30 September", "1–10 October", "11–20 October", "21–31 October", "1–10 November", "11–20 November", "21–30 November", "1–10 December", "11–20 December", "21–31 December" }));
+        totalOrdersbyWeekComboBox.setBackground(new java.awt.Color(255, 204, 102));
+        totalOrdersbyWeekComboBox.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalOrdersbyWeekComboBox.setForeground(new java.awt.Color(225, 135, 44));
+        totalOrdersbyWeekComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1–10 January", "11–20 January", "21–31 January", "1–10 February", "11–20 February", "21–28 February", "1–10 March", "11–20 March", "21–31 March", "1–10 April", "11–20 April", "21–30 April", "1–10 May", "11–20 May", "21–31 May", "1–10 July", "11–20 July", "21–31 July", "1–10 August", "11–20 August", "21–31 August", "1–10 September", "11–20 September", "21–30 September", "1–10 October", "11–20 October", "21–31 October", "1–10 November", "11–20 November", "21–30 November", "1–10 December", "11–20 December", "21–31 December" }));
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -229,11 +219,11 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(totalOrdersbyWeekComboBox, 0, 264, Short.MAX_VALUE)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel12))
+                            .addComponent(jLabel12)
+                            .addComponent(totalOrdersQtyLabel))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -242,11 +232,11 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(jLabel13)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(totalOrdersQtyLabel)
+                .addGap(26, 26, 26)
+                .addComponent(totalOrdersbyWeekComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel11.setBackground(new java.awt.Color(255, 204, 102));
@@ -256,20 +246,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Orders in Production");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Total Orders Production");
+        totalOrdersProductionQtyLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalOrdersProductionQtyLabel.setForeground(new java.awt.Color(225, 135, 44));
+        totalOrdersProductionQtyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalOrdersProductionQtyLabel.setText("Total Orders Production");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Percentage:");
-
-        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel47.setText("%");
+        OrderProductionListButton.setText("Total Orders");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -277,32 +259,25 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addComponent(jLabel10)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(totalOrdersProductionQtyLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(OrderProductionListButton)
+                .addGap(21, 21, 21))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(9, 9, 9)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel47))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(totalOrdersProductionQtyLabel)
+                    .addComponent(OrderProductionListButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel13.setBackground(new java.awt.Color(255, 204, 102));
@@ -312,15 +287,15 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Orders Completed");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Total Orders Completed");
+        totalOrdersCompletedQtyLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalOrdersCompletedQtyLabel.setForeground(new java.awt.Color(225, 135, 44));
+        totalOrdersCompletedQtyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalOrdersCompletedQtyLabel.setText("Total Orders Completed");
 
-        jComboBox4.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(225, 135, 44));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1–10 January", "11–20 January", "21–31 January", "1–10 February", "11–20 February", "21–28 February", "1–10 March", "11–20 March", "21–31 March", "1–10 April", "11–20 April", "21–30 April", "1–10 May", "11–20 May", "21–31 May", "1–10 July", "11–20 July", "21–31 July", "1–10 August", "11–20 August", "21–31 August", "1–10 September", "11–20 September", "21–30 September", "1–10 October", "11–20 October", "21–31 October", "1–10 November", "11–20 November", "21–30 November", "1–10 December", "11–20 December", "21–31 December" }));
+        totalOrdersCompletedbyWeekComboBox.setBackground(new java.awt.Color(255, 204, 102));
+        totalOrdersCompletedbyWeekComboBox.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalOrdersCompletedbyWeekComboBox.setForeground(new java.awt.Color(225, 135, 44));
+        totalOrdersCompletedbyWeekComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1–10 January", "11–20 January", "21–31 January", "1–10 February", "11–20 February", "21–28 February", "1–10 March", "11–20 March", "21–31 March", "1–10 April", "11–20 April", "21–30 April", "1–10 May", "11–20 May", "21–31 May", "1–10 July", "11–20 July", "21–31 July", "1–10 August", "11–20 August", "21–31 August", "1–10 September", "11–20 September", "21–30 September", "1–10 October", "11–20 October", "21–31 October", "1–10 November", "11–20 November", "21–30 November", "1–10 December", "11–20 December", "21–31 December" }));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -329,11 +304,11 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox4, 0, 228, Short.MAX_VALUE)
+                    .addComponent(totalOrdersCompletedbyWeekComboBox, 0, 228, Short.MAX_VALUE)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel14))
+                            .addComponent(jLabel14)
+                            .addComponent(totalOrdersCompletedQtyLabel))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -342,11 +317,11 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel15)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(totalOrdersCompletedQtyLabel)
+                .addGap(33, 33, 33)
+                .addComponent(totalOrdersCompletedbyWeekComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel15.setBackground(new java.awt.Color(255, 204, 102));
@@ -391,29 +366,29 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel17.setText("3 Top Selling Categories");
         jPanel14.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("Product name:");
-        jPanel14.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, -1, -1));
+        FirstTopSellingProductNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        FirstTopSellingProductNameLabel.setForeground(new java.awt.Color(225, 135, 44));
+        FirstTopSellingProductNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        FirstTopSellingProductNameLabel.setText("Product name:");
+        jPanel14.add(FirstTopSellingProductNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, -1, -1));
 
-        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("Product name:");
-        jPanel14.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
+        SecondTopSellingProductNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SecondTopSellingProductNameLabel.setForeground(new java.awt.Color(225, 135, 44));
+        SecondTopSellingProductNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SecondTopSellingProductNameLabel.setText("Product name:");
+        jPanel14.add(SecondTopSellingProductNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("Product name:");
-        jPanel14.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 114, -1, -1));
+        ThirdTopSellingProductNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ThirdTopSellingProductNameLabel.setForeground(new java.awt.Color(225, 135, 44));
+        ThirdTopSellingProductNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ThirdTopSellingProductNameLabel.setText("Product name:");
+        jPanel14.add(ThirdTopSellingProductNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 114, -1, -1));
 
-        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel37.setText("%");
-        jPanel14.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+        FirstTopSellingProductNameLabelOrderQuantity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        FirstTopSellingProductNameLabelOrderQuantity.setForeground(new java.awt.Color(225, 135, 44));
+        FirstTopSellingProductNameLabelOrderQuantity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FirstTopSellingProductNameLabelOrderQuantity.setText("%");
+        jPanel14.add(FirstTopSellingProductNameLabelOrderQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(225, 135, 44));
@@ -434,11 +409,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Earnings");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Total expenses:");
-
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cuba-peso-currency-symbol_1.png"))); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
@@ -453,114 +423,23 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel24)
-                        .addGap(7, 7, 7))))
+                        .addComponent(jLabel24)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE)))
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel17.setBackground(new java.awt.Color(255, 204, 102));
-
-        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("Profit per category");
-
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("Product name:");
-
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("Product name:");
-
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("Product name:");
-
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel31.setText("no.%");
-
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel32.setText("no.%");
-
-        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel33.setText("no.%");
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel28))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel33)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addComponent(jLabel28)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel32))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel31))))
-                .addGap(18, 18, 18))
         );
 
         jPanel18.setBackground(new java.awt.Color(255, 204, 102));
@@ -599,10 +478,10 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel40)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -615,20 +494,19 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                            .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(22, 22, 22)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
-                            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel9))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -645,11 +523,9 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(14, 14, 14)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -791,23 +667,21 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FirstTopSellingProductNameLabel;
+    private javax.swing.JLabel FirstTopSellingProductNameLabelOrderQuantity;
     private javax.swing.JToggleButton Inventory;
+    private javax.swing.JButton OrderProductionListButton;
     private javax.swing.JToggleButton Orders;
     private javax.swing.JToggleButton PointOfSale;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JLabel SecondTopSellingProductNameLabel;
+    private javax.swing.JLabel ThirdTopSellingProductNameLabel;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -816,24 +690,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
@@ -842,12 +704,16 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton logOutbtn;
+    private javax.swing.JLabel totalOrdersCompletedQtyLabel;
+    private javax.swing.JComboBox<String> totalOrdersCompletedbyWeekComboBox;
+    private javax.swing.JLabel totalOrdersProductionQtyLabel;
+    private javax.swing.JLabel totalOrdersQtyLabel;
+    private javax.swing.JComboBox<String> totalOrdersbyWeekComboBox;
     // End of variables declaration//GEN-END:variables
 }
