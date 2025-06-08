@@ -1400,177 +1400,79 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jScrollPane1 = new javax.swing.JScrollPane();
         cakesPanel = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
-        mangoToppings = new javax.swing.JToggleButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        minusButtonMango = new javax.swing.JButton();
-        mangoBravoQuantity = new javax.swing.JLabel();
-        addButtonMango = new javax.swing.JButton();
-        jPanel13 = new javax.swing.JPanel();
-        mangoPrice = new javax.swing.JLabel();
-        mangoBravo5x2button = new javax.swing.JToggleButton();
-        mangoBravo6x2button = new javax.swing.JToggleButton();
-        mangoBravo4x2button = new javax.swing.JToggleButton();
-        mangoRadioButton = new javax.swing.JRadioButton();
-        jLabel72 = new javax.swing.JLabel();
-        addBUTTONtoPANEL = new javax.swing.JButton();
+        AddMangoBravoToPanel = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        Jpanel = new javax.swing.JPanel();
-        redVelvetMinusButton = new javax.swing.JButton();
-        redvelvetlabel = new javax.swing.JLabel();
-        RedVelvetPlusButton = new javax.swing.JButton();
-        jPanel22 = new javax.swing.JPanel();
-        redVelvetCakePrice = new javax.swing.JLabel();
-        redVelvet6x2sizebutton = new javax.swing.JToggleButton();
-        redVelvet5x2sizeButton = new javax.swing.JToggleButton();
-        redVelvetRadioButton = new javax.swing.JRadioButton();
+        AddRedVelvetCakeToPanel = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
-        strawberryshortminusbutton = new javax.swing.JButton();
-        strawberyshortcakelbl = new javax.swing.JLabel();
-        strawberryshortplusbutton = new javax.swing.JButton();
-        jPanel26 = new javax.swing.JPanel();
-        strawberryShortCakePrice = new javax.swing.JLabel();
-        strawberryshortcake6x3sizebtn = new javax.swing.JToggleButton();
-        strawberryshortcake5x3sizebtn = new javax.swing.JToggleButton();
-        strawberryshortcake8x3sizebtn = new javax.swing.JToggleButton();
-        strawberryToppingsShortcake = new javax.swing.JToggleButton();
-        strawberryshortcake4x3sizebtn = new javax.swing.JToggleButton();
-        jLabel71 = new javax.swing.JLabel();
-        strawberryshortcakeradioButton = new javax.swing.JRadioButton();
+        AddStrawberryShortCakeToPanel = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel51 = new javax.swing.JPanel();
         jPanel52 = new javax.swing.JPanel();
         jLabel82 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        bentoCakeminusButton = new javax.swing.JButton();
-        bentocakelbl = new javax.swing.JLabel();
-        bentoCakePlusButton = new javax.swing.JButton();
-        jPanel54 = new javax.swing.JPanel();
-        bentoCakePrice = new javax.swing.JLabel();
-        bentoCakeSizebutton = new javax.swing.JToggleButton();
-        bentoCakeRadioButton = new javax.swing.JRadioButton();
+        AddBentoCakeToPanel = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
-        jPanel29 = new javax.swing.JPanel();
-        btnMinusCaramelFlan = new javax.swing.JButton();
-        lbqtycaramelflan = new javax.swing.JLabel();
-        btnPlusCaramelFlan = new javax.swing.JButton();
-        jPanel30 = new javax.swing.JPanel();
-        caramelFlanDeLecheCakePrice = new javax.swing.JLabel();
-        btn4x2CaramelFlan = new javax.swing.JToggleButton();
-        btn6x2CaramelFlan = new javax.swing.JToggleButton();
-        btn5x2CaramelFlan = new javax.swing.JToggleButton();
-        jLabel57 = new javax.swing.JLabel();
-        caramelToppingsLecheFlan = new javax.swing.JToggleButton();
-        lecheFlanToppingsCake = new javax.swing.JToggleButton();
-        caramelFlanRadio = new javax.swing.JRadioButton();
+        AddCaramelFlanDeLecheCakeToPanel = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
-        jPanel33 = new javax.swing.JPanel();
-        btnMinusCheesecake = new javax.swing.JButton();
-        lblquantitycheesecake = new javax.swing.JLabel();
-        btnPlusCheesecake = new javax.swing.JButton();
-        jPanel34 = new javax.swing.JPanel();
-        cheeseCakePrice = new javax.swing.JLabel();
-        btn8Cheesecake = new javax.swing.JToggleButton();
-        blueberryToppingsCheesecake = new javax.swing.JToggleButton();
-        mangoToppingsCheesecake = new javax.swing.JToggleButton();
-        biscoffToppingsCheesecake = new javax.swing.JToggleButton();
-        strawberryToppingsCheesecake = new javax.swing.JToggleButton();
-        cheeseCakeRadio = new javax.swing.JRadioButton();
-        jLabel61 = new javax.swing.JLabel();
+        AddCheeseCakeToPanel = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jPanel36 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
-        jPanel37 = new javax.swing.JPanel();
-        btnMinusSliceCheesecake = new javax.swing.JButton();
-        slicecheesecakelblqty = new javax.swing.JLabel();
-        btnPlusSliceCheesecake = new javax.swing.JButton();
-        jPanel38 = new javax.swing.JPanel();
-        sliceCheesecakePrice = new javax.swing.JLabel();
-        blueberryToppingsSliceCheesecake = new javax.swing.JToggleButton();
-        mangoToppingsSliceCheesecake = new javax.swing.JToggleButton();
-        biscoffToppingsSliceCheesecake = new javax.swing.JToggleButton();
-        strawberryToppingsSliceCheesecake = new javax.swing.JToggleButton();
-        sliceCheesecakeRadio = new javax.swing.JRadioButton();
-        jLabel66 = new javax.swing.JLabel();
-        btnSliceCheesecakePiece = new javax.swing.JToggleButton();
+        AddSliceCheeseCakeToPanel = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
         jPanel39 = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
-        jPanel41 = new javax.swing.JPanel();
-        btnMinusMangoBravoTub = new javax.swing.JButton();
-        mangobravotublblqty = new javax.swing.JLabel();
-        btnPlusMangoBravoTub = new javax.swing.JButton();
-        jPanel42 = new javax.swing.JPanel();
-        mangoBravoTubPrice = new javax.swing.JLabel();
-        mangoBravoTubRadio = new javax.swing.JRadioButton();
-        mangoBravoTub = new javax.swing.JToggleButton();
+        AddMangoBravoTubToPanel = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
         jPanel43 = new javax.swing.JPanel();
         jPanel44 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
-        jPanel45 = new javax.swing.JPanel();
-        btnMinusMiniCupcake = new javax.swing.JButton();
-        lbQtyMiniCupcake = new javax.swing.JLabel();
-        btnPlusMiniCupcake = new javax.swing.JButton();
-        jPanel46 = new javax.swing.JPanel();
-        miniCupcakesPrice = new javax.swing.JLabel();
-        btn6PcsMiniCupcake = new javax.swing.JToggleButton();
-        btn12PcsMiniCupcake = new javax.swing.JToggleButton();
-        miniCupcakesRadio = new javax.swing.JRadioButton();
+        AddMiniCupcakeToPanel = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
         jPanel47 = new javax.swing.JPanel();
         jPanel48 = new javax.swing.JPanel();
         jLabel78 = new javax.swing.JLabel();
-        jPanel49 = new javax.swing.JPanel();
-        btnMinusPiscesCupcake = new javax.swing.JButton();
-        lbzeroqty = new javax.swing.JLabel();
-        btnPlusPiscescupcake = new javax.swing.JButton();
-        jPanel50 = new javax.swing.JPanel();
-        piscesCupcakesPrice = new javax.swing.JLabel();
-        btn1pcPisces = new javax.swing.JToggleButton();
-        btn3PcsPisces = new javax.swing.JToggleButton();
-        btn4PcsPisces = new javax.swing.JToggleButton();
-        btn6PcsPisces = new javax.swing.JToggleButton();
-        btn12PcsPisces = new javax.swing.JToggleButton();
-        piscesRadio = new javax.swing.JRadioButton();
+        AddPiscesCupcakeToPanel = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
         jPanel55 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
-        jPanel57 = new javax.swing.JPanel();
-        btnCustomeCakeIcingCake = new javax.swing.JToggleButton();
-        jLabel7 = new javax.swing.JLabel();
+        AddIcingCustomCakeToPanel = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
         jPanel84 = new javax.swing.JPanel();
         jPanel85 = new javax.swing.JPanel();
         jLabel70 = new javax.swing.JLabel();
-        jPanel86 = new javax.swing.JPanel();
-        btnMinimalistCakeCustomCake = new javax.swing.JToggleButton();
-        jLabel8 = new javax.swing.JLabel();
+        AddMinimalistCustomCakeToPanel = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jPanel88 = new javax.swing.JPanel();
         jPanel89 = new javax.swing.JPanel();
         jLabel77 = new javax.swing.JLabel();
-        jPanel90 = new javax.swing.JPanel();
-        customCakeButton = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        AddFondantCustomCakeToPanel = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         jPanel92 = new javax.swing.JPanel();
         jPanel93 = new javax.swing.JPanel();
         jLabel73 = new javax.swing.JLabel();
-        jPanel94 = new javax.swing.JPanel();
-        btnMinusYemaCake = new javax.swing.JButton();
-        yemaCakeLabelQty = new javax.swing.JLabel();
-        btnPlusYemaCake = new javax.swing.JButton();
-        jPanel95 = new javax.swing.JPanel();
-        lbPhpYemaCake = new javax.swing.JLabel();
-        yemaCakeRadio = new javax.swing.JRadioButton();
-        btn6x2Yemacake = new javax.swing.JToggleButton();
-        btn5x2Yemacake = new javax.swing.JToggleButton();
-        btn4x2Yemacake = new javax.swing.JToggleButton();
+        AddYemaCakeToPanel = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         breadsandsweetsPanel = new javax.swing.JPanel();
@@ -1893,10 +1795,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
 
         jPanel15.setBackground(new java.awt.Color(255, 204, 102));
 
-        mangoToppings.setBackground(new java.awt.Color(255, 255, 153));
-        mangoToppings.setForeground(new java.awt.Color(255, 204, 102));
-        mangoToppings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
-
         jPanel9.setBackground(new java.awt.Color(255, 255, 153));
 
         jLabel43.setBackground(new java.awt.Color(225, 135, 44));
@@ -1920,104 +1818,20 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel10.setBackground(new java.awt.Color(255, 204, 102));
-
-        minusButtonMango.setBackground(new java.awt.Color(255, 204, 102));
-        minusButtonMango.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        minusButtonMango.setForeground(new java.awt.Color(225, 135, 44));
-        minusButtonMango.setText("-");
-        minusButtonMango.addActionListener(new java.awt.event.ActionListener() {
+        AddMangoBravoToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddMangoBravoToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddMangoBravoToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddMangoBravoToPanel.setText("ADD");
+        AddMangoBravoToPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minusButtonMangoActionPerformed(evt);
+                AddMangoBravoToPanelActionPerformed(evt);
             }
         });
 
-        mangoBravoQuantity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravoQuantity.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravoQuantity.setText("0");
-
-        addButtonMango.setBackground(new java.awt.Color(255, 204, 102));
-        addButtonMango.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addButtonMango.setForeground(new java.awt.Color(225, 135, 44));
-        addButtonMango.setText("+");
-        addButtonMango.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonMangoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(minusButtonMango, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(mangoBravoQuantity)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(addButtonMango, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(minusButtonMango)
-                    .addComponent(mangoBravoQuantity)
-                    .addComponent(addButtonMango))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel13.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel13.setForeground(new java.awt.Color(225, 135, 44));
-
-        mangoPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoPrice.setForeground(new java.awt.Color(225, 135, 44));
-        mangoPrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mangoPrice)
-                .addContainerGap())
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mangoPrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        mangoBravo5x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo5x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo5x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo5x2button.setText("5 x 2\"");
-
-        mangoBravo6x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo6x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo6x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo6x2button.setText("6 x 2\"");
-
-        mangoBravo4x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo4x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo4x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo4x2button.setText("4 x 2\"");
-
-        mangoRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        mangoRadioButton.setText("Mango Bravo");
-
-        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel72.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel72.setText("Topping:");
-
-        addBUTTONtoPANEL.setText("ADD");
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Mango Bravo");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -2025,60 +1839,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel72)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mangoToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(mangoBravo5x2button)
-                                            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(mangoBravo6x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(mangoBravo4x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(addBUTTONtoPANEL))))
-                    .addComponent(mangoRadioButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AddMangoBravoToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+            .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mangoRadioButton)
-                .addGap(1, 1, 1)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mangoBravo6x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(mangoBravo5x2button)
-                            .addComponent(mangoBravo4x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mangoToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel72)
-                    .addComponent(addBUTTONtoPANEL))
-                .addContainerGap())
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddMangoBravoToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(10, 10, 10))
         );
 
         jPanel16.setBackground(new java.awt.Color(255, 204, 102));
@@ -2102,134 +1880,46 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        Jpanel.setBackground(new java.awt.Color(255, 204, 102));
+        AddRedVelvetCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddRedVelvetCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddRedVelvetCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddRedVelvetCakeToPanel.setText("ADD");
 
-        redVelvetMinusButton.setBackground(new java.awt.Color(255, 204, 102));
-        redVelvetMinusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        redVelvetMinusButton.setForeground(new java.awt.Color(225, 135, 44));
-        redVelvetMinusButton.setText("-");
-        redVelvetMinusButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                redVelvetMinusButtonActionPerformed(evt);
-            }
-        });
-
-        redvelvetlabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        redvelvetlabel.setForeground(new java.awt.Color(225, 135, 44));
-        redvelvetlabel.setText("0");
-
-        RedVelvetPlusButton.setBackground(new java.awt.Color(255, 204, 102));
-        RedVelvetPlusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RedVelvetPlusButton.setForeground(new java.awt.Color(225, 135, 44));
-        RedVelvetPlusButton.setText("+");
-        RedVelvetPlusButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RedVelvetPlusButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout JpanelLayout = new javax.swing.GroupLayout(Jpanel);
-        Jpanel.setLayout(JpanelLayout);
-        JpanelLayout.setHorizontalGroup(
-            JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(redVelvetMinusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(redvelvetlabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RedVelvetPlusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        JpanelLayout.setVerticalGroup(
-            JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JpanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(redVelvetMinusButton)
-                    .addComponent(redvelvetlabel)
-                    .addComponent(RedVelvetPlusButton))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel22.setBackground(new java.awt.Color(255, 255, 153));
-
-        redVelvetCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        redVelvetCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        redVelvetCakePrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(redVelvetCakePrice)
-                .addContainerGap())
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(redVelvetCakePrice)
-                .addContainerGap())
-        );
-
-        redVelvet6x2sizebutton.setBackground(new java.awt.Color(255, 255, 153));
-        redVelvet6x2sizebutton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        redVelvet6x2sizebutton.setForeground(new java.awt.Color(225, 135, 44));
-        redVelvet6x2sizebutton.setText("6 x 2\"");
-
-        redVelvet5x2sizeButton.setBackground(new java.awt.Color(255, 255, 153));
-        redVelvet5x2sizeButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        redVelvet5x2sizeButton.setForeground(new java.awt.Color(225, 135, 44));
-        redVelvet5x2sizeButton.setText("5 x 2\"");
-
-        redVelvetRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        redVelvetRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        redVelvetRadioButton.setText("Red Velvet Cake");
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("RedVelvet Cake");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Jpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(redVelvetRadioButton)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(redVelvet6x2sizebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(redVelvet5x2sizeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(AddRedVelvetCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(redVelvetRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(Jpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(126, 126, 126))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(redVelvet6x2sizebutton)
-                            .addComponent(redVelvet5x2sizeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddRedVelvetCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         jPanel23.setBackground(new java.awt.Color(255, 204, 102));
@@ -2251,115 +1941,25 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jPanel25.setBackground(new java.awt.Color(255, 204, 102));
-
-        strawberryshortminusbutton.setBackground(new java.awt.Color(255, 204, 102));
-        strawberryshortminusbutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        strawberryshortminusbutton.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortminusbutton.setText("-");
-        strawberryshortminusbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                strawberryshortminusbuttonActionPerformed(evt);
-            }
-        });
-
-        strawberyshortcakelbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberyshortcakelbl.setForeground(new java.awt.Color(225, 135, 44));
-        strawberyshortcakelbl.setText("0");
-
-        strawberryshortplusbutton.setBackground(new java.awt.Color(255, 204, 102));
-        strawberryshortplusbutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        strawberryshortplusbutton.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortplusbutton.setText("+");
-        strawberryshortplusbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                strawberryshortplusbuttonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(strawberryshortminusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(strawberyshortcakelbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(strawberryshortplusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(strawberryshortminusbutton)
-                    .addComponent(strawberyshortcakelbl)
-                    .addComponent(strawberryshortplusbutton))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
 
-        jPanel26.setBackground(new java.awt.Color(255, 255, 153));
+        AddStrawberryShortCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddStrawberryShortCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddStrawberryShortCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddStrawberryShortCakeToPanel.setText("ADD");
 
-        strawberryShortCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryShortCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryShortCakePrice.setText("Php: 0.00");
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Strawberry");
 
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(strawberryShortCakePrice)
-                .addContainerGap())
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(strawberryShortCakePrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        strawberryshortcake6x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryshortcake6x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryshortcake6x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortcake6x3sizebtn.setText("6x3\"");
-
-        strawberryshortcake5x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryshortcake5x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryshortcake5x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortcake5x3sizebtn.setText("5x3\"");
-
-        strawberryshortcake8x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryshortcake8x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryshortcake8x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortcake8x3sizebtn.setText("8x3\"");
-
-        strawberryToppingsShortcake.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryToppingsShortcake.setForeground(new java.awt.Color(255, 204, 102));
-        strawberryToppingsShortcake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
-
-        strawberryshortcake4x3sizebtn.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryshortcake4x3sizebtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryshortcake4x3sizebtn.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortcake4x3sizebtn.setText("4x3\"");
-
-        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel71.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel71.setText("Topping:");
-
-        strawberryshortcakeradioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        strawberryshortcakeradioButton.setForeground(new java.awt.Color(225, 135, 44));
-        strawberryshortcakeradioButton.setText("Strawberry Shortcake");
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("ShortCake");
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
@@ -2367,58 +1967,29 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel23Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel71)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(strawberryToppingsShortcake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                                    .addComponent(strawberryshortcake4x3sizebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(strawberryshortcake5x3sizebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel23Layout.createSequentialGroup()
-                                .addComponent(strawberryshortcake6x3sizebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(strawberryshortcake8x3sizebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addComponent(strawberryshortcakeradioButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(AddStrawberryShortCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+            .addGroup(jPanel23Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(strawberryshortcakeradioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(strawberryshortcake5x3sizebtn)
-                            .addComponent(strawberryshortcake4x3sizebtn))
+                        .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(strawberryshortcake8x3sizebtn)
-                            .addComponent(strawberryshortcake6x3sizebtn)))
-                    .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel23Layout.createSequentialGroup()
-                                .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(strawberryToppingsShortcake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel71))))
-                .addGap(13, 13, 13))
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddStrawberryShortCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(10, 10, 10))
         );
 
         jPanel51.setBackground(new java.awt.Color(255, 204, 102));
@@ -2426,7 +1997,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel52.setBackground(new java.awt.Color(255, 255, 153));
 
         jLabel82.setBackground(new java.awt.Color(225, 135, 44));
-        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Bento .jpg"))); // NOI18N
+        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Bento _1.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
@@ -2440,94 +2011,19 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel82)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel53.setBackground(new java.awt.Color(255, 204, 102));
-        jPanel53.setForeground(new java.awt.Color(225, 135, 44));
-
-        bentoCakeminusButton.setBackground(new java.awt.Color(255, 204, 102));
-        bentoCakeminusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bentoCakeminusButton.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakeminusButton.setText("-");
-        bentoCakeminusButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bentoCakeminusButtonActionPerformed(evt);
-            }
-        });
-
-        bentocakelbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bentocakelbl.setForeground(new java.awt.Color(225, 135, 44));
-        bentocakelbl.setText("0");
-
-        bentoCakePlusButton.setBackground(new java.awt.Color(255, 204, 102));
-        bentoCakePlusButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bentoCakePlusButton.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakePlusButton.setText("+");
-        bentoCakePlusButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bentoCakePlusButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
-        jPanel53.setLayout(jPanel53Layout);
-        jPanel53Layout.setHorizontalGroup(
-            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel53Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bentoCakeminusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bentocakelbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bentoCakePlusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel53Layout.setVerticalGroup(
-            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel53Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bentoCakeminusButton)
-                    .addComponent(bentocakelbl)
-                    .addComponent(bentoCakePlusButton))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
 
-        jPanel54.setBackground(new java.awt.Color(255, 255, 153));
+        AddBentoCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddBentoCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddBentoCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddBentoCakeToPanel.setText("ADD");
 
-        bentoCakePrice.setBackground(new java.awt.Color(255, 255, 153));
-        bentoCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bentoCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakePrice.setText("Php 0.00");
-
-        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
-        jPanel54.setLayout(jPanel54Layout);
-        jPanel54Layout.setHorizontalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
-                .addComponent(bentoCakePrice)
-                .addContainerGap())
-        );
-        jPanel54Layout.setVerticalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel54Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bentoCakePrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        bentoCakeSizebutton.setBackground(new java.awt.Color(255, 255, 153));
-        bentoCakeSizebutton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bentoCakeSizebutton.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakeSizebutton.setText("4 x 2\" + 2 pcs cupcake");
-
-        bentoCakeRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bentoCakeRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        bentoCakeRadioButton.setText("Bento Cake");
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Bento Cake");
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
@@ -2535,36 +2031,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel51Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel51Layout.createSequentialGroup()
-                        .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel51Layout.createSequentialGroup()
-                                .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
-                                .addComponent(bentoCakeSizebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                .addContainerGap())))
-                    .addComponent(bentoCakeRadioButton)))
+                .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(AddBentoCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bentoCakeRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel51Layout.createSequentialGroup()
-                        .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(bentoCakeSizebutton)))
-                .addGap(40, 40, 40))
+                    .addGroup(jPanel51Layout.createSequentialGroup()
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(AddBentoCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel27.setBackground(new java.awt.Color(255, 204, 102));
@@ -2586,176 +2070,54 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel29.setBackground(new java.awt.Color(255, 204, 102));
+        AddCaramelFlanDeLecheCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddCaramelFlanDeLecheCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddCaramelFlanDeLecheCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddCaramelFlanDeLecheCakeToPanel.setText("ADD");
 
-        btnMinusCaramelFlan.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusCaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusCaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusCaramelFlan.setText("-");
-        btnMinusCaramelFlan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusCaramelFlanActionPerformed(evt);
-            }
-        });
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Caramel flan de");
 
-        lbqtycaramelflan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbqtycaramelflan.setForeground(new java.awt.Color(225, 135, 44));
-        lbqtycaramelflan.setText("0");
-
-        btnPlusCaramelFlan.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusCaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusCaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusCaramelFlan.setText("+");
-        btnPlusCaramelFlan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusCaramelFlanActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
-        jPanel29.setLayout(jPanel29Layout);
-        jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(lbqtycaramelflan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusCaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusCaramelFlan)
-                    .addComponent(lbqtycaramelflan)
-                    .addComponent(btnPlusCaramelFlan))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel30.setBackground(new java.awt.Color(255, 255, 153));
-
-        caramelFlanDeLecheCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        caramelFlanDeLecheCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        caramelFlanDeLecheCakePrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
-        jPanel30.setLayout(jPanel30Layout);
-        jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(caramelFlanDeLecheCakePrice)
-                .addContainerGap())
-        );
-        jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel30Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(caramelFlanDeLecheCakePrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        btn4x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
-        btn4x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn4x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
-        btn4x2CaramelFlan.setText("4x2\"");
-
-        btn6x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
-        btn6x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn6x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
-        btn6x2CaramelFlan.setText(" 6x2\"");
-        btn6x2CaramelFlan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn6x2CaramelFlanActionPerformed(evt);
-            }
-        });
-
-        btn5x2CaramelFlan.setBackground(new java.awt.Color(255, 255, 153));
-        btn5x2CaramelFlan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn5x2CaramelFlan.setForeground(new java.awt.Color(225, 135, 44));
-        btn5x2CaramelFlan.setText("5x2\"");
-
-        jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel57.setText("Topping:");
-
-        caramelToppingsLecheFlan.setBackground(new java.awt.Color(255, 255, 153));
-        caramelToppingsLecheFlan.setForeground(new java.awt.Color(255, 204, 102));
-        caramelToppingsLecheFlan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/caramel.png"))); // NOI18N
-
-        lecheFlanToppingsCake.setBackground(new java.awt.Color(255, 255, 153));
-        lecheFlanToppingsCake.setForeground(new java.awt.Color(255, 204, 102));
-        lecheFlanToppingsCake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pudding.png"))); // NOI18N
-
-        caramelFlanRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        caramelFlanRadio.setForeground(new java.awt.Color(225, 135, 44));
-        caramelFlanRadio.setText("Caramel flan de leche cake");
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("leche cake");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel27Layout.createSequentialGroup()
-                                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
-                                        .addComponent(btn5x2CaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(12, 12, 12))
-                                    .addGroup(jPanel27Layout.createSequentialGroup()
-                                        .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(9, 9, 9)))
-                                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btn6x2CaramelFlan, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-                                    .addComponent(btn4x2CaramelFlan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jPanel29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addComponent(jLabel57)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(caramelToppingsLecheFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
-                        .addComponent(lecheFlanToppingsCake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(caramelFlanRadio))
-                .addGap(6, 6, 6))
+                        .addComponent(AddCaramelFlanDeLecheCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(caramelFlanRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn6x2CaramelFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn4x2CaramelFlan)
-                            .addComponent(btn5x2CaramelFlan)))
-                    .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel57)
-                    .addComponent(caramelToppingsLecheFlan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lecheFlanToppingsCake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13))
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddCaramelFlanDeLecheCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel31.setBackground(new java.awt.Color(255, 204, 102));
@@ -2782,112 +2144,15 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addGap(17, 17, 17))
         );
 
-        jPanel33.setBackground(new java.awt.Color(255, 204, 102));
+        AddCheeseCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddCheeseCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddCheeseCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddCheeseCakeToPanel.setText("ADD");
 
-        btnMinusCheesecake.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusCheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusCheesecake.setText("-");
-        btnMinusCheesecake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusCheesecakeActionPerformed(evt);
-            }
-        });
-
-        lblquantitycheesecake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblquantitycheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        lblquantitycheesecake.setText("0");
-
-        btnPlusCheesecake.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusCheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusCheesecake.setText("+");
-        btnPlusCheesecake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusCheesecakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
-        jPanel33.setLayout(jPanel33Layout);
-        jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(lblquantitycheesecake)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusCheesecake)
-                    .addComponent(lblquantitycheesecake)
-                    .addComponent(btnPlusCheesecake))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel34.setBackground(new java.awt.Color(255, 255, 153));
-
-        cheeseCakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        cheeseCakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        cheeseCakePrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
-        jPanel34.setLayout(jPanel34Layout);
-        jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cheeseCakePrice)
-                .addContainerGap())
-        );
-        jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel34Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cheeseCakePrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        btn8Cheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        btn8Cheesecake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn8Cheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        btn8Cheesecake.setText("8\"");
-        btn8Cheesecake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn8CheesecakeActionPerformed(evt);
-            }
-        });
-
-        blueberryToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        blueberryToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        blueberryToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
-
-        mangoToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        mangoToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        mangoToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
-
-        biscoffToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        biscoffToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        biscoffToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
-
-        strawberryToppingsCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryToppingsCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        strawberryToppingsCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
-
-        cheeseCakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        cheeseCakeRadio.setForeground(new java.awt.Color(225, 135, 44));
-        cheeseCakeRadio.setText("Cheesecake");
-
-        jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel61.setText("Topping:");
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("CheeseCake");
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -2895,52 +2160,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel31Layout.createSequentialGroup()
-                                .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn8Cheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel61)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(blueberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
-                        .addComponent(mangoToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(biscoffToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(strawberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cheeseCakeRadio))
+                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(AddCheeseCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cheeseCakeRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn8Cheesecake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(blueberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mangoToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(biscoffToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(strawberryToppingsCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel61))
-                .addGap(13, 13, 13))
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddCheeseCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel35.setBackground(new java.awt.Color(255, 204, 102));
@@ -2963,112 +2200,19 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
-        jPanel37.setBackground(new java.awt.Color(255, 204, 102));
+        AddSliceCheeseCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddSliceCheeseCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddSliceCheeseCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddSliceCheeseCakeToPanel.setText("ADD");
 
-        btnMinusSliceCheesecake.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusSliceCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusSliceCheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusSliceCheesecake.setText("-");
-        btnMinusSliceCheesecake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusSliceCheesecakeActionPerformed(evt);
-            }
-        });
-
-        slicecheesecakelblqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        slicecheesecakelblqty.setForeground(new java.awt.Color(225, 135, 44));
-        slicecheesecakelblqty.setText("0");
-
-        btnPlusSliceCheesecake.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusSliceCheesecake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusSliceCheesecake.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusSliceCheesecake.setText("+");
-        btnPlusSliceCheesecake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusSliceCheesecakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
-        jPanel37.setLayout(jPanel37Layout);
-        jPanel37Layout.setHorizontalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel37Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinusSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(slicecheesecakelblqty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel37Layout.setVerticalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel37Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusSliceCheesecake)
-                    .addComponent(slicecheesecakelblqty)
-                    .addComponent(btnPlusSliceCheesecake))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel38.setBackground(new java.awt.Color(255, 255, 153));
-
-        sliceCheesecakePrice.setBackground(new java.awt.Color(255, 204, 102));
-        sliceCheesecakePrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        sliceCheesecakePrice.setForeground(new java.awt.Color(225, 135, 44));
-        sliceCheesecakePrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
-        jPanel38.setLayout(jPanel38Layout);
-        jPanel38Layout.setHorizontalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sliceCheesecakePrice)
-                .addContainerGap())
-        );
-        jPanel38Layout.setVerticalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel38Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(sliceCheesecakePrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        blueberryToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        blueberryToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        blueberryToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blueberry.png"))); // NOI18N
-
-        mangoToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        mangoToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        mangoToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
-
-        biscoffToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        biscoffToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        biscoffToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/biscuit.png"))); // NOI18N
-
-        strawberryToppingsSliceCheesecake.setBackground(new java.awt.Color(255, 255, 153));
-        strawberryToppingsSliceCheesecake.setForeground(new java.awt.Color(255, 204, 102));
-        strawberryToppingsSliceCheesecake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/strawberry.png"))); // NOI18N
-
-        sliceCheesecakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        sliceCheesecakeRadio.setForeground(new java.awt.Color(209, 127, 45));
-        sliceCheesecakeRadio.setText("Slice Cheesecake");
-
-        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel66.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel66.setText("Topping:");
-
-        btnSliceCheesecakePiece.setBackground(new java.awt.Color(255, 255, 153));
-        btnSliceCheesecakePiece.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSliceCheesecakePiece.setForeground(new java.awt.Color(225, 135, 44));
-        btnSliceCheesecakePiece.setText("1 pc");
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Slice CheeseCake");
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -3076,50 +2220,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel35Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSliceCheesecakePiece, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel66)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(blueberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
-                        .addComponent(mangoToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(biscoffToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(strawberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(sliceCheesecakeRadio))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(AddSliceCheeseCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(sliceCheesecakeRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSliceCheesecakePiece))
-                    .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(blueberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mangoToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(biscoffToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(strawberryToppingsSliceCheesecake, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel66))
-                .addGap(13, 13, 13))
+                        .addComponent(AddSliceCheeseCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62))
         );
 
         jPanel39.setBackground(new java.awt.Color(255, 204, 102));
@@ -3146,87 +2264,15 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addGap(29, 29, 29))
         );
 
-        jPanel41.setBackground(new java.awt.Color(255, 204, 102));
-        jPanel41.setForeground(new java.awt.Color(225, 135, 44));
+        AddMangoBravoTubToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddMangoBravoTubToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddMangoBravoTubToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddMangoBravoTubToPanel.setText("ADD");
 
-        btnMinusMangoBravoTub.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusMangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusMangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusMangoBravoTub.setText("-");
-        btnMinusMangoBravoTub.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusMangoBravoTubActionPerformed(evt);
-            }
-        });
-
-        mangobravotublblqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangobravotublblqty.setForeground(new java.awt.Color(225, 135, 44));
-        mangobravotublblqty.setText("0");
-
-        btnPlusMangoBravoTub.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusMangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusMangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusMangoBravoTub.setText("+");
-        btnPlusMangoBravoTub.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusMangoBravoTubActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
-        jPanel41.setLayout(jPanel41Layout);
-        jPanel41Layout.setHorizontalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mangobravotublblqty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusMangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel41Layout.setVerticalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusMangoBravoTub)
-                    .addComponent(mangobravotublblqty)
-                    .addComponent(btnPlusMangoBravoTub))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel42.setBackground(new java.awt.Color(255, 255, 153));
-
-        mangoBravoTubPrice.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravoTubPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravoTubPrice.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravoTubPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mangoBravoTubPrice.setText("Php 0.00");
-
-        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
-        jPanel42.setLayout(jPanel42Layout);
-        jPanel42Layout.setHorizontalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mangoBravoTubPrice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-        );
-        jPanel42Layout.setVerticalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel42Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mangoBravoTubPrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        mangoBravoTubRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravoTubRadio.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravoTubRadio.setText("Mango Bravo Tub");
-
-        mangoBravoTub.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravoTub.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravoTub.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravoTub.setText("1 pc");
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Mango Bravo Tub");
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -3234,16 +2280,12 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel39Layout.createSequentialGroup()
-                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(mangoBravoTub, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(mangoBravoTubRadio))
-                .addGap(0, 39, Short.MAX_VALUE))
+                    .addComponent(AddMangoBravoTubToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3251,17 +2293,12 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
                 .addContainerGap()
                 .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel39Layout.createSequentialGroup()
-                        .addComponent(mangoBravoTubRadio)
-                        .addGap(51, 51, 51)
-                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(58, Short.MAX_VALUE))
-                    .addGroup(jPanel39Layout.createSequentialGroup()
-                        .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 5, Short.MAX_VALUE)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(mangoBravoTub)
-                        .addGap(38, 38, 38))))
+                        .addComponent(AddMangoBravoTubToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel43.setBackground(new java.awt.Color(255, 204, 102));
@@ -3282,100 +2319,21 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel74)
-                .addGap(29, 29, 29))
-        );
-
-        jPanel45.setBackground(new java.awt.Color(255, 204, 102));
-        jPanel45.setForeground(new java.awt.Color(225, 135, 44));
-
-        btnMinusMiniCupcake.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusMiniCupcake.setText("-");
-        btnMinusMiniCupcake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusMiniCupcakeActionPerformed(evt);
-            }
-        });
-
-        lbQtyMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbQtyMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        lbQtyMiniCupcake.setText("0");
-
-        btnPlusMiniCupcake.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusMiniCupcake.setText("+");
-        btnPlusMiniCupcake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusMiniCupcakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
-        jPanel45.setLayout(jPanel45Layout);
-        jPanel45Layout.setHorizontalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel45Layout.createSequentialGroup()
+            .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnMinusMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbQtyMiniCupcake)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel45Layout.setVerticalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel45Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusMiniCupcake)
-                    .addComponent(lbQtyMiniCupcake)
-                    .addComponent(btnPlusMiniCupcake))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
 
-        jPanel46.setBackground(new java.awt.Color(255, 255, 153));
+        AddMiniCupcakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddMiniCupcakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddMiniCupcakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddMiniCupcakeToPanel.setText("ADD");
 
-        miniCupcakesPrice.setBackground(new java.awt.Color(255, 255, 153));
-        miniCupcakesPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        miniCupcakesPrice.setForeground(new java.awt.Color(225, 135, 44));
-        miniCupcakesPrice.setText("Php 0.00");
-
-        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
-        jPanel46.setLayout(jPanel46Layout);
-        jPanel46Layout.setHorizontalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel46Layout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
-                .addComponent(miniCupcakesPrice)
-                .addContainerGap())
-        );
-        jPanel46Layout.setVerticalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(miniCupcakesPrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        btn6PcsMiniCupcake.setBackground(new java.awt.Color(255, 255, 153));
-        btn6PcsMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn6PcsMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btn6PcsMiniCupcake.setText("6PCS");
-
-        btn12PcsMiniCupcake.setBackground(new java.awt.Color(255, 255, 153));
-        btn12PcsMiniCupcake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn12PcsMiniCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btn12PcsMiniCupcake.setText("12PCS");
-
-        miniCupcakesRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        miniCupcakesRadio.setForeground(new java.awt.Color(225, 135, 44));
-        miniCupcakesRadio.setText("Mini Cupcakes");
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Mini Cupcake");
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
@@ -3383,39 +2341,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(btn6PcsMiniCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn12PcsMiniCupcake))
-                    .addComponent(miniCupcakesRadio))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(AddMiniCupcakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(miniCupcakesRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
-                        .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
-                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn6PcsMiniCupcake)
-                    .addComponent(btn12PcsMiniCupcake))
-                .addGap(55, 55, 55))
+                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel43Layout.createSequentialGroup()
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddMiniCupcakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel47.setBackground(new java.awt.Color(255, 204, 102));
@@ -3437,114 +2380,20 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel78)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel49.setBackground(new java.awt.Color(255, 204, 102));
-        jPanel49.setForeground(new java.awt.Color(225, 135, 44));
-
-        btnMinusPiscesCupcake.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusPiscesCupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusPiscesCupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusPiscesCupcake.setText("-");
-        btnMinusPiscesCupcake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusPiscesCupcakeActionPerformed(evt);
-            }
-        });
-
-        lbzeroqty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbzeroqty.setForeground(new java.awt.Color(225, 135, 44));
-        lbzeroqty.setText("0");
-
-        btnPlusPiscescupcake.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusPiscescupcake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusPiscescupcake.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusPiscescupcake.setText("+");
-        btnPlusPiscescupcake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusPiscescupcakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
-        jPanel49.setLayout(jPanel49Layout);
-        jPanel49Layout.setHorizontalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel49Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnMinusPiscesCupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbzeroqty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusPiscescupcake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel78, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel49Layout.setVerticalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel49Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusPiscesCupcake)
-                    .addComponent(lbzeroqty)
-                    .addComponent(btnPlusPiscescupcake))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
 
-        jPanel50.setBackground(new java.awt.Color(255, 255, 153));
+        AddPiscesCupcakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddPiscesCupcakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddPiscesCupcakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddPiscesCupcakeToPanel.setText("ADD");
 
-        piscesCupcakesPrice.setBackground(new java.awt.Color(255, 255, 153));
-        piscesCupcakesPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        piscesCupcakesPrice.setForeground(new java.awt.Color(225, 135, 44));
-        piscesCupcakesPrice.setText("Php 0.00");
-
-        javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
-        jPanel50.setLayout(jPanel50Layout);
-        jPanel50Layout.setHorizontalGroup(
-            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
-                .addComponent(piscesCupcakesPrice)
-                .addContainerGap())
-        );
-        jPanel50Layout.setVerticalGroup(
-            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel50Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(piscesCupcakesPrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        btn1pcPisces.setBackground(new java.awt.Color(255, 255, 153));
-        btn1pcPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn1pcPisces.setForeground(new java.awt.Color(225, 135, 44));
-        btn1pcPisces.setText("1 PC");
-
-        btn3PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
-        btn3PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn3PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
-        btn3PcsPisces.setText("3 PCS");
-
-        btn4PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
-        btn4PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn4PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
-        btn4PcsPisces.setText("4 PCS");
-
-        btn6PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
-        btn6PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn6PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
-        btn6PcsPisces.setText("6 PCS");
-
-        btn12PcsPisces.setBackground(new java.awt.Color(255, 255, 153));
-        btn12PcsPisces.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn12PcsPisces.setForeground(new java.awt.Color(225, 135, 44));
-        btn12PcsPisces.setText("12 PCS");
-
-        piscesRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        piscesRadio.setForeground(new java.awt.Color(225, 135, 44));
-        piscesRadio.setText("Pisces Cupcake");
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Pisces Cupcake");
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -3552,50 +2401,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel47Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btn1pcPisces, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn3PcsPisces, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn6PcsPisces, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-                            .addComponent(btn4PcsPisces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn12PcsPisces))
-                    .addComponent(piscesRadio))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(AddPiscesCupcakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel47Layout.setVerticalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(piscesRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
-                        .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48))
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn1pcPisces)
-                            .addComponent(btn4PcsPisces))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn3PcsPisces)
-                            .addComponent(btn6PcsPisces)
-                            .addComponent(btn12PcsPisces))
-                        .addGap(30, 30, 30))))
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddPiscesCupcakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74))
         );
 
         jPanel55.setBackground(new java.awt.Color(255, 204, 102));
@@ -3616,44 +2439,21 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         );
         jPanel56Layout.setVerticalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel56Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jPanel57.setBackground(new java.awt.Color(255, 204, 102));
-
-        btnCustomeCakeIcingCake.setBackground(new java.awt.Color(255, 255, 153));
-        btnCustomeCakeIcingCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnCustomeCakeIcingCake.setForeground(new java.awt.Color(225, 135, 44));
-        btnCustomeCakeIcingCake.setText("Custom Cake");
-        btnCustomeCakeIcingCake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCustomeCakeIcingCakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
-        jPanel57.setLayout(jPanel57Layout);
-        jPanel57Layout.setHorizontalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel57Layout.createSequentialGroup()
+            .addGroup(jPanel56Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnCustomeCakeIcingCake)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        jPanel57Layout.setVerticalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel57Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(btnCustomeCakeIcingCake, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(209, 127, 45));
-        jLabel7.setText("Icing Custom Cake");
+        AddIcingCustomCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddIcingCustomCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddIcingCustomCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddIcingCustomCakeToPanel.setText("ADD");
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("Icing Custom Cake");
 
         javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
         jPanel55.setLayout(jPanel55Layout);
@@ -3661,23 +2461,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel55Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
-                    .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AddIcingCustomCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel55Layout.setVerticalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel55Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel55Layout.createSequentialGroup()
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddIcingCustomCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel84.setBackground(new java.awt.Color(255, 204, 102));
@@ -3700,42 +2501,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel85Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel85Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel86.setBackground(new java.awt.Color(255, 204, 102));
+        AddMinimalistCustomCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddMinimalistCustomCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddMinimalistCustomCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddMinimalistCustomCakeToPanel.setText("ADD");
 
-        btnMinimalistCakeCustomCake.setBackground(new java.awt.Color(255, 255, 153));
-        btnMinimalistCakeCustomCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnMinimalistCakeCustomCake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinimalistCakeCustomCake.setText("Custom Cake");
-        btnMinimalistCakeCustomCake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinimalistCakeCustomCakeActionPerformed(evt);
-            }
-        });
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("Minimalist Custom");
 
-        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
-        jPanel86.setLayout(jPanel86Layout);
-        jPanel86Layout.setHorizontalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(btnMinimalistCakeCustomCake)
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-        jPanel86Layout.setVerticalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinimalistCakeCustomCake, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(209, 127, 45));
-        jLabel8.setText("Minimalist Cake");
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Cake");
 
         javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
         jPanel84.setLayout(jPanel84Layout);
@@ -3743,25 +2526,27 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel84Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel84Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel8)))
+                .addComponent(jPanel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AddMinimalistCustomCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel84Layout.setVerticalGroup(
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel84Layout.createSequentialGroup()
+            .addGroup(jPanel84Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel84Layout.createSequentialGroup()
+                        .addComponent(jLabel23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddMinimalistCustomCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel88.setBackground(new java.awt.Color(255, 204, 102));
@@ -3784,43 +2569,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel89Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel89Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
-        jPanel90.setBackground(new java.awt.Color(255, 204, 102));
+        AddFondantCustomCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddFondantCustomCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddFondantCustomCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddFondantCustomCakeToPanel.setText("ADD");
 
-        customCakeButton.setBackground(new java.awt.Color(255, 255, 153));
-        customCakeButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        customCakeButton.setForeground(new java.awt.Color(225, 135, 44));
-        customCakeButton.setText("Custom Cake");
-        customCakeButton.setToolTipText("");
-        customCakeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customCakeButtonActionPerformed(evt);
-            }
-        });
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Fondant");
 
-        javax.swing.GroupLayout jPanel90Layout = new javax.swing.GroupLayout(jPanel90);
-        jPanel90.setLayout(jPanel90Layout);
-        jPanel90Layout.setHorizontalGroup(
-            jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel90Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(customCakeButton)
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
-        jPanel90Layout.setVerticalGroup(
-            jPanel90Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel90Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(customCakeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(209, 127, 45));
-        jLabel9.setText("Fondant Cake");
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Custom Cake");
 
         javax.swing.GroupLayout jPanel88Layout = new javax.swing.GroupLayout(jPanel88);
         jPanel88.setLayout(jPanel88Layout);
@@ -3828,25 +2594,27 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel88Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel88Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel9)))
+                .addComponent(jPanel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 35, Short.MAX_VALUE))
+                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AddFondantCustomCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel88Layout.setVerticalGroup(
             jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel88Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51))
+                .addGroup(jPanel88Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel88Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddFondantCustomCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel89, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(98, 98, 98))
         );
 
         jPanel92.setBackground(new java.awt.Color(255, 204, 102));
@@ -3869,106 +2637,19 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel93Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
 
-        jPanel94.setBackground(new java.awt.Color(255, 204, 102));
+        AddYemaCakeToPanel.setBackground(new java.awt.Color(255, 255, 153));
+        AddYemaCakeToPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AddYemaCakeToPanel.setForeground(new java.awt.Color(225, 135, 44));
+        AddYemaCakeToPanel.setText("ADD");
 
-        btnMinusYemaCake.setBackground(new java.awt.Color(255, 204, 102));
-        btnMinusYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnMinusYemaCake.setForeground(new java.awt.Color(225, 135, 44));
-        btnMinusYemaCake.setText("-");
-        btnMinusYemaCake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMinusYemaCakeActionPerformed(evt);
-            }
-        });
-
-        yemaCakeLabelQty.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        yemaCakeLabelQty.setForeground(new java.awt.Color(225, 135, 44));
-        yemaCakeLabelQty.setText("0");
-
-        btnPlusYemaCake.setBackground(new java.awt.Color(255, 204, 102));
-        btnPlusYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPlusYemaCake.setForeground(new java.awt.Color(225, 135, 44));
-        btnPlusYemaCake.setText("+");
-        btnPlusYemaCake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlusYemaCakeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
-        jPanel94.setLayout(jPanel94Layout);
-        jPanel94Layout.setHorizontalGroup(
-            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel94Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnMinusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(yemaCakeLabelQty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPlusYemaCake, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel94Layout.setVerticalGroup(
-            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel94Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMinusYemaCake)
-                    .addComponent(yemaCakeLabelQty)
-                    .addComponent(btnPlusYemaCake))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
-
-        jPanel95.setBackground(new java.awt.Color(255, 255, 153));
-
-        lbPhpYemaCake.setBackground(new java.awt.Color(255, 204, 102));
-        lbPhpYemaCake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbPhpYemaCake.setForeground(new java.awt.Color(225, 135, 44));
-        lbPhpYemaCake.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
-        jPanel95.setLayout(jPanel95Layout);
-        jPanel95Layout.setHorizontalGroup(
-            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel95Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbPhpYemaCake, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
-        );
-        jPanel95Layout.setVerticalGroup(
-            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel95Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbPhpYemaCake)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        yemaCakeRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        yemaCakeRadio.setForeground(new java.awt.Color(209, 127, 45));
-        yemaCakeRadio.setText("Yema Cake");
-
-        btn6x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
-        btn6x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn6x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
-        btn6x2Yemacake.setText(" 6x2\"");
-
-        btn5x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
-        btn5x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn5x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
-        btn5x2Yemacake.setText("5x2\"");
-
-        btn4x2Yemacake.setBackground(new java.awt.Color(255, 255, 153));
-        btn4x2Yemacake.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn4x2Yemacake.setForeground(new java.awt.Color(225, 135, 44));
-        btn4x2Yemacake.setText("4x2\"");
-        btn4x2Yemacake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn4x2YemacakeActionPerformed(evt);
-            }
-        });
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(225, 135, 44));
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("Yema Cake");
 
         javax.swing.GroupLayout jPanel92Layout = new javax.swing.GroupLayout(jPanel92);
         jPanel92.setLayout(jPanel92Layout);
@@ -3976,53 +2657,24 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel92Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel92Layout.createSequentialGroup()
-                        .addComponent(yemaCakeRadio)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel92Layout.createSequentialGroup()
-                        .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel92Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jPanel94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel92Layout.createSequentialGroup()
-                                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel92Layout.createSequentialGroup()
-                                                .addComponent(btn5x2Yemacake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btn4x2Yemacake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel92Layout.createSequentialGroup()
-                                                .addComponent(btn6x2Yemacake, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE)))
-                                        .addGap(6, 6, 6))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65))))))
+                    .addComponent(AddYemaCakeToPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel92Layout.setVerticalGroup(
             jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel92Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(yemaCakeRadio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel92Layout.createSequentialGroup()
-                        .addComponent(jPanel94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn5x2Yemacake)
-                            .addComponent(btn4x2Yemacake)))
-                    .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn6x2Yemacake, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                        .addComponent(AddYemaCakeToPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel93, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout cakesPanelLayout = new javax.swing.GroupLayout(cakesPanel);
@@ -4031,61 +2683,59 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cakesPanelLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(cakesPanelLayout.createSequentialGroup()
-                        .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(12, 12, 12)
-                        .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(cakesPanelLayout.createSequentialGroup()
-                        .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel88, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(jPanel88, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel39, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cakesPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(cakesPanelLayout.createSequentialGroup()
+                        .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(101, Short.MAX_VALUE))))
         );
         cakesPanelLayout.setVerticalGroup(
             cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cakesPanelLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel92, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                    .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel31, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel51, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(cakesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel88, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(480, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(cakesPanel);
@@ -4098,7 +2748,7 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("cakes", jPanel71);
@@ -5276,78 +3926,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
        }       
     }//GEN-LAST:event_txtSearchFocusLost
 
-    private void redVelvetMinusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redVelvetMinusButtonActionPerformed
-        if(redVelvetQty>0){
-           redVelvetQty--;
-           redvelvetlabel.setText(String.valueOf(redVelvetQty));
-           updateRedVelvetPrice();
-       }
-    }//GEN-LAST:event_redVelvetMinusButtonActionPerformed
-
-    private void strawberryshortminusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strawberryshortminusbuttonActionPerformed
-        if(strawberryShortcakeQty>0){
-           strawberryShortcakeQty--;
-           strawberyshortcakelbl.setText(String.valueOf(strawberryShortcakeQty));
-           updateStrawberryShortPrice();
-       }
-    }//GEN-LAST:event_strawberryshortminusbuttonActionPerformed
-
-    private void bentoCakeminusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentoCakeminusButtonActionPerformed
-        if(bentoCakeQty>0){
-           bentoCakeQty--;
-           bentocakelbl.setText(String.valueOf(bentoCakeQty));
-           updateBentoCakePrice();
-       }
-    }//GEN-LAST:event_bentoCakeminusButtonActionPerformed
-
-    private void btnMinusCaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCaramelFlanActionPerformed
-        if(caramelFlanQty>0){
-           caramelFlanQty--;
-           lbqtycaramelflan.setText(String.valueOf(caramelFlanQty));
-           updateCaramelLechePrice();
-       }
-    }//GEN-LAST:event_btnMinusCaramelFlanActionPerformed
-
-    private void btnMinusCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusCheesecakeActionPerformed
-        if(cheesecakeQuantity>0){
-           cheesecakeQuantity--;
-           lblquantitycheesecake.setText(String.valueOf(cheesecakeQuantity));
-           updateCheeseCakePrice();
-       }
-    }//GEN-LAST:event_btnMinusCheesecakeActionPerformed
-
-    private void btnMinusSliceCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusSliceCheesecakeActionPerformed
-        if(slicecheesecakeQty>0){
-           slicecheesecakeQty--;
-           slicecheesecakelblqty.setText(String.valueOf(slicecheesecakeQty));
-           updateSliceCheesecakePrice();
-       }
-    }//GEN-LAST:event_btnMinusSliceCheesecakeActionPerformed
-
-    private void btnMinusMangoBravoTubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMangoBravoTubActionPerformed
-        if(mangoBravoTubQty>0){
-           mangoBravoTubQty--;
-           mangobravotublblqty.setText(String.valueOf(mangoBravoTubQty));
-           updateMangoBravoTubPrice();
-       }
-    }//GEN-LAST:event_btnMinusMangoBravoTubActionPerformed
-
-    private void btnMinusMiniCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusMiniCupcakeActionPerformed
-        if(miniCupcakesQty>0){
-           miniCupcakesQty--;
-           lbQtyMiniCupcake.setText(String.valueOf(miniCupcakesQty));
-           updateMiniCupcakesPrice();
-       }
-    }//GEN-LAST:event_btnMinusMiniCupcakeActionPerformed
-
-    private void btnMinusPiscesCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusPiscesCupcakeActionPerformed
-        if(piscesCupcakesQty>0){
-           piscesCupcakesQty--;
-           lbzeroqty.setText(String.valueOf(piscesCupcakesQty));
-           updatePiscesCupcakesPrice();
-       }
-    }//GEN-LAST:event_btnMinusPiscesCupcakeActionPerformed
-
     private void btnMinusUbePandesalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusUbePandesalActionPerformed
        if(ubePandesalQty>0){
            ubePandesalQty--;
@@ -5404,77 +3982,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
        main.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
-    private void btnMinusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusYemaCakeActionPerformed
-        if(yemaCakeQty>0){
-           yemaCakeQty--;
-           yemaCakeLabelQty.setText(String.valueOf(yemaCakeQty));
-          updateYemaCakePrice();
-       }
-    }//GEN-LAST:event_btnMinusYemaCakeActionPerformed
-
-    private void RedVelvetPlusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedVelvetPlusButtonActionPerformed
-       redVelvetQty ++;
-       redvelvetlabel.setText(String.valueOf(redVelvetQty));
-    }//GEN-LAST:event_RedVelvetPlusButtonActionPerformed
-
-    private void strawberryshortplusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strawberryshortplusbuttonActionPerformed
-       strawberryShortcakeQty++;
-       strawberyshortcakelbl.setText(String.valueOf(strawberryShortcakeQty));
-    }//GEN-LAST:event_strawberryshortplusbuttonActionPerformed
-
-    private void bentoCakePlusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentoCakePlusButtonActionPerformed
-       bentoCakeQty++;
-       bentocakelbl.setText(String.valueOf(bentoCakeQty));
-    }//GEN-LAST:event_bentoCakePlusButtonActionPerformed
-
-    private void btnPlusCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusCheesecakeActionPerformed
-       cheesecakeQuantity++;
-       lblquantitycheesecake.setText(String.valueOf(cheesecakeQuantity));
-    }//GEN-LAST:event_btnPlusCheesecakeActionPerformed
-
-    private void btn8CheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8CheesecakeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn8CheesecakeActionPerformed
-
-    private void btn6x2CaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6x2CaramelFlanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn6x2CaramelFlanActionPerformed
-
-    private void btnPlusCaramelFlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusCaramelFlanActionPerformed
-        caramelFlanQty++;
-        lbqtycaramelflan.setText(String.valueOf( caramelFlanQty));
-    }//GEN-LAST:event_btnPlusCaramelFlanActionPerformed
-
-    private void btnPlusMangoBravoTubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMangoBravoTubActionPerformed
-        mangoBravoTubQty++;
-        mangobravotublblqty.setText(String.valueOf(mangoBravoTubQty));
-        updateMangoBravoTubPrice();
-    }//GEN-LAST:event_btnPlusMangoBravoTubActionPerformed
-
-    private void btnPlusSliceCheesecakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusSliceCheesecakeActionPerformed
-        slicecheesecakeQty++;
-        slicecheesecakelblqty.setText(String.valueOf(slicecheesecakeQty));
-        updateSliceCheesecakePrice();
-    }//GEN-LAST:event_btnPlusSliceCheesecakeActionPerformed
-
-    private void btnPlusMiniCupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMiniCupcakeActionPerformed
-        miniCupcakesQty++;
-        lbQtyMiniCupcake.setText(String.valueOf(miniCupcakesQty));
-        updateMiniCupcakesPrice();
-    }//GEN-LAST:event_btnPlusMiniCupcakeActionPerformed
-
-    private void btnPlusPiscescupcakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusPiscescupcakeActionPerformed
-        piscesCupcakesQty++;
-        lbzeroqty.setText(String.valueOf(piscesCupcakesQty));
-        updatePiscesCupcakesPrice();
-    }//GEN-LAST:event_btnPlusPiscescupcakeActionPerformed
-
-    private void btnPlusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusYemaCakeActionPerformed
-        yemaCakeQty++;
-        yemaCakeLabelQty.setText(String.valueOf(yemaCakeQty));
-        updateYemaCakePrice();
-    }//GEN-LAST:event_btnPlusYemaCakeActionPerformed
-
     private void btnPlusClassicCinnamonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusClassicCinnamonActionPerformed
         classicCinnamonQty++;
         lbzeroClassicCinnamon.setText(String.valueOf(classicCinnamonQty));
@@ -5511,49 +4018,13 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
        updateBananaMuffinPrice();
     }//GEN-LAST:event_btnPlusMuffinActionPerformed
 
-    private void btn4x2YemacakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4x2YemacakeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn4x2YemacakeActionPerformed
-
-    private void btnCustomeCakeIcingCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomeCakeIcingCakeActionPerformed
-//        Icingcustomcake icc = new Icingcustomcake();
-//        icc.setVisible(true);
-//        
-        
-
-    }//GEN-LAST:event_btnCustomeCakeIcingCakeActionPerformed
-
-    private void btnMinimalistCakeCustomCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinimalistCakeCustomCakeActionPerformed
-//        MinimalistCustomCake show = new MinimalistCustomCake();
-//        show.setVisible(true);
-    }//GEN-LAST:event_btnMinimalistCakeCustomCakeActionPerformed
-
-    private void customCakeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customCakeButtonActionPerformed
-        
-        
-    }//GEN-LAST:event_customCakeButtonActionPerformed
-
     private void payByCashBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payByCashBtnActionPerformed
         
     }//GEN-LAST:event_payByCashBtnActionPerformed
 
-    private void addButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonMangoActionPerformed
-        mangoQty++;
-        mangoBravoQuantity.setText(String.valueOf(mangoQty));
-        updateMangoPrice();
-    }//GEN-LAST:event_addButtonMangoActionPerformed
-
-    private void minusButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonMangoActionPerformed
-        if (mangoQty > 0) {
-            mangoQty--;
-        }
-        mangoBravoQuantity.setText(String.valueOf(mangoQty));
-        updateMangoPrice();
-
-        //    if (mangoQty == 0) {
-            //        mangoRadioButton.setSelected(false);
-            //    }
-    }//GEN-LAST:event_minusButtonMangoActionPerformed
+    private void AddMangoBravoToPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddMangoBravoToPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddMangoBravoToPanelActionPerformed
     
 
 
@@ -5595,96 +4066,77 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddBentoCakeToPanel;
+    private javax.swing.JButton AddCaramelFlanDeLecheCakeToPanel;
+    private javax.swing.JButton AddCheeseCakeToPanel;
+    private javax.swing.JButton AddFondantCustomCakeToPanel;
+    private javax.swing.JButton AddIcingCustomCakeToPanel;
+    private javax.swing.JButton AddMangoBravoToPanel;
+    private javax.swing.JButton AddMangoBravoTubToPanel;
+    private javax.swing.JButton AddMiniCupcakeToPanel;
+    private javax.swing.JButton AddMinimalistCustomCakeToPanel;
+    private javax.swing.JButton AddPiscesCupcakeToPanel;
+    private javax.swing.JButton AddRedVelvetCakeToPanel;
+    private javax.swing.JButton AddSliceCheeseCakeToPanel;
+    private javax.swing.JButton AddStrawberryShortCakeToPanel;
+    private javax.swing.JButton AddYemaCakeToPanel;
     private javax.swing.JRadioButton BananaLoafRadio;
     private javax.swing.JPanel BillPanel;
-    private javax.swing.JPanel Jpanel;
-    private javax.swing.JButton RedVelvetPlusButton;
-    private javax.swing.JButton addBUTTONtoPANEL;
-    private javax.swing.JButton addButtonMango;
     private javax.swing.JButton backButton;
     private javax.swing.JRadioButton bananaMuffinRadio;
-    private javax.swing.JButton bentoCakePlusButton;
-    private javax.swing.JLabel bentoCakePrice;
-    private javax.swing.JRadioButton bentoCakeRadioButton;
-    private javax.swing.JToggleButton bentoCakeSizebutton;
-    private javax.swing.JButton bentoCakeminusButton;
-    private javax.swing.JLabel bentocakelbl;
     private javax.swing.JLabel billLabel;
     private javax.swing.JList<String> billList;
-    private javax.swing.JToggleButton biscoffToppingsCheesecake;
-    private javax.swing.JToggleButton biscoffToppingsSliceCheesecake;
-    private javax.swing.JToggleButton blueberryToppingsCheesecake;
-    private javax.swing.JToggleButton blueberryToppingsSliceCheesecake;
     private javax.swing.JPanel breadsandsweetsPanel;
     private javax.swing.JRadioButton browniesRadio;
     private javax.swing.JToggleButton btn10PcsMilkyDonut;
     private javax.swing.JToggleButton btn12PcsBrownies;
-    private javax.swing.JToggleButton btn12PcsMiniCupcake;
-    private javax.swing.JToggleButton btn12PcsPisces;
-    private javax.swing.JToggleButton btn1pcPisces;
     private javax.swing.JToggleButton btn30PcsBrownies;
-    private javax.swing.JToggleButton btn3PcsPisces;
-    private javax.swing.JToggleButton btn4PcsPisces;
-    private javax.swing.JToggleButton btn4x2CaramelFlan;
-    private javax.swing.JToggleButton btn4x2Yemacake;
     private javax.swing.JToggleButton btn5PcsMilkyDonut;
-    private javax.swing.JToggleButton btn5x2CaramelFlan;
-    private javax.swing.JToggleButton btn5x2Yemacake;
     private javax.swing.JToggleButton btn6PcsBananaMuffin;
     private javax.swing.JToggleButton btn6PcsBrownies;
-    private javax.swing.JToggleButton btn6PcsMiniCupcake;
-    private javax.swing.JToggleButton btn6PcsPisces;
-    private javax.swing.JToggleButton btn6x2CaramelFlan;
-    private javax.swing.JToggleButton btn6x2Yemacake;
-    private javax.swing.JToggleButton btn8Cheesecake;
     private javax.swing.JToggleButton btnBoxof4ClassicCinnamon;
     private javax.swing.JToggleButton btnBoxof6ClassicCinnamon;
     private javax.swing.JButton btnBreadSweets1;
     private javax.swing.JButton btnCake;
-    private javax.swing.JToggleButton btnCustomeCakeIcingCake;
-    private javax.swing.JToggleButton btnMinimalistCakeCustomCake;
     private javax.swing.JButton btnMinuMuffin;
     private javax.swing.JButton btnMinusBananaLoaf;
     private javax.swing.JButton btnMinusBrownies;
-    private javax.swing.JButton btnMinusCaramelFlan;
-    private javax.swing.JButton btnMinusCheesecake;
     private javax.swing.JButton btnMinusClassicCinnamon;
-    private javax.swing.JButton btnMinusMangoBravoTub;
     private javax.swing.JButton btnMinusMilkyDonut;
-    private javax.swing.JButton btnMinusMiniCupcake;
-    private javax.swing.JButton btnMinusPiscesCupcake;
-    private javax.swing.JButton btnMinusSliceCheesecake;
     private javax.swing.JButton btnMinusUbePandesal;
-    private javax.swing.JButton btnMinusYemaCake;
     private javax.swing.JToggleButton btnMoistBananaChocoChipAlmondLoaf;
     private javax.swing.JToggleButton btnMoistBananaChocoChipLoaf;
     private javax.swing.JButton btnPlusBananaLoaf;
     private javax.swing.JButton btnPlusBrownies;
-    private javax.swing.JButton btnPlusCaramelFlan;
-    private javax.swing.JButton btnPlusCheesecake;
     private javax.swing.JButton btnPlusClassicCinnamon;
-    private javax.swing.JButton btnPlusMangoBravoTub;
     private javax.swing.JButton btnPlusMilkyDonut;
-    private javax.swing.JButton btnPlusMiniCupcake;
     private javax.swing.JButton btnPlusMuffin;
-    private javax.swing.JButton btnPlusPiscescupcake;
-    private javax.swing.JButton btnPlusSliceCheesecake;
     private javax.swing.JButton btnPlusUbePandesal;
-    private javax.swing.JButton btnPlusYemaCake;
-    private javax.swing.JToggleButton btnSliceCheesecakePiece;
     private javax.swing.JToggleButton btnUbeCheesedesal;
     private javax.swing.JToggleButton btnUbeHalayaCheesedesal;
     private javax.swing.JPanel cakesPanel;
-    private javax.swing.JLabel caramelFlanDeLecheCakePrice;
-    private javax.swing.JRadioButton caramelFlanRadio;
-    private javax.swing.JToggleButton caramelToppingsLecheFlan;
-    private javax.swing.JLabel cheeseCakePrice;
-    private javax.swing.JRadioButton cheeseCakeRadio;
     private javax.swing.JRadioButton classicCinnamonRadio;
-    private javax.swing.JButton customCakeButton;
     private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel43;
@@ -5693,76 +4145,48 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
-    private javax.swing.JPanel jPanel42;
     private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel44;
-    private javax.swing.JPanel jPanel45;
-    private javax.swing.JPanel jPanel46;
     private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel48;
-    private javax.swing.JPanel jPanel49;
-    private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
     private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel56;
-    private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
@@ -5791,15 +4215,11 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JPanel jPanel83;
     private javax.swing.JPanel jPanel84;
     private javax.swing.JPanel jPanel85;
-    private javax.swing.JPanel jPanel86;
     private javax.swing.JPanel jPanel88;
     private javax.swing.JPanel jPanel89;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanel90;
     private javax.swing.JPanel jPanel92;
     private javax.swing.JPanel jPanel93;
-    private javax.swing.JPanel jPanel94;
-    private javax.swing.JPanel jPanel95;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -5810,66 +4230,19 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel lbPhpMilkyDonut;
     private javax.swing.JLabel lbPhpMuffin;
     private javax.swing.JLabel lbPhpUbePandesal;
-    private javax.swing.JLabel lbPhpYemaCake;
-    private javax.swing.JLabel lbQtyMiniCupcake;
-    private javax.swing.JLabel lblquantitycheesecake;
-    private javax.swing.JLabel lbqtycaramelflan;
     private javax.swing.JLabel lbzeroBananaLoaf;
     private javax.swing.JLabel lbzeroBrownies;
     private javax.swing.JLabel lbzeroClassicCinnamon;
     private javax.swing.JLabel lbzeroMilkyDonut;
     private javax.swing.JLabel lbzeroMuffin;
     private javax.swing.JLabel lbzeroUbePandesal;
-    private javax.swing.JLabel lbzeroqty;
-    private javax.swing.JToggleButton lecheFlanToppingsCake;
-    private javax.swing.JToggleButton mangoBravo4x2button;
-    private javax.swing.JToggleButton mangoBravo5x2button;
-    private javax.swing.JToggleButton mangoBravo6x2button;
-    private javax.swing.JLabel mangoBravoQuantity;
-    private javax.swing.JToggleButton mangoBravoTub;
-    private javax.swing.JLabel mangoBravoTubPrice;
-    private javax.swing.JRadioButton mangoBravoTubRadio;
-    private javax.swing.JLabel mangoPrice;
-    private javax.swing.JRadioButton mangoRadioButton;
-    private javax.swing.JToggleButton mangoToppings;
-    private javax.swing.JToggleButton mangoToppingsCheesecake;
-    private javax.swing.JToggleButton mangoToppingsSliceCheesecake;
-    private javax.swing.JLabel mangobravotublblqty;
     private javax.swing.JRadioButton milkyCheeseRadio;
-    private javax.swing.JLabel miniCupcakesPrice;
-    private javax.swing.JRadioButton miniCupcakesRadio;
-    private javax.swing.JButton minusButtonMango;
     private javax.swing.JToggleButton payByCashBtn;
     private javax.swing.JToggleButton payByGCASHBtn;
-    private javax.swing.JLabel piscesCupcakesPrice;
-    private javax.swing.JRadioButton piscesRadio;
     private javax.swing.JPanel productsPanel;
-    private javax.swing.JToggleButton redVelvet5x2sizeButton;
-    private javax.swing.JToggleButton redVelvet6x2sizebutton;
-    private javax.swing.JLabel redVelvetCakePrice;
-    private javax.swing.JButton redVelvetMinusButton;
-    private javax.swing.JRadioButton redVelvetRadioButton;
-    private javax.swing.JLabel redvelvetlabel;
-    private javax.swing.JLabel sliceCheesecakePrice;
-    private javax.swing.JRadioButton sliceCheesecakeRadio;
-    private javax.swing.JLabel slicecheesecakelblqty;
-    private javax.swing.JLabel strawberryShortCakePrice;
-    private javax.swing.JToggleButton strawberryToppingsCheesecake;
-    private javax.swing.JToggleButton strawberryToppingsShortcake;
-    private javax.swing.JToggleButton strawberryToppingsSliceCheesecake;
-    private javax.swing.JToggleButton strawberryshortcake4x3sizebtn;
-    private javax.swing.JToggleButton strawberryshortcake5x3sizebtn;
-    private javax.swing.JToggleButton strawberryshortcake6x3sizebtn;
-    private javax.swing.JToggleButton strawberryshortcake8x3sizebtn;
-    private javax.swing.JRadioButton strawberryshortcakeradioButton;
-    private javax.swing.JButton strawberryshortminusbutton;
-    private javax.swing.JButton strawberryshortplusbutton;
-    private javax.swing.JLabel strawberyshortcakelbl;
     private javax.swing.JLabel totalAmountLabel;
     private javax.swing.JLabel totalstaticlabel;
     private javax.swing.JTextField txtSearch;
     private javax.swing.JRadioButton ubePandesalRadio;
-    private javax.swing.JLabel yemaCakeLabelQty;
-    private javax.swing.JRadioButton yemaCakeRadio;
     // End of variables declaration//GEN-END:variables
 }
