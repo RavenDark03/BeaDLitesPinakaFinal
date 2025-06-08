@@ -1400,20 +1400,9 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
         jScrollPane1 = new javax.swing.JScrollPane();
         cakesPanel = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
-        mangoToppings = new javax.swing.JToggleButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        minusButtonMango = new javax.swing.JButton();
-        mangoBravoQuantity = new javax.swing.JLabel();
-        addButtonMango = new javax.swing.JButton();
-        jPanel13 = new javax.swing.JPanel();
-        mangoPrice = new javax.swing.JLabel();
-        mangoBravo5x2button = new javax.swing.JToggleButton();
-        mangoBravo6x2button = new javax.swing.JToggleButton();
-        mangoBravo4x2button = new javax.swing.JToggleButton();
-        mangoRadioButton = new javax.swing.JRadioButton();
-        jLabel72 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
@@ -1892,10 +1881,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
 
         jPanel15.setBackground(new java.awt.Color(255, 204, 102));
 
-        mangoToppings.setBackground(new java.awt.Color(255, 255, 153));
-        mangoToppings.setForeground(new java.awt.Color(255, 204, 102));
-        mangoToppings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mango.png"))); // NOI18N
-
         jPanel9.setBackground(new java.awt.Color(255, 255, 153));
 
         jLabel43.setBackground(new java.awt.Color(225, 135, 44));
@@ -1921,100 +1906,16 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
 
         jPanel10.setBackground(new java.awt.Color(255, 204, 102));
 
-        minusButtonMango.setBackground(new java.awt.Color(255, 204, 102));
-        minusButtonMango.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        minusButtonMango.setForeground(new java.awt.Color(225, 135, 44));
-        minusButtonMango.setText("-");
-        minusButtonMango.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minusButtonMangoActionPerformed(evt);
-            }
-        });
-
-        mangoBravoQuantity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravoQuantity.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravoQuantity.setText("0");
-
-        addButtonMango.setBackground(new java.awt.Color(255, 204, 102));
-        addButtonMango.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addButtonMango.setForeground(new java.awt.Color(225, 135, 44));
-        addButtonMango.setText("+");
-        addButtonMango.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonMangoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(minusButtonMango, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(mangoBravoQuantity)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(addButtonMango, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 139, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(minusButtonMango)
-                    .addComponent(mangoBravoQuantity)
-                    .addComponent(addButtonMango))
-                .addContainerGap(11, Short.MAX_VALUE))
+            .addGap(0, 52, Short.MAX_VALUE)
         );
-
-        jPanel13.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel13.setForeground(new java.awt.Color(225, 135, 44));
-
-        mangoPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoPrice.setForeground(new java.awt.Color(225, 135, 44));
-        mangoPrice.setText("Php: 0.00");
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mangoPrice)
-                .addContainerGap())
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mangoPrice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        mangoBravo5x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo5x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo5x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo5x2button.setText("5 x 2\"");
-
-        mangoBravo6x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo6x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo6x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo6x2button.setText("6 x 2\"");
-
-        mangoBravo4x2button.setBackground(new java.awt.Color(255, 255, 153));
-        mangoBravo4x2button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoBravo4x2button.setForeground(new java.awt.Color(225, 135, 44));
-        mangoBravo4x2button.setText("4 x 2\"");
-
-        mangoRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        mangoRadioButton.setForeground(new java.awt.Color(225, 135, 44));
-        mangoRadioButton.setText("Mango Bravo");
-
-        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel72.setForeground(new java.awt.Color(225, 135, 44));
-        jLabel72.setText("Topping:");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -2022,54 +1923,23 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel72)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mangoToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(mangoBravo5x2button)
-                                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(mangoBravo6x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(mangoBravo4x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addComponent(mangoRadioButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mangoRadioButton)
-                .addGap(1, 1, 1)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mangoBravo6x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(mangoBravo5x2button)
-                            .addComponent(mangoBravo4x2button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mangoToppings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel72))
-                .addContainerGap())
+                .addGap(44, 44, 44))
         );
 
         jPanel16.setBackground(new java.awt.Color(255, 204, 102));
@@ -5267,19 +5137,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
        }       
     }//GEN-LAST:event_txtSearchFocusLost
 
-    private void minusButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonMangoActionPerformed
-    if (mangoQty > 0) {
-        mangoQty--;
-    }
-    mangoBravoQuantity.setText(String.valueOf(mangoQty));
-    updateMangoPrice();
-    
-    
-//    if (mangoQty == 0) {
-//        mangoRadioButton.setSelected(false);
-//    }
-    }//GEN-LAST:event_minusButtonMangoActionPerformed
-
     private void redVelvetMinusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redVelvetMinusButtonActionPerformed
         if(redVelvetQty>0){
            redVelvetQty--;
@@ -5407,12 +5264,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
        Dashboard main = new Dashboard();
        main.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
-
-    private void addButtonMangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonMangoActionPerformed
-    mangoQty++;
-    mangoBravoQuantity.setText(String.valueOf(mangoQty));
-    updateMangoPrice();
-    }//GEN-LAST:event_addButtonMangoActionPerformed
 
     private void btnMinusYemaCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusYemaCakeActionPerformed
         if(yemaCakeQty>0){
@@ -5591,7 +5442,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JPanel BillPanel;
     private javax.swing.JPanel Jpanel;
     private javax.swing.JButton RedVelvetPlusButton;
-    private javax.swing.JButton addButtonMango;
     private javax.swing.JButton backButton;
     private javax.swing.JRadioButton bananaMuffinRadio;
     private javax.swing.JButton bentoCakePlusButton;
@@ -5696,7 +5546,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel77;
@@ -5711,7 +5560,6 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
@@ -5813,23 +5661,15 @@ public void addCustomCakeToBill(String cakeSize, int quantity, int price) {
     private javax.swing.JLabel lbzeroUbePandesal;
     private javax.swing.JLabel lbzeroqty;
     private javax.swing.JToggleButton lecheFlanToppingsCake;
-    private javax.swing.JToggleButton mangoBravo4x2button;
-    private javax.swing.JToggleButton mangoBravo5x2button;
-    private javax.swing.JToggleButton mangoBravo6x2button;
-    private javax.swing.JLabel mangoBravoQuantity;
     private javax.swing.JToggleButton mangoBravoTub;
     private javax.swing.JLabel mangoBravoTubPrice;
     private javax.swing.JRadioButton mangoBravoTubRadio;
-    private javax.swing.JLabel mangoPrice;
-    private javax.swing.JRadioButton mangoRadioButton;
-    private javax.swing.JToggleButton mangoToppings;
     private javax.swing.JToggleButton mangoToppingsCheesecake;
     private javax.swing.JToggleButton mangoToppingsSliceCheesecake;
     private javax.swing.JLabel mangobravotublblqty;
     private javax.swing.JRadioButton milkyCheeseRadio;
     private javax.swing.JLabel miniCupcakesPrice;
     private javax.swing.JRadioButton miniCupcakesRadio;
-    private javax.swing.JButton minusButtonMango;
     private javax.swing.JToggleButton payByCashBtn;
     private javax.swing.JToggleButton payByGCASHBtn;
     private javax.swing.JLabel piscesCupcakesPrice;

@@ -109,7 +109,6 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="DoneAddPOS" max="32767" attributes="0"/>
                               <Component id="EditAddPOS" pref="182" max="32767" attributes="0"/>
-                              <Component id="jLabel1" pref="182" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -120,9 +119,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel1" min="-2" pref="125" max="-2" attributes="0"/>
-                                  <EmptySpace pref="306" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="431" max="32767" attributes="0"/>
                                   <Component id="EditAddPOS" min="-2" pref="50" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="DoneAddPOS" min="-2" pref="50" max="-2" attributes="0"/>
@@ -156,30 +154,15 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="639" max="32767" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="0" pref="930" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="2192" max="32767" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="0" pref="2376" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JButton" name="jButton1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jButton1"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
                     </Container>
                   </SubComponents>
                 </Container>
@@ -216,14 +199,6 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditAddPOSActionPerformed"/>
                   </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel1">
-                  <Properties>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/BeA D&apos; Lites2.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
